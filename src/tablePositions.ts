@@ -1,6 +1,6 @@
 import type { TabletopSeatCount } from './types';
 
-export type TabletopSeatPositionValue = `${number}%`;
+type TabletopSeatPositionValue = `${number}%`;
 
 export interface TabletopSeatPosition {
   readonly top: TabletopSeatPositionValue;
