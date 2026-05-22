@@ -21,11 +21,7 @@ export function CardHand({
   const hiddenCards = createFaceDownCards(faceDownCards);
 
   return (
-    <View
-      accessibilityLabel={accessibilityLabel}
-      style={styles.hand}
-      testID={testID}
-    >
+    <View accessibilityLabel={accessibilityLabel} style={styles.hand} testID={testID}>
       {cards.map((card, index) => (
         <PlayingCard
           card={card}

@@ -8,15 +8,8 @@ export interface TabletopSeatPosition {
 const fallbackSeatPosition: TabletopSeatPosition = { top: '82%', left: '50%' };
 
 const seatPositions: Readonly<Record<TabletopSeatCount, readonly TabletopSeatPosition[]>> = {
-  2: [
-    fallbackSeatPosition,
-    { top: '18%', left: '50%' },
-  ],
-  3: [
-    fallbackSeatPosition,
-    { top: '28%', left: '18%' },
-    { top: '28%', left: '82%' },
-  ],
+  2: [fallbackSeatPosition, { top: '18%', left: '50%' }],
+  3: [fallbackSeatPosition, { top: '28%', left: '18%' }, { top: '28%', left: '82%' }],
   4: [
     fallbackSeatPosition,
     { top: '50%', left: '12%' },

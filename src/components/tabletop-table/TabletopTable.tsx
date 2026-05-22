@@ -73,11 +73,15 @@ export function TabletopTable({
           ) : null}
           {centerLabel !== undefined ? (
             <View style={[styles.centerLabel, { backgroundColor: colors.seatSurface }]}>
-              <Text style={[styles.centerLabelText, { color: colors.cardText }]}>{centerLabel}</Text>
+              <Text style={[styles.centerLabelText, { color: colors.cardText }]}>
+                {centerLabel}
+              </Text>
             </View>
           ) : null}
           {centerSublabel !== undefined ? (
-            <Text style={[styles.centerSublabel, { color: colors.mutedText }]}>{centerSublabel}</Text>
+            <Text style={[styles.centerSublabel, { color: colors.mutedText }]}>
+              {centerSublabel}
+            </Text>
           ) : null}
         </View>
       </View>
@@ -106,17 +110,21 @@ export function TabletopTable({
                 cards={seat.cards}
                 colorScheme={colorScheme}
                 faceDownCards={seat.faceDownCards}
-                muted={seat.muted || seat.disabled}
+                muted={seat.muted ?? seat.disabled}
                 size={cardSize}
               />
             ) : null}
             <Text style={[styles.seatLabel, { color: colors.cardText }]}>{seat.label}</Text>
             {seat.sublabel !== undefined ? (
-              <Text style={[styles.seatSublabel, { color: colors.mutedText }]}>{seat.sublabel}</Text>
+              <Text style={[styles.seatSublabel, { color: colors.mutedText }]}>
+                {seat.sublabel}
+              </Text>
             ) : null}
             {seat.tokenLabel !== undefined ? (
               <View style={[styles.token, { backgroundColor: colors.tokenSurface }]}>
-                <Text style={[styles.tokenText, { color: colors.tokenText }]}>{seat.tokenLabel}</Text>
+                <Text style={[styles.tokenText, { color: colors.tokenText }]}>
+                  {seat.tokenLabel}
+                </Text>
               </View>
             ) : null}
           </View>
