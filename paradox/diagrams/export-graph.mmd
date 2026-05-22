@@ -1,2 +1,74 @@
 graph LR
+  module_src_cardLabel_ts["src/cardLabel.ts"]
+  module_src_cardSizing_ts["src/cardSizing.ts"]
+  module_src_colors_ts["src/colors.ts"]
+  module_src_components_card_back_CardBack_tsx["src/components/card-back/CardBack.tsx"]
+  module_src_components_card_back_index_ts["src/components/card-back/index.ts"]
+  module_src_components_card_back_types_ts["src/components/card-back/types.ts"]
+  module_src_components_card_hand_CardHand_tsx["src/components/card-hand/CardHand.tsx"]
+  module_src_components_card_hand_index_ts["src/components/card-hand/index.ts"]
+  module_src_components_card_hand_types_ts["src/components/card-hand/types.ts"]
+  module_src_components_playing_card_index_ts["src/components/playing-card/index.ts"]
+  module_src_components_playing_card_PlayingCard_tsx["src/components/playing-card/PlayingCard.tsx"]
+  module_src_components_playing_card_types_ts["src/components/playing-card/types.ts"]
+  module_src_components_tabletop_table_index_ts["src/components/tabletop-table/index.ts"]
+  module_src_components_tabletop_table_TabletopTable_tsx["src/components/tabletop-table/TabletopTable.tsx"]
+  module_src_components_tabletop_table_types_ts["src/components/tabletop-table/types.ts"]
   module_src_index_ts["src/index.ts"]
+  module_src_tablePositions_ts["src/tablePositions.ts"]
+  module_src_types_ts["src/types.ts"]
+  export_CardBack["CardBack"]
+  module_src_components_card_back_CardBack_tsx --> export_CardBack
+  export_CardBack -.-> export_CardBackProps
+  export_CardBackProps["CardBackProps"]
+  module_src_components_card_back_types_ts --> export_CardBackProps
+  export_CardBackProps -.-> export_TabletopCardSize
+  export_CardBackProps -.-> export_TabletopColorScheme
+  export_CardHand["CardHand"]
+  module_src_components_card_hand_CardHand_tsx --> export_CardHand
+  export_CardHand -.-> export_CardHandProps
+  export_CardHandProps["CardHandProps"]
+  module_src_components_card_hand_types_ts --> export_CardHandProps
+  export_CardHandProps -.-> export_PlayingCardValue
+  export_CardHandProps -.-> export_TabletopCardSize
+  export_CardHandProps -.-> export_TabletopColorScheme
+  export_createTabletopColorScheme["createTabletopColorScheme"]
+  module_src_colors_ts --> export_createTabletopColorScheme
+  export_createTabletopColorScheme -.-> export_TabletopColorScheme
+  export_PlayingCard["PlayingCard"]
+  module_src_components_playing_card_PlayingCard_tsx --> export_PlayingCard
+  export_PlayingCard -.-> export_PlayingCardProps
+  export_PlayingCardProps["PlayingCardProps"]
+  module_src_components_playing_card_types_ts --> export_PlayingCardProps
+  export_PlayingCardProps -.-> export_PlayingCardValue
+  export_PlayingCardProps -.-> export_TabletopCardSize
+  export_PlayingCardProps -.-> export_TabletopColorScheme
+  export_PlayingCardSuit["PlayingCardSuit"]
+  module_src_types_ts --> export_PlayingCardSuit
+  export_PlayingCardValue["PlayingCardValue"]
+  module_src_types_ts --> export_PlayingCardValue
+  export_PlayingCardValue -.-> export_PlayingCardSuit
+  export_TabletopCardSize["TabletopCardSize"]
+  module_src_types_ts --> export_TabletopCardSize
+  export_TabletopColorOverrides["TabletopColorOverrides"]
+  module_src_colors_ts --> export_TabletopColorOverrides
+  export_TabletopColorScheme["TabletopColorScheme"]
+  module_src_colors_ts --> export_TabletopColorScheme
+  export_TabletopSeatCount["TabletopSeatCount"]
+  module_src_types_ts --> export_TabletopSeatCount
+  export_TabletopSeatState["TabletopSeatState"]
+  module_src_types_ts --> export_TabletopSeatState
+  export_TabletopSeatState -.-> export_PlayingCardValue
+  export_TabletopShape["TabletopShape"]
+  module_src_types_ts --> export_TabletopShape
+  export_TabletopTable["TabletopTable"]
+  module_src_components_tabletop_table_TabletopTable_tsx --> export_TabletopTable
+  export_TabletopTable -.-> export_TabletopTableProps
+  export_TabletopTableProps["TabletopTableProps"]
+  module_src_components_tabletop_table_types_ts --> export_TabletopTableProps
+  export_TabletopTableProps -.-> export_PlayingCardValue
+  export_TabletopTableProps -.-> export_TabletopCardSize
+  export_TabletopTableProps -.-> export_TabletopColorScheme
+  export_TabletopTableProps -.-> export_TabletopSeatCount
+  export_TabletopTableProps -.-> export_TabletopSeatState
+  export_TabletopTableProps -.-> export_TabletopShape

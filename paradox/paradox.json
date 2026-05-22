@@ -63,20 +63,2033 @@
   "entrypoints": ["src/index.ts"],
   "modules": [
     {
+      "path": "src/cardLabel.ts",
+      "isEntrypoint": false,
+      "dependencies": ["src/types.ts"],
+      "exports": ["createHiddenCardLabel", "getPlayingCardLabel"]
+    },
+    {
+      "path": "src/cardSizing.ts",
+      "isEntrypoint": false,
+      "dependencies": ["src/types.ts"],
+      "exports": ["getTabletopCardDimensions", "TabletopCardDimensions"]
+    },
+    {
+      "path": "src/colors.ts",
+      "isEntrypoint": false,
+      "dependencies": [],
+      "exports": [
+        "createTabletopColorScheme",
+        "TabletopColorOverrides",
+        "TabletopColorScheme",
+        "TabletopColorThemeShape"
+      ]
+    },
+    {
+      "path": "src/components/card-back/CardBack.tsx",
+      "isEntrypoint": false,
+      "dependencies": [
+        "src/cardLabel.ts",
+        "src/cardSizing.ts",
+        "src/colors.ts",
+        "src/components/card-back/types.ts"
+      ],
+      "exports": ["CardBack"]
+    },
+    {
+      "path": "src/components/card-back/index.ts",
+      "isEntrypoint": false,
+      "dependencies": [],
+      "exports": ["CardBack", "CardBackProps"]
+    },
+    {
+      "path": "src/components/card-back/types.ts",
+      "isEntrypoint": false,
+      "dependencies": ["src/colors.ts", "src/types.ts"],
+      "exports": ["CardBackProps"]
+    },
+    {
+      "path": "src/components/card-hand/CardHand.tsx",
+      "isEntrypoint": false,
+      "dependencies": [
+        "src/components/card-back/index.ts",
+        "src/components/card-hand/types.ts",
+        "src/components/playing-card/index.ts"
+      ],
+      "exports": ["CardHand"]
+    },
+    {
+      "path": "src/components/card-hand/index.ts",
+      "isEntrypoint": false,
+      "dependencies": [],
+      "exports": ["CardHand", "CardHandProps"]
+    },
+    {
+      "path": "src/components/card-hand/types.ts",
+      "isEntrypoint": false,
+      "dependencies": ["src/colors.ts", "src/types.ts"],
+      "exports": ["CardHandProps"]
+    },
+    {
+      "path": "src/components/playing-card/index.ts",
+      "isEntrypoint": false,
+      "dependencies": [],
+      "exports": ["PlayingCard", "PlayingCardProps"]
+    },
+    {
+      "path": "src/components/playing-card/PlayingCard.tsx",
+      "isEntrypoint": false,
+      "dependencies": [
+        "src/cardLabel.ts",
+        "src/cardSizing.ts",
+        "src/colors.ts",
+        "src/components/playing-card/types.ts",
+        "src/types.ts"
+      ],
+      "exports": ["PlayingCard"]
+    },
+    {
+      "path": "src/components/playing-card/types.ts",
+      "isEntrypoint": false,
+      "dependencies": ["src/colors.ts", "src/types.ts"],
+      "exports": ["PlayingCardProps"]
+    },
+    {
+      "path": "src/components/tabletop-table/index.ts",
+      "isEntrypoint": false,
+      "dependencies": [],
+      "exports": ["TabletopTable", "TabletopTableProps"]
+    },
+    {
+      "path": "src/components/tabletop-table/TabletopTable.tsx",
+      "isEntrypoint": false,
+      "dependencies": [
+        "src/colors.ts",
+        "src/components/card-hand/index.ts",
+        "src/components/tabletop-table/types.ts",
+        "src/tablePositions.ts",
+        "src/types.ts"
+      ],
+      "exports": ["TabletopTable"]
+    },
+    {
+      "path": "src/components/tabletop-table/types.ts",
+      "isEntrypoint": false,
+      "dependencies": ["src/colors.ts", "src/types.ts"],
+      "exports": ["TabletopTableProps"]
+    },
+    {
       "path": "src/index.ts",
       "isEntrypoint": true,
       "dependencies": [],
-      "exports": []
+      "exports": [
+        "CardBack",
+        "CardBackProps",
+        "CardHand",
+        "CardHandProps",
+        "createTabletopColorScheme",
+        "PlayingCard",
+        "PlayingCardProps",
+        "PlayingCardSuit",
+        "PlayingCardValue",
+        "TabletopCardSize",
+        "TabletopColorOverrides",
+        "TabletopColorScheme",
+        "TabletopSeatCount",
+        "TabletopSeatState",
+        "TabletopShape",
+        "TabletopTable",
+        "TabletopTableProps"
+      ]
+    },
+    {
+      "path": "src/tablePositions.ts",
+      "isEntrypoint": false,
+      "dependencies": ["src/types.ts"],
+      "exports": [
+        "getTabletopSeatPosition",
+        "getTabletopSeatPositions",
+        "normalizeTabletopSeatCount",
+        "TabletopSeatPosition"
+      ]
+    },
+    {
+      "path": "src/types.ts",
+      "isEntrypoint": false,
+      "dependencies": [],
+      "exports": [
+        "PlayingCardSuit",
+        "PlayingCardValue",
+        "TabletopCardSize",
+        "TabletopSeatCount",
+        "TabletopSeatState",
+        "TabletopShape"
+      ]
     }
   ],
-  "exports": [],
-  "components": [],
-  "sourceFunctions": [],
-  "sequenceScenarios": [],
+  "exports": [
+    {
+      "name": "CardBack",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "function",
+      "modulePath": "src/components/card-back/CardBack.tsx",
+      "sourceLocation": {
+        "filePath": "src/components/card-back/CardBack.tsx",
+        "line": 10,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["CardBackProps"],
+      "signatures": [
+        {
+          "label": "({\n  size = 'medium',\n  muted = false,\n  accessibilityLabel,\n  colorScheme,\n  testID,\n}: CardBackProps) => React.JSX.Element",
+          "parameters": [
+            {
+              "name": "{\n  size = 'medium',\n  muted = false,\n  accessibilityLabel,\n  colorScheme,\n  testID,\n}",
+              "type": "CardBackProps",
+              "required": true,
+              "description": null
+            }
+          ],
+          "returnType": "React.JSX.Element",
+          "returnDescription": null
+        }
+      ],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "CardBackProps",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/components/card-back/types.ts",
+      "sourceLocation": {
+        "filePath": "src/components/card-back/types.ts",
+        "line": 4,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["TabletopCardSize", "TabletopColorScheme"],
+      "signatures": [],
+      "members": [
+        {
+          "name": "accessibilityLabel",
+          "kind": "property",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "colorScheme",
+          "kind": "property",
+          "type": "Partial<import(\"/Users/a_rtiphishl_e/git/zora-tabletop/src/colors\").TabletopColorScheme> | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "muted",
+          "kind": "property",
+          "type": "boolean | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "size",
+          "kind": "property",
+          "type": "TabletopCardSize | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "testID",
+          "kind": "property",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "CardHand",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "function",
+      "modulePath": "src/components/card-hand/CardHand.tsx",
+      "sourceLocation": {
+        "filePath": "src/components/card-hand/CardHand.tsx",
+        "line": 12,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["CardHandProps"],
+      "signatures": [
+        {
+          "label": "({\n  cards = [],\n  faceDownCards = 0,\n  size = 'medium',\n  muted = false,\n  colorScheme,\n  accessibilityLabel,\n  testID,\n}: CardHandProps) => React.JSX.Element",
+          "parameters": [
+            {
+              "name": "{\n  cards = [],\n  faceDownCards = 0,\n  size = 'medium',\n  muted = false,\n  colorScheme,\n  accessibilityLabel,\n  testID,\n}",
+              "type": "CardHandProps",
+              "required": true,
+              "description": null
+            }
+          ],
+          "returnType": "React.JSX.Element",
+          "returnDescription": null
+        }
+      ],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "CardHandProps",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/components/card-hand/types.ts",
+      "sourceLocation": {
+        "filePath": "src/components/card-hand/types.ts",
+        "line": 4,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["PlayingCardValue", "TabletopCardSize", "TabletopColorScheme"],
+      "signatures": [],
+      "members": [
+        {
+          "name": "accessibilityLabel",
+          "kind": "property",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "cards",
+          "kind": "property",
+          "type": "readonly PlayingCardValue[] | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "colorScheme",
+          "kind": "property",
+          "type": "Partial<import(\"/Users/a_rtiphishl_e/git/zora-tabletop/src/colors\").TabletopColorScheme> | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "faceDownCards",
+          "kind": "property",
+          "type": "number | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "muted",
+          "kind": "property",
+          "type": "boolean | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "size",
+          "kind": "property",
+          "type": "TabletopCardSize | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "testID",
+          "kind": "property",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "createTabletopColorScheme",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "function",
+      "modulePath": "src/colors.ts",
+      "sourceLocation": {
+        "filePath": "src/colors.ts",
+        "line": 46,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["TabletopColorScheme"],
+      "signatures": [
+        {
+          "label": "(theme: TabletopColorThemeShape, overrides?: Partial<TabletopColorScheme>) => TabletopColorScheme",
+          "parameters": [
+            {
+              "name": "overrides",
+              "type": "Partial<TabletopColorScheme>",
+              "required": false,
+              "description": null
+            },
+            {
+              "name": "theme",
+              "type": "TabletopColorThemeShape",
+              "required": true,
+              "description": null
+            }
+          ],
+          "returnType": "TabletopColorScheme",
+          "returnDescription": null
+        }
+      ],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "PlayingCard",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "function",
+      "modulePath": "src/components/playing-card/PlayingCard.tsx",
+      "sourceLocation": {
+        "filePath": "src/components/playing-card/PlayingCard.tsx",
+        "line": 22,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["PlayingCardProps"],
+      "signatures": [
+        {
+          "label": "({\n  card,\n  size = 'medium',\n  selected = false,\n  muted = false,\n  accessibilityLabel,\n  colorScheme,\n  testID,\n}: PlayingCardProps) => React.JSX.Element",
+          "parameters": [
+            {
+              "name": "{\n  card,\n  size = 'medium',\n  selected = false,\n  muted = false,\n  accessibilityLabel,\n  colorScheme,\n  testID,\n}",
+              "type": "PlayingCardProps",
+              "required": true,
+              "description": null
+            }
+          ],
+          "returnType": "React.JSX.Element",
+          "returnDescription": null
+        }
+      ],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "PlayingCardProps",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/components/playing-card/types.ts",
+      "sourceLocation": {
+        "filePath": "src/components/playing-card/types.ts",
+        "line": 4,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["PlayingCardValue", "TabletopCardSize", "TabletopColorScheme"],
+      "signatures": [],
+      "members": [
+        {
+          "name": "accessibilityLabel",
+          "kind": "property",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "card",
+          "kind": "property",
+          "type": "PlayingCardValue",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "colorScheme",
+          "kind": "property",
+          "type": "Partial<import(\"/Users/a_rtiphishl_e/git/zora-tabletop/src/colors\").TabletopColorScheme> | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "muted",
+          "kind": "property",
+          "type": "boolean | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "selected",
+          "kind": "property",
+          "type": "boolean | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "size",
+          "kind": "property",
+          "type": "TabletopCardSize | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "testID",
+          "kind": "property",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "PlayingCardSuit",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "unknown",
+      "modulePath": "src/types.ts",
+      "sourceLocation": {
+        "filePath": "src/types.ts",
+        "line": 3,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "PlayingCardValue",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/types.ts",
+      "sourceLocation": {
+        "filePath": "src/types.ts",
+        "line": 8,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["PlayingCardSuit"],
+      "signatures": [],
+      "members": [
+        {
+          "name": "rank",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "suit",
+          "kind": "property",
+          "type": "PlayingCardSuit",
+          "required": true,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "TabletopCardSize",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "unknown",
+      "modulePath": "src/types.ts",
+      "sourceLocation": {
+        "filePath": "src/types.ts",
+        "line": 4,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "TabletopColorOverrides",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "unknown",
+      "modulePath": "src/colors.ts",
+      "sourceLocation": {
+        "filePath": "src/colors.ts",
+        "line": 19,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "TabletopColorScheme",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/colors.ts",
+      "sourceLocation": {
+        "filePath": "src/colors.ts",
+        "line": 1,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [
+        {
+          "name": "cardBack",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "cardBackBorder",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "cardBorder",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "cardSurface",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "cardText",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "mutedText",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "redSuitText",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "seatBorder",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "seatSelectedBorder",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "seatSurface",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "tableBorder",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "tableFelt",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "tableInnerBorder",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "tokenSurface",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "tokenText",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "TabletopSeatCount",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "unknown",
+      "modulePath": "src/types.ts",
+      "sourceLocation": {
+        "filePath": "src/types.ts",
+        "line": 6,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "TabletopSeatState",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/types.ts",
+      "sourceLocation": {
+        "filePath": "src/types.ts",
+        "line": 13,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["PlayingCardValue"],
+      "signatures": [],
+      "members": [
+        {
+          "name": "accessibilityLabel",
+          "kind": "property",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "cards",
+          "kind": "property",
+          "type": "readonly PlayingCardValue[] | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "disabled",
+          "kind": "property",
+          "type": "boolean | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "faceDownCards",
+          "kind": "property",
+          "type": "number | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "id",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "label",
+          "kind": "property",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "muted",
+          "kind": "property",
+          "type": "boolean | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "selected",
+          "kind": "property",
+          "type": "boolean | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "sublabel",
+          "kind": "property",
+          "type": "React.ReactNode",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "tokenLabel",
+          "kind": "property",
+          "type": "React.ReactNode",
+          "required": false,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "TabletopShape",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "unknown",
+      "modulePath": "src/types.ts",
+      "sourceLocation": {
+        "filePath": "src/types.ts",
+        "line": 5,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "TabletopTable",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "function",
+      "modulePath": "src/components/tabletop-table/TabletopTable.tsx",
+      "sourceLocation": {
+        "filePath": "src/components/tabletop-table/TabletopTable.tsx",
+        "line": 24,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["TabletopTableProps"],
+      "signatures": [
+        {
+          "label": "({\n  seats,\n  centerCards = [],\n  centerLabel,\n  centerSublabel,\n  shape = 'oval',\n  seatCount,\n  cardSize = 'small',\n  disabled = false,\n  colorScheme,\n  accessibilityLabel,\n  testID,\n}: TabletopTableProps) => React.JSX.Element",
+          "parameters": [
+            {
+              "name": "{\n  seats,\n  centerCards = [],\n  centerLabel,\n  centerSublabel,\n  shape = 'oval',\n  seatCount,\n  cardSize = 'small',\n  disabled = false,\n  colorScheme,\n  accessibilityLabel,\n  testID,\n}",
+              "type": "TabletopTableProps",
+              "required": true,
+              "description": null
+            }
+          ],
+          "returnType": "React.JSX.Element",
+          "returnDescription": null
+        }
+      ],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "TabletopTableProps",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/components/tabletop-table/types.ts",
+      "sourceLocation": {
+        "filePath": "src/components/tabletop-table/types.ts",
+        "line": 12,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [
+        "PlayingCardValue",
+        "TabletopCardSize",
+        "TabletopColorScheme",
+        "TabletopSeatCount",
+        "TabletopSeatState",
+        "TabletopShape"
+      ],
+      "signatures": [],
+      "members": [
+        {
+          "name": "accessibilityLabel",
+          "kind": "property",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "cardSize",
+          "kind": "property",
+          "type": "TabletopCardSize | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "centerCards",
+          "kind": "property",
+          "type": "readonly PlayingCardValue[] | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "centerLabel",
+          "kind": "property",
+          "type": "React.ReactNode",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "centerSublabel",
+          "kind": "property",
+          "type": "React.ReactNode",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "colorScheme",
+          "kind": "property",
+          "type": "Partial<import(\"/Users/a_rtiphishl_e/git/zora-tabletop/src/colors\").TabletopColorScheme> | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "disabled",
+          "kind": "property",
+          "type": "boolean | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "seatCount",
+          "kind": "property",
+          "type": "TabletopSeatCount | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "seats",
+          "kind": "property",
+          "type": "readonly TabletopSeatState[]",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "shape",
+          "kind": "property",
+          "type": "TabletopShape | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "testID",
+          "kind": "property",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    }
+  ],
+  "components": [
+    {
+      "name": "CardBack",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "modulePath": "src/components/card-back/CardBack.tsx",
+      "sourceLocation": {
+        "filePath": "src/components/card-back/CardBack.tsx",
+        "line": 10,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "props": [
+        {
+          "name": "accessibilityLabel",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "colorScheme",
+          "type": "TabletopColorOverrides | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "muted",
+          "type": "boolean | undefined",
+          "required": false,
+          "defaultValue": "false",
+          "description": null
+        },
+        {
+          "name": "size",
+          "type": "TabletopCardSize | undefined",
+          "required": false,
+          "defaultValue": "'medium'",
+          "description": null
+        },
+        {
+          "name": "testID",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        }
+      ]
+    },
+    {
+      "name": "CardHand",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "modulePath": "src/components/card-hand/CardHand.tsx",
+      "sourceLocation": {
+        "filePath": "src/components/card-hand/CardHand.tsx",
+        "line": 12,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "props": [
+        {
+          "name": "accessibilityLabel",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "cards",
+          "type": "readonly PlayingCardValue[] | undefined",
+          "required": false,
+          "defaultValue": "[]",
+          "description": null
+        },
+        {
+          "name": "colorScheme",
+          "type": "TabletopColorOverrides | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "faceDownCards",
+          "type": "number | undefined",
+          "required": false,
+          "defaultValue": "0",
+          "description": null
+        },
+        {
+          "name": "muted",
+          "type": "boolean | undefined",
+          "required": false,
+          "defaultValue": "false",
+          "description": null
+        },
+        {
+          "name": "size",
+          "type": "TabletopCardSize | undefined",
+          "required": false,
+          "defaultValue": "'medium'",
+          "description": null
+        },
+        {
+          "name": "testID",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        }
+      ]
+    },
+    {
+      "name": "PlayingCard",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "modulePath": "src/components/playing-card/PlayingCard.tsx",
+      "sourceLocation": {
+        "filePath": "src/components/playing-card/PlayingCard.tsx",
+        "line": 22,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "props": [
+        {
+          "name": "accessibilityLabel",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "card",
+          "type": "PlayingCardValue",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "colorScheme",
+          "type": "TabletopColorOverrides | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "muted",
+          "type": "boolean | undefined",
+          "required": false,
+          "defaultValue": "false",
+          "description": null
+        },
+        {
+          "name": "selected",
+          "type": "boolean | undefined",
+          "required": false,
+          "defaultValue": "false",
+          "description": null
+        },
+        {
+          "name": "size",
+          "type": "TabletopCardSize | undefined",
+          "required": false,
+          "defaultValue": "'medium'",
+          "description": null
+        },
+        {
+          "name": "testID",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        }
+      ]
+    },
+    {
+      "name": "TabletopTable",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "modulePath": "src/components/tabletop-table/TabletopTable.tsx",
+      "sourceLocation": {
+        "filePath": "src/components/tabletop-table/TabletopTable.tsx",
+        "line": 24,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "props": [
+        {
+          "name": "accessibilityLabel",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "cardSize",
+          "type": "TabletopCardSize | undefined",
+          "required": false,
+          "defaultValue": "'small'",
+          "description": null
+        },
+        {
+          "name": "centerCards",
+          "type": "readonly PlayingCardValue[] | undefined",
+          "required": false,
+          "defaultValue": "[]",
+          "description": null
+        },
+        {
+          "name": "centerLabel",
+          "type": "React.ReactNode | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "centerSublabel",
+          "type": "React.ReactNode | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "colorScheme",
+          "type": "TabletopColorOverrides | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "disabled",
+          "type": "boolean | undefined",
+          "required": false,
+          "defaultValue": "false",
+          "description": null
+        },
+        {
+          "name": "seatCount",
+          "type": "TabletopSeatCount | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "seats",
+          "type": "readonly TabletopSeatState[]",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "shape",
+          "type": "TabletopShape | undefined",
+          "required": false,
+          "defaultValue": "'oval'",
+          "description": null
+        },
+        {
+          "name": "testID",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        }
+      ]
+    }
+  ],
+  "sourceFunctions": [
+    {
+      "name": "getPlayingCardLabel",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/cardLabel.ts",
+        "line": 3,
+        "column": 1
+      }
+    },
+    {
+      "name": "createHiddenCardLabel",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/cardLabel.ts",
+        "line": 7,
+        "column": 1
+      }
+    },
+    {
+      "name": "getTabletopCardDimensions",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/cardSizing.ts",
+        "line": 35,
+        "column": 1
+      }
+    },
+    {
+      "name": "createTabletopColorScheme",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/colors.ts",
+        "line": 46,
+        "column": 1
+      }
+    },
+    {
+      "name": "CardBack",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/components/card-back/CardBack.tsx",
+        "line": 10,
+        "column": 1
+      }
+    },
+    {
+      "name": "createFaceDownCards",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/components/card-hand/CardHand.tsx",
+        "line": 8,
+        "column": 1
+      }
+    },
+    {
+      "name": "CardHand",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/components/card-hand/CardHand.tsx",
+        "line": 12,
+        "column": 1
+      }
+    },
+    {
+      "name": "isRedSuit",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/components/playing-card/PlayingCard.tsx",
+        "line": 18,
+        "column": 1
+      }
+    },
+    {
+      "name": "PlayingCard",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/components/playing-card/PlayingCard.tsx",
+        "line": 22,
+        "column": 1
+      }
+    },
+    {
+      "name": "createSeatAccessibilityLabel",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/components/tabletop-table/TabletopTable.tsx",
+        "line": 11,
+        "column": 1
+      }
+    },
+    {
+      "name": "TabletopTable",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/components/tabletop-table/TabletopTable.tsx",
+        "line": 24,
+        "column": 1
+      }
+    },
+    {
+      "name": "normalizeTabletopSeatCount",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/tablePositions.ts",
+        "line": 78,
+        "column": 1
+      }
+    },
+    {
+      "name": "getTabletopSeatPositions",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/tablePositions.ts",
+        "line": 86,
+        "column": 1
+      }
+    },
+    {
+      "name": "getTabletopSeatPosition",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/tablePositions.ts",
+        "line": 90,
+        "column": 1
+      }
+    }
+  ],
+  "sequenceScenarios": [
+    {
+      "kind": "export",
+      "name": "CardBack",
+      "sourcePath": "src/components/card-back/CardBack.tsx",
+      "symbolName": "CardBack",
+      "description": null,
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "CardHand",
+      "sourcePath": "src/components/card-hand/CardHand.tsx",
+      "symbolName": "CardHand",
+      "description": null,
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "createTabletopColorScheme",
+      "sourcePath": "src/colors.ts",
+      "symbolName": "createTabletopColorScheme",
+      "description": null,
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "PlayingCard",
+      "sourcePath": "src/components/playing-card/PlayingCard.tsx",
+      "symbolName": "PlayingCard",
+      "description": null,
+      "isReadme": false
+    },
+    {
+      "kind": "export",
+      "name": "TabletopTable",
+      "sourcePath": "src/components/tabletop-table/TabletopTable.tsx",
+      "symbolName": "TabletopTable",
+      "description": null,
+      "isReadme": false
+    }
+  ],
   "graphs": {
-    "imports": [],
-    "calls": [],
-    "typeReferences": [],
-    "componentComposition": []
+    "imports": [
+      {
+        "fromPath": "src/cardLabel.ts",
+        "toPath": "src/types.ts",
+        "sourcePath": "src/cardLabel.ts"
+      },
+      {
+        "fromPath": "src/cardSizing.ts",
+        "toPath": "src/types.ts",
+        "sourcePath": "src/cardSizing.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/colors.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/components/card-back/index.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/components/card-hand/index.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/components/playing-card/index.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/components/tabletop-table/index.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/types.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/tablePositions.ts",
+        "toPath": "src/types.ts",
+        "sourcePath": "src/tablePositions.ts"
+      },
+      {
+        "fromPath": "src/components/card-back/CardBack.tsx",
+        "toPath": "src/cardLabel.ts",
+        "sourcePath": "src/components/card-back/CardBack.tsx"
+      },
+      {
+        "fromPath": "src/components/card-back/CardBack.tsx",
+        "toPath": "src/cardSizing.ts",
+        "sourcePath": "src/components/card-back/CardBack.tsx"
+      },
+      {
+        "fromPath": "src/components/card-back/CardBack.tsx",
+        "toPath": "src/colors.ts",
+        "sourcePath": "src/components/card-back/CardBack.tsx"
+      },
+      {
+        "fromPath": "src/components/card-back/CardBack.tsx",
+        "toPath": "src/components/card-back/types.ts",
+        "sourcePath": "src/components/card-back/CardBack.tsx"
+      },
+      {
+        "fromPath": "src/components/card-back/index.ts",
+        "toPath": "src/components/card-back/CardBack.tsx",
+        "sourcePath": "src/components/card-back/index.ts"
+      },
+      {
+        "fromPath": "src/components/card-back/index.ts",
+        "toPath": "src/components/card-back/types.ts",
+        "sourcePath": "src/components/card-back/index.ts"
+      },
+      {
+        "fromPath": "src/components/card-back/types.ts",
+        "toPath": "src/colors.ts",
+        "sourcePath": "src/components/card-back/types.ts"
+      },
+      {
+        "fromPath": "src/components/card-back/types.ts",
+        "toPath": "src/types.ts",
+        "sourcePath": "src/components/card-back/types.ts"
+      },
+      {
+        "fromPath": "src/components/card-hand/CardHand.tsx",
+        "toPath": "src/components/card-back/index.ts",
+        "sourcePath": "src/components/card-hand/CardHand.tsx"
+      },
+      {
+        "fromPath": "src/components/card-hand/CardHand.tsx",
+        "toPath": "src/components/playing-card/index.ts",
+        "sourcePath": "src/components/card-hand/CardHand.tsx"
+      },
+      {
+        "fromPath": "src/components/card-hand/CardHand.tsx",
+        "toPath": "src/components/card-hand/types.ts",
+        "sourcePath": "src/components/card-hand/CardHand.tsx"
+      },
+      {
+        "fromPath": "src/components/card-hand/index.ts",
+        "toPath": "src/components/card-hand/CardHand.tsx",
+        "sourcePath": "src/components/card-hand/index.ts"
+      },
+      {
+        "fromPath": "src/components/card-hand/index.ts",
+        "toPath": "src/components/card-hand/types.ts",
+        "sourcePath": "src/components/card-hand/index.ts"
+      },
+      {
+        "fromPath": "src/components/card-hand/types.ts",
+        "toPath": "src/colors.ts",
+        "sourcePath": "src/components/card-hand/types.ts"
+      },
+      {
+        "fromPath": "src/components/card-hand/types.ts",
+        "toPath": "src/types.ts",
+        "sourcePath": "src/components/card-hand/types.ts"
+      },
+      {
+        "fromPath": "src/components/playing-card/index.ts",
+        "toPath": "src/components/playing-card/PlayingCard.tsx",
+        "sourcePath": "src/components/playing-card/index.ts"
+      },
+      {
+        "fromPath": "src/components/playing-card/index.ts",
+        "toPath": "src/components/playing-card/types.ts",
+        "sourcePath": "src/components/playing-card/index.ts"
+      },
+      {
+        "fromPath": "src/components/playing-card/PlayingCard.tsx",
+        "toPath": "src/cardLabel.ts",
+        "sourcePath": "src/components/playing-card/PlayingCard.tsx"
+      },
+      {
+        "fromPath": "src/components/playing-card/PlayingCard.tsx",
+        "toPath": "src/cardSizing.ts",
+        "sourcePath": "src/components/playing-card/PlayingCard.tsx"
+      },
+      {
+        "fromPath": "src/components/playing-card/PlayingCard.tsx",
+        "toPath": "src/colors.ts",
+        "sourcePath": "src/components/playing-card/PlayingCard.tsx"
+      },
+      {
+        "fromPath": "src/components/playing-card/PlayingCard.tsx",
+        "toPath": "src/types.ts",
+        "sourcePath": "src/components/playing-card/PlayingCard.tsx"
+      },
+      {
+        "fromPath": "src/components/playing-card/PlayingCard.tsx",
+        "toPath": "src/components/playing-card/types.ts",
+        "sourcePath": "src/components/playing-card/PlayingCard.tsx"
+      },
+      {
+        "fromPath": "src/components/playing-card/types.ts",
+        "toPath": "src/colors.ts",
+        "sourcePath": "src/components/playing-card/types.ts"
+      },
+      {
+        "fromPath": "src/components/playing-card/types.ts",
+        "toPath": "src/types.ts",
+        "sourcePath": "src/components/playing-card/types.ts"
+      },
+      {
+        "fromPath": "src/components/tabletop-table/index.ts",
+        "toPath": "src/components/tabletop-table/TabletopTable.tsx",
+        "sourcePath": "src/components/tabletop-table/index.ts"
+      },
+      {
+        "fromPath": "src/components/tabletop-table/index.ts",
+        "toPath": "src/components/tabletop-table/types.ts",
+        "sourcePath": "src/components/tabletop-table/index.ts"
+      },
+      {
+        "fromPath": "src/components/tabletop-table/TabletopTable.tsx",
+        "toPath": "src/colors.ts",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromPath": "src/components/tabletop-table/TabletopTable.tsx",
+        "toPath": "src/tablePositions.ts",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromPath": "src/components/tabletop-table/TabletopTable.tsx",
+        "toPath": "src/types.ts",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromPath": "src/components/tabletop-table/TabletopTable.tsx",
+        "toPath": "src/components/card-hand/index.ts",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromPath": "src/components/tabletop-table/TabletopTable.tsx",
+        "toPath": "src/components/tabletop-table/types.ts",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromPath": "src/components/tabletop-table/types.ts",
+        "toPath": "src/colors.ts",
+        "sourcePath": "src/components/tabletop-table/types.ts"
+      },
+      {
+        "fromPath": "src/components/tabletop-table/types.ts",
+        "toPath": "src/types.ts",
+        "sourcePath": "src/components/tabletop-table/types.ts"
+      }
+    ],
+    "calls": [
+      {
+        "fromSymbol": "getTabletopSeatPositions",
+        "toSymbol": "normalizeTabletopSeatCount",
+        "callExpression": "normalizeTabletopSeatCount",
+        "sourcePath": "src/tablePositions.ts"
+      },
+      {
+        "fromSymbol": "getTabletopSeatPosition",
+        "toSymbol": "getTabletopSeatPositions",
+        "callExpression": "getTabletopSeatPositions",
+        "sourcePath": "src/tablePositions.ts"
+      },
+      {
+        "fromSymbol": "CardBack",
+        "toSymbol": "useZoraTheme",
+        "callExpression": "useZoraTheme",
+        "sourcePath": "src/components/card-back/CardBack.tsx"
+      },
+      {
+        "fromSymbol": "src/components/card-back/CardBack.tsx",
+        "toSymbol": "createTabletopColorScheme",
+        "callExpression": "createTabletopColorScheme",
+        "sourcePath": "src/components/card-back/CardBack.tsx"
+      },
+      {
+        "fromSymbol": "CardBack",
+        "toSymbol": "getTabletopCardDimensions",
+        "callExpression": "getTabletopCardDimensions",
+        "sourcePath": "src/components/card-back/CardBack.tsx"
+      },
+      {
+        "fromSymbol": "CardBack",
+        "toSymbol": "createHiddenCardLabel",
+        "callExpression": "createHiddenCardLabel",
+        "sourcePath": "src/components/card-back/CardBack.tsx"
+      },
+      {
+        "fromSymbol": "CardHand",
+        "toSymbol": "createFaceDownCards",
+        "callExpression": "createFaceDownCards",
+        "sourcePath": "src/components/card-hand/CardHand.tsx"
+      },
+      {
+        "fromSymbol": "PlayingCard",
+        "toSymbol": "useZoraTheme",
+        "callExpression": "useZoraTheme",
+        "sourcePath": "src/components/playing-card/PlayingCard.tsx"
+      },
+      {
+        "fromSymbol": "src/components/playing-card/PlayingCard.tsx",
+        "toSymbol": "createTabletopColorScheme",
+        "callExpression": "createTabletopColorScheme",
+        "sourcePath": "src/components/playing-card/PlayingCard.tsx"
+      },
+      {
+        "fromSymbol": "PlayingCard",
+        "toSymbol": "getTabletopCardDimensions",
+        "callExpression": "getTabletopCardDimensions",
+        "sourcePath": "src/components/playing-card/PlayingCard.tsx"
+      },
+      {
+        "fromSymbol": "PlayingCard",
+        "toSymbol": "isRedSuit",
+        "callExpression": "isRedSuit",
+        "sourcePath": "src/components/playing-card/PlayingCard.tsx"
+      },
+      {
+        "fromSymbol": "PlayingCard",
+        "toSymbol": "getPlayingCardLabel",
+        "callExpression": "getPlayingCardLabel",
+        "sourcePath": "src/components/playing-card/PlayingCard.tsx"
+      },
+      {
+        "fromSymbol": "TabletopTable",
+        "toSymbol": "useZoraTheme",
+        "callExpression": "useZoraTheme",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromSymbol": "src/components/tabletop-table/TabletopTable.tsx",
+        "toSymbol": "createTabletopColorScheme",
+        "callExpression": "createTabletopColorScheme",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromSymbol": "src/components/tabletop-table/TabletopTable.tsx",
+        "toSymbol": "getTabletopSeatPosition",
+        "callExpression": "getTabletopSeatPosition",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromSymbol": "src/components/tabletop-table/TabletopTable.tsx",
+        "toSymbol": "createSeatAccessibilityLabel",
+        "callExpression": "createSeatAccessibilityLabel",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      }
+    ],
+    "typeReferences": [
+      {
+        "fromSymbol": "createTabletopColorScheme",
+        "toType": "Partial",
+        "sourcePath": "src/colors.ts"
+      },
+      {
+        "fromSymbol": "createTabletopColorScheme",
+        "toType": "TabletopColorScheme",
+        "sourcePath": "src/colors.ts"
+      },
+      {
+        "fromSymbol": "createTabletopColorScheme",
+        "toType": "TabletopColorThemeShape",
+        "sourcePath": "src/colors.ts"
+      },
+      {
+        "fromSymbol": "CardBackProps",
+        "toType": "Partial",
+        "sourcePath": "src/components/card-back/types.ts"
+      },
+      {
+        "fromSymbol": "CardBackProps",
+        "toType": "TabletopCardSize",
+        "sourcePath": "src/components/card-back/types.ts"
+      },
+      {
+        "fromSymbol": "CardBackProps",
+        "toType": "TabletopColorScheme",
+        "sourcePath": "src/components/card-back/types.ts"
+      },
+      {
+        "fromSymbol": "CardBackProps",
+        "toType": "Users",
+        "sourcePath": "src/components/card-back/types.ts"
+      },
+      {
+        "fromSymbol": "CardBack",
+        "toType": "CardBackProps",
+        "sourcePath": "src/components/card-back/CardBack.tsx"
+      },
+      {
+        "fromSymbol": "CardBack",
+        "toType": "React",
+        "sourcePath": "src/components/card-back/CardBack.tsx"
+      },
+      {
+        "fromSymbol": "CardHandProps",
+        "toType": "Partial",
+        "sourcePath": "src/components/card-hand/types.ts"
+      },
+      {
+        "fromSymbol": "CardHandProps",
+        "toType": "PlayingCardValue",
+        "sourcePath": "src/components/card-hand/types.ts"
+      },
+      {
+        "fromSymbol": "CardHandProps",
+        "toType": "TabletopCardSize",
+        "sourcePath": "src/components/card-hand/types.ts"
+      },
+      {
+        "fromSymbol": "CardHandProps",
+        "toType": "TabletopColorScheme",
+        "sourcePath": "src/components/card-hand/types.ts"
+      },
+      {
+        "fromSymbol": "CardHandProps",
+        "toType": "Users",
+        "sourcePath": "src/components/card-hand/types.ts"
+      },
+      {
+        "fromSymbol": "CardHand",
+        "toType": "CardHandProps",
+        "sourcePath": "src/components/card-hand/CardHand.tsx"
+      },
+      {
+        "fromSymbol": "CardHand",
+        "toType": "React",
+        "sourcePath": "src/components/card-hand/CardHand.tsx"
+      },
+      {
+        "fromSymbol": "PlayingCardProps",
+        "toType": "Partial",
+        "sourcePath": "src/components/playing-card/types.ts"
+      },
+      {
+        "fromSymbol": "PlayingCardProps",
+        "toType": "PlayingCardValue",
+        "sourcePath": "src/components/playing-card/types.ts"
+      },
+      {
+        "fromSymbol": "PlayingCardProps",
+        "toType": "TabletopCardSize",
+        "sourcePath": "src/components/playing-card/types.ts"
+      },
+      {
+        "fromSymbol": "PlayingCardProps",
+        "toType": "TabletopColorScheme",
+        "sourcePath": "src/components/playing-card/types.ts"
+      },
+      {
+        "fromSymbol": "PlayingCardProps",
+        "toType": "Users",
+        "sourcePath": "src/components/playing-card/types.ts"
+      },
+      {
+        "fromSymbol": "PlayingCard",
+        "toType": "PlayingCardProps",
+        "sourcePath": "src/components/playing-card/PlayingCard.tsx"
+      },
+      {
+        "fromSymbol": "PlayingCard",
+        "toType": "React",
+        "sourcePath": "src/components/playing-card/PlayingCard.tsx"
+      },
+      {
+        "fromSymbol": "TabletopTableProps",
+        "toType": "Partial",
+        "sourcePath": "src/components/tabletop-table/types.ts"
+      },
+      {
+        "fromSymbol": "TabletopTableProps",
+        "toType": "PlayingCardValue",
+        "sourcePath": "src/components/tabletop-table/types.ts"
+      },
+      {
+        "fromSymbol": "TabletopTableProps",
+        "toType": "React",
+        "sourcePath": "src/components/tabletop-table/types.ts"
+      },
+      {
+        "fromSymbol": "TabletopTableProps",
+        "toType": "ReactNode",
+        "sourcePath": "src/components/tabletop-table/types.ts"
+      },
+      {
+        "fromSymbol": "TabletopTableProps",
+        "toType": "TabletopCardSize",
+        "sourcePath": "src/components/tabletop-table/types.ts"
+      },
+      {
+        "fromSymbol": "TabletopTableProps",
+        "toType": "TabletopColorScheme",
+        "sourcePath": "src/components/tabletop-table/types.ts"
+      },
+      {
+        "fromSymbol": "TabletopTableProps",
+        "toType": "TabletopSeatCount",
+        "sourcePath": "src/components/tabletop-table/types.ts"
+      },
+      {
+        "fromSymbol": "TabletopTableProps",
+        "toType": "TabletopSeatState",
+        "sourcePath": "src/components/tabletop-table/types.ts"
+      },
+      {
+        "fromSymbol": "TabletopTableProps",
+        "toType": "TabletopShape",
+        "sourcePath": "src/components/tabletop-table/types.ts"
+      },
+      {
+        "fromSymbol": "TabletopTableProps",
+        "toType": "Users",
+        "sourcePath": "src/components/tabletop-table/types.ts"
+      },
+      {
+        "fromSymbol": "TabletopTable",
+        "toType": "React",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromSymbol": "TabletopTable",
+        "toType": "TabletopTableProps",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromSymbol": "PlayingCardValue",
+        "toType": "PlayingCardSuit",
+        "sourcePath": "src/types.ts"
+      },
+      {
+        "fromSymbol": "TabletopSeatState",
+        "toType": "PlayingCardValue",
+        "sourcePath": "src/types.ts"
+      },
+      {
+        "fromSymbol": "TabletopSeatState",
+        "toType": "React",
+        "sourcePath": "src/types.ts"
+      },
+      {
+        "fromSymbol": "TabletopSeatState",
+        "toType": "ReactNode",
+        "sourcePath": "src/types.ts"
+      }
+    ],
+    "componentComposition": [
+      {
+        "fromComponent": "CardBack",
+        "toComponent": "View",
+        "jsxElement": "<View\n      accessibilityLabel={accessibilityLabel ?? createHiddenCardLabel()}\n      accessibilityRole=\"image\"\n      style={[\n        styles.card,\n        {\n          backgroundColor: colors.cardBack,\n          borderColor: colors.cardBackBorder,\n          borderRadius: dimensions.radius,\n          height: dimensions.height,\n          opacity: muted ? 0.48 : 1,\n          width: dimensions.width,\n        },\n      ]}\n      testID={testID}\n    >",
+        "sourcePath": "src/components/card-back/CardBack.tsx"
+      },
+      {
+        "fromComponent": "CardBack",
+        "toComponent": "View",
+        "jsxElement": "<View\n        style={[\n          styles.inner,\n          {\n            borderColor: colors.cardBackBorder,\n            borderRadius: Math.max(2, dimensions.radius - 3),\n          },\n        ]}\n      />",
+        "sourcePath": "src/components/card-back/CardBack.tsx"
+      },
+      {
+        "fromComponent": "CardHand",
+        "toComponent": "View",
+        "jsxElement": "<View accessibilityLabel={accessibilityLabel} style={styles.hand} testID={testID}>",
+        "sourcePath": "src/components/card-hand/CardHand.tsx"
+      },
+      {
+        "fromComponent": "CardHand",
+        "toComponent": "PlayingCard",
+        "jsxElement": "<PlayingCard\n          card={card}\n          colorScheme={colorScheme}\n          key={`${card.rank}-${card.suit}-${index}`}\n          muted={muted}\n          size={size}\n          testID={testID ? `${testID}-card-${index}` : undefined}\n        />",
+        "sourcePath": "src/components/card-hand/CardHand.tsx"
+      },
+      {
+        "fromComponent": "CardHand",
+        "toComponent": "CardBack",
+        "jsxElement": "<CardBack\n          colorScheme={colorScheme}\n          key={`hidden-${index}`}\n          muted={muted}\n          size={size}\n          testID={testID ? `${testID}-hidden-${index}` : undefined}\n        />",
+        "sourcePath": "src/components/card-hand/CardHand.tsx"
+      },
+      {
+        "fromComponent": "PlayingCard",
+        "toComponent": "View",
+        "jsxElement": "<View\n      accessibilityLabel={accessibilityLabel ?? getPlayingCardLabel(card)}\n      accessibilityRole=\"image\"\n      style={[\n        styles.card,\n        {\n          backgroundColor: colors.cardSurface,\n          borderColor: selected ? colors.seatSelectedBorder : colors.cardBorder,\n          borderRadius: dimensions.radius,\n          height: dimensions.height,\n          opacity: muted ? 0.48 : 1,\n          width: dimensions.width,\n        },\n      ]}\n      testID={testID}\n    >",
+        "sourcePath": "src/components/playing-card/PlayingCard.tsx"
+      },
+      {
+        "fromComponent": "PlayingCard",
+        "toComponent": "Text",
+        "jsxElement": "<Text\n        selectable={false}\n        style={[\n          styles.rank,\n          {\n            color: suitColor,\n            fontSize: dimensions.rankFontSize,\n            lineHeight: dimensions.rankFontSize + 4,\n          },\n        ]}\n      >",
+        "sourcePath": "src/components/playing-card/PlayingCard.tsx"
+      },
+      {
+        "fromComponent": "PlayingCard",
+        "toComponent": "Text",
+        "jsxElement": "<Text\n        selectable={false}\n        style={[\n          styles.suit,\n          {\n            color: suitColor,\n            fontSize: dimensions.suitFontSize,\n            lineHeight: dimensions.suitFontSize + 3,\n          },\n        ]}\n      >",
+        "sourcePath": "src/components/playing-card/PlayingCard.tsx"
+      },
+      {
+        "fromComponent": "TabletopTable",
+        "toComponent": "View",
+        "jsxElement": "<View\n      accessibilityLabel={accessibilityLabel}\n      style={[styles.root, { opacity: disabled ? 0.56 : 1 }]}\n      testID={testID}\n    >",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromComponent": "TabletopTable",
+        "toComponent": "View",
+        "jsxElement": "<View\n        style={[\n          styles.surface,\n          shape === 'circle' ? styles.circleSurface : styles.ovalSurface,\n          shape === 'rounded' ? styles.roundedSurface : null,\n          {\n            backgroundColor: colors.tableFelt,\n            borderColor: colors.tableBorder,\n          },\n        ]}\n      >",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromComponent": "TabletopTable",
+        "toComponent": "View",
+        "jsxElement": "<View\n          pointerEvents=\"none\"\n          style={[\n            styles.innerSurface,\n            shape === 'circle' ? styles.circleSurface : styles.ovalSurface,\n            shape === 'rounded' ? styles.roundedSurface : null,\n            { borderColor: colors.tableInnerBorder },\n          ]}\n        />",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromComponent": "TabletopTable",
+        "toComponent": "View",
+        "jsxElement": "<View style={styles.centerContent}>",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromComponent": "TabletopTable",
+        "toComponent": "CardHand",
+        "jsxElement": "<CardHand cards={centerCards} colorScheme={colorScheme} size={cardSize} />",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromComponent": "TabletopTable",
+        "toComponent": "View",
+        "jsxElement": "<View style={[styles.centerLabel, { backgroundColor: colors.seatSurface }]}>",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromComponent": "TabletopTable",
+        "toComponent": "Text",
+        "jsxElement": "<Text style={[styles.centerLabelText, { color: colors.cardText }]}>",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromComponent": "TabletopTable",
+        "toComponent": "Text",
+        "jsxElement": "<Text style={[styles.centerSublabel, { color: colors.mutedText }]}>",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromComponent": "TabletopTable",
+        "toComponent": "View",
+        "jsxElement": "<View\n            accessibilityLabel={createSeatAccessibilityLabel(seat)}\n            accessibilityRole=\"summary\"\n            key={seat.id}\n            style={[\n              styles.seat,\n              {\n                borderColor: seat.selected ? colors.seatSelectedBorder : colors.seatBorder,\n                backgroundColor: colors.seatSurface,\n                left: position.left,\n                opacity: seat.muted ? 0.48 : 1,\n                top: position.top,\n              },\n            ]}\n            testID={testID ? `${testID}-seat-${seat.id}` : undefined}\n          >",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromComponent": "TabletopTable",
+        "toComponent": "CardHand",
+        "jsxElement": "<CardHand\n                cards={seat.cards}\n                colorScheme={colorScheme}\n                faceDownCards={seat.faceDownCards}\n                muted={seat.muted ?? seat.disabled}\n                size={cardSize}\n              />",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromComponent": "TabletopTable",
+        "toComponent": "Text",
+        "jsxElement": "<Text style={[styles.seatLabel, { color: colors.cardText }]}>",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromComponent": "TabletopTable",
+        "toComponent": "Text",
+        "jsxElement": "<Text style={[styles.seatSublabel, { color: colors.mutedText }]}>",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromComponent": "TabletopTable",
+        "toComponent": "View",
+        "jsxElement": "<View style={[styles.token, { backgroundColor: colors.tokenSurface }]}>",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromComponent": "TabletopTable",
+        "toComponent": "Text",
+        "jsxElement": "<Text style={[styles.tokenText, { color: colors.tokenText }]}>",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      }
+    ]
   }
 }

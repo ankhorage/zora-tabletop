@@ -1,0 +1,5 @@
+sequenceDiagram
+  participant participant_CardHand as CardHand
+  participant participant_createFaceDownCards as createFaceDownCards
+  participant_CardHand->>participant_createFaceDownCards: createFaceDownCards()
+  participant_createFaceDownCards-->>participant_CardHand: return
