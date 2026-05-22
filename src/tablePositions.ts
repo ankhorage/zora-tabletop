@@ -5,18 +5,20 @@ export interface TabletopSeatPosition {
   readonly left: string;
 }
 
+const fallbackSeatPosition: TabletopSeatPosition = { top: '82%', left: '50%' };
+
 const seatPositions: Readonly<Record<TabletopSeatCount, readonly TabletopSeatPosition[]>> = {
   2: [
-    { top: '82%', left: '50%' },
+    fallbackSeatPosition,
     { top: '18%', left: '50%' },
   ],
   3: [
-    { top: '82%', left: '50%' },
+    fallbackSeatPosition,
     { top: '28%', left: '18%' },
     { top: '28%', left: '82%' },
   ],
   4: [
-    { top: '82%', left: '50%' },
+    fallbackSeatPosition,
     { top: '50%', left: '12%' },
     { top: '18%', left: '50%' },
     { top: '50%', left: '88%' },
@@ -81,10 +83,11 @@ const seatPositions: Readonly<Record<TabletopSeatCount, readonly TabletopSeatPos
 };
 
 export function normalizeTabletopSeatCount(count: number): TabletopSeatCount {
-  if (count <= 2) return 2;
-  if (count >= 10) return 10;
+  const rounded = Math.round(count);
+  if (rounded <= 2) return 2;
+  if (rounded >= 10) return 10;
 
-  return count as TabletopSeatCount;
+  return rounded as TabletopSeatCount;
 }
 
 export function getTabletopSeatPositions(count: number): readonly TabletopSeatPosition[] {
@@ -94,9 +97,6 @@ export function getTabletopSeatPositions(count: number): readonly TabletopSeatPo
 export function getTabletopSeatPosition(index: number, count: number): TabletopSeatPosition {
   const positions = getTabletopSeatPositions(count);
   const position = positions[index % positions.length];
-  if (position === undefined) {
-    return positions[0];
-  }
 
-  return position;
+  return position ?? fallbackSeatPosition;
 }
