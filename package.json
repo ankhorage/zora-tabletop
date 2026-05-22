@@ -2,7 +2,7 @@
   "name": "@ankhorage/zora-tabletop",
   "type": "module",
   "version": "0.0.0",
-  "description": "Reusable tabletop, playing-card, seat, token, and card-game presentation components for React Native and React Native Web.",
+  "description": "Tabletop and card-game UI primitives for React Native and React Native Web, built on ZORA.",
   "homepage": "https://github.com/ankhorage/zora-tabletop#readme",
   "bugs": {
     "url": "https://github.com/ankhorage/zora-tabletop/issues"
@@ -18,12 +18,13 @@
   "keywords": [
     "react-native",
     "react-native-web",
-    "ui-kit",
-    "design-system",
+    "tabletop",
+    "cards",
+    "card-game",
+    "expo",
     "zora",
-    "components"
+    "ui-kit"
   ],
-  "dependencies": {},
   "files": [
     "dist",
     "src",
@@ -39,13 +40,6 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "default": "./dist/index.js"
-    },
-    "./metadata": {
-      "react-native": "./src/metadata/index.ts",
-      "browser": "./src/metadata/index.ts",
-      "types": "./dist/metadata/index.d.ts",
-      "import": "./dist/metadata/index.js",
-      "default": "./dist/metadata/index.js"
     },
     "./package.json": "./package.json"
   },
@@ -67,11 +61,21 @@
     "typecheck": "bun x tsc --noEmit -p tsconfig.json",
     "version-packages": "changeset version"
   },
+  "peerDependencies": {
+    "@ankhorage/zora": ">=0.1.0",
+    "react": ">=18.2.0",
+    "react-native": ">=0.72.0"
+  },
   "devDependencies": {
     "@ankhorage/devtools": "^1.0.6",
     "@ankhorage/paradox": "^0.1.7",
+    "@ankhorage/zora": "^2.5.1",
+    "@changesets/cli": "^2.31.0",
     "@types/bun": "^1.3.13",
     "@types/node": "^25.6.0",
+    "@types/react": "^19.1.8",
+    "react": "^19.1.0",
+    "react-native": "^0.81.5",
     "typescript": "^5.9.3"
   },
   "packageManager": "bun@1.3.13"

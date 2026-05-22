@@ -1,0 +1,11 @@
+sequenceDiagram
+  participant participant_CardBack as CardBack
+  participant participant_createHiddenCardLabel as createHiddenCardLabel
+  participant participant_getTabletopCardDimensions as getTabletopCardDimensions
+  participant participant_useZoraTheme as useZoraTheme
+  participant_CardBack->>participant_useZoraTheme: useZoraTheme()
+  participant_useZoraTheme-->>participant_CardBack: return
+  participant_CardBack->>participant_getTabletopCardDimensions: getTabletopCardDimensions()
+  participant_getTabletopCardDimensions-->>participant_CardBack: return
+  participant_CardBack->>participant_createHiddenCardLabel: createHiddenCardLabel()
+  participant_createHiddenCardLabel-->>participant_CardBack: return

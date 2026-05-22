@@ -198,6 +198,70 @@
                 <small>Overview, CLI, public API, diagrams</small>
               </button>
             </li>
+            <li>
+              <button class="nav-button" type="button" data-target="src/cardLabel.ts">
+                src/cardLabel.ts
+                <small>2 functions</small>
+              </button>
+            </li>
+            <li>
+              <button class="nav-button" type="button" data-target="src/cardSizing.ts">
+                src/cardSizing.ts
+                <small>1 function</small>
+              </button>
+            </li>
+            <li>
+              <button class="nav-button" type="button" data-target="src/colors.ts">
+                src/colors.ts
+                <small>1 function</small>
+              </button>
+            </li>
+            <li>
+              <button
+                class="nav-button"
+                type="button"
+                data-target="src/components/card-back/CardBack.tsx"
+              >
+                src/components/card-back/CardBack.tsx
+                <small>1 function</small>
+              </button>
+            </li>
+            <li>
+              <button
+                class="nav-button"
+                type="button"
+                data-target="src/components/card-hand/CardHand.tsx"
+              >
+                src/components/card-hand/CardHand.tsx
+                <small>2 functions</small>
+              </button>
+            </li>
+            <li>
+              <button
+                class="nav-button"
+                type="button"
+                data-target="src/components/playing-card/PlayingCard.tsx"
+              >
+                src/components/playing-card/PlayingCard.tsx
+                <small>2 functions</small>
+              </button>
+            </li>
+            <li>
+              <button
+                class="nav-button"
+                type="button"
+                data-target="src/components/tabletop-table/TabletopTable.tsx"
+              >
+                src/components/tabletop-table/TabletopTable.tsx
+                <small>2 functions</small>
+              </button>
+            </li>
+            <li>
+              <button class="nav-button" type="button" data-target="src/tablePositions.ts">
+                src/tablePositions.ts
+                <small>3 functions</small>
+              </button>
+            </li>
           </ul>
         </nav>
       </aside>
@@ -206,9 +270,9 @@
           <section class="panel">
             <h2>Package overview</h2>
             <div class="summary">
-              <div><strong>0</strong><span class="muted">public exports</span></div>
-              <div><strong>0</strong><span class="muted">components</span></div>
-              <div><strong>1</strong><span class="muted">modules</span></div>
+              <div><strong>17</strong><span class="muted">public exports</span></div>
+              <div><strong>4</strong><span class="muted">components</span></div>
+              <div><strong>18</strong><span class="muted">modules</span></div>
               <div><strong>1</strong><span class="muted">entrypoints</span></div>
             </div>
             <h3>Entrypoints</h3>
@@ -219,19 +283,1495 @@
 
           <section class="panel">
             <h2>Modules</h2>
-            <article class="item" data-search="src/index.ts">
+            <article
+              class="item"
+              data-search="src/cardLabel.ts src/types.ts createHiddenCardLabel getPlayingCardLabel"
+            >
+              <h3>src/cardLabel.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p><strong>Dependencies:</strong> <code>src/types.ts</code></p>
+              <p>
+                <strong>Exports:</strong> <code>createHiddenCardLabel</code>,
+                <code>getPlayingCardLabel</code>
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="src/cardSizing.ts src/types.ts getTabletopCardDimensions TabletopCardDimensions"
+            >
+              <h3>src/cardSizing.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p><strong>Dependencies:</strong> <code>src/types.ts</code></p>
+              <p>
+                <strong>Exports:</strong> <code>getTabletopCardDimensions</code>,
+                <code>TabletopCardDimensions</code>
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="src/colors.ts createTabletopColorScheme TabletopColorOverrides TabletopColorScheme TabletopColorThemeShape"
+            >
+              <h3>src/colors.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p><strong>Dependencies:</strong> <span class="empty">None</span></p>
+              <p>
+                <strong>Exports:</strong> <code>createTabletopColorScheme</code>,
+                <code>TabletopColorOverrides</code>, <code>TabletopColorScheme</code>,
+                <code>TabletopColorThemeShape</code>
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="src/components/card-back/CardBack.tsx src/cardLabel.ts src/cardSizing.ts src/colors.ts src/components/card-back/types.ts CardBack"
+            >
+              <h3>src/components/card-back/CardBack.tsx</h3>
+              <p class="muted">Referenced module</p>
+              <p>
+                <strong>Dependencies:</strong> <code>src/cardLabel.ts</code>,
+                <code>src/cardSizing.ts</code>, <code>src/colors.ts</code>,
+                <code>src/components/card-back/types.ts</code>
+              </p>
+              <p><strong>Exports:</strong> <code>CardBack</code></p>
+            </article>
+            <article
+              class="item"
+              data-search="src/components/card-back/index.ts CardBack CardBackProps"
+            >
+              <h3>src/components/card-back/index.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p><strong>Dependencies:</strong> <span class="empty">None</span></p>
+              <p><strong>Exports:</strong> <code>CardBack</code>, <code>CardBackProps</code></p>
+            </article>
+            <article
+              class="item"
+              data-search="src/components/card-back/types.ts src/colors.ts src/types.ts CardBackProps"
+            >
+              <h3>src/components/card-back/types.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p>
+                <strong>Dependencies:</strong> <code>src/colors.ts</code>, <code>src/types.ts</code>
+              </p>
+              <p><strong>Exports:</strong> <code>CardBackProps</code></p>
+            </article>
+            <article
+              class="item"
+              data-search="src/components/card-hand/CardHand.tsx src/components/card-back/index.ts src/components/card-hand/types.ts src/components/playing-card/index.ts CardHand"
+            >
+              <h3>src/components/card-hand/CardHand.tsx</h3>
+              <p class="muted">Referenced module</p>
+              <p>
+                <strong>Dependencies:</strong> <code>src/components/card-back/index.ts</code>,
+                <code>src/components/card-hand/types.ts</code>,
+                <code>src/components/playing-card/index.ts</code>
+              </p>
+              <p><strong>Exports:</strong> <code>CardHand</code></p>
+            </article>
+            <article
+              class="item"
+              data-search="src/components/card-hand/index.ts CardHand CardHandProps"
+            >
+              <h3>src/components/card-hand/index.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p><strong>Dependencies:</strong> <span class="empty">None</span></p>
+              <p><strong>Exports:</strong> <code>CardHand</code>, <code>CardHandProps</code></p>
+            </article>
+            <article
+              class="item"
+              data-search="src/components/card-hand/types.ts src/colors.ts src/types.ts CardHandProps"
+            >
+              <h3>src/components/card-hand/types.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p>
+                <strong>Dependencies:</strong> <code>src/colors.ts</code>, <code>src/types.ts</code>
+              </p>
+              <p><strong>Exports:</strong> <code>CardHandProps</code></p>
+            </article>
+            <article
+              class="item"
+              data-search="src/components/playing-card/index.ts PlayingCard PlayingCardProps"
+            >
+              <h3>src/components/playing-card/index.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p><strong>Dependencies:</strong> <span class="empty">None</span></p>
+              <p>
+                <strong>Exports:</strong> <code>PlayingCard</code>, <code>PlayingCardProps</code>
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="src/components/playing-card/PlayingCard.tsx src/cardLabel.ts src/cardSizing.ts src/colors.ts src/components/playing-card/types.ts src/types.ts PlayingCard"
+            >
+              <h3>src/components/playing-card/PlayingCard.tsx</h3>
+              <p class="muted">Referenced module</p>
+              <p>
+                <strong>Dependencies:</strong> <code>src/cardLabel.ts</code>,
+                <code>src/cardSizing.ts</code>, <code>src/colors.ts</code>,
+                <code>src/components/playing-card/types.ts</code>, <code>src/types.ts</code>
+              </p>
+              <p><strong>Exports:</strong> <code>PlayingCard</code></p>
+            </article>
+            <article
+              class="item"
+              data-search="src/components/playing-card/types.ts src/colors.ts src/types.ts PlayingCardProps"
+            >
+              <h3>src/components/playing-card/types.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p>
+                <strong>Dependencies:</strong> <code>src/colors.ts</code>, <code>src/types.ts</code>
+              </p>
+              <p><strong>Exports:</strong> <code>PlayingCardProps</code></p>
+            </article>
+            <article
+              class="item"
+              data-search="src/components/tabletop-table/index.ts TabletopTable TabletopTableProps"
+            >
+              <h3>src/components/tabletop-table/index.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p><strong>Dependencies:</strong> <span class="empty">None</span></p>
+              <p>
+                <strong>Exports:</strong> <code>TabletopTable</code>,
+                <code>TabletopTableProps</code>
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="src/components/tabletop-table/TabletopTable.tsx src/colors.ts src/components/card-hand/index.ts src/components/tabletop-table/types.ts src/tablePositions.ts src/types.ts TabletopTable"
+            >
+              <h3>src/components/tabletop-table/TabletopTable.tsx</h3>
+              <p class="muted">Referenced module</p>
+              <p>
+                <strong>Dependencies:</strong> <code>src/colors.ts</code>,
+                <code>src/components/card-hand/index.ts</code>,
+                <code>src/components/tabletop-table/types.ts</code>,
+                <code>src/tablePositions.ts</code>, <code>src/types.ts</code>
+              </p>
+              <p><strong>Exports:</strong> <code>TabletopTable</code></p>
+            </article>
+            <article
+              class="item"
+              data-search="src/components/tabletop-table/types.ts src/colors.ts src/types.ts TabletopTableProps"
+            >
+              <h3>src/components/tabletop-table/types.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p>
+                <strong>Dependencies:</strong> <code>src/colors.ts</code>, <code>src/types.ts</code>
+              </p>
+              <p><strong>Exports:</strong> <code>TabletopTableProps</code></p>
+            </article>
+            <article
+              class="item"
+              data-search="src/index.ts CardBack CardBackProps CardHand CardHandProps createTabletopColorScheme PlayingCard PlayingCardProps PlayingCardSuit PlayingCardValue TabletopCardSize TabletopColorOverrides TabletopColorScheme TabletopSeatCount TabletopSeatState TabletopShape TabletopTable TabletopTableProps"
+            >
               <h3>src/index.ts</h3>
               <p class="muted">Configured entrypoint</p>
               <p><strong>Dependencies:</strong> <span class="empty">None</span></p>
-              <p><strong>Exports:</strong> <span class="empty">None</span></p>
+              <p>
+                <strong>Exports:</strong> <code>CardBack</code>, <code>CardBackProps</code>,
+                <code>CardHand</code>, <code>CardHandProps</code>,
+                <code>createTabletopColorScheme</code>, <code>PlayingCard</code>,
+                <code>PlayingCardProps</code>, <code>PlayingCardSuit</code>,
+                <code>PlayingCardValue</code>, <code>TabletopCardSize</code>,
+                <code>TabletopColorOverrides</code>, <code>TabletopColorScheme</code>,
+                <code>TabletopSeatCount</code>, <code>TabletopSeatState</code>,
+                <code>TabletopShape</code>, <code>TabletopTable</code>,
+                <code>TabletopTableProps</code>
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="src/tablePositions.ts src/types.ts getTabletopSeatPosition getTabletopSeatPositions normalizeTabletopSeatCount TabletopSeatPosition"
+            >
+              <h3>src/tablePositions.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p><strong>Dependencies:</strong> <code>src/types.ts</code></p>
+              <p>
+                <strong>Exports:</strong> <code>getTabletopSeatPosition</code>,
+                <code>getTabletopSeatPositions</code>, <code>normalizeTabletopSeatCount</code>,
+                <code>TabletopSeatPosition</code>
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="src/types.ts PlayingCardSuit PlayingCardValue TabletopCardSize TabletopSeatCount TabletopSeatState TabletopShape"
+            >
+              <h3>src/types.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p><strong>Dependencies:</strong> <span class="empty">None</span></p>
+              <p>
+                <strong>Exports:</strong> <code>PlayingCardSuit</code>,
+                <code>PlayingCardValue</code>, <code>TabletopCardSize</code>,
+                <code>TabletopSeatCount</code>, <code>TabletopSeatState</code>,
+                <code>TabletopShape</code>
+              </p>
             </article>
           </section>
           <section class="panel">
             <h2>Public API</h2>
+
+            <section>
+              <h3>src/colors.ts</h3>
+              <article
+                class="item"
+                id="symbol-createtabletopcolorscheme"
+                data-search="createTabletopColorScheme function src/colors.ts  TabletopColorScheme (theme: TabletopColorThemeShape, overrides?: Partial&lt;TabletopColorScheme&gt;) =&gt; TabletopColorScheme"
+              >
+                <h4>createTabletopColorScheme</h4>
+                <p class="muted">function • <code>src/colors.ts:46:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">TabletopColorScheme</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Signature</h5>
+                  <pre>
+(theme: TabletopColorThemeShape, overrides?: Partial&lt;TabletopColorScheme&gt;) =&gt; TabletopColorScheme</pre
+                  >
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>overrides</code></td>
+                        <td><code>Partial&lt;TabletopColorScheme&gt;</code></td>
+                        <td>no</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><code>theme</code></td>
+                        <td><code>TabletopColorThemeShape</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p><strong>Returns:</strong> <code>TabletopColorScheme</code></p>
+                </div>
+              </article>
+              <article
+                class="item"
+                id="symbol-tabletopcoloroverrides"
+                data-search="TabletopColorOverrides unknown src/colors.ts "
+              >
+                <h4>TabletopColorOverrides</h4>
+                <p class="muted">unknown • <code>src/colors.ts:19:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+              <article
+                class="item"
+                id="symbol-tabletopcolorscheme"
+                data-search="TabletopColorScheme type src/colors.ts "
+              >
+                <h4>TabletopColorScheme</h4>
+                <p class="muted">type • <code>src/colors.ts:1:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>cardBack</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>cardBackBorder</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>cardBorder</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>cardSurface</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>cardText</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>mutedText</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>redSuitText</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>seatBorder</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>seatSelectedBorder</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>seatSurface</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>tableBorder</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>tableFelt</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>tableInnerBorder</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>tokenSurface</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>tokenText</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+            <section>
+              <h3>src/components/card-back/CardBack.tsx</h3>
+              <article
+                class="item"
+                id="symbol-cardback"
+                data-search="CardBack function src/components/card-back/CardBack.tsx  CardBackProps ({&#10;  size = &#39;medium&#39;,&#10;  muted = false,&#10;  accessibilityLabel,&#10;  colorScheme,&#10;  testID,&#10;}: CardBackProps) =&gt; React.JSX.Element"
+              >
+                <h4>CardBack</h4>
+                <p class="muted">
+                  function • <code>src/components/card-back/CardBack.tsx:10:1</code>
+                </p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">CardBackProps</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Signature</h5>
+                  <pre>
+({
+  size = &#39;medium&#39;,
+  muted = false,
+  accessibilityLabel,
+  colorScheme,
+  testID,
+}: CardBackProps) =&gt; React.JSX.Element</pre
+                  >
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <code
+                            >{ size = &#39;medium&#39;, muted = false, accessibilityLabel,
+                            colorScheme, testID, }</code
+                          >
+                        </td>
+                        <td><code>CardBackProps</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p><strong>Returns:</strong> <code>React.JSX.Element</code></p>
+                </div>
+              </article>
+            </section>
+            <section>
+              <h3>src/components/card-back/types.ts</h3>
+              <article
+                class="item"
+                id="symbol-cardbackprops"
+                data-search="CardBackProps type src/components/card-back/types.ts  TabletopCardSize TabletopColorScheme"
+              >
+                <h4>CardBackProps</h4>
+                <p class="muted">type • <code>src/components/card-back/types.ts:4:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">TabletopCardSize</li>
+                    <li class="chip">TabletopColorScheme</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>accessibilityLabel</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>colorScheme</code></td>
+                      <td>property</td>
+                      <td>
+                        <code
+                          >Partial&lt;import(&quot;/Users/a_rtiphishl_e/git/zora-tabletop/src/colors&quot;).TabletopColorScheme&gt;
+                          | undefined</code
+                        >
+                      </td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>muted</code></td>
+                      <td>property</td>
+                      <td><code>boolean | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>size</code></td>
+                      <td>property</td>
+                      <td><code>TabletopCardSize | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>testID</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+            <section>
+              <h3>src/components/card-hand/CardHand.tsx</h3>
+              <article
+                class="item"
+                id="symbol-cardhand"
+                data-search="CardHand function src/components/card-hand/CardHand.tsx  CardHandProps ({&#10;  cards = [],&#10;  faceDownCards = 0,&#10;  size = &#39;medium&#39;,&#10;  muted = false,&#10;  colorScheme,&#10;  accessibilityLabel,&#10;  testID,&#10;}: CardHandProps) =&gt; React.JSX.Element"
+              >
+                <h4>CardHand</h4>
+                <p class="muted">
+                  function • <code>src/components/card-hand/CardHand.tsx:12:1</code>
+                </p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">CardHandProps</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Signature</h5>
+                  <pre>
+({
+  cards = [],
+  faceDownCards = 0,
+  size = &#39;medium&#39;,
+  muted = false,
+  colorScheme,
+  accessibilityLabel,
+  testID,
+}: CardHandProps) =&gt; React.JSX.Element</pre
+                  >
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <code
+                            >{ cards = [], faceDownCards = 0, size = &#39;medium&#39;, muted =
+                            false, colorScheme, accessibilityLabel, testID, }</code
+                          >
+                        </td>
+                        <td><code>CardHandProps</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p><strong>Returns:</strong> <code>React.JSX.Element</code></p>
+                </div>
+              </article>
+            </section>
+            <section>
+              <h3>src/components/card-hand/types.ts</h3>
+              <article
+                class="item"
+                id="symbol-cardhandprops"
+                data-search="CardHandProps type src/components/card-hand/types.ts  PlayingCardValue TabletopCardSize TabletopColorScheme"
+              >
+                <h4>CardHandProps</h4>
+                <p class="muted">type • <code>src/components/card-hand/types.ts:4:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">PlayingCardValue</li>
+                    <li class="chip">TabletopCardSize</li>
+                    <li class="chip">TabletopColorScheme</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>accessibilityLabel</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>cards</code></td>
+                      <td>property</td>
+                      <td><code>readonly PlayingCardValue[] | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>colorScheme</code></td>
+                      <td>property</td>
+                      <td>
+                        <code
+                          >Partial&lt;import(&quot;/Users/a_rtiphishl_e/git/zora-tabletop/src/colors&quot;).TabletopColorScheme&gt;
+                          | undefined</code
+                        >
+                      </td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>faceDownCards</code></td>
+                      <td>property</td>
+                      <td><code>number | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>muted</code></td>
+                      <td>property</td>
+                      <td><code>boolean | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>size</code></td>
+                      <td>property</td>
+                      <td><code>TabletopCardSize | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>testID</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+            <section>
+              <h3>src/components/playing-card/PlayingCard.tsx</h3>
+              <article
+                class="item"
+                id="symbol-playingcard"
+                data-search="PlayingCard function src/components/playing-card/PlayingCard.tsx  PlayingCardProps ({&#10;  card,&#10;  size = &#39;medium&#39;,&#10;  selected = false,&#10;  muted = false,&#10;  accessibilityLabel,&#10;  colorScheme,&#10;  testID,&#10;}: PlayingCardProps) =&gt; React.JSX.Element"
+              >
+                <h4>PlayingCard</h4>
+                <p class="muted">
+                  function • <code>src/components/playing-card/PlayingCard.tsx:22:1</code>
+                </p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">PlayingCardProps</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Signature</h5>
+                  <pre>
+({
+  card,
+  size = &#39;medium&#39;,
+  selected = false,
+  muted = false,
+  accessibilityLabel,
+  colorScheme,
+  testID,
+}: PlayingCardProps) =&gt; React.JSX.Element</pre
+                  >
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <code
+                            >{ card, size = &#39;medium&#39;, selected = false, muted = false,
+                            accessibilityLabel, colorScheme, testID, }</code
+                          >
+                        </td>
+                        <td><code>PlayingCardProps</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p><strong>Returns:</strong> <code>React.JSX.Element</code></p>
+                </div>
+              </article>
+            </section>
+            <section>
+              <h3>src/components/playing-card/types.ts</h3>
+              <article
+                class="item"
+                id="symbol-playingcardprops"
+                data-search="PlayingCardProps type src/components/playing-card/types.ts  PlayingCardValue TabletopCardSize TabletopColorScheme"
+              >
+                <h4>PlayingCardProps</h4>
+                <p class="muted">type • <code>src/components/playing-card/types.ts:4:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">PlayingCardValue</li>
+                    <li class="chip">TabletopCardSize</li>
+                    <li class="chip">TabletopColorScheme</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>accessibilityLabel</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>card</code></td>
+                      <td>property</td>
+                      <td><code>PlayingCardValue</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>colorScheme</code></td>
+                      <td>property</td>
+                      <td>
+                        <code
+                          >Partial&lt;import(&quot;/Users/a_rtiphishl_e/git/zora-tabletop/src/colors&quot;).TabletopColorScheme&gt;
+                          | undefined</code
+                        >
+                      </td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>muted</code></td>
+                      <td>property</td>
+                      <td><code>boolean | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>selected</code></td>
+                      <td>property</td>
+                      <td><code>boolean | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>size</code></td>
+                      <td>property</td>
+                      <td><code>TabletopCardSize | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>testID</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+            <section>
+              <h3>src/components/tabletop-table/TabletopTable.tsx</h3>
+              <article
+                class="item"
+                id="symbol-tabletoptable"
+                data-search="TabletopTable function src/components/tabletop-table/TabletopTable.tsx  TabletopTableProps ({&#10;  seats,&#10;  centerCards = [],&#10;  centerLabel,&#10;  centerSublabel,&#10;  shape = &#39;oval&#39;,&#10;  seatCount,&#10;  cardSize = &#39;small&#39;,&#10;  disabled = false,&#10;  colorScheme,&#10;  accessibilityLabel,&#10;  testID,&#10;}: TabletopTableProps) =&gt; React.JSX.Element"
+              >
+                <h4>TabletopTable</h4>
+                <p class="muted">
+                  function • <code>src/components/tabletop-table/TabletopTable.tsx:24:1</code>
+                </p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">TabletopTableProps</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Signature</h5>
+                  <pre>
+({
+  seats,
+  centerCards = [],
+  centerLabel,
+  centerSublabel,
+  shape = &#39;oval&#39;,
+  seatCount,
+  cardSize = &#39;small&#39;,
+  disabled = false,
+  colorScheme,
+  accessibilityLabel,
+  testID,
+}: TabletopTableProps) =&gt; React.JSX.Element</pre
+                  >
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <code
+                            >{ seats, centerCards = [], centerLabel, centerSublabel, shape =
+                            &#39;oval&#39;, seatCount, cardSize = &#39;small&#39;, disabled = false,
+                            colorScheme, accessibilityLabel, testID, }</code
+                          >
+                        </td>
+                        <td><code>TabletopTableProps</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p><strong>Returns:</strong> <code>React.JSX.Element</code></p>
+                </div>
+              </article>
+            </section>
+            <section>
+              <h3>src/components/tabletop-table/types.ts</h3>
+              <article
+                class="item"
+                id="symbol-tabletoptableprops"
+                data-search="TabletopTableProps type src/components/tabletop-table/types.ts  PlayingCardValue TabletopCardSize TabletopColorScheme TabletopSeatCount TabletopSeatState TabletopShape"
+              >
+                <h4>TabletopTableProps</h4>
+                <p class="muted">type • <code>src/components/tabletop-table/types.ts:12:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">PlayingCardValue</li>
+                    <li class="chip">TabletopCardSize</li>
+                    <li class="chip">TabletopColorScheme</li>
+                    <li class="chip">TabletopSeatCount</li>
+                    <li class="chip">TabletopSeatState</li>
+                    <li class="chip">TabletopShape</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>accessibilityLabel</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>cardSize</code></td>
+                      <td>property</td>
+                      <td><code>TabletopCardSize | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>centerCards</code></td>
+                      <td>property</td>
+                      <td><code>readonly PlayingCardValue[] | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>centerLabel</code></td>
+                      <td>property</td>
+                      <td><code>React.ReactNode</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>centerSublabel</code></td>
+                      <td>property</td>
+                      <td><code>React.ReactNode</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>colorScheme</code></td>
+                      <td>property</td>
+                      <td>
+                        <code
+                          >Partial&lt;import(&quot;/Users/a_rtiphishl_e/git/zora-tabletop/src/colors&quot;).TabletopColorScheme&gt;
+                          | undefined</code
+                        >
+                      </td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>disabled</code></td>
+                      <td>property</td>
+                      <td><code>boolean | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>seatCount</code></td>
+                      <td>property</td>
+                      <td><code>TabletopSeatCount | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>seats</code></td>
+                      <td>property</td>
+                      <td><code>readonly TabletopSeatState[]</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>shape</code></td>
+                      <td>property</td>
+                      <td><code>TabletopShape | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>testID</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+            <section>
+              <h3>src/types.ts</h3>
+              <article
+                class="item"
+                id="symbol-playingcardsuit"
+                data-search="PlayingCardSuit unknown src/types.ts "
+              >
+                <h4>PlayingCardSuit</h4>
+                <p class="muted">unknown • <code>src/types.ts:3:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+              <article
+                class="item"
+                id="symbol-playingcardvalue"
+                data-search="PlayingCardValue type src/types.ts  PlayingCardSuit"
+              >
+                <h4>PlayingCardValue</h4>
+                <p class="muted">type • <code>src/types.ts:8:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">PlayingCardSuit</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>rank</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>suit</code></td>
+                      <td>property</td>
+                      <td><code>PlayingCardSuit</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-tabletopcardsize"
+                data-search="TabletopCardSize unknown src/types.ts "
+              >
+                <h4>TabletopCardSize</h4>
+                <p class="muted">unknown • <code>src/types.ts:4:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+              <article
+                class="item"
+                id="symbol-tabletopseatcount"
+                data-search="TabletopSeatCount unknown src/types.ts "
+              >
+                <h4>TabletopSeatCount</h4>
+                <p class="muted">unknown • <code>src/types.ts:6:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+              <article
+                class="item"
+                id="symbol-tabletopseatstate"
+                data-search="TabletopSeatState type src/types.ts  PlayingCardValue"
+              >
+                <h4>TabletopSeatState</h4>
+                <p class="muted">type • <code>src/types.ts:13:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">PlayingCardValue</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>accessibilityLabel</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>cards</code></td>
+                      <td>property</td>
+                      <td><code>readonly PlayingCardValue[] | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>disabled</code></td>
+                      <td>property</td>
+                      <td><code>boolean | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>faceDownCards</code></td>
+                      <td>property</td>
+                      <td><code>number | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>id</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>label</code></td>
+                      <td>property</td>
+                      <td><code>React.ReactNode</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>muted</code></td>
+                      <td>property</td>
+                      <td><code>boolean | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>selected</code></td>
+                      <td>property</td>
+                      <td><code>boolean | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>sublabel</code></td>
+                      <td>property</td>
+                      <td><code>React.ReactNode</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>tokenLabel</code></td>
+                      <td>property</td>
+                      <td><code>React.ReactNode</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-tabletopshape"
+                data-search="TabletopShape unknown src/types.ts "
+              >
+                <h4>TabletopShape</h4>
+                <p class="muted">unknown • <code>src/types.ts:5:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+            </section>
           </section>
           <section class="panel">
             <h2>Component registry</h2>
-            <p class="empty">No components were detected.</p>
+            <article
+              class="item"
+              id="component-cardback"
+              data-search="CardBack src/components/card-back/CardBack.tsx  accessibilityLabel string | undefined colorScheme TabletopColorOverrides | undefined muted boolean | undefined size TabletopCardSize | undefined testID string | undefined"
+            >
+              <h3>CardBack</h3>
+              <p class="muted"><code>src/components/card-back/CardBack.tsx:10:1</code></p>
+
+              <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Prop</th>
+                    <th>Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>accessibilityLabel</code></td>
+                    <td><code>string | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>colorScheme</code></td>
+                    <td><code>TabletopColorOverrides | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>muted</code></td>
+                    <td><code>boolean | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>size</code></td>
+                    <td><code>TabletopCardSize | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>testID</code></td>
+                    <td><code>string | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+            <article
+              class="item"
+              id="component-cardhand"
+              data-search="CardHand src/components/card-hand/CardHand.tsx  accessibilityLabel string | undefined cards readonly PlayingCardValue[] | undefined colorScheme TabletopColorOverrides | undefined faceDownCards number | undefined muted boolean | undefined size TabletopCardSize | undefined testID string | undefined"
+            >
+              <h3>CardHand</h3>
+              <p class="muted"><code>src/components/card-hand/CardHand.tsx:12:1</code></p>
+
+              <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Prop</th>
+                    <th>Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>accessibilityLabel</code></td>
+                    <td><code>string | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>cards</code></td>
+                    <td><code>readonly PlayingCardValue[] | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>colorScheme</code></td>
+                    <td><code>TabletopColorOverrides | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>faceDownCards</code></td>
+                    <td><code>number | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>muted</code></td>
+                    <td><code>boolean | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>size</code></td>
+                    <td><code>TabletopCardSize | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>testID</code></td>
+                    <td><code>string | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+            <article
+              class="item"
+              id="component-playingcard"
+              data-search="PlayingCard src/components/playing-card/PlayingCard.tsx  accessibilityLabel string | undefined card PlayingCardValue colorScheme TabletopColorOverrides | undefined muted boolean | undefined selected boolean | undefined size TabletopCardSize | undefined testID string | undefined"
+            >
+              <h3>PlayingCard</h3>
+              <p class="muted"><code>src/components/playing-card/PlayingCard.tsx:22:1</code></p>
+
+              <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Prop</th>
+                    <th>Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>accessibilityLabel</code></td>
+                    <td><code>string | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>card</code></td>
+                    <td><code>PlayingCardValue</code></td>
+                    <td>yes</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>colorScheme</code></td>
+                    <td><code>TabletopColorOverrides | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>muted</code></td>
+                    <td><code>boolean | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>selected</code></td>
+                    <td><code>boolean | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>size</code></td>
+                    <td><code>TabletopCardSize | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>testID</code></td>
+                    <td><code>string | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+            <article
+              class="item"
+              id="component-tabletoptable"
+              data-search="TabletopTable src/components/tabletop-table/TabletopTable.tsx  accessibilityLabel string | undefined cardSize TabletopCardSize | undefined centerCards readonly PlayingCardValue[] | undefined centerLabel React.ReactNode | undefined centerSublabel React.ReactNode | undefined colorScheme TabletopColorOverrides | undefined disabled boolean | undefined seatCount TabletopSeatCount | undefined seats readonly TabletopSeatState[] shape TabletopShape | undefined testID string | undefined"
+            >
+              <h3>TabletopTable</h3>
+              <p class="muted"><code>src/components/tabletop-table/TabletopTable.tsx:24:1</code></p>
+
+              <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Prop</th>
+                    <th>Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>accessibilityLabel</code></td>
+                    <td><code>string | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>cardSize</code></td>
+                    <td><code>TabletopCardSize | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>centerCards</code></td>
+                    <td><code>readonly PlayingCardValue[] | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>centerLabel</code></td>
+                    <td><code>React.ReactNode | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>centerSublabel</code></td>
+                    <td><code>React.ReactNode | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>colorScheme</code></td>
+                    <td><code>TabletopColorOverrides | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>disabled</code></td>
+                    <td><code>boolean | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>seatCount</code></td>
+                    <td><code>TabletopSeatCount | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>seats</code></td>
+                    <td><code>readonly TabletopSeatState[]</code></td>
+                    <td>yes</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>shape</code></td>
+                    <td><code>TabletopShape | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>testID</code></td>
+                    <td><code>string | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
           </section>
           <section class="panel">
             <h2>Diagrams</h2>
@@ -244,7 +1784,83 @@
               <div class="mermaid">
                 graph TD package__ankhorage_zora_tabletop[&quot;@ankhorage/zora-tabletop&quot;]
                 entrypoint_src_index_ts[&quot;src/index.ts&quot;] package__ankhorage_zora_tabletop
-                --&gt; entrypoint_src_index_ts module_src_index_ts[&quot;src/index.ts&quot;]
+                --&gt; entrypoint_src_index_ts module_src_cardLabel_ts[&quot;src/cardLabel.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt; module_src_cardLabel_ts
+                module_src_cardLabel_ts --&gt; module_src_types_ts
+                module_src_cardSizing_ts[&quot;src/cardSizing.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt; module_src_cardSizing_ts
+                module_src_cardSizing_ts --&gt; module_src_types_ts
+                module_src_colors_ts[&quot;src/colors.ts&quot;] package__ankhorage_zora_tabletop
+                -.-&gt; module_src_colors_ts
+                module_src_components_card_back_CardBack_tsx[&quot;src/components/card-back/CardBack.tsx&quot;]
+                package__ankhorage_zora_tabletop -.-&gt;
+                module_src_components_card_back_CardBack_tsx
+                module_src_components_card_back_CardBack_tsx --&gt; module_src_cardLabel_ts
+                module_src_components_card_back_CardBack_tsx --&gt; module_src_cardSizing_ts
+                module_src_components_card_back_CardBack_tsx --&gt; module_src_colors_ts
+                module_src_components_card_back_CardBack_tsx --&gt;
+                module_src_components_card_back_types_ts
+                module_src_components_card_back_index_ts[&quot;src/components/card-back/index.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt; module_src_components_card_back_index_ts
+                module_src_components_card_back_types_ts[&quot;src/components/card-back/types.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt; module_src_components_card_back_types_ts
+                module_src_components_card_back_types_ts --&gt; module_src_colors_ts
+                module_src_components_card_back_types_ts --&gt; module_src_types_ts
+                module_src_components_card_hand_CardHand_tsx[&quot;src/components/card-hand/CardHand.tsx&quot;]
+                package__ankhorage_zora_tabletop -.-&gt;
+                module_src_components_card_hand_CardHand_tsx
+                module_src_components_card_hand_CardHand_tsx --&gt;
+                module_src_components_card_back_index_ts
+                module_src_components_card_hand_CardHand_tsx --&gt;
+                module_src_components_card_hand_types_ts
+                module_src_components_card_hand_CardHand_tsx --&gt;
+                module_src_components_playing_card_index_ts
+                module_src_components_card_hand_index_ts[&quot;src/components/card-hand/index.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt; module_src_components_card_hand_index_ts
+                module_src_components_card_hand_types_ts[&quot;src/components/card-hand/types.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt; module_src_components_card_hand_types_ts
+                module_src_components_card_hand_types_ts --&gt; module_src_colors_ts
+                module_src_components_card_hand_types_ts --&gt; module_src_types_ts
+                module_src_components_playing_card_index_ts[&quot;src/components/playing-card/index.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt; module_src_components_playing_card_index_ts
+                module_src_components_playing_card_PlayingCard_tsx[&quot;src/components/playing-card/PlayingCard.tsx&quot;]
+                package__ankhorage_zora_tabletop -.-&gt;
+                module_src_components_playing_card_PlayingCard_tsx
+                module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_cardLabel_ts
+                module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_cardSizing_ts
+                module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_colors_ts
+                module_src_components_playing_card_PlayingCard_tsx --&gt;
+                module_src_components_playing_card_types_ts
+                module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_types_ts
+                module_src_components_playing_card_types_ts[&quot;src/components/playing-card/types.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt; module_src_components_playing_card_types_ts
+                module_src_components_playing_card_types_ts --&gt; module_src_colors_ts
+                module_src_components_playing_card_types_ts --&gt; module_src_types_ts
+                module_src_components_tabletop_table_index_ts[&quot;src/components/tabletop-table/index.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt;
+                module_src_components_tabletop_table_index_ts
+                module_src_components_tabletop_table_TabletopTable_tsx[&quot;src/components/tabletop-table/TabletopTable.tsx&quot;]
+                package__ankhorage_zora_tabletop -.-&gt;
+                module_src_components_tabletop_table_TabletopTable_tsx
+                module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_colors_ts
+                module_src_components_tabletop_table_TabletopTable_tsx --&gt;
+                module_src_components_card_hand_index_ts
+                module_src_components_tabletop_table_TabletopTable_tsx --&gt;
+                module_src_components_tabletop_table_types_ts
+                module_src_components_tabletop_table_TabletopTable_tsx --&gt;
+                module_src_tablePositions_ts module_src_components_tabletop_table_TabletopTable_tsx
+                --&gt; module_src_types_ts
+                module_src_components_tabletop_table_types_ts[&quot;src/components/tabletop-table/types.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt;
+                module_src_components_tabletop_table_types_ts
+                module_src_components_tabletop_table_types_ts --&gt; module_src_colors_ts
+                module_src_components_tabletop_table_types_ts --&gt; module_src_types_ts
+                module_src_index_ts[&quot;src/index.ts&quot;]
+                module_src_tablePositions_ts[&quot;src/tablePositions.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt; module_src_tablePositions_ts
+                module_src_tablePositions_ts --&gt; module_src_types_ts
+                module_src_types_ts[&quot;src/types.ts&quot;] package__ankhorage_zora_tabletop
+                -.-&gt; module_src_types_ts
               </div>
               <details>
                 <summary>View Mermaid source</summary>
@@ -253,7 +1869,69 @@ graph TD
   package__ankhorage_zora_tabletop[&quot;@ankhorage/zora-tabletop&quot;]
   entrypoint_src_index_ts[&quot;src/index.ts&quot;]
   package__ankhorage_zora_tabletop --&gt; entrypoint_src_index_ts
+  module_src_cardLabel_ts[&quot;src/cardLabel.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_cardLabel_ts
+  module_src_cardLabel_ts --&gt; module_src_types_ts
+  module_src_cardSizing_ts[&quot;src/cardSizing.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_cardSizing_ts
+  module_src_cardSizing_ts --&gt; module_src_types_ts
+  module_src_colors_ts[&quot;src/colors.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_colors_ts
+  module_src_components_card_back_CardBack_tsx[&quot;src/components/card-back/CardBack.tsx&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_components_card_back_CardBack_tsx
+  module_src_components_card_back_CardBack_tsx --&gt; module_src_cardLabel_ts
+  module_src_components_card_back_CardBack_tsx --&gt; module_src_cardSizing_ts
+  module_src_components_card_back_CardBack_tsx --&gt; module_src_colors_ts
+  module_src_components_card_back_CardBack_tsx --&gt; module_src_components_card_back_types_ts
+  module_src_components_card_back_index_ts[&quot;src/components/card-back/index.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_components_card_back_index_ts
+  module_src_components_card_back_types_ts[&quot;src/components/card-back/types.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_components_card_back_types_ts
+  module_src_components_card_back_types_ts --&gt; module_src_colors_ts
+  module_src_components_card_back_types_ts --&gt; module_src_types_ts
+  module_src_components_card_hand_CardHand_tsx[&quot;src/components/card-hand/CardHand.tsx&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_components_card_hand_CardHand_tsx
+  module_src_components_card_hand_CardHand_tsx --&gt; module_src_components_card_back_index_ts
+  module_src_components_card_hand_CardHand_tsx --&gt; module_src_components_card_hand_types_ts
+  module_src_components_card_hand_CardHand_tsx --&gt; module_src_components_playing_card_index_ts
+  module_src_components_card_hand_index_ts[&quot;src/components/card-hand/index.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_components_card_hand_index_ts
+  module_src_components_card_hand_types_ts[&quot;src/components/card-hand/types.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_components_card_hand_types_ts
+  module_src_components_card_hand_types_ts --&gt; module_src_colors_ts
+  module_src_components_card_hand_types_ts --&gt; module_src_types_ts
+  module_src_components_playing_card_index_ts[&quot;src/components/playing-card/index.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_components_playing_card_index_ts
+  module_src_components_playing_card_PlayingCard_tsx[&quot;src/components/playing-card/PlayingCard.tsx&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_components_playing_card_PlayingCard_tsx
+  module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_cardLabel_ts
+  module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_cardSizing_ts
+  module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_colors_ts
+  module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_components_playing_card_types_ts
+  module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_types_ts
+  module_src_components_playing_card_types_ts[&quot;src/components/playing-card/types.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_components_playing_card_types_ts
+  module_src_components_playing_card_types_ts --&gt; module_src_colors_ts
+  module_src_components_playing_card_types_ts --&gt; module_src_types_ts
+  module_src_components_tabletop_table_index_ts[&quot;src/components/tabletop-table/index.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_components_tabletop_table_index_ts
+  module_src_components_tabletop_table_TabletopTable_tsx[&quot;src/components/tabletop-table/TabletopTable.tsx&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_components_tabletop_table_TabletopTable_tsx
+  module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_colors_ts
+  module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_components_card_hand_index_ts
+  module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_components_tabletop_table_types_ts
+  module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_tablePositions_ts
+  module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_types_ts
+  module_src_components_tabletop_table_types_ts[&quot;src/components/tabletop-table/types.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_components_tabletop_table_types_ts
+  module_src_components_tabletop_table_types_ts --&gt; module_src_colors_ts
+  module_src_components_tabletop_table_types_ts --&gt; module_src_types_ts
   module_src_index_ts[&quot;src/index.ts&quot;]
+  module_src_tablePositions_ts[&quot;src/tablePositions.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_tablePositions_ts
+  module_src_tablePositions_ts --&gt; module_src_types_ts
+  module_src_types_ts[&quot;src/types.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_types_ts
 </pre
                 >
               </details>
@@ -264,12 +1942,108 @@ graph TD
             >
               <h3>Module relationships</h3>
               <p class="muted"><code>diagrams/module-relationships.mmd</code></p>
-              <div class="mermaid">graph LR module_src_index_ts[&quot;src/index.ts&quot;]</div>
+              <div class="mermaid">
+                graph LR module_src_cardLabel_ts[&quot;src/cardLabel.ts&quot;]
+                module_src_cardSizing_ts[&quot;src/cardSizing.ts&quot;]
+                module_src_colors_ts[&quot;src/colors.ts&quot;]
+                module_src_components_card_back_CardBack_tsx[&quot;src/components/card-back/CardBack.tsx&quot;]
+                module_src_components_card_back_index_ts[&quot;src/components/card-back/index.ts&quot;]
+                module_src_components_card_back_types_ts[&quot;src/components/card-back/types.ts&quot;]
+                module_src_components_card_hand_CardHand_tsx[&quot;src/components/card-hand/CardHand.tsx&quot;]
+                module_src_components_card_hand_index_ts[&quot;src/components/card-hand/index.ts&quot;]
+                module_src_components_card_hand_types_ts[&quot;src/components/card-hand/types.ts&quot;]
+                module_src_components_playing_card_index_ts[&quot;src/components/playing-card/index.ts&quot;]
+                module_src_components_playing_card_PlayingCard_tsx[&quot;src/components/playing-card/PlayingCard.tsx&quot;]
+                module_src_components_playing_card_types_ts[&quot;src/components/playing-card/types.ts&quot;]
+                module_src_components_tabletop_table_index_ts[&quot;src/components/tabletop-table/index.ts&quot;]
+                module_src_components_tabletop_table_TabletopTable_tsx[&quot;src/components/tabletop-table/TabletopTable.tsx&quot;]
+                module_src_components_tabletop_table_types_ts[&quot;src/components/tabletop-table/types.ts&quot;]
+                module_src_index_ts[&quot;src/index.ts&quot;]
+                module_src_tablePositions_ts[&quot;src/tablePositions.ts&quot;]
+                module_src_types_ts[&quot;src/types.ts&quot;] module_src_cardLabel_ts --&gt;
+                module_src_types_ts module_src_cardSizing_ts --&gt; module_src_types_ts
+                module_src_components_card_back_CardBack_tsx --&gt; module_src_cardLabel_ts
+                module_src_components_card_back_CardBack_tsx --&gt; module_src_cardSizing_ts
+                module_src_components_card_back_CardBack_tsx --&gt; module_src_colors_ts
+                module_src_components_card_back_CardBack_tsx --&gt;
+                module_src_components_card_back_types_ts module_src_components_card_back_types_ts
+                --&gt; module_src_colors_ts module_src_components_card_back_types_ts --&gt;
+                module_src_types_ts module_src_components_card_hand_CardHand_tsx --&gt;
+                module_src_components_card_back_index_ts
+                module_src_components_card_hand_CardHand_tsx --&gt;
+                module_src_components_card_hand_types_ts
+                module_src_components_card_hand_CardHand_tsx --&gt;
+                module_src_components_playing_card_index_ts module_src_components_card_hand_types_ts
+                --&gt; module_src_colors_ts module_src_components_card_hand_types_ts --&gt;
+                module_src_types_ts module_src_components_playing_card_PlayingCard_tsx --&gt;
+                module_src_cardLabel_ts module_src_components_playing_card_PlayingCard_tsx --&gt;
+                module_src_cardSizing_ts module_src_components_playing_card_PlayingCard_tsx --&gt;
+                module_src_colors_ts module_src_components_playing_card_PlayingCard_tsx --&gt;
+                module_src_components_playing_card_types_ts
+                module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_types_ts
+                module_src_components_playing_card_types_ts --&gt; module_src_colors_ts
+                module_src_components_playing_card_types_ts --&gt; module_src_types_ts
+                module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_colors_ts
+                module_src_components_tabletop_table_TabletopTable_tsx --&gt;
+                module_src_components_card_hand_index_ts
+                module_src_components_tabletop_table_TabletopTable_tsx --&gt;
+                module_src_components_tabletop_table_types_ts
+                module_src_components_tabletop_table_TabletopTable_tsx --&gt;
+                module_src_tablePositions_ts module_src_components_tabletop_table_TabletopTable_tsx
+                --&gt; module_src_types_ts module_src_components_tabletop_table_types_ts --&gt;
+                module_src_colors_ts module_src_components_tabletop_table_types_ts --&gt;
+                module_src_types_ts module_src_tablePositions_ts --&gt; module_src_types_ts
+              </div>
               <details>
                 <summary>View Mermaid source</summary>
                 <pre>
 graph LR
+  module_src_cardLabel_ts[&quot;src/cardLabel.ts&quot;]
+  module_src_cardSizing_ts[&quot;src/cardSizing.ts&quot;]
+  module_src_colors_ts[&quot;src/colors.ts&quot;]
+  module_src_components_card_back_CardBack_tsx[&quot;src/components/card-back/CardBack.tsx&quot;]
+  module_src_components_card_back_index_ts[&quot;src/components/card-back/index.ts&quot;]
+  module_src_components_card_back_types_ts[&quot;src/components/card-back/types.ts&quot;]
+  module_src_components_card_hand_CardHand_tsx[&quot;src/components/card-hand/CardHand.tsx&quot;]
+  module_src_components_card_hand_index_ts[&quot;src/components/card-hand/index.ts&quot;]
+  module_src_components_card_hand_types_ts[&quot;src/components/card-hand/types.ts&quot;]
+  module_src_components_playing_card_index_ts[&quot;src/components/playing-card/index.ts&quot;]
+  module_src_components_playing_card_PlayingCard_tsx[&quot;src/components/playing-card/PlayingCard.tsx&quot;]
+  module_src_components_playing_card_types_ts[&quot;src/components/playing-card/types.ts&quot;]
+  module_src_components_tabletop_table_index_ts[&quot;src/components/tabletop-table/index.ts&quot;]
+  module_src_components_tabletop_table_TabletopTable_tsx[&quot;src/components/tabletop-table/TabletopTable.tsx&quot;]
+  module_src_components_tabletop_table_types_ts[&quot;src/components/tabletop-table/types.ts&quot;]
   module_src_index_ts[&quot;src/index.ts&quot;]
+  module_src_tablePositions_ts[&quot;src/tablePositions.ts&quot;]
+  module_src_types_ts[&quot;src/types.ts&quot;]
+  module_src_cardLabel_ts --&gt; module_src_types_ts
+  module_src_cardSizing_ts --&gt; module_src_types_ts
+  module_src_components_card_back_CardBack_tsx --&gt; module_src_cardLabel_ts
+  module_src_components_card_back_CardBack_tsx --&gt; module_src_cardSizing_ts
+  module_src_components_card_back_CardBack_tsx --&gt; module_src_colors_ts
+  module_src_components_card_back_CardBack_tsx --&gt; module_src_components_card_back_types_ts
+  module_src_components_card_back_types_ts --&gt; module_src_colors_ts
+  module_src_components_card_back_types_ts --&gt; module_src_types_ts
+  module_src_components_card_hand_CardHand_tsx --&gt; module_src_components_card_back_index_ts
+  module_src_components_card_hand_CardHand_tsx --&gt; module_src_components_card_hand_types_ts
+  module_src_components_card_hand_CardHand_tsx --&gt; module_src_components_playing_card_index_ts
+  module_src_components_card_hand_types_ts --&gt; module_src_colors_ts
+  module_src_components_card_hand_types_ts --&gt; module_src_types_ts
+  module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_cardLabel_ts
+  module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_cardSizing_ts
+  module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_colors_ts
+  module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_components_playing_card_types_ts
+  module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_types_ts
+  module_src_components_playing_card_types_ts --&gt; module_src_colors_ts
+  module_src_components_playing_card_types_ts --&gt; module_src_types_ts
+  module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_colors_ts
+  module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_components_card_hand_index_ts
+  module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_components_tabletop_table_types_ts
+  module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_tablePositions_ts
+  module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_types_ts
+  module_src_components_tabletop_table_types_ts --&gt; module_src_colors_ts
+  module_src_components_tabletop_table_types_ts --&gt; module_src_types_ts
+  module_src_tablePositions_ts --&gt; module_src_types_ts
 </pre
                 >
               </details>
@@ -277,15 +2051,424 @@ graph LR
             <article class="item" data-search="Export graph diagrams/export-graph.mmd">
               <h3>Export graph</h3>
               <p class="muted"><code>diagrams/export-graph.mmd</code></p>
-              <div class="mermaid">graph LR module_src_index_ts[&quot;src/index.ts&quot;]</div>
+              <div class="mermaid">
+                graph LR module_src_cardLabel_ts[&quot;src/cardLabel.ts&quot;]
+                module_src_cardSizing_ts[&quot;src/cardSizing.ts&quot;]
+                module_src_colors_ts[&quot;src/colors.ts&quot;]
+                module_src_components_card_back_CardBack_tsx[&quot;src/components/card-back/CardBack.tsx&quot;]
+                module_src_components_card_back_index_ts[&quot;src/components/card-back/index.ts&quot;]
+                module_src_components_card_back_types_ts[&quot;src/components/card-back/types.ts&quot;]
+                module_src_components_card_hand_CardHand_tsx[&quot;src/components/card-hand/CardHand.tsx&quot;]
+                module_src_components_card_hand_index_ts[&quot;src/components/card-hand/index.ts&quot;]
+                module_src_components_card_hand_types_ts[&quot;src/components/card-hand/types.ts&quot;]
+                module_src_components_playing_card_index_ts[&quot;src/components/playing-card/index.ts&quot;]
+                module_src_components_playing_card_PlayingCard_tsx[&quot;src/components/playing-card/PlayingCard.tsx&quot;]
+                module_src_components_playing_card_types_ts[&quot;src/components/playing-card/types.ts&quot;]
+                module_src_components_tabletop_table_index_ts[&quot;src/components/tabletop-table/index.ts&quot;]
+                module_src_components_tabletop_table_TabletopTable_tsx[&quot;src/components/tabletop-table/TabletopTable.tsx&quot;]
+                module_src_components_tabletop_table_types_ts[&quot;src/components/tabletop-table/types.ts&quot;]
+                module_src_index_ts[&quot;src/index.ts&quot;]
+                module_src_tablePositions_ts[&quot;src/tablePositions.ts&quot;]
+                module_src_types_ts[&quot;src/types.ts&quot;] export_CardBack[&quot;CardBack&quot;]
+                module_src_components_card_back_CardBack_tsx --&gt; export_CardBack export_CardBack
+                -.-&gt; export_CardBackProps export_CardBackProps[&quot;CardBackProps&quot;]
+                module_src_components_card_back_types_ts --&gt; export_CardBackProps
+                export_CardBackProps -.-&gt; export_TabletopCardSize export_CardBackProps -.-&gt;
+                export_TabletopColorScheme export_CardHand[&quot;CardHand&quot;]
+                module_src_components_card_hand_CardHand_tsx --&gt; export_CardHand export_CardHand
+                -.-&gt; export_CardHandProps export_CardHandProps[&quot;CardHandProps&quot;]
+                module_src_components_card_hand_types_ts --&gt; export_CardHandProps
+                export_CardHandProps -.-&gt; export_PlayingCardValue export_CardHandProps -.-&gt;
+                export_TabletopCardSize export_CardHandProps -.-&gt; export_TabletopColorScheme
+                export_createTabletopColorScheme[&quot;createTabletopColorScheme&quot;]
+                module_src_colors_ts --&gt; export_createTabletopColorScheme
+                export_createTabletopColorScheme -.-&gt; export_TabletopColorScheme
+                export_PlayingCard[&quot;PlayingCard&quot;]
+                module_src_components_playing_card_PlayingCard_tsx --&gt; export_PlayingCard
+                export_PlayingCard -.-&gt; export_PlayingCardProps
+                export_PlayingCardProps[&quot;PlayingCardProps&quot;]
+                module_src_components_playing_card_types_ts --&gt; export_PlayingCardProps
+                export_PlayingCardProps -.-&gt; export_PlayingCardValue export_PlayingCardProps
+                -.-&gt; export_TabletopCardSize export_PlayingCardProps -.-&gt;
+                export_TabletopColorScheme export_PlayingCardSuit[&quot;PlayingCardSuit&quot;]
+                module_src_types_ts --&gt; export_PlayingCardSuit
+                export_PlayingCardValue[&quot;PlayingCardValue&quot;] module_src_types_ts --&gt;
+                export_PlayingCardValue export_PlayingCardValue -.-&gt; export_PlayingCardSuit
+                export_TabletopCardSize[&quot;TabletopCardSize&quot;] module_src_types_ts --&gt;
+                export_TabletopCardSize
+                export_TabletopColorOverrides[&quot;TabletopColorOverrides&quot;]
+                module_src_colors_ts --&gt; export_TabletopColorOverrides
+                export_TabletopColorScheme[&quot;TabletopColorScheme&quot;] module_src_colors_ts
+                --&gt; export_TabletopColorScheme
+                export_TabletopSeatCount[&quot;TabletopSeatCount&quot;] module_src_types_ts --&gt;
+                export_TabletopSeatCount export_TabletopSeatState[&quot;TabletopSeatState&quot;]
+                module_src_types_ts --&gt; export_TabletopSeatState export_TabletopSeatState -.-&gt;
+                export_PlayingCardValue export_TabletopShape[&quot;TabletopShape&quot;]
+                module_src_types_ts --&gt; export_TabletopShape
+                export_TabletopTable[&quot;TabletopTable&quot;]
+                module_src_components_tabletop_table_TabletopTable_tsx --&gt; export_TabletopTable
+                export_TabletopTable -.-&gt; export_TabletopTableProps
+                export_TabletopTableProps[&quot;TabletopTableProps&quot;]
+                module_src_components_tabletop_table_types_ts --&gt; export_TabletopTableProps
+                export_TabletopTableProps -.-&gt; export_PlayingCardValue export_TabletopTableProps
+                -.-&gt; export_TabletopCardSize export_TabletopTableProps -.-&gt;
+                export_TabletopColorScheme export_TabletopTableProps -.-&gt;
+                export_TabletopSeatCount export_TabletopTableProps -.-&gt; export_TabletopSeatState
+                export_TabletopTableProps -.-&gt; export_TabletopShape
+              </div>
               <details>
                 <summary>View Mermaid source</summary>
                 <pre>
 graph LR
+  module_src_cardLabel_ts[&quot;src/cardLabel.ts&quot;]
+  module_src_cardSizing_ts[&quot;src/cardSizing.ts&quot;]
+  module_src_colors_ts[&quot;src/colors.ts&quot;]
+  module_src_components_card_back_CardBack_tsx[&quot;src/components/card-back/CardBack.tsx&quot;]
+  module_src_components_card_back_index_ts[&quot;src/components/card-back/index.ts&quot;]
+  module_src_components_card_back_types_ts[&quot;src/components/card-back/types.ts&quot;]
+  module_src_components_card_hand_CardHand_tsx[&quot;src/components/card-hand/CardHand.tsx&quot;]
+  module_src_components_card_hand_index_ts[&quot;src/components/card-hand/index.ts&quot;]
+  module_src_components_card_hand_types_ts[&quot;src/components/card-hand/types.ts&quot;]
+  module_src_components_playing_card_index_ts[&quot;src/components/playing-card/index.ts&quot;]
+  module_src_components_playing_card_PlayingCard_tsx[&quot;src/components/playing-card/PlayingCard.tsx&quot;]
+  module_src_components_playing_card_types_ts[&quot;src/components/playing-card/types.ts&quot;]
+  module_src_components_tabletop_table_index_ts[&quot;src/components/tabletop-table/index.ts&quot;]
+  module_src_components_tabletop_table_TabletopTable_tsx[&quot;src/components/tabletop-table/TabletopTable.tsx&quot;]
+  module_src_components_tabletop_table_types_ts[&quot;src/components/tabletop-table/types.ts&quot;]
   module_src_index_ts[&quot;src/index.ts&quot;]
+  module_src_tablePositions_ts[&quot;src/tablePositions.ts&quot;]
+  module_src_types_ts[&quot;src/types.ts&quot;]
+  export_CardBack[&quot;CardBack&quot;]
+  module_src_components_card_back_CardBack_tsx --&gt; export_CardBack
+  export_CardBack -.-&gt; export_CardBackProps
+  export_CardBackProps[&quot;CardBackProps&quot;]
+  module_src_components_card_back_types_ts --&gt; export_CardBackProps
+  export_CardBackProps -.-&gt; export_TabletopCardSize
+  export_CardBackProps -.-&gt; export_TabletopColorScheme
+  export_CardHand[&quot;CardHand&quot;]
+  module_src_components_card_hand_CardHand_tsx --&gt; export_CardHand
+  export_CardHand -.-&gt; export_CardHandProps
+  export_CardHandProps[&quot;CardHandProps&quot;]
+  module_src_components_card_hand_types_ts --&gt; export_CardHandProps
+  export_CardHandProps -.-&gt; export_PlayingCardValue
+  export_CardHandProps -.-&gt; export_TabletopCardSize
+  export_CardHandProps -.-&gt; export_TabletopColorScheme
+  export_createTabletopColorScheme[&quot;createTabletopColorScheme&quot;]
+  module_src_colors_ts --&gt; export_createTabletopColorScheme
+  export_createTabletopColorScheme -.-&gt; export_TabletopColorScheme
+  export_PlayingCard[&quot;PlayingCard&quot;]
+  module_src_components_playing_card_PlayingCard_tsx --&gt; export_PlayingCard
+  export_PlayingCard -.-&gt; export_PlayingCardProps
+  export_PlayingCardProps[&quot;PlayingCardProps&quot;]
+  module_src_components_playing_card_types_ts --&gt; export_PlayingCardProps
+  export_PlayingCardProps -.-&gt; export_PlayingCardValue
+  export_PlayingCardProps -.-&gt; export_TabletopCardSize
+  export_PlayingCardProps -.-&gt; export_TabletopColorScheme
+  export_PlayingCardSuit[&quot;PlayingCardSuit&quot;]
+  module_src_types_ts --&gt; export_PlayingCardSuit
+  export_PlayingCardValue[&quot;PlayingCardValue&quot;]
+  module_src_types_ts --&gt; export_PlayingCardValue
+  export_PlayingCardValue -.-&gt; export_PlayingCardSuit
+  export_TabletopCardSize[&quot;TabletopCardSize&quot;]
+  module_src_types_ts --&gt; export_TabletopCardSize
+  export_TabletopColorOverrides[&quot;TabletopColorOverrides&quot;]
+  module_src_colors_ts --&gt; export_TabletopColorOverrides
+  export_TabletopColorScheme[&quot;TabletopColorScheme&quot;]
+  module_src_colors_ts --&gt; export_TabletopColorScheme
+  export_TabletopSeatCount[&quot;TabletopSeatCount&quot;]
+  module_src_types_ts --&gt; export_TabletopSeatCount
+  export_TabletopSeatState[&quot;TabletopSeatState&quot;]
+  module_src_types_ts --&gt; export_TabletopSeatState
+  export_TabletopSeatState -.-&gt; export_PlayingCardValue
+  export_TabletopShape[&quot;TabletopShape&quot;]
+  module_src_types_ts --&gt; export_TabletopShape
+  export_TabletopTable[&quot;TabletopTable&quot;]
+  module_src_components_tabletop_table_TabletopTable_tsx --&gt; export_TabletopTable
+  export_TabletopTable -.-&gt; export_TabletopTableProps
+  export_TabletopTableProps[&quot;TabletopTableProps&quot;]
+  module_src_components_tabletop_table_types_ts --&gt; export_TabletopTableProps
+  export_TabletopTableProps -.-&gt; export_PlayingCardValue
+  export_TabletopTableProps -.-&gt; export_TabletopCardSize
+  export_TabletopTableProps -.-&gt; export_TabletopColorScheme
+  export_TabletopTableProps -.-&gt; export_TabletopSeatCount
+  export_TabletopTableProps -.-&gt; export_TabletopSeatState
+  export_TabletopTableProps -.-&gt; export_TabletopShape
 </pre
                 >
               </details>
+            </article>
+            <article class="item" data-search="CardBack sequence diagrams/sequences/card-back.mmd">
+              <h3>CardBack sequence</h3>
+              <p class="muted"><code>diagrams/sequences/card-back.mmd</code></p>
+              <div class="mermaid">
+                sequenceDiagram participant participant_CardBack as CardBack participant
+                participant_createHiddenCardLabel as createHiddenCardLabel participant
+                participant_getTabletopCardDimensions as getTabletopCardDimensions participant
+                participant_useZoraTheme as useZoraTheme
+                participant_CardBack-&gt;&gt;participant_useZoraTheme: useZoraTheme()
+                participant_useZoraTheme--&gt;&gt;participant_CardBack: return
+                participant_CardBack-&gt;&gt;participant_getTabletopCardDimensions:
+                getTabletopCardDimensions()
+                participant_getTabletopCardDimensions--&gt;&gt;participant_CardBack: return
+                participant_CardBack-&gt;&gt;participant_createHiddenCardLabel:
+                createHiddenCardLabel()
+                participant_createHiddenCardLabel--&gt;&gt;participant_CardBack: return
+              </div>
+              <details>
+                <summary>View Mermaid source</summary>
+                <pre>
+sequenceDiagram
+  participant participant_CardBack as CardBack
+  participant participant_createHiddenCardLabel as createHiddenCardLabel
+  participant participant_getTabletopCardDimensions as getTabletopCardDimensions
+  participant participant_useZoraTheme as useZoraTheme
+  participant_CardBack-&gt;&gt;participant_useZoraTheme: useZoraTheme()
+  participant_useZoraTheme--&gt;&gt;participant_CardBack: return
+  participant_CardBack-&gt;&gt;participant_getTabletopCardDimensions: getTabletopCardDimensions()
+  participant_getTabletopCardDimensions--&gt;&gt;participant_CardBack: return
+  participant_CardBack-&gt;&gt;participant_createHiddenCardLabel: createHiddenCardLabel()
+  participant_createHiddenCardLabel--&gt;&gt;participant_CardBack: return
+</pre
+                >
+              </details>
+            </article>
+            <article class="item" data-search="CardHand sequence diagrams/sequences/card-hand.mmd">
+              <h3>CardHand sequence</h3>
+              <p class="muted"><code>diagrams/sequences/card-hand.mmd</code></p>
+              <div class="mermaid">
+                sequenceDiagram participant participant_CardHand as CardHand participant
+                participant_createFaceDownCards as createFaceDownCards
+                participant_CardHand-&gt;&gt;participant_createFaceDownCards: createFaceDownCards()
+                participant_createFaceDownCards--&gt;&gt;participant_CardHand: return
+              </div>
+              <details>
+                <summary>View Mermaid source</summary>
+                <pre>
+sequenceDiagram
+  participant participant_CardHand as CardHand
+  participant participant_createFaceDownCards as createFaceDownCards
+  participant_CardHand-&gt;&gt;participant_createFaceDownCards: createFaceDownCards()
+  participant_createFaceDownCards--&gt;&gt;participant_CardHand: return
+</pre
+                >
+              </details>
+            </article>
+            <article
+              class="item"
+              data-search="PlayingCard sequence diagrams/sequences/playing-card.mmd"
+            >
+              <h3>PlayingCard sequence</h3>
+              <p class="muted"><code>diagrams/sequences/playing-card.mmd</code></p>
+              <div class="mermaid">
+                sequenceDiagram participant participant_getPlayingCardLabel as getPlayingCardLabel
+                participant participant_getTabletopCardDimensions as getTabletopCardDimensions
+                participant participant_isRedSuit as isRedSuit participant participant_PlayingCard
+                as PlayingCard participant participant_useZoraTheme as useZoraTheme
+                participant_PlayingCard-&gt;&gt;participant_useZoraTheme: useZoraTheme()
+                participant_useZoraTheme--&gt;&gt;participant_PlayingCard: return
+                participant_PlayingCard-&gt;&gt;participant_getTabletopCardDimensions:
+                getTabletopCardDimensions()
+                participant_getTabletopCardDimensions--&gt;&gt;participant_PlayingCard: return
+                participant_PlayingCard-&gt;&gt;participant_isRedSuit: isRedSuit()
+                participant_isRedSuit--&gt;&gt;participant_PlayingCard: return
+                participant_PlayingCard-&gt;&gt;participant_getPlayingCardLabel:
+                getPlayingCardLabel()
+                participant_getPlayingCardLabel--&gt;&gt;participant_PlayingCard: return
+              </div>
+              <details>
+                <summary>View Mermaid source</summary>
+                <pre>
+sequenceDiagram
+  participant participant_getPlayingCardLabel as getPlayingCardLabel
+  participant participant_getTabletopCardDimensions as getTabletopCardDimensions
+  participant participant_isRedSuit as isRedSuit
+  participant participant_PlayingCard as PlayingCard
+  participant participant_useZoraTheme as useZoraTheme
+  participant_PlayingCard-&gt;&gt;participant_useZoraTheme: useZoraTheme()
+  participant_useZoraTheme--&gt;&gt;participant_PlayingCard: return
+  participant_PlayingCard-&gt;&gt;participant_getTabletopCardDimensions: getTabletopCardDimensions()
+  participant_getTabletopCardDimensions--&gt;&gt;participant_PlayingCard: return
+  participant_PlayingCard-&gt;&gt;participant_isRedSuit: isRedSuit()
+  participant_isRedSuit--&gt;&gt;participant_PlayingCard: return
+  participant_PlayingCard-&gt;&gt;participant_getPlayingCardLabel: getPlayingCardLabel()
+  participant_getPlayingCardLabel--&gt;&gt;participant_PlayingCard: return
+</pre
+                >
+              </details>
+            </article>
+            <article
+              class="item"
+              data-search="TabletopTable sequence diagrams/sequences/tabletop-table.mmd"
+            >
+              <h3>TabletopTable sequence</h3>
+              <p class="muted"><code>diagrams/sequences/tabletop-table.mmd</code></p>
+              <div class="mermaid">
+                sequenceDiagram participant participant_TabletopTable as TabletopTable participant
+                participant_useZoraTheme as useZoraTheme
+                participant_TabletopTable-&gt;&gt;participant_useZoraTheme: useZoraTheme()
+                participant_useZoraTheme--&gt;&gt;participant_TabletopTable: return
+              </div>
+              <details>
+                <summary>View Mermaid source</summary>
+                <pre>
+sequenceDiagram
+  participant participant_TabletopTable as TabletopTable
+  participant participant_useZoraTheme as useZoraTheme
+  participant_TabletopTable-&gt;&gt;participant_useZoraTheme: useZoraTheme()
+  participant_useZoraTheme--&gt;&gt;participant_TabletopTable: return
+</pre
+                >
+              </details>
+            </article>
+          </section>
+        </section>
+        <section id="view-src-cardlabel-ts" class="view" data-view="src/cardLabel.ts" hidden>
+          <section class="panel">
+            <h2>src/cardLabel.ts</h2>
+            <article class="item" data-search="getPlayingCardLabel src/cardLabel.ts ">
+              <h3>getPlayingCardLabel</h3>
+              <p class="muted"><code>src/cardLabel.ts:3:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="createHiddenCardLabel src/cardLabel.ts ">
+              <h3>createHiddenCardLabel</h3>
+              <p class="muted"><code>src/cardLabel.ts:7:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+          </section>
+        </section>
+        <section id="view-src-cardsizing-ts" class="view" data-view="src/cardSizing.ts" hidden>
+          <section class="panel">
+            <h2>src/cardSizing.ts</h2>
+            <article class="item" data-search="getTabletopCardDimensions src/cardSizing.ts ">
+              <h3>getTabletopCardDimensions</h3>
+              <p class="muted"><code>src/cardSizing.ts:35:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+          </section>
+        </section>
+        <section id="view-src-colors-ts" class="view" data-view="src/colors.ts" hidden>
+          <section class="panel">
+            <h2>src/colors.ts</h2>
+            <article class="item" data-search="createTabletopColorScheme src/colors.ts ">
+              <h3>createTabletopColorScheme</h3>
+              <p class="muted"><code>src/colors.ts:46:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+          </section>
+        </section>
+        <section
+          id="view-src-components-card-back-cardback-tsx"
+          class="view"
+          data-view="src/components/card-back/CardBack.tsx"
+          hidden
+        >
+          <section class="panel">
+            <h2>src/components/card-back/CardBack.tsx</h2>
+            <article class="item" data-search="CardBack src/components/card-back/CardBack.tsx ">
+              <h3>CardBack</h3>
+              <p class="muted"><code>src/components/card-back/CardBack.tsx:10:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+          </section>
+        </section>
+        <section
+          id="view-src-components-card-hand-cardhand-tsx"
+          class="view"
+          data-view="src/components/card-hand/CardHand.tsx"
+          hidden
+        >
+          <section class="panel">
+            <h2>src/components/card-hand/CardHand.tsx</h2>
+            <article
+              class="item"
+              data-search="createFaceDownCards src/components/card-hand/CardHand.tsx "
+            >
+              <h3>createFaceDownCards</h3>
+              <p class="muted"><code>src/components/card-hand/CardHand.tsx:8:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="CardHand src/components/card-hand/CardHand.tsx ">
+              <h3>CardHand</h3>
+              <p class="muted"><code>src/components/card-hand/CardHand.tsx:12:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+          </section>
+        </section>
+        <section
+          id="view-src-components-playing-card-playingcard-tsx"
+          class="view"
+          data-view="src/components/playing-card/PlayingCard.tsx"
+          hidden
+        >
+          <section class="panel">
+            <h2>src/components/playing-card/PlayingCard.tsx</h2>
+            <article
+              class="item"
+              data-search="isRedSuit src/components/playing-card/PlayingCard.tsx "
+            >
+              <h3>isRedSuit</h3>
+              <p class="muted"><code>src/components/playing-card/PlayingCard.tsx:18:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article
+              class="item"
+              data-search="PlayingCard src/components/playing-card/PlayingCard.tsx "
+            >
+              <h3>PlayingCard</h3>
+              <p class="muted"><code>src/components/playing-card/PlayingCard.tsx:22:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+          </section>
+        </section>
+        <section
+          id="view-src-components-tabletop-table-tabletoptable-tsx"
+          class="view"
+          data-view="src/components/tabletop-table/TabletopTable.tsx"
+          hidden
+        >
+          <section class="panel">
+            <h2>src/components/tabletop-table/TabletopTable.tsx</h2>
+            <article
+              class="item"
+              data-search="createSeatAccessibilityLabel src/components/tabletop-table/TabletopTable.tsx "
+            >
+              <h3>createSeatAccessibilityLabel</h3>
+              <p class="muted"><code>src/components/tabletop-table/TabletopTable.tsx:11:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article
+              class="item"
+              data-search="TabletopTable src/components/tabletop-table/TabletopTable.tsx "
+            >
+              <h3>TabletopTable</h3>
+              <p class="muted"><code>src/components/tabletop-table/TabletopTable.tsx:24:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+          </section>
+        </section>
+        <section
+          id="view-src-tablepositions-ts"
+          class="view"
+          data-view="src/tablePositions.ts"
+          hidden
+        >
+          <section class="panel">
+            <h2>src/tablePositions.ts</h2>
+            <article class="item" data-search="normalizeTabletopSeatCount src/tablePositions.ts ">
+              <h3>normalizeTabletopSeatCount</h3>
+              <p class="muted"><code>src/tablePositions.ts:78:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="getTabletopSeatPositions src/tablePositions.ts ">
+              <h3>getTabletopSeatPositions</h3>
+              <p class="muted"><code>src/tablePositions.ts:86:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="getTabletopSeatPosition src/tablePositions.ts ">
+              <h3>getTabletopSeatPosition</h3>
+              <p class="muted"><code>src/tablePositions.ts:90:1</code></p>
+              <p class="empty">No description available.</p>
             </article>
           </section>
         </section>
