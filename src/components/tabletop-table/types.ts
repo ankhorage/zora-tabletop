@@ -1,3 +1,5 @@
+import type React from 'react';
+
 import type { TabletopColorOverrides } from '../../colors';
 import type {
   PlayingCardValue,
