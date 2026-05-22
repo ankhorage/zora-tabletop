@@ -1,8 +1,10 @@
 import type { TabletopSeatCount } from './types';
 
+export type TabletopSeatPositionValue = `${number}%`;
+
 export interface TabletopSeatPosition {
-  readonly top: string;
-  readonly left: string;
+  readonly top: TabletopSeatPositionValue;
+  readonly left: TabletopSeatPositionValue;
 }
 
 const fallbackSeatPosition: TabletopSeatPosition = { top: '82%', left: '50%' };
