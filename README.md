@@ -7,6 +7,88 @@
 
 Reusable tabletop, playing-card, seat, token, and card-game presentation components for React Native and React Native Web.
 
+## Usage
+
+### Minimal tabletop app root.
+
+Use `TabletopTable` inside a ZORA app shell to render generic seats, visible
+cards, face-down cards, and center-table labels without adding game rules.
+
+Source: `examples/basic-tabletop/App.tsx`
+
+```tsx
+import {
+  AppBar,
+  AppShell,
+  Screen,
+  ScreenSection,
+  ZoraProvider,
+  type ZoraTheme,
+} from '@ankhorage/zora';
+import { type TabletopSeatState, TabletopTable } from '@ankhorage/zora-tabletop';
+
+const tabletopTheme: ZoraTheme = {
+  id: 'basic-tabletop',
+  name: 'Basic tabletop',
+  appCategory: 'games',
+  primaryColor: '#0f766e',
+  harmony: 'analogous',
+};
+
+const seats: readonly TabletopSeatState[] = [
+  {
+    id: 'seat-a',
+    label: 'Seat A',
+    sublabel: 'Ready',
+    cards: [
+      { rank: 'A', suit: 'spades' },
+      { rank: 'K', suit: 'hearts' },
+    ],
+    selected: true,
+    tokenLabel: 'Active',
+  },
+  {
+    id: 'seat-b',
+    label: 'Seat B',
+    sublabel: 'Hidden cards',
+    faceDownCards: 2,
+  },
+  {
+    id: 'seat-c',
+    label: 'Seat C',
+    sublabel: 'Paused',
+    faceDownCards: 2,
+    muted: true,
+  },
+];
+
+export default function BasicTabletopApp() {
+  return (
+    <ZoraProvider initialMode="light" theme={tabletopTheme}>
+      <AppShell header={<AppBar title="Tabletop" subtitle="Reusable card-game UI" />}>
+        <Screen>
+          <ScreenSection
+            title="Table state"
+            description="Map app data into generic seats and cards."
+          >
+            <TabletopTable
+              seats={seats}
+              centerCards={[
+                { rank: 'Q', suit: 'diamonds' },
+                { rank: 'J', suit: 'clubs' },
+                { rank: '10', suit: 'spades' },
+              ]}
+              centerLabel="Round 1"
+              centerSublabel="Shared cards"
+            />
+          </ScreenSection>
+        </Screen>
+      </AppShell>
+    </ZoraProvider>
+  );
+}
+```
+
 ## Generated documentation
 
 - [Interactive documentation app](././paradox/index.html)
@@ -19,83 +101,6 @@ Reusable tabletop, playing-card, seat, token, and card-game presentation compone
 - [CardHand sequence](././paradox/diagrams/sequences/card-hand.mmd)
 - [PlayingCard sequence](././paradox/diagrams/sequences/playing-card.mmd)
 - [TabletopTable sequence](././paradox/diagrams/sequences/tabletop-table.mmd)
-
-## Architecture preview
-
-<details>
-<summary>Architecture overview</summary>
-
-```mermaid
-graph TD
-  package__ankhorage_zora_tabletop["@ankhorage/zora-tabletop"]
-  entrypoint_src_index_ts["src/index.ts"]
-  package__ankhorage_zora_tabletop --> entrypoint_src_index_ts
-  module_src_cardLabel_ts["src/cardLabel.ts"]
-  package__ankhorage_zora_tabletop -.-> module_src_cardLabel_ts
-  module_src_cardLabel_ts --> module_src_types_ts
-  module_src_cardSizing_ts["src/cardSizing.ts"]
-  package__ankhorage_zora_tabletop -.-> module_src_cardSizing_ts
-  module_src_cardSizing_ts --> module_src_types_ts
-  module_src_colors_ts["src/colors.ts"]
-  package__ankhorage_zora_tabletop -.-> module_src_colors_ts
-  module_src_components_card_back_CardBack_tsx["src/components/card-back/CardBack.tsx"]
-  package__ankhorage_zora_tabletop -.-> module_src_components_card_back_CardBack_tsx
-  module_src_components_card_back_CardBack_tsx --> module_src_cardLabel_ts
-  module_src_components_card_back_CardBack_tsx --> module_src_cardSizing_ts
-  module_src_components_card_back_CardBack_tsx --> module_src_colors_ts
-  module_src_components_card_back_CardBack_tsx --> module_src_components_card_back_types_ts
-  module_src_components_card_back_index_ts["src/components/card-back/index.ts"]
-  package__ankhorage_zora_tabletop -.-> module_src_components_card_back_index_ts
-  module_src_components_card_back_types_ts["src/components/card-back/types.ts"]
-  package__ankhorage_zora_tabletop -.-> module_src_components_card_back_types_ts
-  module_src_components_card_back_types_ts --> module_src_colors_ts
-  module_src_components_card_back_types_ts --> module_src_types_ts
-  module_src_components_card_hand_CardHand_tsx["src/components/card-hand/CardHand.tsx"]
-  package__ankhorage_zora_tabletop -.-> module_src_components_card_hand_CardHand_tsx
-  module_src_components_card_hand_CardHand_tsx --> module_src_components_card_back_index_ts
-  module_src_components_card_hand_CardHand_tsx --> module_src_components_card_hand_types_ts
-  module_src_components_card_hand_CardHand_tsx --> module_src_components_playing_card_index_ts
-  module_src_components_card_hand_index_ts["src/components/card-hand/index.ts"]
-  package__ankhorage_zora_tabletop -.-> module_src_components_card_hand_index_ts
-  module_src_components_card_hand_types_ts["src/components/card-hand/types.ts"]
-  package__ankhorage_zora_tabletop -.-> module_src_components_card_hand_types_ts
-  module_src_components_card_hand_types_ts --> module_src_colors_ts
-  module_src_components_card_hand_types_ts --> module_src_types_ts
-  module_src_components_playing_card_index_ts["src/components/playing-card/index.ts"]
-  package__ankhorage_zora_tabletop -.-> module_src_components_playing_card_index_ts
-  module_src_components_playing_card_PlayingCard_tsx["src/components/playing-card/PlayingCard.tsx"]
-  package__ankhorage_zora_tabletop -.-> module_src_components_playing_card_PlayingCard_tsx
-  module_src_components_playing_card_PlayingCard_tsx --> module_src_cardLabel_ts
-  module_src_components_playing_card_PlayingCard_tsx --> module_src_cardSizing_ts
-  module_src_components_playing_card_PlayingCard_tsx --> module_src_colors_ts
-  module_src_components_playing_card_PlayingCard_tsx --> module_src_components_playing_card_types_ts
-  module_src_components_playing_card_PlayingCard_tsx --> module_src_types_ts
-  module_src_components_playing_card_types_ts["src/components/playing-card/types.ts"]
-  package__ankhorage_zora_tabletop -.-> module_src_components_playing_card_types_ts
-  module_src_components_playing_card_types_ts --> module_src_colors_ts
-  module_src_components_playing_card_types_ts --> module_src_types_ts
-  module_src_components_tabletop_table_index_ts["src/components/tabletop-table/index.ts"]
-  package__ankhorage_zora_tabletop -.-> module_src_components_tabletop_table_index_ts
-  module_src_components_tabletop_table_TabletopTable_tsx["src/components/tabletop-table/TabletopTable.tsx"]
-  package__ankhorage_zora_tabletop -.-> module_src_components_tabletop_table_TabletopTable_tsx
-  module_src_components_tabletop_table_TabletopTable_tsx --> module_src_colors_ts
-  module_src_components_tabletop_table_TabletopTable_tsx --> module_src_components_card_hand_index_ts
-  module_src_components_tabletop_table_TabletopTable_tsx --> module_src_components_tabletop_table_types_ts
-  module_src_components_tabletop_table_TabletopTable_tsx --> module_src_tablePositions_ts
-  module_src_components_tabletop_table_TabletopTable_tsx --> module_src_types_ts
-  module_src_components_tabletop_table_types_ts["src/components/tabletop-table/types.ts"]
-  package__ankhorage_zora_tabletop -.-> module_src_components_tabletop_table_types_ts
-  module_src_components_tabletop_table_types_ts --> module_src_colors_ts
-  module_src_components_tabletop_table_types_ts --> module_src_types_ts
-  module_src_index_ts["src/index.ts"]
-  module_src_tablePositions_ts["src/tablePositions.ts"]
-  package__ankhorage_zora_tabletop -.-> module_src_tablePositions_ts
-  module_src_tablePositions_ts --> module_src_types_ts
-  module_src_types_ts["src/types.ts"]
-  package__ankhorage_zora_tabletop -.-> module_src_types_ts
-```
-
-</details>
 
 ## Public API
 

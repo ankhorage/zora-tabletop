@@ -59,6 +59,15 @@
     }
   ],
   "usage": null,
+  "readmeUsage": [
+    {
+      "title": "Minimal tabletop app root.",
+      "description": "Minimal tabletop app root.\n\nUse `TabletopTable` inside a ZORA app shell to render generic seats, visible\ncards, face-down cards, and center-table labels without adding game rules.",
+      "language": "tsx",
+      "code": "import {\n  AppBar,\n  AppShell,\n  Screen,\n  ScreenSection,\n  ZoraProvider,\n  type ZoraTheme,\n} from '@ankhorage/zora';\nimport { type TabletopSeatState, TabletopTable } from '@ankhorage/zora-tabletop';\n\nconst tabletopTheme: ZoraTheme = {\n  id: 'basic-tabletop',\n  name: 'Basic tabletop',\n  appCategory: 'games',\n  primaryColor: '#0f766e',\n  harmony: 'analogous',\n};\n\nconst seats: readonly TabletopSeatState[] = [\n  {\n    id: 'seat-a',\n    label: 'Seat A',\n    sublabel: 'Ready',\n    cards: [\n      { rank: 'A', suit: 'spades' },\n      { rank: 'K', suit: 'hearts' },\n    ],\n    selected: true,\n    tokenLabel: 'Active',\n  },\n  {\n    id: 'seat-b',\n    label: 'Seat B',\n    sublabel: 'Hidden cards',\n    faceDownCards: 2,\n  },\n  {\n    id: 'seat-c',\n    label: 'Seat C',\n    sublabel: 'Paused',\n    faceDownCards: 2,\n    muted: true,\n  },\n];\n\nexport default function BasicTabletopApp() {\n  return (\n    <ZoraProvider initialMode=\"light\" theme={tabletopTheme}>\n      <AppShell header={<AppBar title=\"Tabletop\" subtitle=\"Reusable card-game UI\" />}>\n        <Screen>\n          <ScreenSection\n            title=\"Table state\"\n            description=\"Map app data into generic seats and cards.\"\n          >\n            <TabletopTable\n              seats={seats}\n              centerCards={[\n                { rank: 'Q', suit: 'diamonds' },\n                { rank: 'J', suit: 'clubs' },\n                { rank: '10', suit: 'spades' },\n              ]}\n              centerLabel=\"Round 1\"\n              centerSublabel=\"Shared cards\"\n            />\n          </ScreenSection>\n        </Screen>\n      </AppShell>\n    </ZoraProvider>\n  );\n}",
+      "sourcePath": "examples/basic-tabletop/App.tsx"
+    }
+  ],
   "config": null,
   "entrypoints": ["src/index.ts"],
   "modules": [
