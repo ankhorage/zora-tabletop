@@ -110,11 +110,7 @@ export function createTabletopColorScheme(
   };
 }
 
-function resolveReadableTextColor(
-  background: string,
-  preferred: string,
-  fallback: string,
-): string {
+function resolveReadableTextColor(background: string, preferred: string, fallback: string): string {
   const preferredContrast = getContrastRatio(background, preferred);
   if (preferredContrast !== null && preferredContrast >= MINIMUM_READABLE_CONTRAST) {
     return preferred;
@@ -123,8 +119,9 @@ function resolveReadableTextColor(
   const candidates = uniqueColors([preferred, fallback, LIGHT_TEXT_FALLBACK, DARK_TEXT_FALLBACK]);
   const [readableCandidate] = candidates
     .map((candidate) => ({ candidate, contrast: getContrastRatio(background, candidate) }))
-    .filter((entry): entry is { readonly candidate: string; readonly contrast: number } =>
-      entry.contrast !== null,
+    .filter(
+      (entry): entry is { readonly candidate: string; readonly contrast: number } =>
+        entry.contrast !== null,
     )
     .sort((left, right) => right.contrast - left.contrast);
 
