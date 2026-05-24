@@ -7,6 +7,18 @@ import { getTabletopCardDimensions } from '../../cardSizing';
 import { createTabletopColorScheme } from '../../colors';
 import type { CardBackProps } from './types';
 
+/***
+ * Face-down playing-card primitive for hidden cards and decks.
+ *
+ * Use `CardBack` when a card should be represented visually without exposing its
+ * rank or suit. The component keeps a generic accessible label for hidden cards.
+ *
+ * @readme
+ * @example Hidden cards
+ * ```tsx
+ * <CardBack size="small" />
+ * ```
+ */
 export function CardBack({
   size = 'medium',
   muted = false,
