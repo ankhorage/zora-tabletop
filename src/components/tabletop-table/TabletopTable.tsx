@@ -21,6 +21,23 @@ function createSeatAccessibilityLabel(seat: TabletopSeatState): string | undefin
   return parts.join(', ');
 }
 
+/***
+ * Responsive tabletop surface for generic card-game and board-game scenes.
+ *
+ * Use `TabletopTable` to arrange seats around a themed table surface, display
+ * shared center cards, and show neutral seat labels/tokens without embedding game
+ * rules into the component.
+ *
+ * @readme
+ * @example Basic table
+ * ```tsx
+ * <TabletopTable
+ *   seats={seats}
+ *   centerCards={[{ rank: 'A', suit: 'spades' }]}
+ *   centerLabel="Round 1"
+ * />
+ * ```
+ */
 export function TabletopTable({
   seats,
   centerCards = [],
