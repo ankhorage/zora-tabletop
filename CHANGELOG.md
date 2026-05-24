@@ -1,5 +1,11 @@
 # @ankhorage/zora-tabletop
 
+## 0.0.4
+
+### Patch Changes
+
+- 51c846b: Update packages
+
 ## 0.0.3
 
 ### Patch Changes
