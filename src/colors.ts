@@ -121,12 +121,12 @@ function resolveReadableTextColor(
   }
 
   const candidates = uniqueColors([preferred, fallback, LIGHT_TEXT_FALLBACK, DARK_TEXT_FALLBACK]);
-  const readableCandidate = candidates
+  const [readableCandidate] = candidates
     .map((candidate) => ({ candidate, contrast: getContrastRatio(background, candidate) }))
     .filter((entry): entry is { readonly candidate: string; readonly contrast: number } =>
       entry.contrast !== null,
     )
-    .sort((left, right) => right.contrast - left.contrast)[0];
+    .sort((left, right) => right.contrast - left.contrast);
 
   return readableCandidate?.candidate ?? preferred;
 }
@@ -151,11 +151,8 @@ function getContrastRatio(background: string, foreground: string): number | null
 
 function parseHexColor(color: string): RgbColor | null {
   const value = color.trim();
-  const match = /^#([0-9a-f]{3}|[0-9a-f]{6}|[0-9a-f]{8})$/i.exec(value);
-  if (!match) return null;
-
-  const hex = match[1];
-  if (hex === undefined) return null;
+  const hex = value.startsWith('#') ? value.slice(1) : '';
+  if (!isSupportedHexLength(hex) || !isHexColorValue(hex)) return null;
 
   if (hex.length === 3) {
     const red = hex.slice(0, 1);
@@ -174,6 +171,23 @@ function parseHexColor(color: string): RgbColor | null {
     green: parseInt(hex.slice(2, 4), 16),
     blue: parseInt(hex.slice(4, 6), 16),
   };
+}
+
+function isSupportedHexLength(hex: string): boolean {
+  return hex.length === 3 || hex.length === 6 || hex.length === 8;
+}
+
+function isHexColorValue(hex: string): boolean {
+  return [...hex].every((character) => isHexCharacter(character));
+}
+
+function isHexCharacter(character: string): boolean {
+  const code = character.charCodeAt(0);
+  const isDigit = code >= 48 && code <= 57;
+  const isUpperHex = code >= 65 && code <= 70;
+  const isLowerHex = code >= 97 && code <= 102;
+
+  return isDigit || isUpperHex || isLowerHex;
 }
 
 function getRelativeLuminance(color: RgbColor): number {
