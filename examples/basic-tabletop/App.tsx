@@ -6,7 +6,7 @@ import {
   ZoraProvider,
   type ZoraTheme,
 } from '@ankhorage/zora';
-import { TabletopTable, type TabletopSeatState } from '@ankhorage/zora-tabletop';
+import { type TabletopSeatState, TabletopTable } from '@ankhorage/zora-tabletop';
 
 const tabletopTheme: ZoraTheme = {
   id: 'basic-tabletop',
