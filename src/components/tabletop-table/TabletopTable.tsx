@@ -73,13 +73,13 @@ export function TabletopTable({
           ) : null}
           {centerLabel !== undefined ? (
             <View style={[styles.centerLabel, { backgroundColor: colors.seatSurface }]}>
-              <Text style={[styles.centerLabelText, { color: colors.cardText }]}>
+              <Text style={[styles.centerLabelText, { color: colors.seatText }]}>
                 {centerLabel}
               </Text>
             </View>
           ) : null}
           {centerSublabel !== undefined ? (
-            <Text style={[styles.centerSublabel, { color: colors.mutedText }]}>
+            <Text style={[styles.centerSublabel, { color: colors.tableMutedText }]}>
               {centerSublabel}
             </Text>
           ) : null}
@@ -114,9 +114,9 @@ export function TabletopTable({
                 size={cardSize}
               />
             ) : null}
-            <Text style={[styles.seatLabel, { color: colors.cardText }]}>{seat.label}</Text>
+            <Text style={[styles.seatLabel, { color: colors.seatText }]}>{seat.label}</Text>
             {seat.sublabel !== undefined ? (
-              <Text style={[styles.seatSublabel, { color: colors.mutedText }]}>
+              <Text style={[styles.seatSublabel, { color: colors.seatMutedText }]}>
                 {seat.sublabel}
               </Text>
             ) : null}
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
   },
   centerSublabel: {
     fontSize: 11,
-    fontWeight: '600',
+    fontWeight: '700',
   },
   circleSurface: {
     borderRadius: 999,
@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
   },
   seatSublabel: {
     fontSize: 10,
-    fontWeight: '600',
+    fontWeight: '700',
   },
   surface: {
     borderWidth: 8,
