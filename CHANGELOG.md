@@ -1,5 +1,11 @@
 # @ankhorage/zora-tabletop
 
+## 0.0.3
+
+### Patch Changes
+
+- 25a2245: Add Paradox README and usage documentation comments for tabletop UI exports.
+
 ## 0.0.2
 
 ### Patch Changes
