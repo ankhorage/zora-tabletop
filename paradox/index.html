@@ -213,7 +213,7 @@
             <li>
               <button class="nav-button" type="button" data-target="src/colors.ts">
                 src/colors.ts
-                <small>1 function</small>
+                <small>10 functions</small>
               </button>
             </li>
             <li>
@@ -513,11 +513,16 @@
               <article
                 class="item"
                 id="symbol-createtabletopcolorscheme"
-                data-search="createTabletopColorScheme function src/colors.ts  TabletopColorScheme (theme: TabletopColorThemeShape, overrides?: Partial&lt;TabletopColorScheme&gt;) =&gt; TabletopColorScheme"
+                data-search="createTabletopColorScheme function src/colors.ts Creates the theme-derived color palette used by tabletop primitives.&#10;&#10;Use `createTabletopColorScheme` when custom components need to align with the&#10;same card, table, seat, token, and contrast-aware foreground colors as the&#10;built-in tabletop components. TabletopColorScheme (theme: TabletopColorThemeShape, overrides?: Partial&lt;TabletopColorScheme&gt;) =&gt; TabletopColorScheme"
               >
                 <h4>createTabletopColorScheme</h4>
-                <p class="muted">function • <code>src/colors.ts:46:1</code></p>
-
+                <p class="muted">function • <code>src/colors.ts:73:1</code></p>
+                <p>
+                  Creates the theme-derived color palette used by tabletop primitives. Use
+                  `createTabletopColorScheme` when custom components need to align with the same
+                  card, table, seat, token, and contrast-aware foreground colors as the built-in
+                  tabletop components.
+                </p>
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
                   <strong>Related symbols:</strong>
@@ -563,7 +568,7 @@
                 data-search="TabletopColorOverrides unknown src/colors.ts "
               >
                 <h4>TabletopColorOverrides</h4>
-                <p class="muted">unknown • <code>src/colors.ts:19:1</code></p>
+                <p class="muted">unknown • <code>src/colors.ts:23:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
@@ -647,6 +652,13 @@
                       <td></td>
                     </tr>
                     <tr>
+                      <td><code>seatMutedText</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
                       <td><code>seatSelectedBorder</code></td>
                       <td>property</td>
                       <td><code>string</code></td>
@@ -655,6 +667,13 @@
                     </tr>
                     <tr>
                       <td><code>seatSurface</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>seatText</code></td>
                       <td>property</td>
                       <td><code>string</code></td>
                       <td>yes</td>
@@ -676,6 +695,20 @@
                     </tr>
                     <tr>
                       <td><code>tableInnerBorder</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>tableMutedText</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>tableText</code></td>
                       <td>property</td>
                       <td><code>string</code></td>
                       <td>yes</td>
@@ -704,13 +737,17 @@
               <article
                 class="item"
                 id="symbol-cardback"
-                data-search="CardBack function src/components/card-back/CardBack.tsx  CardBackProps ({&#10;  size = &#39;medium&#39;,&#10;  muted = false,&#10;  accessibilityLabel,&#10;  colorScheme,&#10;  testID,&#10;}: CardBackProps) =&gt; React.JSX.Element"
+                data-search="CardBack function src/components/card-back/CardBack.tsx Face-down playing-card primitive for hidden cards and decks.&#10;&#10;Use `CardBack` when a card should be represented visually without exposing its&#10;rank or suit. The component keeps a generic accessible label for hidden cards. CardBackProps ({&#10;  size = &#39;medium&#39;,&#10;  muted = false,&#10;  accessibilityLabel,&#10;  colorScheme,&#10;  testID,&#10;}: CardBackProps) =&gt; React.JSX.Element"
               >
                 <h4>CardBack</h4>
                 <p class="muted">
-                  function • <code>src/components/card-back/CardBack.tsx:10:1</code>
+                  function • <code>src/components/card-back/CardBack.tsx:22:1</code>
                 </p>
-
+                <p>
+                  Face-down playing-card primitive for hidden cards and decks. Use `CardBack` when a
+                  card should be represented visually without exposing its rank or suit. The
+                  component keeps a generic accessible label for hidden cards.
+                </p>
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
                   <strong>Related symbols:</strong>
@@ -835,13 +872,17 @@
               <article
                 class="item"
                 id="symbol-cardhand"
-                data-search="CardHand function src/components/card-hand/CardHand.tsx  CardHandProps ({&#10;  cards = [],&#10;  faceDownCards = 0,&#10;  size = &#39;medium&#39;,&#10;  muted = false,&#10;  colorScheme,&#10;  accessibilityLabel,&#10;  testID,&#10;}: CardHandProps) =&gt; React.JSX.Element"
+                data-search="CardHand function src/components/card-hand/CardHand.tsx Compact row of visible and face-down playing cards.&#10;&#10;Use `CardHand` when a seat, pile, or custom layout needs to show multiple cards&#10;with consistent spacing, sizing, and muted state handling. CardHandProps ({&#10;  cards = [],&#10;  faceDownCards = 0,&#10;  size = &#39;medium&#39;,&#10;  muted = false,&#10;  colorScheme,&#10;  accessibilityLabel,&#10;  testID,&#10;}: CardHandProps) =&gt; React.JSX.Element"
               >
                 <h4>CardHand</h4>
                 <p class="muted">
-                  function • <code>src/components/card-hand/CardHand.tsx:12:1</code>
+                  function • <code>src/components/card-hand/CardHand.tsx:24:1</code>
                 </p>
-
+                <p>
+                  Compact row of visible and face-down playing cards. Use `CardHand` when a seat,
+                  pile, or custom layout needs to show multiple cards with consistent spacing,
+                  sizing, and muted state handling.
+                </p>
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
                   <strong>Related symbols:</strong>
@@ -983,13 +1024,18 @@
               <article
                 class="item"
                 id="symbol-playingcard"
-                data-search="PlayingCard function src/components/playing-card/PlayingCard.tsx  PlayingCardProps ({&#10;  card,&#10;  size = &#39;medium&#39;,&#10;  selected = false,&#10;  muted = false,&#10;  accessibilityLabel,&#10;  colorScheme,&#10;  testID,&#10;}: PlayingCardProps) =&gt; React.JSX.Element"
+                data-search="PlayingCard function src/components/playing-card/PlayingCard.tsx Theme-aware face-up playing card primitive.&#10;&#10;Use `PlayingCard` for visible card values in hands, shared table cards, piles,&#10;or custom tabletop layouts. The component renders rank and suit text and exposes&#10;an accessible card label by default. PlayingCardProps ({&#10;  card,&#10;  size = &#39;medium&#39;,&#10;  selected = false,&#10;  muted = false,&#10;  accessibilityLabel,&#10;  colorScheme,&#10;  testID,&#10;}: PlayingCardProps) =&gt; React.JSX.Element"
               >
                 <h4>PlayingCard</h4>
                 <p class="muted">
-                  function • <code>src/components/playing-card/PlayingCard.tsx:22:1</code>
+                  function • <code>src/components/playing-card/PlayingCard.tsx:35:1</code>
                 </p>
-
+                <p>
+                  Theme-aware face-up playing card primitive. Use `PlayingCard` for visible card
+                  values in hands, shared table cards, piles, or custom tabletop layouts. The
+                  component renders rank and suit text and exposes an accessible card label by
+                  default.
+                </p>
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
                   <strong>Related symbols:</strong>
@@ -1131,13 +1177,18 @@
               <article
                 class="item"
                 id="symbol-tabletoptable"
-                data-search="TabletopTable function src/components/tabletop-table/TabletopTable.tsx  TabletopTableProps ({&#10;  seats,&#10;  centerCards = [],&#10;  centerLabel,&#10;  centerSublabel,&#10;  shape = &#39;oval&#39;,&#10;  seatCount,&#10;  cardSize = &#39;small&#39;,&#10;  disabled = false,&#10;  colorScheme,&#10;  accessibilityLabel,&#10;  testID,&#10;}: TabletopTableProps) =&gt; React.JSX.Element"
+                data-search="TabletopTable function src/components/tabletop-table/TabletopTable.tsx Responsive tabletop surface for generic card-game and board-game scenes.&#10;&#10;Use `TabletopTable` to arrange seats around a themed table surface, display&#10;shared center cards, and show neutral seat labels/tokens without embedding game&#10;rules into the component. TabletopTableProps ({&#10;  seats,&#10;  centerCards = [],&#10;  centerLabel,&#10;  centerSublabel,&#10;  shape = &#39;oval&#39;,&#10;  seatCount,&#10;  cardSize = &#39;small&#39;,&#10;  disabled = false,&#10;  colorScheme,&#10;  accessibilityLabel,&#10;  testID,&#10;}: TabletopTableProps) =&gt; React.JSX.Element"
               >
                 <h4>TabletopTable</h4>
                 <p class="muted">
-                  function • <code>src/components/tabletop-table/TabletopTable.tsx:24:1</code>
+                  function • <code>src/components/tabletop-table/TabletopTable.tsx:41:1</code>
                 </p>
-
+                <p>
+                  Responsive tabletop surface for generic card-game and board-game scenes. Use
+                  `TabletopTable` to arrange seats around a themed table surface, display shared
+                  center cards, and show neutral seat labels/tokens without embedding game rules
+                  into the component.
+                </p>
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
                   <strong>Related symbols:</strong>
@@ -1507,11 +1558,15 @@
             <article
               class="item"
               id="component-cardback"
-              data-search="CardBack src/components/card-back/CardBack.tsx  accessibilityLabel string | undefined colorScheme TabletopColorOverrides | undefined muted boolean | undefined size TabletopCardSize | undefined testID string | undefined"
+              data-search="CardBack src/components/card-back/CardBack.tsx Face-down playing-card primitive for hidden cards and decks.&#10;&#10;Use `CardBack` when a card should be represented visually without exposing its&#10;rank or suit. The component keeps a generic accessible label for hidden cards. accessibilityLabel string | undefined colorScheme TabletopColorOverrides | undefined muted boolean | undefined size TabletopCardSize | undefined testID string | undefined"
             >
               <h3>CardBack</h3>
-              <p class="muted"><code>src/components/card-back/CardBack.tsx:10:1</code></p>
-
+              <p class="muted"><code>src/components/card-back/CardBack.tsx:22:1</code></p>
+              <p>
+                Face-down playing-card primitive for hidden cards and decks. Use `CardBack` when a
+                card should be represented visually without exposing its rank or suit. The component
+                keeps a generic accessible label for hidden cards.
+              </p>
               <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
               <table>
                 <thead>
@@ -1559,11 +1614,15 @@
             <article
               class="item"
               id="component-cardhand"
-              data-search="CardHand src/components/card-hand/CardHand.tsx  accessibilityLabel string | undefined cards readonly PlayingCardValue[] | undefined colorScheme TabletopColorOverrides | undefined faceDownCards number | undefined muted boolean | undefined size TabletopCardSize | undefined testID string | undefined"
+              data-search="CardHand src/components/card-hand/CardHand.tsx Compact row of visible and face-down playing cards.&#10;&#10;Use `CardHand` when a seat, pile, or custom layout needs to show multiple cards&#10;with consistent spacing, sizing, and muted state handling. accessibilityLabel string | undefined cards readonly PlayingCardValue[] | undefined colorScheme TabletopColorOverrides | undefined faceDownCards number | undefined muted boolean | undefined size TabletopCardSize | undefined testID string | undefined"
             >
               <h3>CardHand</h3>
-              <p class="muted"><code>src/components/card-hand/CardHand.tsx:12:1</code></p>
-
+              <p class="muted"><code>src/components/card-hand/CardHand.tsx:24:1</code></p>
+              <p>
+                Compact row of visible and face-down playing cards. Use `CardHand` when a seat,
+                pile, or custom layout needs to show multiple cards with consistent spacing, sizing,
+                and muted state handling.
+              </p>
               <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
               <table>
                 <thead>
@@ -1623,11 +1682,16 @@
             <article
               class="item"
               id="component-playingcard"
-              data-search="PlayingCard src/components/playing-card/PlayingCard.tsx  accessibilityLabel string | undefined card PlayingCardValue colorScheme TabletopColorOverrides | undefined muted boolean | undefined selected boolean | undefined size TabletopCardSize | undefined testID string | undefined"
+              data-search="PlayingCard src/components/playing-card/PlayingCard.tsx Theme-aware face-up playing card primitive.&#10;&#10;Use `PlayingCard` for visible card values in hands, shared table cards, piles,&#10;or custom tabletop layouts. The component renders rank and suit text and exposes&#10;an accessible card label by default. accessibilityLabel string | undefined card PlayingCardValue colorScheme TabletopColorOverrides | undefined muted boolean | undefined selected boolean | undefined size TabletopCardSize | undefined testID string | undefined"
             >
               <h3>PlayingCard</h3>
-              <p class="muted"><code>src/components/playing-card/PlayingCard.tsx:22:1</code></p>
-
+              <p class="muted"><code>src/components/playing-card/PlayingCard.tsx:35:1</code></p>
+              <p>
+                Theme-aware face-up playing card primitive. Use `PlayingCard` for visible card
+                values in hands, shared table cards, piles, or custom tabletop layouts. The
+                component renders rank and suit text and exposes an accessible card label by
+                default.
+              </p>
               <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
               <table>
                 <thead>
@@ -1687,11 +1751,16 @@
             <article
               class="item"
               id="component-tabletoptable"
-              data-search="TabletopTable src/components/tabletop-table/TabletopTable.tsx  accessibilityLabel string | undefined cardSize TabletopCardSize | undefined centerCards readonly PlayingCardValue[] | undefined centerLabel React.ReactNode | undefined centerSublabel React.ReactNode | undefined colorScheme TabletopColorOverrides | undefined disabled boolean | undefined seatCount TabletopSeatCount | undefined seats readonly TabletopSeatState[] shape TabletopShape | undefined testID string | undefined"
+              data-search="TabletopTable src/components/tabletop-table/TabletopTable.tsx Responsive tabletop surface for generic card-game and board-game scenes.&#10;&#10;Use `TabletopTable` to arrange seats around a themed table surface, display&#10;shared center cards, and show neutral seat labels/tokens without embedding game&#10;rules into the component. accessibilityLabel string | undefined cardSize TabletopCardSize | undefined centerCards readonly PlayingCardValue[] | undefined centerLabel React.ReactNode | undefined centerSublabel React.ReactNode | undefined colorScheme TabletopColorOverrides | undefined disabled boolean | undefined seatCount TabletopSeatCount | undefined seats readonly TabletopSeatState[] shape TabletopShape | undefined testID string | undefined"
             >
               <h3>TabletopTable</h3>
-              <p class="muted"><code>src/components/tabletop-table/TabletopTable.tsx:24:1</code></p>
-
+              <p class="muted"><code>src/components/tabletop-table/TabletopTable.tsx:41:1</code></p>
+              <p>
+                Responsive tabletop surface for generic card-game and board-game scenes. Use
+                `TabletopTable` to arrange seats around a themed table surface, display shared
+                center cards, and show neutral seat labels/tokens without embedding game rules into
+                the component.
+              </p>
               <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
               <table>
                 <thead>
@@ -2350,9 +2419,62 @@ sequenceDiagram
         <section id="view-src-colors-ts" class="view" data-view="src/colors.ts" hidden>
           <section class="panel">
             <h2>src/colors.ts</h2>
-            <article class="item" data-search="createTabletopColorScheme src/colors.ts ">
+            <article
+              class="item"
+              data-search="createTabletopColorScheme src/colors.ts Creates the theme-derived color palette used by tabletop primitives.&#10;&#10;Use `createTabletopColorScheme` when custom components need to align with the&#10;same card, table, seat, token, and contrast-aware foreground colors as the&#10;built-in tabletop components."
+            >
               <h3>createTabletopColorScheme</h3>
-              <p class="muted"><code>src/colors.ts:46:1</code></p>
+              <p class="muted"><code>src/colors.ts:73:1</code></p>
+              <p>
+                Creates the theme-derived color palette used by tabletop primitives. Use
+                `createTabletopColorScheme` when custom components need to align with the same card,
+                table, seat, token, and contrast-aware foreground colors as the built-in tabletop
+                components.
+              </p>
+            </article>
+            <article class="item" data-search="resolveReadableTextColor src/colors.ts ">
+              <h3>resolveReadableTextColor</h3>
+              <p class="muted"><code>src/colors.ts:126:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="uniqueColors src/colors.ts ">
+              <h3>uniqueColors</h3>
+              <p class="muted"><code>src/colors.ts:144:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="getContrastRatio src/colors.ts ">
+              <h3>getContrastRatio</h3>
+              <p class="muted"><code>src/colors.ts:148:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="parseHexColor src/colors.ts ">
+              <h3>parseHexColor</h3>
+              <p class="muted"><code>src/colors.ts:162:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="isSupportedHexLength src/colors.ts ">
+              <h3>isSupportedHexLength</h3>
+              <p class="muted"><code>src/colors.ts:186:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="isHexColorValue src/colors.ts ">
+              <h3>isHexColorValue</h3>
+              <p class="muted"><code>src/colors.ts:190:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="isHexCharacter src/colors.ts ">
+              <h3>isHexCharacter</h3>
+              <p class="muted"><code>src/colors.ts:194:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="getRelativeLuminance src/colors.ts ">
+              <h3>getRelativeLuminance</h3>
+              <p class="muted"><code>src/colors.ts:203:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="normalizeColorChannel src/colors.ts ">
+              <h3>normalizeColorChannel</h3>
+              <p class="muted"><code>src/colors.ts:211:1</code></p>
               <p class="empty">No description available.</p>
             </article>
           </section>
@@ -2365,10 +2487,17 @@ sequenceDiagram
         >
           <section class="panel">
             <h2>src/components/card-back/CardBack.tsx</h2>
-            <article class="item" data-search="CardBack src/components/card-back/CardBack.tsx ">
+            <article
+              class="item"
+              data-search="CardBack src/components/card-back/CardBack.tsx Face-down playing-card primitive for hidden cards and decks.&#10;&#10;Use `CardBack` when a card should be represented visually without exposing its&#10;rank or suit. The component keeps a generic accessible label for hidden cards."
+            >
               <h3>CardBack</h3>
-              <p class="muted"><code>src/components/card-back/CardBack.tsx:10:1</code></p>
-              <p class="empty">No description available.</p>
+              <p class="muted"><code>src/components/card-back/CardBack.tsx:22:1</code></p>
+              <p>
+                Face-down playing-card primitive for hidden cards and decks. Use `CardBack` when a
+                card should be represented visually without exposing its rank or suit. The component
+                keeps a generic accessible label for hidden cards.
+              </p>
             </article>
           </section>
         </section>
@@ -2388,10 +2517,17 @@ sequenceDiagram
               <p class="muted"><code>src/components/card-hand/CardHand.tsx:8:1</code></p>
               <p class="empty">No description available.</p>
             </article>
-            <article class="item" data-search="CardHand src/components/card-hand/CardHand.tsx ">
+            <article
+              class="item"
+              data-search="CardHand src/components/card-hand/CardHand.tsx Compact row of visible and face-down playing cards.&#10;&#10;Use `CardHand` when a seat, pile, or custom layout needs to show multiple cards&#10;with consistent spacing, sizing, and muted state handling."
+            >
               <h3>CardHand</h3>
-              <p class="muted"><code>src/components/card-hand/CardHand.tsx:12:1</code></p>
-              <p class="empty">No description available.</p>
+              <p class="muted"><code>src/components/card-hand/CardHand.tsx:24:1</code></p>
+              <p>
+                Compact row of visible and face-down playing cards. Use `CardHand` when a seat,
+                pile, or custom layout needs to show multiple cards with consistent spacing, sizing,
+                and muted state handling.
+              </p>
             </article>
           </section>
         </section>
@@ -2413,11 +2549,16 @@ sequenceDiagram
             </article>
             <article
               class="item"
-              data-search="PlayingCard src/components/playing-card/PlayingCard.tsx "
+              data-search="PlayingCard src/components/playing-card/PlayingCard.tsx Theme-aware face-up playing card primitive.&#10;&#10;Use `PlayingCard` for visible card values in hands, shared table cards, piles,&#10;or custom tabletop layouts. The component renders rank and suit text and exposes&#10;an accessible card label by default."
             >
               <h3>PlayingCard</h3>
-              <p class="muted"><code>src/components/playing-card/PlayingCard.tsx:22:1</code></p>
-              <p class="empty">No description available.</p>
+              <p class="muted"><code>src/components/playing-card/PlayingCard.tsx:35:1</code></p>
+              <p>
+                Theme-aware face-up playing card primitive. Use `PlayingCard` for visible card
+                values in hands, shared table cards, piles, or custom tabletop layouts. The
+                component renders rank and suit text and exposes an accessible card label by
+                default.
+              </p>
             </article>
           </section>
         </section>
@@ -2439,11 +2580,16 @@ sequenceDiagram
             </article>
             <article
               class="item"
-              data-search="TabletopTable src/components/tabletop-table/TabletopTable.tsx "
+              data-search="TabletopTable src/components/tabletop-table/TabletopTable.tsx Responsive tabletop surface for generic card-game and board-game scenes.&#10;&#10;Use `TabletopTable` to arrange seats around a themed table surface, display&#10;shared center cards, and show neutral seat labels/tokens without embedding game&#10;rules into the component."
             >
               <h3>TabletopTable</h3>
-              <p class="muted"><code>src/components/tabletop-table/TabletopTable.tsx:24:1</code></p>
-              <p class="empty">No description available.</p>
+              <p class="muted"><code>src/components/tabletop-table/TabletopTable.tsx:41:1</code></p>
+              <p>
+                Responsive tabletop surface for generic card-game and board-game scenes. Use
+                `TabletopTable` to arrange seats around a themed table surface, display shared
+                center cards, and show neutral seat labels/tokens without embedding game rules into
+                the component.
+              </p>
             </article>
           </section>
         </section>
@@ -2457,17 +2603,17 @@ sequenceDiagram
             <h2>src/tablePositions.ts</h2>
             <article class="item" data-search="normalizeTabletopSeatCount src/tablePositions.ts ">
               <h3>normalizeTabletopSeatCount</h3>
-              <p class="muted"><code>src/tablePositions.ts:78:1</code></p>
+              <p class="muted"><code>src/tablePositions.ts:80:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article class="item" data-search="getTabletopSeatPositions src/tablePositions.ts ">
               <h3>getTabletopSeatPositions</h3>
-              <p class="muted"><code>src/tablePositions.ts:86:1</code></p>
+              <p class="muted"><code>src/tablePositions.ts:88:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article class="item" data-search="getTabletopSeatPosition src/tablePositions.ts ">
               <h3>getTabletopSeatPosition</h3>
-              <p class="muted"><code>src/tablePositions.ts:90:1</code></p>
+              <p class="muted"><code>src/tablePositions.ts:92:1</code></p>
               <p class="empty">No description available.</p>
             </article>
           </section>

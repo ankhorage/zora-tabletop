@@ -9,6 +9,18 @@ function createFaceDownCards(count: number): readonly number[] {
   return Array.from({ length: Math.max(0, count) }, (_, index) => index);
 }
 
+/***
+ * Compact row of visible and face-down playing cards.
+ *
+ * Use `CardHand` when a seat, pile, or custom layout needs to show multiple cards
+ * with consistent spacing, sizing, and muted state handling.
+ *
+ * @readme
+ * @example Mixed hand
+ * ```tsx
+ * <CardHand cards={[{ rank: 'Q', suit: 'hearts' }]} faceDownCards={1} />
+ * ```
+ */
 export function CardHand({
   cards = [],
   faceDownCards = 0,

@@ -1,14 +1,20 @@
 [
   {
     "name": "CardBack",
-    "description": null,
-    "isReadme": false,
-    "examples": [],
+    "description": "Face-down playing-card primitive for hidden cards and decks.\n\nUse `CardBack` when a card should be represented visually without exposing its\nrank or suit. The component keeps a generic accessible label for hidden cards.",
+    "isReadme": true,
+    "examples": [
+      {
+        "title": "Hidden cards",
+        "language": "tsx",
+        "code": "<CardBack size=\"small\" />"
+      }
+    ],
     "kind": "function",
     "modulePath": "src/components/card-back/CardBack.tsx",
     "sourceLocation": {
       "filePath": "src/components/card-back/CardBack.tsx",
-      "line": 10,
+      "line": 22,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -87,14 +93,20 @@
   },
   {
     "name": "CardHand",
-    "description": null,
-    "isReadme": false,
-    "examples": [],
+    "description": "Compact row of visible and face-down playing cards.\n\nUse `CardHand` when a seat, pile, or custom layout needs to show multiple cards\nwith consistent spacing, sizing, and muted state handling.",
+    "isReadme": true,
+    "examples": [
+      {
+        "title": "Mixed hand",
+        "language": "tsx",
+        "code": "<CardHand cards={[{ rank: 'Q', suit: 'hearts' }]} faceDownCards={1} />"
+      }
+    ],
     "kind": "function",
     "modulePath": "src/components/card-hand/CardHand.tsx",
     "sourceLocation": {
       "filePath": "src/components/card-hand/CardHand.tsx",
-      "line": 12,
+      "line": 24,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -187,14 +199,20 @@
   },
   {
     "name": "createTabletopColorScheme",
-    "description": null,
-    "isReadme": false,
-    "examples": [],
+    "description": "Creates the theme-derived color palette used by tabletop primitives.\n\nUse `createTabletopColorScheme` when custom components need to align with the\nsame card, table, seat, token, and contrast-aware foreground colors as the\nbuilt-in tabletop components.",
+    "isReadme": true,
+    "examples": [
+      {
+        "title": "Custom color scheme",
+        "language": "ts",
+        "code": "const colors = createTabletopColorScheme(theme, { tableFelt: '#065f46' });"
+      }
+    ],
     "kind": "function",
     "modulePath": "src/colors.ts",
     "sourceLocation": {
       "filePath": "src/colors.ts",
-      "line": 46,
+      "line": 73,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -225,14 +243,20 @@
   },
   {
     "name": "PlayingCard",
-    "description": null,
-    "isReadme": false,
-    "examples": [],
+    "description": "Theme-aware face-up playing card primitive.\n\nUse `PlayingCard` for visible card values in hands, shared table cards, piles,\nor custom tabletop layouts. The component renders rank and suit text and exposes\nan accessible card label by default.",
+    "isReadme": true,
+    "examples": [
+      {
+        "title": "Face-up card",
+        "language": "tsx",
+        "code": "<PlayingCard card={{ rank: 'A', suit: 'spades' }} selected />"
+      }
+    ],
     "kind": "function",
     "modulePath": "src/components/playing-card/PlayingCard.tsx",
     "sourceLocation": {
       "filePath": "src/components/playing-card/PlayingCard.tsx",
-      "line": 22,
+      "line": 35,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -401,7 +425,7 @@
     "modulePath": "src/colors.ts",
     "sourceLocation": {
       "filePath": "src/colors.ts",
-      "line": 19,
+      "line": 23,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -483,6 +507,13 @@
         "description": null
       },
       {
+        "name": "seatMutedText",
+        "kind": "property",
+        "type": "string",
+        "required": true,
+        "description": null
+      },
+      {
         "name": "seatSelectedBorder",
         "kind": "property",
         "type": "string",
@@ -491,6 +522,13 @@
       },
       {
         "name": "seatSurface",
+        "kind": "property",
+        "type": "string",
+        "required": true,
+        "description": null
+      },
+      {
+        "name": "seatText",
         "kind": "property",
         "type": "string",
         "required": true,
@@ -512,6 +550,20 @@
       },
       {
         "name": "tableInnerBorder",
+        "kind": "property",
+        "type": "string",
+        "required": true,
+        "description": null
+      },
+      {
+        "name": "tableMutedText",
+        "kind": "property",
+        "type": "string",
+        "required": true,
+        "description": null
+      },
+      {
+        "name": "tableText",
         "kind": "property",
         "type": "string",
         "required": true,
@@ -661,14 +713,20 @@
   },
   {
     "name": "TabletopTable",
-    "description": null,
-    "isReadme": false,
-    "examples": [],
+    "description": "Responsive tabletop surface for generic card-game and board-game scenes.\n\nUse `TabletopTable` to arrange seats around a themed table surface, display\nshared center cards, and show neutral seat labels/tokens without embedding game\nrules into the component.",
+    "isReadme": true,
+    "examples": [
+      {
+        "title": "Basic table",
+        "language": "tsx",
+        "code": "<TabletopTable\n  seats={seats}\n  centerCards={[{ rank: 'A', suit: 'spades' }]}\n  centerLabel=\"Round 1\"\n/>"
+      }
+    ],
     "kind": "function",
     "modulePath": "src/components/tabletop-table/TabletopTable.tsx",
     "sourceLocation": {
       "filePath": "src/components/tabletop-table/TabletopTable.tsx",
-      "line": 24,
+      "line": 41,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],

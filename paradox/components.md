@@ -2,7 +2,12 @@
 
 ## CardBack
 
-Source: `src/components/card-back/CardBack.tsx:10:1`
+Source: `src/components/card-back/CardBack.tsx:22:1`
+
+Face-down playing-card primitive for hidden cards and decks.
+
+Use `CardBack` when a card should be represented visually without exposing its
+rank or suit. The component keeps a generic accessible label for hidden cards.
 
 Export paths: `src/index.ts`
 
@@ -16,7 +21,12 @@ Export paths: `src/index.ts`
 
 ## CardHand
 
-Source: `src/components/card-hand/CardHand.tsx:12:1`
+Source: `src/components/card-hand/CardHand.tsx:24:1`
+
+Compact row of visible and face-down playing cards.
+
+Use `CardHand` when a seat, pile, or custom layout needs to show multiple cards
+with consistent spacing, sizing, and muted state handling.
 
 Export paths: `src/index.ts`
 
@@ -32,7 +42,13 @@ Export paths: `src/index.ts`
 
 ## PlayingCard
 
-Source: `src/components/playing-card/PlayingCard.tsx:22:1`
+Source: `src/components/playing-card/PlayingCard.tsx:35:1`
+
+Theme-aware face-up playing card primitive.
+
+Use `PlayingCard` for visible card values in hands, shared table cards, piles,
+or custom tabletop layouts. The component renders rank and suit text and exposes
+an accessible card label by default.
 
 Export paths: `src/index.ts`
 
@@ -48,7 +64,13 @@ Export paths: `src/index.ts`
 
 ## TabletopTable
 
-Source: `src/components/tabletop-table/TabletopTable.tsx:24:1`
+Source: `src/components/tabletop-table/TabletopTable.tsx:41:1`
+
+Responsive tabletop surface for generic card-game and board-game scenes.
+
+Use `TabletopTable` to arrange seats around a themed table surface, display
+shared center cards, and show neutral seat labels/tokens without embedding game
+rules into the component.
 
 Export paths: `src/index.ts`
 

@@ -57,6 +57,19 @@ const DARK_TEXT_FALLBACK = '#111827';
 const LIGHT_TEXT_FALLBACK = '#ffffff';
 const MINIMUM_READABLE_CONTRAST = 4.5;
 
+/***
+ * Creates the theme-derived color palette used by tabletop primitives.
+ *
+ * Use `createTabletopColorScheme` when custom components need to align with the
+ * same card, table, seat, token, and contrast-aware foreground colors as the
+ * built-in tabletop components.
+ *
+ * @readme
+ * @example Custom color scheme
+ * ```ts
+ * const colors = createTabletopColorScheme(theme, { tableFelt: '#065f46' });
+ * ```
+ */
 export function createTabletopColorScheme(
   theme: TabletopColorThemeShape,
   overrides: TabletopColorOverrides = {},
