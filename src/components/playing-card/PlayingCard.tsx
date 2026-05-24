@@ -19,6 +19,19 @@ function isRedSuit(suit: PlayingCardSuit): boolean {
   return suit === 'diamonds' || suit === 'hearts';
 }
 
+/***
+ * Theme-aware face-up playing card primitive.
+ *
+ * Use `PlayingCard` for visible card values in hands, shared table cards, piles,
+ * or custom tabletop layouts. The component renders rank and suit text and exposes
+ * an accessible card label by default.
+ *
+ * @readme
+ * @example Face-up card
+ * ```tsx
+ * <PlayingCard card={{ rank: 'A', suit: 'spades' }} selected />
+ * ```
+ */
 export function PlayingCard({
   card,
   size = 'medium',
