@@ -158,10 +158,14 @@ function parseHexColor(color: string): RgbColor | null {
   if (hex === undefined) return null;
 
   if (hex.length === 3) {
+    const red = hex.slice(0, 1);
+    const green = hex.slice(1, 2);
+    const blue = hex.slice(2, 3);
+
     return {
-      red: parseInt(hex[0] + hex[0], 16),
-      green: parseInt(hex[1] + hex[1], 16),
-      blue: parseInt(hex[2] + hex[2], 16),
+      red: parseInt(red + red, 16),
+      green: parseInt(green + green, 16),
+      blue: parseInt(blue + blue, 16),
     };
   }
 
