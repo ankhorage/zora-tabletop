@@ -1,4 +1,11 @@
-import { AppBar, AppShell, Screen, ScreenSection, ZoraProvider, type ZoraTheme } from '@ankhorage/zora';
+import {
+  AppBar,
+  AppShell,
+  Screen,
+  ScreenSection,
+  ZoraProvider,
+  type ZoraTheme,
+} from '@ankhorage/zora';
 import { TabletopTable, type TabletopSeatState } from '@ankhorage/zora-tabletop';
 
 const tabletopTheme: ZoraTheme = {
@@ -50,7 +57,10 @@ export default function BasicTabletopApp() {
     <ZoraProvider initialMode="light" theme={tabletopTheme}>
       <AppShell header={<AppBar title="Tabletop" subtitle="Reusable card-game UI" />}>
         <Screen>
-          <ScreenSection title="Table state" description="Map app data into generic seats and cards.">
+          <ScreenSection
+            title="Table state"
+            description="Map app data into generic seats and cards."
+          >
             <TabletopTable
               seats={seats}
               centerCards={[

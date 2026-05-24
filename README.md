@@ -3,7 +3,7 @@
 
 # @ankhorage/zora-tabletop
 
-![license: MIT](././paradox/badges/license.svg) ![npm: v0.0.0](././paradox/badges/npm.svg) ![runtime: bun](././paradox/badges/runtime.svg) ![typescript: strict](././paradox/badges/typescript.svg) ![eslint: checked](././paradox/badges/eslint.svg) ![prettier: checked](././paradox/badges/prettier.svg) ![build: checked](././paradox/badges/build.svg) ![tests: checked](././paradox/badges/tests.svg) ![docs: paradox](././paradox/badges/docs.svg)
+![license: MIT](././paradox/badges/license.svg) ![npm: v0.0.2](././paradox/badges/npm.svg) ![runtime: bun](././paradox/badges/runtime.svg) ![typescript: strict](././paradox/badges/typescript.svg) ![eslint: checked](././paradox/badges/eslint.svg) ![prettier: checked](././paradox/badges/prettier.svg) ![build: checked](././paradox/badges/build.svg) ![tests: checked](././paradox/badges/tests.svg) ![docs: paradox](././paradox/badges/docs.svg)
 
 Reusable tabletop, playing-card, seat, token, and card-game presentation components for React Native and React Native Web.
 
@@ -94,5 +94,222 @@ graph TD
   module_src_types_ts["src/types.ts"]
   package__ankhorage_zora_tabletop -.-> module_src_types_ts
 ```
+
+</details>
+
+## Public API
+
+### Components
+
+<details>
+<summary>CardBack</summary>
+
+```ts
+CardBack({
+  size = 'medium',
+  muted = false,
+  accessibilityLabel,
+  colorScheme,
+  testID,
+}: CardBackProps) => React.JSX.Element
+```
+
+Face-down playing-card primitive for hidden cards and decks.
+
+Use `CardBack` when a card should be represented visually without exposing its
+rank or suit. The component keeps a generic accessible label for hidden cards.
+
+#### Hidden cards
+
+```tsx
+<CardBack size="small" />
+```
+
+Related types: `CardBackProps`
+
+<details>
+<summary>Props</summary>
+
+| Prop               | Type                                  | Required | Default    | Description |
+| ------------------ | ------------------------------------- | -------- | ---------- | ----------- |
+| accessibilityLabel | `string \| undefined`                 | no       | —          |             |
+| colorScheme        | `TabletopColorOverrides \| undefined` | no       | —          |             |
+| muted              | `boolean \| undefined`                | no       | `false`    |             |
+| size               | `TabletopCardSize \| undefined`       | no       | `'medium'` |             |
+| testID             | `string \| undefined`                 | no       | —          |             |
+
+</details>
+
+</details>
+
+<details>
+<summary>CardHand</summary>
+
+```ts
+CardHand({
+  cards = [],
+  faceDownCards = 0,
+  size = 'medium',
+  muted = false,
+  colorScheme,
+  accessibilityLabel,
+  testID,
+}: CardHandProps) => React.JSX.Element
+```
+
+Compact row of visible and face-down playing cards.
+
+Use `CardHand` when a seat, pile, or custom layout needs to show multiple cards
+with consistent spacing, sizing, and muted state handling.
+
+#### Mixed hand
+
+```tsx
+<CardHand cards={[{ rank: 'Q', suit: 'hearts' }]} faceDownCards={1} />
+```
+
+Related types: `CardHandProps`
+
+<details>
+<summary>Props</summary>
+
+| Prop               | Type                                       | Required | Default    | Description |
+| ------------------ | ------------------------------------------ | -------- | ---------- | ----------- |
+| accessibilityLabel | `string \| undefined`                      | no       | —          |             |
+| cards              | `readonly PlayingCardValue[] \| undefined` | no       | `[]`       |             |
+| colorScheme        | `TabletopColorOverrides \| undefined`      | no       | —          |             |
+| faceDownCards      | `number \| undefined`                      | no       | `0`        |             |
+| muted              | `boolean \| undefined`                     | no       | `false`    |             |
+| size               | `TabletopCardSize \| undefined`            | no       | `'medium'` |             |
+| testID             | `string \| undefined`                      | no       | —          |             |
+
+</details>
+
+</details>
+
+<details>
+<summary>PlayingCard</summary>
+
+```ts
+PlayingCard({
+  card,
+  size = 'medium',
+  selected = false,
+  muted = false,
+  accessibilityLabel,
+  colorScheme,
+  testID,
+}: PlayingCardProps) => React.JSX.Element
+```
+
+Theme-aware face-up playing card primitive.
+
+Use `PlayingCard` for visible card values in hands, shared table cards, piles,
+or custom tabletop layouts. The component renders rank and suit text and exposes
+an accessible card label by default.
+
+#### Face-up card
+
+```tsx
+<PlayingCard card={{ rank: 'A', suit: 'spades' }} selected />
+```
+
+Related types: `PlayingCardProps`
+
+<details>
+<summary>Props</summary>
+
+| Prop               | Type                                  | Required | Default    | Description |
+| ------------------ | ------------------------------------- | -------- | ---------- | ----------- |
+| accessibilityLabel | `string \| undefined`                 | no       | —          |             |
+| card               | `PlayingCardValue`                    | yes      | —          |             |
+| colorScheme        | `TabletopColorOverrides \| undefined` | no       | —          |             |
+| muted              | `boolean \| undefined`                | no       | `false`    |             |
+| selected           | `boolean \| undefined`                | no       | `false`    |             |
+| size               | `TabletopCardSize \| undefined`       | no       | `'medium'` |             |
+| testID             | `string \| undefined`                 | no       | —          |             |
+
+</details>
+
+</details>
+
+<details>
+<summary>TabletopTable</summary>
+
+```ts
+TabletopTable({
+  seats,
+  centerCards = [],
+  centerLabel,
+  centerSublabel,
+  shape = 'oval',
+  seatCount,
+  cardSize = 'small',
+  disabled = false,
+  colorScheme,
+  accessibilityLabel,
+  testID,
+}: TabletopTableProps) => React.JSX.Element
+```
+
+Responsive tabletop surface for generic card-game and board-game scenes.
+
+Use `TabletopTable` to arrange seats around a themed table surface, display
+shared center cards, and show neutral seat labels/tokens without embedding game
+rules into the component.
+
+#### Basic table
+
+```tsx
+<TabletopTable seats={seats} centerCards={[{ rank: 'A', suit: 'spades' }]} centerLabel="Round 1" />
+```
+
+Related types: `TabletopTableProps`
+
+<details>
+<summary>Props</summary>
+
+| Prop               | Type                                       | Required | Default   | Description |
+| ------------------ | ------------------------------------------ | -------- | --------- | ----------- |
+| accessibilityLabel | `string \| undefined`                      | no       | —         |             |
+| cardSize           | `TabletopCardSize \| undefined`            | no       | `'small'` |             |
+| centerCards        | `readonly PlayingCardValue[] \| undefined` | no       | `[]`      |             |
+| centerLabel        | `React.ReactNode \| undefined`             | no       | —         |             |
+| centerSublabel     | `React.ReactNode \| undefined`             | no       | —         |             |
+| colorScheme        | `TabletopColorOverrides \| undefined`      | no       | —         |             |
+| disabled           | `boolean \| undefined`                     | no       | `false`   |             |
+| seatCount          | `TabletopSeatCount \| undefined`           | no       | —         |             |
+| seats              | `readonly TabletopSeatState[]`             | yes      | —         |             |
+| shape              | `TabletopShape \| undefined`               | no       | `'oval'`  |             |
+| testID             | `string \| undefined`                      | no       | —         |             |
+
+</details>
+
+</details>
+
+### Utilities
+
+<details>
+<summary>createTabletopColorScheme</summary>
+
+```ts
+createTabletopColorScheme(theme: TabletopColorThemeShape, overrides?: Partial<TabletopColorScheme>) => TabletopColorScheme
+```
+
+Creates the theme-derived color palette used by tabletop primitives.
+
+Use `createTabletopColorScheme` when custom components need to align with the
+same card, table, seat, token, and contrast-aware foreground colors as the
+built-in tabletop components.
+
+#### Custom color scheme
+
+```ts
+const colors = createTabletopColorScheme(theme, { tableFelt: '#065f46' });
+```
+
+Module: `src/colors.ts`
+Source: `src/colors.ts:73:1`
+Related symbols: `TabletopColorScheme`
 
 </details>

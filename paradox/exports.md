@@ -4,7 +4,12 @@
 
 Kind: `function`
 Module: `src/components/card-back/CardBack.tsx`
-Source: `src/components/card-back/CardBack.tsx:10:1`
+Source: `src/components/card-back/CardBack.tsx:22:1`
+
+Face-down playing-card primitive for hidden cards and decks.
+
+Use `CardBack` when a card should be represented visually without exposing its
+rank or suit. The component keeps a generic accessible label for hidden cards.
 
 ### Signatures
 
@@ -44,7 +49,12 @@ Source: `src/components/card-back/types.ts:4:1`
 
 Kind: `function`
 Module: `src/components/card-hand/CardHand.tsx`
-Source: `src/components/card-hand/CardHand.tsx:12:1`
+Source: `src/components/card-hand/CardHand.tsx:24:1`
+
+Compact row of visible and face-down playing cards.
+
+Use `CardHand` when a seat, pile, or custom layout needs to show multiple cards
+with consistent spacing, sizing, and muted state handling.
 
 ### Signatures
 
@@ -90,7 +100,13 @@ Source: `src/components/card-hand/types.ts:4:1`
 
 Kind: `function`
 Module: `src/colors.ts`
-Source: `src/colors.ts:46:1`
+Source: `src/colors.ts:73:1`
+
+Creates the theme-derived color palette used by tabletop primitives.
+
+Use `createTabletopColorScheme` when custom components need to align with the
+same card, table, seat, token, and contrast-aware foreground colors as the
+built-in tabletop components.
 
 ### Signatures
 
@@ -103,7 +119,13 @@ Source: `src/colors.ts:46:1`
 
 Kind: `function`
 Module: `src/components/playing-card/PlayingCard.tsx`
-Source: `src/components/playing-card/PlayingCard.tsx:22:1`
+Source: `src/components/playing-card/PlayingCard.tsx:35:1`
+
+Theme-aware face-up playing card primitive.
+
+Use `PlayingCard` for visible card values in hands, shared table cards, piles,
+or custom tabletop layouts. The component renders rank and suit text and exposes
+an accessible card label by default.
 
 ### Signatures
 
@@ -174,7 +196,7 @@ Source: `src/types.ts:4:1`
 
 Kind: `unknown`
 Module: `src/colors.ts`
-Source: `src/colors.ts:19:1`
+Source: `src/colors.ts:23:1`
 
 ## TabletopColorScheme
 
@@ -194,11 +216,15 @@ Source: `src/colors.ts:1:1`
 | mutedText          | property | `string` | yes      |             |
 | redSuitText        | property | `string` | yes      |             |
 | seatBorder         | property | `string` | yes      |             |
+| seatMutedText      | property | `string` | yes      |             |
 | seatSelectedBorder | property | `string` | yes      |             |
 | seatSurface        | property | `string` | yes      |             |
+| seatText           | property | `string` | yes      |             |
 | tableBorder        | property | `string` | yes      |             |
 | tableFelt          | property | `string` | yes      |             |
 | tableInnerBorder   | property | `string` | yes      |             |
+| tableMutedText     | property | `string` | yes      |             |
+| tableText          | property | `string` | yes      |             |
 | tokenSurface       | property | `string` | yes      |             |
 | tokenText          | property | `string` | yes      |             |
 
@@ -239,7 +265,13 @@ Source: `src/types.ts:5:1`
 
 Kind: `function`
 Module: `src/components/tabletop-table/TabletopTable.tsx`
-Source: `src/components/tabletop-table/TabletopTable.tsx:24:1`
+Source: `src/components/tabletop-table/TabletopTable.tsx:41:1`
+
+Responsive tabletop surface for generic card-game and board-game scenes.
+
+Use `TabletopTable` to arrange seats around a themed table surface, display
+shared center cards, and show neutral seat labels/tokens without embedding game
+rules into the component.
 
 ### Signatures
 
