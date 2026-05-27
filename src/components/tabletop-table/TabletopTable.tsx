@@ -91,7 +91,9 @@ export function TabletopTable({
           ) : null}
           {centerLabel !== undefined ? (
             <View style={[styles.centerLabel, { backgroundColor: colors.seatSurface }]}> 
-              <Text style={[styles.centerLabelText, { color: colors.seatText }]}>{centerLabel}</Text>
+              <Text style={[styles.centerLabelText, { color: colors.seatText }]}>
+                {centerLabel}
+              </Text>
             </View>
           ) : null}
           {centerSublabel !== undefined ? (
@@ -163,7 +165,9 @@ export function TabletopTable({
                   },
                 ]}
               >
-                <Text style={[styles.tokenText, { color: colors.tokenText }]}>{seat.tokenLabel}</Text>
+                <Text style={[styles.tokenText, { color: colors.tokenText }]}>
+                  {seat.tokenLabel}
+                </Text>
               </View>
             ) : null}
           </View>
