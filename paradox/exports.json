@@ -243,7 +243,7 @@
   },
   {
     "name": "PlayingCard",
-    "description": "Theme-aware face-up playing card primitive.\n\nUse `PlayingCard` for visible card values in hands, shared table cards, piles,\nor custom tabletop layouts. The component renders rank and suit text and exposes\nan accessible card label by default.",
+    "description": "Theme-aware face-up playing card primitive.\n\nUse `PlayingCard` for visible card values in hands, shared table cards, piles,\nor custom tabletop layouts. The component renders rank and suit glyphs and\nexposes an accessible card label by default.",
     "isReadme": true,
     "examples": [
       {
@@ -256,7 +256,7 @@
     "modulePath": "src/components/playing-card/PlayingCard.tsx",
     "sourceLocation": {
       "filePath": "src/components/playing-card/PlayingCard.tsx",
-      "line": 35,
+      "line": 24,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -726,7 +726,7 @@
     "modulePath": "src/components/tabletop-table/TabletopTable.tsx",
     "sourceLocation": {
       "filePath": "src/components/tabletop-table/TabletopTable.tsx",
-      "line": 41,
+      "line": 42,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],

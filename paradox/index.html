@@ -201,13 +201,19 @@
             <li>
               <button class="nav-button" type="button" data-target="src/cardLabel.ts">
                 src/cardLabel.ts
-                <small>2 functions</small>
+                <small>3 functions</small>
               </button>
             </li>
             <li>
               <button class="nav-button" type="button" data-target="src/cardSizing.ts">
                 src/cardSizing.ts
                 <small>1 function</small>
+              </button>
+            </li>
+            <li>
+              <button class="nav-button" type="button" data-target="src/cardSymbols.ts">
+                src/cardSymbols.ts
+                <small>2 functions</small>
               </button>
             </li>
             <li>
@@ -243,7 +249,7 @@
                 data-target="src/components/playing-card/PlayingCard.tsx"
               >
                 src/components/playing-card/PlayingCard.tsx
-                <small>2 functions</small>
+                <small>1 function</small>
               </button>
             </li>
             <li>
@@ -254,6 +260,12 @@
               >
                 src/components/tabletop-table/TabletopTable.tsx
                 <small>2 functions</small>
+              </button>
+            </li>
+            <li>
+              <button class="nav-button" type="button" data-target="src/tableLayout.ts">
+                src/tableLayout.ts
+                <small>1 function</small>
               </button>
             </li>
             <li>
@@ -272,7 +284,7 @@
             <div class="summary">
               <div><strong>17</strong><span class="muted">public exports</span></div>
               <div><strong>4</strong><span class="muted">components</span></div>
-              <div><strong>18</strong><span class="muted">modules</span></div>
+              <div><strong>20</strong><span class="muted">modules</span></div>
               <div><strong>1</strong><span class="muted">entrypoints</span></div>
             </div>
             <h3>Entrypoints</h3>
@@ -305,6 +317,18 @@
               <p>
                 <strong>Exports:</strong> <code>getTabletopCardDimensions</code>,
                 <code>TabletopCardDimensions</code>
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="src/cardSymbols.ts src/types.ts getPlayingCardSuitMark isRedPlayingCardSuit"
+            >
+              <h3>src/cardSymbols.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p><strong>Dependencies:</strong> <code>src/types.ts</code></p>
+              <p>
+                <strong>Exports:</strong> <code>getPlayingCardSuitMark</code>,
+                <code>isRedPlayingCardSuit</code>
               </p>
             </article>
             <article
@@ -399,14 +423,14 @@
             </article>
             <article
               class="item"
-              data-search="src/components/playing-card/PlayingCard.tsx src/cardLabel.ts src/cardSizing.ts src/colors.ts src/components/playing-card/types.ts src/types.ts PlayingCard"
+              data-search="src/components/playing-card/PlayingCard.tsx src/cardLabel.ts src/cardSizing.ts src/cardSymbols.ts src/colors.ts src/components/playing-card/types.ts PlayingCard"
             >
               <h3>src/components/playing-card/PlayingCard.tsx</h3>
               <p class="muted">Referenced module</p>
               <p>
                 <strong>Dependencies:</strong> <code>src/cardLabel.ts</code>,
-                <code>src/cardSizing.ts</code>, <code>src/colors.ts</code>,
-                <code>src/components/playing-card/types.ts</code>, <code>src/types.ts</code>
+                <code>src/cardSizing.ts</code>, <code>src/cardSymbols.ts</code>,
+                <code>src/colors.ts</code>, <code>src/components/playing-card/types.ts</code>
               </p>
               <p><strong>Exports:</strong> <code>PlayingCard</code></p>
             </article>
@@ -435,7 +459,7 @@
             </article>
             <article
               class="item"
-              data-search="src/components/tabletop-table/TabletopTable.tsx src/colors.ts src/components/card-hand/index.ts src/components/tabletop-table/types.ts src/tablePositions.ts src/types.ts TabletopTable"
+              data-search="src/components/tabletop-table/TabletopTable.tsx src/colors.ts src/components/card-hand/index.ts src/components/tabletop-table/types.ts src/tableLayout.ts src/tablePositions.ts src/types.ts TabletopTable"
             >
               <h3>src/components/tabletop-table/TabletopTable.tsx</h3>
               <p class="muted">Referenced module</p>
@@ -443,7 +467,8 @@
                 <strong>Dependencies:</strong> <code>src/colors.ts</code>,
                 <code>src/components/card-hand/index.ts</code>,
                 <code>src/components/tabletop-table/types.ts</code>,
-                <code>src/tablePositions.ts</code>, <code>src/types.ts</code>
+                <code>src/tableLayout.ts</code>, <code>src/tablePositions.ts</code>,
+                <code>src/types.ts</code>
               </p>
               <p><strong>Exports:</strong> <code>TabletopTable</code></p>
             </article>
@@ -476,6 +501,15 @@
                 <code>TabletopShape</code>, <code>TabletopTable</code>,
                 <code>TabletopTableProps</code>
               </p>
+            </article>
+            <article
+              class="item"
+              data-search="src/tableLayout.ts src/types.ts getTabletopSeatCardSize"
+            >
+              <h3>src/tableLayout.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p><strong>Dependencies:</strong> <code>src/types.ts</code></p>
+              <p><strong>Exports:</strong> <code>getTabletopSeatCardSize</code></p>
             </article>
             <article
               class="item"
@@ -1024,16 +1058,16 @@
               <article
                 class="item"
                 id="symbol-playingcard"
-                data-search="PlayingCard function src/components/playing-card/PlayingCard.tsx Theme-aware face-up playing card primitive.&#10;&#10;Use `PlayingCard` for visible card values in hands, shared table cards, piles,&#10;or custom tabletop layouts. The component renders rank and suit text and exposes&#10;an accessible card label by default. PlayingCardProps ({&#10;  card,&#10;  size = &#39;medium&#39;,&#10;  selected = false,&#10;  muted = false,&#10;  accessibilityLabel,&#10;  colorScheme,&#10;  testID,&#10;}: PlayingCardProps) =&gt; React.JSX.Element"
+                data-search="PlayingCard function src/components/playing-card/PlayingCard.tsx Theme-aware face-up playing card primitive.&#10;&#10;Use `PlayingCard` for visible card values in hands, shared table cards, piles,&#10;or custom tabletop layouts. The component renders rank and suit glyphs and&#10;exposes an accessible card label by default. PlayingCardProps ({&#10;  card,&#10;  size = &#39;medium&#39;,&#10;  selected = false,&#10;  muted = false,&#10;  accessibilityLabel,&#10;  colorScheme,&#10;  testID,&#10;}: PlayingCardProps) =&gt; React.JSX.Element"
               >
                 <h4>PlayingCard</h4>
                 <p class="muted">
-                  function • <code>src/components/playing-card/PlayingCard.tsx:35:1</code>
+                  function • <code>src/components/playing-card/PlayingCard.tsx:24:1</code>
                 </p>
                 <p>
                   Theme-aware face-up playing card primitive. Use `PlayingCard` for visible card
                   values in hands, shared table cards, piles, or custom tabletop layouts. The
-                  component renders rank and suit text and exposes an accessible card label by
+                  component renders rank and suit glyphs and exposes an accessible card label by
                   default.
                 </p>
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
@@ -1181,7 +1215,7 @@
               >
                 <h4>TabletopTable</h4>
                 <p class="muted">
-                  function • <code>src/components/tabletop-table/TabletopTable.tsx:41:1</code>
+                  function • <code>src/components/tabletop-table/TabletopTable.tsx:42:1</code>
                 </p>
                 <p>
                   Responsive tabletop surface for generic card-game and board-game scenes. Use
@@ -1682,14 +1716,14 @@
             <article
               class="item"
               id="component-playingcard"
-              data-search="PlayingCard src/components/playing-card/PlayingCard.tsx Theme-aware face-up playing card primitive.&#10;&#10;Use `PlayingCard` for visible card values in hands, shared table cards, piles,&#10;or custom tabletop layouts. The component renders rank and suit text and exposes&#10;an accessible card label by default. accessibilityLabel string | undefined card PlayingCardValue colorScheme TabletopColorOverrides | undefined muted boolean | undefined selected boolean | undefined size TabletopCardSize | undefined testID string | undefined"
+              data-search="PlayingCard src/components/playing-card/PlayingCard.tsx Theme-aware face-up playing card primitive.&#10;&#10;Use `PlayingCard` for visible card values in hands, shared table cards, piles,&#10;or custom tabletop layouts. The component renders rank and suit glyphs and&#10;exposes an accessible card label by default. accessibilityLabel string | undefined card PlayingCardValue colorScheme TabletopColorOverrides | undefined muted boolean | undefined selected boolean | undefined size TabletopCardSize | undefined testID string | undefined"
             >
               <h3>PlayingCard</h3>
-              <p class="muted"><code>src/components/playing-card/PlayingCard.tsx:35:1</code></p>
+              <p class="muted"><code>src/components/playing-card/PlayingCard.tsx:24:1</code></p>
               <p>
                 Theme-aware face-up playing card primitive. Use `PlayingCard` for visible card
                 values in hands, shared table cards, piles, or custom tabletop layouts. The
-                component renders rank and suit text and exposes an accessible card label by
+                component renders rank and suit glyphs and exposes an accessible card label by
                 default.
               </p>
               <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
@@ -1754,7 +1788,7 @@
               data-search="TabletopTable src/components/tabletop-table/TabletopTable.tsx Responsive tabletop surface for generic card-game and board-game scenes.&#10;&#10;Use `TabletopTable` to arrange seats around a themed table surface, display&#10;shared center cards, and show neutral seat labels/tokens without embedding game&#10;rules into the component. accessibilityLabel string | undefined cardSize TabletopCardSize | undefined centerCards readonly PlayingCardValue[] | undefined centerLabel React.ReactNode | undefined centerSublabel React.ReactNode | undefined colorScheme TabletopColorOverrides | undefined disabled boolean | undefined seatCount TabletopSeatCount | undefined seats readonly TabletopSeatState[] shape TabletopShape | undefined testID string | undefined"
             >
               <h3>TabletopTable</h3>
-              <p class="muted"><code>src/components/tabletop-table/TabletopTable.tsx:41:1</code></p>
+              <p class="muted"><code>src/components/tabletop-table/TabletopTable.tsx:42:1</code></p>
               <p>
                 Responsive tabletop surface for generic card-game and board-game scenes. Use
                 `TabletopTable` to arrange seats around a themed table surface, display shared
@@ -1859,6 +1893,9 @@
                 module_src_cardSizing_ts[&quot;src/cardSizing.ts&quot;]
                 package__ankhorage_zora_tabletop -.-&gt; module_src_cardSizing_ts
                 module_src_cardSizing_ts --&gt; module_src_types_ts
+                module_src_cardSymbols_ts[&quot;src/cardSymbols.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt; module_src_cardSymbols_ts
+                module_src_cardSymbols_ts --&gt; module_src_types_ts
                 module_src_colors_ts[&quot;src/colors.ts&quot;] package__ankhorage_zora_tabletop
                 -.-&gt; module_src_colors_ts
                 module_src_components_card_back_CardBack_tsx[&quot;src/components/card-back/CardBack.tsx&quot;]
@@ -1897,10 +1934,10 @@
                 module_src_components_playing_card_PlayingCard_tsx
                 module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_cardLabel_ts
                 module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_cardSizing_ts
+                module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_cardSymbols_ts
                 module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_colors_ts
                 module_src_components_playing_card_PlayingCard_tsx --&gt;
                 module_src_components_playing_card_types_ts
-                module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_types_ts
                 module_src_components_playing_card_types_ts[&quot;src/components/playing-card/types.ts&quot;]
                 package__ankhorage_zora_tabletop -.-&gt; module_src_components_playing_card_types_ts
                 module_src_components_playing_card_types_ts --&gt; module_src_colors_ts
@@ -1917,14 +1954,18 @@
                 module_src_components_tabletop_table_TabletopTable_tsx --&gt;
                 module_src_components_tabletop_table_types_ts
                 module_src_components_tabletop_table_TabletopTable_tsx --&gt;
-                module_src_tablePositions_ts module_src_components_tabletop_table_TabletopTable_tsx
-                --&gt; module_src_types_ts
+                module_src_tableLayout_ts module_src_components_tabletop_table_TabletopTable_tsx
+                --&gt; module_src_tablePositions_ts
+                module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_types_ts
                 module_src_components_tabletop_table_types_ts[&quot;src/components/tabletop-table/types.ts&quot;]
                 package__ankhorage_zora_tabletop -.-&gt;
                 module_src_components_tabletop_table_types_ts
                 module_src_components_tabletop_table_types_ts --&gt; module_src_colors_ts
                 module_src_components_tabletop_table_types_ts --&gt; module_src_types_ts
                 module_src_index_ts[&quot;src/index.ts&quot;]
+                module_src_tableLayout_ts[&quot;src/tableLayout.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt; module_src_tableLayout_ts
+                module_src_tableLayout_ts --&gt; module_src_types_ts
                 module_src_tablePositions_ts[&quot;src/tablePositions.ts&quot;]
                 package__ankhorage_zora_tabletop -.-&gt; module_src_tablePositions_ts
                 module_src_tablePositions_ts --&gt; module_src_types_ts
@@ -1944,6 +1985,9 @@ graph TD
   module_src_cardSizing_ts[&quot;src/cardSizing.ts&quot;]
   package__ankhorage_zora_tabletop -.-&gt; module_src_cardSizing_ts
   module_src_cardSizing_ts --&gt; module_src_types_ts
+  module_src_cardSymbols_ts[&quot;src/cardSymbols.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_cardSymbols_ts
+  module_src_cardSymbols_ts --&gt; module_src_types_ts
   module_src_colors_ts[&quot;src/colors.ts&quot;]
   package__ankhorage_zora_tabletop -.-&gt; module_src_colors_ts
   module_src_components_card_back_CardBack_tsx[&quot;src/components/card-back/CardBack.tsx&quot;]
@@ -1975,9 +2019,9 @@ graph TD
   package__ankhorage_zora_tabletop -.-&gt; module_src_components_playing_card_PlayingCard_tsx
   module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_cardLabel_ts
   module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_cardSizing_ts
+  module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_cardSymbols_ts
   module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_colors_ts
   module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_components_playing_card_types_ts
-  module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_types_ts
   module_src_components_playing_card_types_ts[&quot;src/components/playing-card/types.ts&quot;]
   package__ankhorage_zora_tabletop -.-&gt; module_src_components_playing_card_types_ts
   module_src_components_playing_card_types_ts --&gt; module_src_colors_ts
@@ -1989,6 +2033,7 @@ graph TD
   module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_colors_ts
   module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_components_card_hand_index_ts
   module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_components_tabletop_table_types_ts
+  module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_tableLayout_ts
   module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_tablePositions_ts
   module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_types_ts
   module_src_components_tabletop_table_types_ts[&quot;src/components/tabletop-table/types.ts&quot;]
@@ -1996,6 +2041,9 @@ graph TD
   module_src_components_tabletop_table_types_ts --&gt; module_src_colors_ts
   module_src_components_tabletop_table_types_ts --&gt; module_src_types_ts
   module_src_index_ts[&quot;src/index.ts&quot;]
+  module_src_tableLayout_ts[&quot;src/tableLayout.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_tableLayout_ts
+  module_src_tableLayout_ts --&gt; module_src_types_ts
   module_src_tablePositions_ts[&quot;src/tablePositions.ts&quot;]
   package__ankhorage_zora_tabletop -.-&gt; module_src_tablePositions_ts
   module_src_tablePositions_ts --&gt; module_src_types_ts
@@ -2014,6 +2062,7 @@ graph TD
               <div class="mermaid">
                 graph LR module_src_cardLabel_ts[&quot;src/cardLabel.ts&quot;]
                 module_src_cardSizing_ts[&quot;src/cardSizing.ts&quot;]
+                module_src_cardSymbols_ts[&quot;src/cardSymbols.ts&quot;]
                 module_src_colors_ts[&quot;src/colors.ts&quot;]
                 module_src_components_card_back_CardBack_tsx[&quot;src/components/card-back/CardBack.tsx&quot;]
                 module_src_components_card_back_index_ts[&quot;src/components/card-back/index.ts&quot;]
@@ -2028,9 +2077,11 @@ graph TD
                 module_src_components_tabletop_table_TabletopTable_tsx[&quot;src/components/tabletop-table/TabletopTable.tsx&quot;]
                 module_src_components_tabletop_table_types_ts[&quot;src/components/tabletop-table/types.ts&quot;]
                 module_src_index_ts[&quot;src/index.ts&quot;]
+                module_src_tableLayout_ts[&quot;src/tableLayout.ts&quot;]
                 module_src_tablePositions_ts[&quot;src/tablePositions.ts&quot;]
                 module_src_types_ts[&quot;src/types.ts&quot;] module_src_cardLabel_ts --&gt;
                 module_src_types_ts module_src_cardSizing_ts --&gt; module_src_types_ts
+                module_src_cardSymbols_ts --&gt; module_src_types_ts
                 module_src_components_card_back_CardBack_tsx --&gt; module_src_cardLabel_ts
                 module_src_components_card_back_CardBack_tsx --&gt; module_src_cardSizing_ts
                 module_src_components_card_back_CardBack_tsx --&gt; module_src_colors_ts
@@ -2047,9 +2098,9 @@ graph TD
                 module_src_types_ts module_src_components_playing_card_PlayingCard_tsx --&gt;
                 module_src_cardLabel_ts module_src_components_playing_card_PlayingCard_tsx --&gt;
                 module_src_cardSizing_ts module_src_components_playing_card_PlayingCard_tsx --&gt;
+                module_src_cardSymbols_ts module_src_components_playing_card_PlayingCard_tsx --&gt;
                 module_src_colors_ts module_src_components_playing_card_PlayingCard_tsx --&gt;
                 module_src_components_playing_card_types_ts
-                module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_types_ts
                 module_src_components_playing_card_types_ts --&gt; module_src_colors_ts
                 module_src_components_playing_card_types_ts --&gt; module_src_types_ts
                 module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_colors_ts
@@ -2058,10 +2109,13 @@ graph TD
                 module_src_components_tabletop_table_TabletopTable_tsx --&gt;
                 module_src_components_tabletop_table_types_ts
                 module_src_components_tabletop_table_TabletopTable_tsx --&gt;
-                module_src_tablePositions_ts module_src_components_tabletop_table_TabletopTable_tsx
-                --&gt; module_src_types_ts module_src_components_tabletop_table_types_ts --&gt;
-                module_src_colors_ts module_src_components_tabletop_table_types_ts --&gt;
-                module_src_types_ts module_src_tablePositions_ts --&gt; module_src_types_ts
+                module_src_tableLayout_ts module_src_components_tabletop_table_TabletopTable_tsx
+                --&gt; module_src_tablePositions_ts
+                module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_types_ts
+                module_src_components_tabletop_table_types_ts --&gt; module_src_colors_ts
+                module_src_components_tabletop_table_types_ts --&gt; module_src_types_ts
+                module_src_tableLayout_ts --&gt; module_src_types_ts module_src_tablePositions_ts
+                --&gt; module_src_types_ts
               </div>
               <details>
                 <summary>View Mermaid source</summary>
@@ -2069,6 +2123,7 @@ graph TD
 graph LR
   module_src_cardLabel_ts[&quot;src/cardLabel.ts&quot;]
   module_src_cardSizing_ts[&quot;src/cardSizing.ts&quot;]
+  module_src_cardSymbols_ts[&quot;src/cardSymbols.ts&quot;]
   module_src_colors_ts[&quot;src/colors.ts&quot;]
   module_src_components_card_back_CardBack_tsx[&quot;src/components/card-back/CardBack.tsx&quot;]
   module_src_components_card_back_index_ts[&quot;src/components/card-back/index.ts&quot;]
@@ -2083,10 +2138,12 @@ graph LR
   module_src_components_tabletop_table_TabletopTable_tsx[&quot;src/components/tabletop-table/TabletopTable.tsx&quot;]
   module_src_components_tabletop_table_types_ts[&quot;src/components/tabletop-table/types.ts&quot;]
   module_src_index_ts[&quot;src/index.ts&quot;]
+  module_src_tableLayout_ts[&quot;src/tableLayout.ts&quot;]
   module_src_tablePositions_ts[&quot;src/tablePositions.ts&quot;]
   module_src_types_ts[&quot;src/types.ts&quot;]
   module_src_cardLabel_ts --&gt; module_src_types_ts
   module_src_cardSizing_ts --&gt; module_src_types_ts
+  module_src_cardSymbols_ts --&gt; module_src_types_ts
   module_src_components_card_back_CardBack_tsx --&gt; module_src_cardLabel_ts
   module_src_components_card_back_CardBack_tsx --&gt; module_src_cardSizing_ts
   module_src_components_card_back_CardBack_tsx --&gt; module_src_colors_ts
@@ -2100,18 +2157,20 @@ graph LR
   module_src_components_card_hand_types_ts --&gt; module_src_types_ts
   module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_cardLabel_ts
   module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_cardSizing_ts
+  module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_cardSymbols_ts
   module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_colors_ts
   module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_components_playing_card_types_ts
-  module_src_components_playing_card_PlayingCard_tsx --&gt; module_src_types_ts
   module_src_components_playing_card_types_ts --&gt; module_src_colors_ts
   module_src_components_playing_card_types_ts --&gt; module_src_types_ts
   module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_colors_ts
   module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_components_card_hand_index_ts
   module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_components_tabletop_table_types_ts
+  module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_tableLayout_ts
   module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_tablePositions_ts
   module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_types_ts
   module_src_components_tabletop_table_types_ts --&gt; module_src_colors_ts
   module_src_components_tabletop_table_types_ts --&gt; module_src_types_ts
+  module_src_tableLayout_ts --&gt; module_src_types_ts
   module_src_tablePositions_ts --&gt; module_src_types_ts
 </pre
                 >
@@ -2123,6 +2182,7 @@ graph LR
               <div class="mermaid">
                 graph LR module_src_cardLabel_ts[&quot;src/cardLabel.ts&quot;]
                 module_src_cardSizing_ts[&quot;src/cardSizing.ts&quot;]
+                module_src_cardSymbols_ts[&quot;src/cardSymbols.ts&quot;]
                 module_src_colors_ts[&quot;src/colors.ts&quot;]
                 module_src_components_card_back_CardBack_tsx[&quot;src/components/card-back/CardBack.tsx&quot;]
                 module_src_components_card_back_index_ts[&quot;src/components/card-back/index.ts&quot;]
@@ -2137,6 +2197,7 @@ graph LR
                 module_src_components_tabletop_table_TabletopTable_tsx[&quot;src/components/tabletop-table/TabletopTable.tsx&quot;]
                 module_src_components_tabletop_table_types_ts[&quot;src/components/tabletop-table/types.ts&quot;]
                 module_src_index_ts[&quot;src/index.ts&quot;]
+                module_src_tableLayout_ts[&quot;src/tableLayout.ts&quot;]
                 module_src_tablePositions_ts[&quot;src/tablePositions.ts&quot;]
                 module_src_types_ts[&quot;src/types.ts&quot;] export_CardBack[&quot;CardBack&quot;]
                 module_src_components_card_back_CardBack_tsx --&gt; export_CardBack export_CardBack
@@ -2191,6 +2252,7 @@ graph LR
 graph LR
   module_src_cardLabel_ts[&quot;src/cardLabel.ts&quot;]
   module_src_cardSizing_ts[&quot;src/cardSizing.ts&quot;]
+  module_src_cardSymbols_ts[&quot;src/cardSymbols.ts&quot;]
   module_src_colors_ts[&quot;src/colors.ts&quot;]
   module_src_components_card_back_CardBack_tsx[&quot;src/components/card-back/CardBack.tsx&quot;]
   module_src_components_card_back_index_ts[&quot;src/components/card-back/index.ts&quot;]
@@ -2205,6 +2267,7 @@ graph LR
   module_src_components_tabletop_table_TabletopTable_tsx[&quot;src/components/tabletop-table/TabletopTable.tsx&quot;]
   module_src_components_tabletop_table_types_ts[&quot;src/components/tabletop-table/types.ts&quot;]
   module_src_index_ts[&quot;src/index.ts&quot;]
+  module_src_tableLayout_ts[&quot;src/tableLayout.ts&quot;]
   module_src_tablePositions_ts[&quot;src/tablePositions.ts&quot;]
   module_src_types_ts[&quot;src/types.ts&quot;]
   export_CardBack[&quot;CardBack&quot;]
@@ -2330,37 +2393,52 @@ sequenceDiagram
               <p class="muted"><code>diagrams/sequences/playing-card.mmd</code></p>
               <div class="mermaid">
                 sequenceDiagram participant participant_getPlayingCardLabel as getPlayingCardLabel
-                participant participant_getTabletopCardDimensions as getTabletopCardDimensions
-                participant participant_isRedSuit as isRedSuit participant participant_PlayingCard
-                as PlayingCard participant participant_useZoraTheme as useZoraTheme
-                participant_PlayingCard-&gt;&gt;participant_useZoraTheme: useZoraTheme()
-                participant_useZoraTheme--&gt;&gt;participant_PlayingCard: return
+                participant participant_getPlayingCardRankLabel as getPlayingCardRankLabel
+                participant participant_getPlayingCardSuitMark as getPlayingCardSuitMark participant
+                participant_getTabletopCardDimensions as getTabletopCardDimensions participant
+                participant_isRedPlayingCardSuit as isRedPlayingCardSuit participant
+                participant_PlayingCard as PlayingCard participant participant_useZoraTheme as
+                useZoraTheme participant_PlayingCard-&gt;&gt;participant_useZoraTheme:
+                useZoraTheme() participant_useZoraTheme--&gt;&gt;participant_PlayingCard: return
                 participant_PlayingCard-&gt;&gt;participant_getTabletopCardDimensions:
                 getTabletopCardDimensions()
                 participant_getTabletopCardDimensions--&gt;&gt;participant_PlayingCard: return
-                participant_PlayingCard-&gt;&gt;participant_isRedSuit: isRedSuit()
-                participant_isRedSuit--&gt;&gt;participant_PlayingCard: return
+                participant_PlayingCard-&gt;&gt;participant_isRedPlayingCardSuit:
+                isRedPlayingCardSuit()
+                participant_isRedPlayingCardSuit--&gt;&gt;participant_PlayingCard: return
                 participant_PlayingCard-&gt;&gt;participant_getPlayingCardLabel:
                 getPlayingCardLabel()
+                participant_getPlayingCardLabel-&gt;&gt;participant_getPlayingCardRankLabel:
+                getPlayingCardRankLabel()
+                participant_getPlayingCardRankLabel--&gt;&gt;participant_getPlayingCardLabel: return
                 participant_getPlayingCardLabel--&gt;&gt;participant_PlayingCard: return
+                participant_PlayingCard-&gt;&gt;participant_getPlayingCardSuitMark:
+                getPlayingCardSuitMark()
+                participant_getPlayingCardSuitMark--&gt;&gt;participant_PlayingCard: return
               </div>
               <details>
                 <summary>View Mermaid source</summary>
                 <pre>
 sequenceDiagram
   participant participant_getPlayingCardLabel as getPlayingCardLabel
+  participant participant_getPlayingCardRankLabel as getPlayingCardRankLabel
+  participant participant_getPlayingCardSuitMark as getPlayingCardSuitMark
   participant participant_getTabletopCardDimensions as getTabletopCardDimensions
-  participant participant_isRedSuit as isRedSuit
+  participant participant_isRedPlayingCardSuit as isRedPlayingCardSuit
   participant participant_PlayingCard as PlayingCard
   participant participant_useZoraTheme as useZoraTheme
   participant_PlayingCard-&gt;&gt;participant_useZoraTheme: useZoraTheme()
   participant_useZoraTheme--&gt;&gt;participant_PlayingCard: return
   participant_PlayingCard-&gt;&gt;participant_getTabletopCardDimensions: getTabletopCardDimensions()
   participant_getTabletopCardDimensions--&gt;&gt;participant_PlayingCard: return
-  participant_PlayingCard-&gt;&gt;participant_isRedSuit: isRedSuit()
-  participant_isRedSuit--&gt;&gt;participant_PlayingCard: return
+  participant_PlayingCard-&gt;&gt;participant_isRedPlayingCardSuit: isRedPlayingCardSuit()
+  participant_isRedPlayingCardSuit--&gt;&gt;participant_PlayingCard: return
   participant_PlayingCard-&gt;&gt;participant_getPlayingCardLabel: getPlayingCardLabel()
+  participant_getPlayingCardLabel-&gt;&gt;participant_getPlayingCardRankLabel: getPlayingCardRankLabel()
+  participant_getPlayingCardRankLabel--&gt;&gt;participant_getPlayingCardLabel: return
   participant_getPlayingCardLabel--&gt;&gt;participant_PlayingCard: return
+  participant_PlayingCard-&gt;&gt;participant_getPlayingCardSuitMark: getPlayingCardSuitMark()
+  participant_getPlayingCardSuitMark--&gt;&gt;participant_PlayingCard: return
 </pre
                 >
               </details>
@@ -2396,12 +2474,17 @@ sequenceDiagram
             <h2>src/cardLabel.ts</h2>
             <article class="item" data-search="getPlayingCardLabel src/cardLabel.ts ">
               <h3>getPlayingCardLabel</h3>
-              <p class="muted"><code>src/cardLabel.ts:3:1</code></p>
+              <p class="muted"><code>src/cardLabel.ts:10:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article class="item" data-search="createHiddenCardLabel src/cardLabel.ts ">
               <h3>createHiddenCardLabel</h3>
-              <p class="muted"><code>src/cardLabel.ts:7:1</code></p>
+              <p class="muted"><code>src/cardLabel.ts:14:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="getPlayingCardRankLabel src/cardLabel.ts ">
+              <h3>getPlayingCardRankLabel</h3>
+              <p class="muted"><code>src/cardLabel.ts:20:1</code></p>
               <p class="empty">No description available.</p>
             </article>
           </section>
@@ -2412,6 +2495,21 @@ sequenceDiagram
             <article class="item" data-search="getTabletopCardDimensions src/cardSizing.ts ">
               <h3>getTabletopCardDimensions</h3>
               <p class="muted"><code>src/cardSizing.ts:35:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+          </section>
+        </section>
+        <section id="view-src-cardsymbols-ts" class="view" data-view="src/cardSymbols.ts" hidden>
+          <section class="panel">
+            <h2>src/cardSymbols.ts</h2>
+            <article class="item" data-search="getPlayingCardSuitMark src/cardSymbols.ts ">
+              <h3>getPlayingCardSuitMark</h3>
+              <p class="muted"><code>src/cardSymbols.ts:10:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="isRedPlayingCardSuit src/cardSymbols.ts ">
+              <h3>isRedPlayingCardSuit</h3>
+              <p class="muted"><code>src/cardSymbols.ts:14:1</code></p>
               <p class="empty">No description available.</p>
             </article>
           </section>
@@ -2541,22 +2639,14 @@ sequenceDiagram
             <h2>src/components/playing-card/PlayingCard.tsx</h2>
             <article
               class="item"
-              data-search="isRedSuit src/components/playing-card/PlayingCard.tsx "
-            >
-              <h3>isRedSuit</h3>
-              <p class="muted"><code>src/components/playing-card/PlayingCard.tsx:18:1</code></p>
-              <p class="empty">No description available.</p>
-            </article>
-            <article
-              class="item"
-              data-search="PlayingCard src/components/playing-card/PlayingCard.tsx Theme-aware face-up playing card primitive.&#10;&#10;Use `PlayingCard` for visible card values in hands, shared table cards, piles,&#10;or custom tabletop layouts. The component renders rank and suit text and exposes&#10;an accessible card label by default."
+              data-search="PlayingCard src/components/playing-card/PlayingCard.tsx Theme-aware face-up playing card primitive.&#10;&#10;Use `PlayingCard` for visible card values in hands, shared table cards, piles,&#10;or custom tabletop layouts. The component renders rank and suit glyphs and&#10;exposes an accessible card label by default."
             >
               <h3>PlayingCard</h3>
-              <p class="muted"><code>src/components/playing-card/PlayingCard.tsx:35:1</code></p>
+              <p class="muted"><code>src/components/playing-card/PlayingCard.tsx:24:1</code></p>
               <p>
                 Theme-aware face-up playing card primitive. Use `PlayingCard` for visible card
                 values in hands, shared table cards, piles, or custom tabletop layouts. The
-                component renders rank and suit text and exposes an accessible card label by
+                component renders rank and suit glyphs and exposes an accessible card label by
                 default.
               </p>
             </article>
@@ -2575,7 +2665,7 @@ sequenceDiagram
               data-search="createSeatAccessibilityLabel src/components/tabletop-table/TabletopTable.tsx "
             >
               <h3>createSeatAccessibilityLabel</h3>
-              <p class="muted"><code>src/components/tabletop-table/TabletopTable.tsx:11:1</code></p>
+              <p class="muted"><code>src/components/tabletop-table/TabletopTable.tsx:12:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article
@@ -2583,13 +2673,23 @@ sequenceDiagram
               data-search="TabletopTable src/components/tabletop-table/TabletopTable.tsx Responsive tabletop surface for generic card-game and board-game scenes.&#10;&#10;Use `TabletopTable` to arrange seats around a themed table surface, display&#10;shared center cards, and show neutral seat labels/tokens without embedding game&#10;rules into the component."
             >
               <h3>TabletopTable</h3>
-              <p class="muted"><code>src/components/tabletop-table/TabletopTable.tsx:41:1</code></p>
+              <p class="muted"><code>src/components/tabletop-table/TabletopTable.tsx:42:1</code></p>
               <p>
                 Responsive tabletop surface for generic card-game and board-game scenes. Use
                 `TabletopTable` to arrange seats around a themed table surface, display shared
                 center cards, and show neutral seat labels/tokens without embedding game rules into
                 the component.
               </p>
+            </article>
+          </section>
+        </section>
+        <section id="view-src-tablelayout-ts" class="view" data-view="src/tableLayout.ts" hidden>
+          <section class="panel">
+            <h2>src/tableLayout.ts</h2>
+            <article class="item" data-search="getTabletopSeatCardSize src/tableLayout.ts ">
+              <h3>getTabletopSeatCardSize</h3>
+              <p class="muted"><code>src/tableLayout.ts:3:1</code></p>
+              <p class="empty">No description available.</p>
             </article>
           </section>
         </section>

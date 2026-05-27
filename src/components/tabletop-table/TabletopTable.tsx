@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { createTabletopColorScheme } from '../../colors';
+import { getTabletopSeatCardSize } from '../../tableLayout';
 import { getTabletopSeatPosition } from '../../tablePositions';
 import type { TabletopSeatState } from '../../types';
 import { CardHand } from '../card-hand';
@@ -105,16 +106,20 @@ export function TabletopTable({
 
       {seats.map((seat, index) => {
         const position = getTabletopSeatPosition(index, resolvedSeatCount);
+        const hasCards = seat.cards !== undefined || seat.faceDownCards !== undefined;
+        const seatCardSize = getTabletopSeatCardSize({
+          selected: seat.selected,
+          tableCardSize: cardSize,
+        });
+
         return (
           <View
             accessibilityLabel={createSeatAccessibilityLabel(seat)}
             accessibilityRole="summary"
             key={seat.id}
             style={[
-              styles.seat,
+              styles.seatSlot,
               {
-                borderColor: seat.selected ? colors.seatSelectedBorder : colors.seatBorder,
-                backgroundColor: colors.seatSurface,
                 left: position.left,
                 opacity: seat.muted ? 0.48 : 1,
                 top: position.top,
@@ -122,23 +127,46 @@ export function TabletopTable({
             ]}
             testID={testID ? `${testID}-seat-${seat.id}` : undefined}
           >
-            {seat.cards !== undefined || seat.faceDownCards !== undefined ? (
-              <CardHand
-                cards={seat.cards}
-                colorScheme={colorScheme}
-                faceDownCards={seat.faceDownCards}
-                muted={seat.muted ?? seat.disabled}
-                size={cardSize}
-              />
-            ) : null}
-            <Text style={[styles.seatLabel, { color: colors.seatText }]}>{seat.label}</Text>
-            {seat.sublabel !== undefined ? (
-              <Text style={[styles.seatSublabel, { color: colors.seatMutedText }]}>
-                {seat.sublabel}
-              </Text>
-            ) : null}
+            <View
+              style={[
+                styles.seatPanel,
+                seat.selected ? styles.selectedSeatPanel : null,
+                {
+                  borderColor: seat.selected ? colors.seatSelectedBorder : colors.seatBorder,
+                  backgroundColor: colors.seatSurface,
+                },
+              ]}
+            >
+              {hasCards ? (
+                <CardHand
+                  cards={seat.cards}
+                  colorScheme={colorScheme}
+                  faceDownCards={seat.faceDownCards}
+                  muted={seat.muted ?? seat.disabled}
+                  size={seatCardSize}
+                />
+              ) : null}
+              <View style={styles.seatTextGroup}>
+                <Text style={[styles.seatLabel, { color: colors.seatText }]}>{seat.label}</Text>
+                {seat.sublabel !== undefined ? (
+                  <Text style={[styles.seatSublabel, { color: colors.seatMutedText }]}>
+                    {seat.sublabel}
+                  </Text>
+                ) : null}
+              </View>
+            </View>
             {seat.tokenLabel !== undefined ? (
-              <View style={[styles.token, { backgroundColor: colors.tokenSurface }]}>
+              <View
+                style={[
+                  styles.token,
+                  {
+                    backgroundColor: colors.tokenSurface,
+                    borderColor: seat.selected
+                      ? colors.seatSelectedBorder
+                      : colors.tableInnerBorder,
+                  },
+                ]}
+              >
                 <Text style={[styles.tokenText, { color: colors.tokenText }]}>
                   {seat.tokenLabel}
                 </Text>
@@ -197,24 +225,38 @@ const styles = StyleSheet.create({
   roundedSurface: {
     borderRadius: 28,
   },
-  seat: {
-    alignItems: 'center',
-    borderRadius: 10,
-    borderWidth: 1,
-    gap: 3,
-    minWidth: 64,
-    paddingHorizontal: 6,
-    paddingVertical: 5,
-    position: 'absolute',
-    transform: [{ translateX: -32 }, { translateY: -28 }],
-  },
   seatLabel: {
     fontSize: 11,
     fontWeight: '800',
   },
+  seatPanel: {
+    alignItems: 'center',
+    borderRadius: 12,
+    borderWidth: 1,
+    gap: 4,
+    minWidth: 68,
+    paddingHorizontal: 7,
+    paddingVertical: 6,
+  },
+  seatSlot: {
+    alignItems: 'center',
+    gap: 4,
+    minWidth: 78,
+    position: 'absolute',
+    transform: [{ translateX: -39 }, { translateY: -34 }],
+  },
   seatSublabel: {
     fontSize: 10,
     fontWeight: '700',
+  },
+  seatTextGroup: {
+    alignItems: 'center',
+    gap: 1,
+  },
+  selectedSeatPanel: {
+    borderWidth: 2,
+    paddingHorizontal: 9,
+    paddingVertical: 7,
   },
   surface: {
     borderWidth: 8,
@@ -226,7 +268,8 @@ const styles = StyleSheet.create({
   },
   token: {
     borderRadius: 999,
-    paddingHorizontal: 6,
+    borderWidth: 1,
+    paddingHorizontal: 7,
     paddingVertical: 2,
   },
   tokenText: {

@@ -4,27 +4,16 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { getPlayingCardLabel } from '../../cardLabel';
 import { getTabletopCardDimensions } from '../../cardSizing';
+import { getPlayingCardSuitMark, isRedPlayingCardSuit } from '../../cardSymbols';
 import { createTabletopColorScheme } from '../../colors';
-import type { PlayingCardSuit } from '../../types';
 import type { PlayingCardProps } from './types';
-
-const suitMarks: Readonly<Record<PlayingCardSuit, string>> = {
-  clubs: 'C',
-  diamonds: 'D',
-  hearts: 'H',
-  spades: 'S',
-};
-
-function isRedSuit(suit: PlayingCardSuit): boolean {
-  return suit === 'diamonds' || suit === 'hearts';
-}
 
 /***
  * Theme-aware face-up playing card primitive.
  *
  * Use `PlayingCard` for visible card values in hands, shared table cards, piles,
- * or custom tabletop layouts. The component renders rank and suit text and exposes
- * an accessible card label by default.
+ * or custom tabletop layouts. The component renders rank and suit glyphs and
+ * exposes an accessible card label by default.
  *
  * @readme
  * @example Face-up card
@@ -47,7 +36,7 @@ export function PlayingCard({
     [colorScheme, theme],
   );
   const dimensions = getTabletopCardDimensions(size);
-  const suitColor = isRedSuit(card.suit) ? colors.redSuitText : colors.cardText;
+  const suitColor = isRedPlayingCardSuit(card.suit) ? colors.redSuitText : colors.cardText;
 
   return (
     <View
@@ -90,7 +79,7 @@ export function PlayingCard({
           },
         ]}
       >
-        {suitMarks[card.suit]}
+        {getPlayingCardSuitMark(card.suit)}
       </Text>
     </View>
   );

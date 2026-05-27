@@ -119,13 +119,13 @@ built-in tabletop components.
 
 Kind: `function`
 Module: `src/components/playing-card/PlayingCard.tsx`
-Source: `src/components/playing-card/PlayingCard.tsx:35:1`
+Source: `src/components/playing-card/PlayingCard.tsx:24:1`
 
 Theme-aware face-up playing card primitive.
 
 Use `PlayingCard` for visible card values in hands, shared table cards, piles,
-or custom tabletop layouts. The component renders rank and suit text and exposes
-an accessible card label by default.
+or custom tabletop layouts. The component renders rank and suit glyphs and
+exposes an accessible card label by default.
 
 ### Signatures
 
@@ -265,7 +265,7 @@ Source: `src/types.ts:5:1`
 
 Kind: `function`
 Module: `src/components/tabletop-table/TabletopTable.tsx`
-Source: `src/components/tabletop-table/TabletopTable.tsx:41:1`
+Source: `src/components/tabletop-table/TabletopTable.tsx:42:1`
 
 Responsive tabletop surface for generic card-game and board-game scenes.
 
