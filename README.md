@@ -210,8 +210,8 @@ PlayingCard({
 Theme-aware face-up playing card primitive.
 
 Use `PlayingCard` for visible card values in hands, shared table cards, piles,
-or custom tabletop layouts. The component renders rank and suit text and exposes
-an accessible card label by default.
+or custom tabletop layouts. The component renders rank and suit glyphs and
+exposes an accessible card label by default.
 
 #### Face-up card
 

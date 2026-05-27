@@ -84,6 +84,12 @@
       "exports": ["getTabletopCardDimensions", "TabletopCardDimensions"]
     },
     {
+      "path": "src/cardSymbols.ts",
+      "isEntrypoint": false,
+      "dependencies": ["src/types.ts"],
+      "exports": ["getPlayingCardSuitMark", "isRedPlayingCardSuit"]
+    },
+    {
       "path": "src/colors.ts",
       "isEntrypoint": false,
       "dependencies": [],
@@ -151,9 +157,9 @@
       "dependencies": [
         "src/cardLabel.ts",
         "src/cardSizing.ts",
+        "src/cardSymbols.ts",
         "src/colors.ts",
-        "src/components/playing-card/types.ts",
-        "src/types.ts"
+        "src/components/playing-card/types.ts"
       ],
       "exports": ["PlayingCard"]
     },
@@ -176,6 +182,7 @@
         "src/colors.ts",
         "src/components/card-hand/index.ts",
         "src/components/tabletop-table/types.ts",
+        "src/tableLayout.ts",
         "src/tablePositions.ts",
         "src/types.ts"
       ],
@@ -210,6 +217,12 @@
         "TabletopTable",
         "TabletopTableProps"
       ]
+    },
+    {
+      "path": "src/tableLayout.ts",
+      "isEntrypoint": false,
+      "dependencies": ["src/types.ts"],
+      "exports": ["getTabletopSeatCardSize"]
     },
     {
       "path": "src/tablePositions.ts",
@@ -481,7 +494,7 @@
     },
     {
       "name": "PlayingCard",
-      "description": "Theme-aware face-up playing card primitive.\n\nUse `PlayingCard` for visible card values in hands, shared table cards, piles,\nor custom tabletop layouts. The component renders rank and suit text and exposes\nan accessible card label by default.",
+      "description": "Theme-aware face-up playing card primitive.\n\nUse `PlayingCard` for visible card values in hands, shared table cards, piles,\nor custom tabletop layouts. The component renders rank and suit glyphs and\nexposes an accessible card label by default.",
       "isReadme": true,
       "examples": [
         {
@@ -494,7 +507,7 @@
       "modulePath": "src/components/playing-card/PlayingCard.tsx",
       "sourceLocation": {
         "filePath": "src/components/playing-card/PlayingCard.tsx",
-        "line": 35,
+        "line": 24,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -964,7 +977,7 @@
       "modulePath": "src/components/tabletop-table/TabletopTable.tsx",
       "sourceLocation": {
         "filePath": "src/components/tabletop-table/TabletopTable.tsx",
-        "line": 41,
+        "line": 42,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1214,7 +1227,7 @@
     },
     {
       "name": "PlayingCard",
-      "description": "Theme-aware face-up playing card primitive.\n\nUse `PlayingCard` for visible card values in hands, shared table cards, piles,\nor custom tabletop layouts. The component renders rank and suit text and exposes\nan accessible card label by default.",
+      "description": "Theme-aware face-up playing card primitive.\n\nUse `PlayingCard` for visible card values in hands, shared table cards, piles,\nor custom tabletop layouts. The component renders rank and suit glyphs and\nexposes an accessible card label by default.",
       "isReadme": true,
       "examples": [
         {
@@ -1226,7 +1239,7 @@
       "modulePath": "src/components/playing-card/PlayingCard.tsx",
       "sourceLocation": {
         "filePath": "src/components/playing-card/PlayingCard.tsx",
-        "line": 35,
+        "line": 24,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1292,7 +1305,7 @@
       "modulePath": "src/components/tabletop-table/TabletopTable.tsx",
       "sourceLocation": {
         "filePath": "src/components/tabletop-table/TabletopTable.tsx",
-        "line": 41,
+        "line": 42,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1376,7 +1389,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/cardLabel.ts",
-        "line": 3,
+        "line": 10,
         "column": 1
       }
     },
@@ -1385,7 +1398,16 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/cardLabel.ts",
-        "line": 7,
+        "line": 14,
+        "column": 1
+      }
+    },
+    {
+      "name": "getPlayingCardRankLabel",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/cardLabel.ts",
+        "line": 20,
         "column": 1
       }
     },
@@ -1395,6 +1417,24 @@
       "sourceLocation": {
         "filePath": "src/cardSizing.ts",
         "line": 35,
+        "column": 1
+      }
+    },
+    {
+      "name": "getPlayingCardSuitMark",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/cardSymbols.ts",
+        "line": 10,
+        "column": 1
+      }
+    },
+    {
+      "name": "isRedPlayingCardSuit",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/cardSymbols.ts",
+        "line": 14,
         "column": 1
       }
     },
@@ -1516,20 +1556,11 @@
       }
     },
     {
-      "name": "isRedSuit",
-      "description": null,
-      "sourceLocation": {
-        "filePath": "src/components/playing-card/PlayingCard.tsx",
-        "line": 18,
-        "column": 1
-      }
-    },
-    {
       "name": "PlayingCard",
-      "description": "Theme-aware face-up playing card primitive.\n\nUse `PlayingCard` for visible card values in hands, shared table cards, piles,\nor custom tabletop layouts. The component renders rank and suit text and exposes\nan accessible card label by default.",
+      "description": "Theme-aware face-up playing card primitive.\n\nUse `PlayingCard` for visible card values in hands, shared table cards, piles,\nor custom tabletop layouts. The component renders rank and suit glyphs and\nexposes an accessible card label by default.",
       "sourceLocation": {
         "filePath": "src/components/playing-card/PlayingCard.tsx",
-        "line": 35,
+        "line": 24,
         "column": 1
       }
     },
@@ -1538,7 +1569,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/components/tabletop-table/TabletopTable.tsx",
-        "line": 11,
+        "line": 12,
         "column": 1
       }
     },
@@ -1547,7 +1578,16 @@
       "description": "Responsive tabletop surface for generic card-game and board-game scenes.\n\nUse `TabletopTable` to arrange seats around a themed table surface, display\nshared center cards, and show neutral seat labels/tokens without embedding game\nrules into the component.",
       "sourceLocation": {
         "filePath": "src/components/tabletop-table/TabletopTable.tsx",
-        "line": 41,
+        "line": 42,
+        "column": 1
+      }
+    },
+    {
+      "name": "getTabletopSeatCardSize",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/tableLayout.ts",
+        "line": 3,
         "column": 1
       }
     },
@@ -1609,7 +1649,7 @@
       "name": "PlayingCard",
       "sourcePath": "src/components/playing-card/PlayingCard.tsx",
       "symbolName": "PlayingCard",
-      "description": "Theme-aware face-up playing card primitive.\n\nUse `PlayingCard` for visible card values in hands, shared table cards, piles,\nor custom tabletop layouts. The component renders rank and suit text and exposes\nan accessible card label by default.",
+      "description": "Theme-aware face-up playing card primitive.\n\nUse `PlayingCard` for visible card values in hands, shared table cards, piles,\nor custom tabletop layouts. The component renders rank and suit glyphs and\nexposes an accessible card label by default.",
       "isReadme": true
     },
     {
@@ -1632,6 +1672,11 @@
         "fromPath": "src/cardSizing.ts",
         "toPath": "src/types.ts",
         "sourcePath": "src/cardSizing.ts"
+      },
+      {
+        "fromPath": "src/cardSymbols.ts",
+        "toPath": "src/types.ts",
+        "sourcePath": "src/cardSymbols.ts"
       },
       {
         "fromPath": "src/index.ts",
@@ -1662,6 +1707,11 @@
         "fromPath": "src/index.ts",
         "toPath": "src/types.ts",
         "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/tableLayout.ts",
+        "toPath": "src/types.ts",
+        "sourcePath": "src/tableLayout.ts"
       },
       {
         "fromPath": "src/tablePositions.ts",
@@ -1765,12 +1815,12 @@
       },
       {
         "fromPath": "src/components/playing-card/PlayingCard.tsx",
-        "toPath": "src/colors.ts",
+        "toPath": "src/cardSymbols.ts",
         "sourcePath": "src/components/playing-card/PlayingCard.tsx"
       },
       {
         "fromPath": "src/components/playing-card/PlayingCard.tsx",
-        "toPath": "src/types.ts",
+        "toPath": "src/colors.ts",
         "sourcePath": "src/components/playing-card/PlayingCard.tsx"
       },
       {
@@ -1805,6 +1855,11 @@
       },
       {
         "fromPath": "src/components/tabletop-table/TabletopTable.tsx",
+        "toPath": "src/tableLayout.ts",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromPath": "src/components/tabletop-table/TabletopTable.tsx",
         "toPath": "src/tablePositions.ts",
         "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
       },
@@ -1835,6 +1890,12 @@
       }
     ],
     "calls": [
+      {
+        "fromSymbol": "getPlayingCardLabel",
+        "toSymbol": "getPlayingCardRankLabel",
+        "callExpression": "getPlayingCardRankLabel",
+        "sourcePath": "src/cardLabel.ts"
+      },
       {
         "fromSymbol": "createTabletopColorScheme",
         "toSymbol": "resolveReadableTextColor",
@@ -1957,14 +2018,20 @@
       },
       {
         "fromSymbol": "PlayingCard",
-        "toSymbol": "isRedSuit",
-        "callExpression": "isRedSuit",
+        "toSymbol": "isRedPlayingCardSuit",
+        "callExpression": "isRedPlayingCardSuit",
         "sourcePath": "src/components/playing-card/PlayingCard.tsx"
       },
       {
         "fromSymbol": "PlayingCard",
         "toSymbol": "getPlayingCardLabel",
         "callExpression": "getPlayingCardLabel",
+        "sourcePath": "src/components/playing-card/PlayingCard.tsx"
+      },
+      {
+        "fromSymbol": "PlayingCard",
+        "toSymbol": "getPlayingCardSuitMark",
+        "callExpression": "getPlayingCardSuitMark",
         "sourcePath": "src/components/playing-card/PlayingCard.tsx"
       },
       {
@@ -1983,6 +2050,12 @@
         "fromSymbol": "src/components/tabletop-table/TabletopTable.tsx",
         "toSymbol": "getTabletopSeatPosition",
         "callExpression": "getTabletopSeatPosition",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromSymbol": "src/components/tabletop-table/TabletopTable.tsx",
+        "toSymbol": "getTabletopSeatCardSize",
+        "callExpression": "getTabletopSeatCardSize",
         "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
       },
       {
@@ -2289,13 +2362,25 @@
       {
         "fromComponent": "TabletopTable",
         "toComponent": "View",
-        "jsxElement": "<View\n            accessibilityLabel={createSeatAccessibilityLabel(seat)}\n            accessibilityRole=\"summary\"\n            key={seat.id}\n            style={[\n              styles.seat,\n              {\n                borderColor: seat.selected ? colors.seatSelectedBorder : colors.seatBorder,\n                backgroundColor: colors.seatSurface,\n                left: position.left,\n                opacity: seat.muted ? 0.48 : 1,\n                top: position.top,\n              },\n            ]}\n            testID={testID ? `${testID}-seat-${seat.id}` : undefined}\n          >",
+        "jsxElement": "<View\n            accessibilityLabel={createSeatAccessibilityLabel(seat)}\n            accessibilityRole=\"summary\"\n            key={seat.id}\n            style={[\n              styles.seatSlot,\n              {\n                left: position.left,\n                opacity: seat.muted ? 0.48 : 1,\n                top: position.top,\n              },\n            ]}\n            testID={testID ? `${testID}-seat-${seat.id}` : undefined}\n          >",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromComponent": "TabletopTable",
+        "toComponent": "View",
+        "jsxElement": "<View\n              style={[\n                styles.seatPanel,\n                seat.selected ? styles.selectedSeatPanel : null,\n                {\n                  borderColor: seat.selected ? colors.seatSelectedBorder : colors.seatBorder,\n                  backgroundColor: colors.seatSurface,\n                },\n              ]}\n            >",
         "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
       },
       {
         "fromComponent": "TabletopTable",
         "toComponent": "CardHand",
-        "jsxElement": "<CardHand\n                cards={seat.cards}\n                colorScheme={colorScheme}\n                faceDownCards={seat.faceDownCards}\n                muted={seat.muted ?? seat.disabled}\n                size={cardSize}\n              />",
+        "jsxElement": "<CardHand\n                  cards={seat.cards}\n                  colorScheme={colorScheme}\n                  faceDownCards={seat.faceDownCards}\n                  muted={seat.muted ?? seat.disabled}\n                  size={seatCardSize}\n                />",
+        "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromComponent": "TabletopTable",
+        "toComponent": "View",
+        "jsxElement": "<View style={styles.seatTextGroup}>",
         "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
       },
       {
@@ -2313,7 +2398,7 @@
       {
         "fromComponent": "TabletopTable",
         "toComponent": "View",
-        "jsxElement": "<View style={[styles.token, { backgroundColor: colors.tokenSurface }]}>",
+        "jsxElement": "<View\n                style={[\n                  styles.token,\n                  {\n                    backgroundColor: colors.tokenSurface,\n                    borderColor: seat.selected\n                      ? colors.seatSelectedBorder\n                      : colors.tableInnerBorder,\n                  },\n                ]}\n              >",
         "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
       },
       {

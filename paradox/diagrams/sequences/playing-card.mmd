@@ -1,14 +1,20 @@
 sequenceDiagram
   participant participant_getPlayingCardLabel as getPlayingCardLabel
+  participant participant_getPlayingCardRankLabel as getPlayingCardRankLabel
+  participant participant_getPlayingCardSuitMark as getPlayingCardSuitMark
   participant participant_getTabletopCardDimensions as getTabletopCardDimensions
-  participant participant_isRedSuit as isRedSuit
+  participant participant_isRedPlayingCardSuit as isRedPlayingCardSuit
   participant participant_PlayingCard as PlayingCard
   participant participant_useZoraTheme as useZoraTheme
   participant_PlayingCard->>participant_useZoraTheme: useZoraTheme()
   participant_useZoraTheme-->>participant_PlayingCard: return
   participant_PlayingCard->>participant_getTabletopCardDimensions: getTabletopCardDimensions()
   participant_getTabletopCardDimensions-->>participant_PlayingCard: return
-  participant_PlayingCard->>participant_isRedSuit: isRedSuit()
-  participant_isRedSuit-->>participant_PlayingCard: return
+  participant_PlayingCard->>participant_isRedPlayingCardSuit: isRedPlayingCardSuit()
+  participant_isRedPlayingCardSuit-->>participant_PlayingCard: return
   participant_PlayingCard->>participant_getPlayingCardLabel: getPlayingCardLabel()
+  participant_getPlayingCardLabel->>participant_getPlayingCardRankLabel: getPlayingCardRankLabel()
+  participant_getPlayingCardRankLabel-->>participant_getPlayingCardLabel: return
   participant_getPlayingCardLabel-->>participant_PlayingCard: return
+  participant_PlayingCard->>participant_getPlayingCardSuitMark: getPlayingCardSuitMark()
+  participant_getPlayingCardSuitMark-->>participant_PlayingCard: return

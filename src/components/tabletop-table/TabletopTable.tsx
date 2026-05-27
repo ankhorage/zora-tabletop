@@ -3,8 +3,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { createTabletopColorScheme } from '../../colors';
-import { getTabletopSeatPosition } from '../../tablePositions';
 import { getTabletopSeatCardSize } from '../../tableLayout';
+import { getTabletopSeatPosition } from '../../tablePositions';
 import type { TabletopSeatState } from '../../types';
 import { CardHand } from '../card-hand';
 import type { TabletopTableProps } from './types';
@@ -90,14 +90,14 @@ export function TabletopTable({
             <CardHand cards={centerCards} colorScheme={colorScheme} size={cardSize} />
           ) : null}
           {centerLabel !== undefined ? (
-            <View style={[styles.centerLabel, { backgroundColor: colors.seatSurface }]}> 
-              <Text style={[styles.centerLabelText, { color: colors.seatText }]}> 
+            <View style={[styles.centerLabel, { backgroundColor: colors.seatSurface }]}>
+              <Text style={[styles.centerLabelText, { color: colors.seatText }]}>
                 {centerLabel}
               </Text>
             </View>
           ) : null}
           {centerSublabel !== undefined ? (
-            <Text style={[styles.centerSublabel, { color: colors.tableMutedText }]}> 
+            <Text style={[styles.centerSublabel, { color: colors.tableMutedText }]}>
               {centerSublabel}
             </Text>
           ) : null}
@@ -149,7 +149,7 @@ export function TabletopTable({
               <View style={styles.seatTextGroup}>
                 <Text style={[styles.seatLabel, { color: colors.seatText }]}>{seat.label}</Text>
                 {seat.sublabel !== undefined ? (
-                  <Text style={[styles.seatSublabel, { color: colors.seatMutedText }]}> 
+                  <Text style={[styles.seatSublabel, { color: colors.seatMutedText }]}>
                     {seat.sublabel}
                   </Text>
                 ) : null}
@@ -161,11 +161,13 @@ export function TabletopTable({
                   styles.token,
                   {
                     backgroundColor: colors.tokenSurface,
-                    borderColor: seat.selected ? colors.seatSelectedBorder : colors.tableInnerBorder,
+                    borderColor: seat.selected
+                      ? colors.seatSelectedBorder
+                      : colors.tableInnerBorder,
                   },
                 ]}
               >
-                <Text style={[styles.tokenText, { color: colors.tokenText }]}> 
+                <Text style={[styles.tokenText, { color: colors.tokenText }]}>
                   {seat.tokenLabel}
                 </Text>
               </View>
