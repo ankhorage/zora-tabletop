@@ -1,5 +1,11 @@
 # @ankhorage/zora-tabletop
 
+## 0.0.5
+
+### Patch Changes
+
+- 01b7403: Render playing-card suit glyphs, improve accessible card labels, and separate tabletop seat panels from token pills for more readable compact card-game trainer layouts.
+
 ## 0.0.4
 
 ### Patch Changes
