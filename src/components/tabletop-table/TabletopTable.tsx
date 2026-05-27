@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { createTabletopColorScheme } from '../../colors';
 import { getTabletopSeatPosition } from '../../tablePositions';
+import { getTabletopSeatCardSize } from '../../tableLayout';
 import type { TabletopSeatState } from '../../types';
 import { CardHand } from '../card-hand';
 import type { TabletopTableProps } from './types';
@@ -90,9 +91,7 @@ export function TabletopTable({
           ) : null}
           {centerLabel !== undefined ? (
             <View style={[styles.centerLabel, { backgroundColor: colors.seatSurface }]}> 
-              <Text style={[styles.centerLabelText, { color: colors.seatText }]}> 
-                {centerLabel}
-              </Text>
+              <Text style={[styles.centerLabelText, { color: colors.seatText }]}>{centerLabel}</Text>
             </View>
           ) : null}
           {centerSublabel !== undefined ? (
@@ -106,6 +105,10 @@ export function TabletopTable({
       {seats.map((seat, index) => {
         const position = getTabletopSeatPosition(index, resolvedSeatCount);
         const hasCards = seat.cards !== undefined || seat.faceDownCards !== undefined;
+        const seatCardSize = getTabletopSeatCardSize({
+          selected: seat.selected,
+          tableCardSize: cardSize,
+        });
 
         return (
           <View
@@ -138,7 +141,7 @@ export function TabletopTable({
                   colorScheme={colorScheme}
                   faceDownCards={seat.faceDownCards}
                   muted={seat.muted ?? seat.disabled}
-                  size={cardSize}
+                  size={seatCardSize}
                 />
               ) : null}
               <View style={styles.seatTextGroup}>
@@ -160,9 +163,7 @@ export function TabletopTable({
                   },
                 ]}
               >
-                <Text style={[styles.tokenText, { color: colors.tokenText }]}> 
-                  {seat.tokenLabel}
-                </Text>
+                <Text style={[styles.tokenText, { color: colors.tokenText }]}>{seat.tokenLabel}</Text>
               </View>
             ) : null}
           </View>
