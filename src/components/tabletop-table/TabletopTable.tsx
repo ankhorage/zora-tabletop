@@ -91,7 +91,7 @@ export function TabletopTable({
           ) : null}
           {centerLabel !== undefined ? (
             <View style={[styles.centerLabel, { backgroundColor: colors.seatSurface }]}> 
-              <Text style={[styles.centerLabelText, { color: colors.seatText }]}>
+              <Text style={[styles.centerLabelText, { color: colors.seatText }]}> 
                 {centerLabel}
               </Text>
             </View>
@@ -165,7 +165,7 @@ export function TabletopTable({
                   },
                 ]}
               >
-                <Text style={[styles.tokenText, { color: colors.tokenText }]}>
+                <Text style={[styles.tokenText, { color: colors.tokenText }]}> 
                   {seat.tokenLabel}
                 </Text>
               </View>
