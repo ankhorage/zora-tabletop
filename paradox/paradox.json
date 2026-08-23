@@ -2,6 +2,7 @@
   "packageName": "@ankhorage/zora-tabletop",
   "packageId": "@ankhorage/zora-tabletop",
   "description": "Reusable tabletop, playing-card, seat, token, and card-game presentation components for React Native and React Native Web.",
+  "donation": null,
   "badges": [
     {
       "id": "license",
@@ -12,7 +13,7 @@
     {
       "id": "npm",
       "label": "npm",
-      "value": "v0.0.4",
+      "value": "v0.0.5",
       "color": "cb3837"
     },
     {
@@ -59,6 +60,7 @@
     }
   ],
   "usage": null,
+  "readmeUsageDescription": null,
   "readmeUsage": [
     {
       "title": "Minimal tabletop app root.",
@@ -68,6 +70,8 @@
       "sourcePath": "examples/basic-tabletop/App.tsx"
     }
   ],
+  "readmeCli": null,
+  "readmeConfig": null,
   "config": null,
   "entrypoints": ["src/index.ts"],
   "modules": [
@@ -314,7 +318,7 @@
         {
           "name": "colorScheme",
           "kind": "property",
-          "type": "Partial<import(\"/Users/a_rtiphishl_e/git/zora-tabletop/src/colors\").TabletopColorScheme> | undefined",
+          "type": "Partial<import(\"./src/colors\").TabletopColorScheme> | undefined",
           "required": false,
           "description": null
         },
@@ -413,7 +417,7 @@
         {
           "name": "colorScheme",
           "kind": "property",
-          "type": "Partial<import(\"/Users/a_rtiphishl_e/git/zora-tabletop/src/colors\").TabletopColorScheme> | undefined",
+          "type": "Partial<import(\"./src/colors\").TabletopColorScheme> | undefined",
           "required": false,
           "description": null
         },
@@ -563,7 +567,7 @@
         {
           "name": "colorScheme",
           "kind": "property",
-          "type": "Partial<import(\"/Users/a_rtiphishl_e/git/zora-tabletop/src/colors\").TabletopColorScheme> | undefined",
+          "type": "Partial<import(\"./src/colors\").TabletopColorScheme> | undefined",
           "required": false,
           "description": null
         },
@@ -1061,7 +1065,7 @@
         {
           "name": "colorScheme",
           "kind": "property",
-          "type": "Partial<import(\"/Users/a_rtiphishl_e/git/zora-tabletop/src/colors\").TabletopColorScheme> | undefined",
+          "type": "Partial<import(\"./src/colors\").TabletopColorScheme> | undefined",
           "required": false,
           "description": null
         },
@@ -2097,11 +2101,6 @@
         "sourcePath": "src/components/card-back/types.ts"
       },
       {
-        "fromSymbol": "CardBackProps",
-        "toType": "Users",
-        "sourcePath": "src/components/card-back/types.ts"
-      },
-      {
         "fromSymbol": "CardBack",
         "toType": "CardBackProps",
         "sourcePath": "src/components/card-back/CardBack.tsx"
@@ -2132,11 +2131,6 @@
         "sourcePath": "src/components/card-hand/types.ts"
       },
       {
-        "fromSymbol": "CardHandProps",
-        "toType": "Users",
-        "sourcePath": "src/components/card-hand/types.ts"
-      },
-      {
         "fromSymbol": "CardHand",
         "toType": "CardHandProps",
         "sourcePath": "src/components/card-hand/CardHand.tsx"
@@ -2164,11 +2158,6 @@
       {
         "fromSymbol": "PlayingCardProps",
         "toType": "TabletopColorScheme",
-        "sourcePath": "src/components/playing-card/types.ts"
-      },
-      {
-        "fromSymbol": "PlayingCardProps",
-        "toType": "Users",
         "sourcePath": "src/components/playing-card/types.ts"
       },
       {
@@ -2224,11 +2213,6 @@
       {
         "fromSymbol": "TabletopTableProps",
         "toType": "TabletopShape",
-        "sourcePath": "src/components/tabletop-table/types.ts"
-      },
-      {
-        "fromSymbol": "TabletopTableProps",
-        "toType": "Users",
         "sourcePath": "src/components/tabletop-table/types.ts"
       },
       {

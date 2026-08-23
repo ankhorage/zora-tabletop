@@ -37,13 +37,13 @@ Source: `src/components/card-back/types.ts:4:1`
 
 ### Members
 
-| Name               | Kind     | Type                                                                                                    | Required | Description |
-| ------------------ | -------- | ------------------------------------------------------------------------------------------------------- | -------- | ----------- |
-| accessibilityLabel | property | `string \| undefined`                                                                                   | no       |             |
-| colorScheme        | property | `Partial<import("/Users/a_rtiphishl_e/git/zora-tabletop/src/colors").TabletopColorScheme> \| undefined` | no       |             |
-| muted              | property | `boolean \| undefined`                                                                                  | no       |             |
-| size               | property | `TabletopCardSize \| undefined`                                                                         | no       |             |
-| testID             | property | `string \| undefined`                                                                                   | no       |             |
+| Name               | Kind     | Type                                                               | Required | Description |
+| ------------------ | -------- | ------------------------------------------------------------------ | -------- | ----------- |
+| accessibilityLabel | property | `string \| undefined`                                              | no       |             |
+| colorScheme        | property | `Partial<import("./src/colors").TabletopColorScheme> \| undefined` | no       |             |
+| muted              | property | `boolean \| undefined`                                             | no       |             |
+| size               | property | `TabletopCardSize \| undefined`                                    | no       |             |
+| testID             | property | `string \| undefined`                                              | no       |             |
 
 ## CardHand
 
@@ -86,15 +86,15 @@ Source: `src/components/card-hand/types.ts:4:1`
 
 ### Members
 
-| Name               | Kind     | Type                                                                                                    | Required | Description |
-| ------------------ | -------- | ------------------------------------------------------------------------------------------------------- | -------- | ----------- |
-| accessibilityLabel | property | `string \| undefined`                                                                                   | no       |             |
-| cards              | property | `readonly PlayingCardValue[] \| undefined`                                                              | no       |             |
-| colorScheme        | property | `Partial<import("/Users/a_rtiphishl_e/git/zora-tabletop/src/colors").TabletopColorScheme> \| undefined` | no       |             |
-| faceDownCards      | property | `number \| undefined`                                                                                   | no       |             |
-| muted              | property | `boolean \| undefined`                                                                                  | no       |             |
-| size               | property | `TabletopCardSize \| undefined`                                                                         | no       |             |
-| testID             | property | `string \| undefined`                                                                                   | no       |             |
+| Name               | Kind     | Type                                                               | Required | Description |
+| ------------------ | -------- | ------------------------------------------------------------------ | -------- | ----------- |
+| accessibilityLabel | property | `string \| undefined`                                              | no       |             |
+| cards              | property | `readonly PlayingCardValue[] \| undefined`                         | no       |             |
+| colorScheme        | property | `Partial<import("./src/colors").TabletopColorScheme> \| undefined` | no       |             |
+| faceDownCards      | property | `number \| undefined`                                              | no       |             |
+| muted              | property | `boolean \| undefined`                                             | no       |             |
+| size               | property | `TabletopCardSize \| undefined`                                    | no       |             |
+| testID             | property | `string \| undefined`                                              | no       |             |
 
 ## createTabletopColorScheme
 
@@ -157,15 +157,15 @@ Source: `src/components/playing-card/types.ts:4:1`
 
 ### Members
 
-| Name               | Kind     | Type                                                                                                    | Required | Description |
-| ------------------ | -------- | ------------------------------------------------------------------------------------------------------- | -------- | ----------- |
-| accessibilityLabel | property | `string \| undefined`                                                                                   | no       |             |
-| card               | property | `PlayingCardValue`                                                                                      | yes      |             |
-| colorScheme        | property | `Partial<import("/Users/a_rtiphishl_e/git/zora-tabletop/src/colors").TabletopColorScheme> \| undefined` | no       |             |
-| muted              | property | `boolean \| undefined`                                                                                  | no       |             |
-| selected           | property | `boolean \| undefined`                                                                                  | no       |             |
-| size               | property | `TabletopCardSize \| undefined`                                                                         | no       |             |
-| testID             | property | `string \| undefined`                                                                                   | no       |             |
+| Name               | Kind     | Type                                                               | Required | Description |
+| ------------------ | -------- | ------------------------------------------------------------------ | -------- | ----------- |
+| accessibilityLabel | property | `string \| undefined`                                              | no       |             |
+| card               | property | `PlayingCardValue`                                                 | yes      |             |
+| colorScheme        | property | `Partial<import("./src/colors").TabletopColorScheme> \| undefined` | no       |             |
+| muted              | property | `boolean \| undefined`                                             | no       |             |
+| selected           | property | `boolean \| undefined`                                             | no       |             |
+| size               | property | `TabletopCardSize \| undefined`                                    | no       |             |
+| testID             | property | `string \| undefined`                                              | no       |             |
 
 ## PlayingCardSuit
 
@@ -311,16 +311,16 @@ Source: `src/components/tabletop-table/types.ts:12:1`
 
 ### Members
 
-| Name               | Kind     | Type                                                                                                    | Required | Description |
-| ------------------ | -------- | ------------------------------------------------------------------------------------------------------- | -------- | ----------- |
-| accessibilityLabel | property | `string \| undefined`                                                                                   | no       |             |
-| cardSize           | property | `TabletopCardSize \| undefined`                                                                         | no       |             |
-| centerCards        | property | `readonly PlayingCardValue[] \| undefined`                                                              | no       |             |
-| centerLabel        | property | `React.ReactNode`                                                                                       | no       |             |
-| centerSublabel     | property | `React.ReactNode`                                                                                       | no       |             |
-| colorScheme        | property | `Partial<import("/Users/a_rtiphishl_e/git/zora-tabletop/src/colors").TabletopColorScheme> \| undefined` | no       |             |
-| disabled           | property | `boolean \| undefined`                                                                                  | no       |             |
-| seatCount          | property | `TabletopSeatCount \| undefined`                                                                        | no       |             |
-| seats              | property | `readonly TabletopSeatState[]`                                                                          | yes      |             |
-| shape              | property | `TabletopShape \| undefined`                                                                            | no       |             |
-| testID             | property | `string \| undefined`                                                                                   | no       |             |
+| Name               | Kind     | Type                                                               | Required | Description |
+| ------------------ | -------- | ------------------------------------------------------------------ | -------- | ----------- |
+| accessibilityLabel | property | `string \| undefined`                                              | no       |             |
+| cardSize           | property | `TabletopCardSize \| undefined`                                    | no       |             |
+| centerCards        | property | `readonly PlayingCardValue[] \| undefined`                         | no       |             |
+| centerLabel        | property | `React.ReactNode`                                                  | no       |             |
+| centerSublabel     | property | `React.ReactNode`                                                  | no       |             |
+| colorScheme        | property | `Partial<import("./src/colors").TabletopColorScheme> \| undefined` | no       |             |
+| disabled           | property | `boolean \| undefined`                                             | no       |             |
+| seatCount          | property | `TabletopSeatCount \| undefined`                                   | no       |             |
+| seats              | property | `readonly TabletopSeatState[]`                                     | yes      |             |
+| shape              | property | `TabletopShape \| undefined`                                       | no       |             |
+| testID             | property | `string \| undefined`                                              | no       |             |
