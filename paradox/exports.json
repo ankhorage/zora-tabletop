@@ -63,7 +63,7 @@
       {
         "name": "colorScheme",
         "kind": "property",
-        "type": "Partial<import(\"/Users/a_rtiphishl_e/git/zora-tabletop/src/colors\").TabletopColorScheme> | undefined",
+        "type": "Partial<import(\"./src/colors\").TabletopColorScheme> | undefined",
         "required": false,
         "description": null
       },
@@ -162,7 +162,7 @@
       {
         "name": "colorScheme",
         "kind": "property",
-        "type": "Partial<import(\"/Users/a_rtiphishl_e/git/zora-tabletop/src/colors\").TabletopColorScheme> | undefined",
+        "type": "Partial<import(\"./src/colors\").TabletopColorScheme> | undefined",
         "required": false,
         "description": null
       },
@@ -312,7 +312,7 @@
       {
         "name": "colorScheme",
         "kind": "property",
-        "type": "Partial<import(\"/Users/a_rtiphishl_e/git/zora-tabletop/src/colors\").TabletopColorScheme> | undefined",
+        "type": "Partial<import(\"./src/colors\").TabletopColorScheme> | undefined",
         "required": false,
         "description": null
       },
@@ -810,7 +810,7 @@
       {
         "name": "colorScheme",
         "kind": "property",
-        "type": "Partial<import(\"/Users/a_rtiphishl_e/git/zora-tabletop/src/colors\").TabletopColorScheme> | undefined",
+        "type": "Partial<import(\"./src/colors\").TabletopColorScheme> | undefined",
         "required": false,
         "description": null
       },
