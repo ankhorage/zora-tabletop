@@ -62,7 +62,7 @@
     "version-packages": "changeset version"
   },
   "peerDependencies": {
-    "@ankhorage/zora": ">=0.1.0",
+    "@ankhorage/zora": ">=3.0.1",
     "react": ">=18.2.0",
     "react-native": ">=0.72.0"
   },
