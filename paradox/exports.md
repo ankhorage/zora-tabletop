@@ -14,11 +14,11 @@ rank or suit. The component keeps a generic accessible label for hidden cards.
 ### Signatures
 
 - `({
-  size = 'medium',
-  muted = false,
-  accessibilityLabel,
-  colorScheme,
-  testID,
+size = 'medium',
+muted = false,
+accessibilityLabel,
+colorScheme,
+testID,
 }: CardBackProps) => React.JSX.Element`
   - {
     size = 'medium',
@@ -59,13 +59,13 @@ with consistent spacing, sizing, and muted state handling.
 ### Signatures
 
 - `({
-  cards = [],
-  faceDownCards = 0,
-  size = 'medium',
-  muted = false,
-  colorScheme,
-  accessibilityLabel,
-  testID,
+cards = [],
+faceDownCards = 0,
+size = 'medium',
+muted = false,
+colorScheme,
+accessibilityLabel,
+testID,
 }: CardHandProps) => React.JSX.Element`
   - {
     cards = [],
@@ -130,13 +130,13 @@ exposes an accessible card label by default.
 ### Signatures
 
 - `({
-  card,
-  size = 'medium',
-  selected = false,
-  muted = false,
-  accessibilityLabel,
-  colorScheme,
-  testID,
+card,
+size = 'medium',
+selected = false,
+muted = false,
+accessibilityLabel,
+colorScheme,
+testID,
 }: PlayingCardProps) => React.JSX.Element`
   - {
     card,
@@ -276,17 +276,17 @@ rules into the component.
 ### Signatures
 
 - `({
-  seats,
-  centerCards = [],
-  centerLabel,
-  centerSublabel,
-  shape = 'oval',
-  seatCount,
-  cardSize = 'small',
-  disabled = false,
-  colorScheme,
-  accessibilityLabel,
-  testID,
+seats,
+centerCards = [],
+centerLabel,
+centerSublabel,
+shape = 'oval',
+seatCount,
+cardSize = 'small',
+disabled = false,
+colorScheme,
+accessibilityLabel,
+testID,
 }: TabletopTableProps) => React.JSX.Element`
   - {
     seats,
