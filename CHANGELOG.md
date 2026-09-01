@@ -1,5 +1,12 @@
 # @ankhorage/zora-tabletop
 
+## 0.0.6
+
+### Patch Changes
+
+- ae78fc9: Update Ankhorage dependencies: `@ankhorage/paradox`, `@ankhorage/zora`.
+- 67b6760: Update Ankhorage dependencies: `@ankhorage/zora`.
+
 ## 0.0.5
 
 ### Patch Changes
