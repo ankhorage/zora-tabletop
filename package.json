@@ -67,7 +67,7 @@
     "react-native": ">=0.72.0"
   },
   "devDependencies": {
-    "@ankhorage/devtools": "^1.8.4",
+    "@ankhorage/devtools": "^1.9.2",
     "@ankhorage/paradox": "^0.1.22",
     "@ankhorage/zora": "^3.0.0",
     "@react-native-picker/picker": "2.11.4",
