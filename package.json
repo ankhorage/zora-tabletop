@@ -1,7 +1,7 @@
 {
   "name": "@ankhorage/zora-tabletop",
   "type": "module",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Tabletop and card-game UI primitives for React Native and React Native Web, built on ZORA.",
   "homepage": "https://github.com/ankhorage/zora-tabletop#readme",
   "bugs": {
