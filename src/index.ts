@@ -8,6 +8,9 @@ export type { PlayingCardProps } from './components/playing-card';
 export { PlayingCard } from './components/playing-card';
 export type { TabletopTableProps } from './components/tabletop-table';
 export { TabletopTable } from './components/tabletop-table';
+export { tabletopTableMeta } from './meta';
+export { ZORA_TABLETOP_COMPONENT_REGISTRY, ZORA_TABLETOP_PLUGIN } from './plugin';
+export { ZORA_PLUGIN_METADATA, ZORA_TABLETOP_COMPONENT_META } from './registry';
 export type {
   PlayingCardSuit,
   PlayingCardValue,
