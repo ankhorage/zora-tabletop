@@ -1,5 +1,15 @@
 # @ankhorage/zora-tabletop
 
+## 0.1.0
+
+### Minor Changes
+
+- 39484a1: Expose TabletopTable through the canonical ZORA plugin descriptor with Studio authoring metadata.
+
+### Patch Changes
+
+- 91312b8: Update Ankhorage dependencies: `@ankhorage/zora`.
+
 ## 0.0.9
 
 ### Patch Changes
