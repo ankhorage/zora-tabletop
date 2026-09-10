@@ -3,7 +3,7 @@
 
 # @ankhorage/zora-tabletop
 
-![license: MIT](././paradox/badges/license.svg) ![npm: v0.0.5](././paradox/badges/npm.svg) ![runtime: bun](././paradox/badges/runtime.svg) ![typescript: strict](././paradox/badges/typescript.svg) ![eslint: checked](././paradox/badges/eslint.svg) ![prettier: checked](././paradox/badges/prettier.svg) ![build: checked](././paradox/badges/build.svg) ![tests: checked](././paradox/badges/tests.svg) ![docs: paradox](././paradox/badges/docs.svg)
+![license: MIT](././paradox/badges/license.svg) ![npm: v0.1.0](././paradox/badges/npm.svg) ![runtime: bun](././paradox/badges/runtime.svg) ![typescript: strict](././paradox/badges/typescript.svg) ![eslint: checked](././paradox/badges/eslint.svg) ![prettier: checked](././paradox/badges/prettier.svg) ![build: checked](././paradox/badges/build.svg) ![tests: checked](././paradox/badges/tests.svg) ![docs: paradox](././paradox/badges/docs.svg)
 
 Reusable tabletop, playing-card, seat, token, and card-game presentation components for React Native and React Native Web.
 
@@ -99,6 +99,7 @@ export default function BasicTabletopApp() {
 - [Export graph](././paradox/diagrams/export-graph.mmd)
 - [CardBack sequence](././paradox/diagrams/sequences/card-back.mmd)
 - [CardHand sequence](././paradox/diagrams/sequences/card-hand.mmd)
+- [createPokerTrainingTableState sequence](././paradox/diagrams/sequences/create-poker-training-table-state.mmd)
 - [PlayingCard sequence](././paradox/diagrams/sequences/playing-card.mmd)
 - [TabletopTable sequence](././paradox/diagrams/sequences/tabletop-table.mmd)
 
@@ -316,5 +317,48 @@ const colors = createTabletopColorScheme(theme, { tableFelt: '#065f46' });
 Module: `src/colors.ts`
 Source: `src/colors.ts:73:1`
 Related symbols: `TabletopColorScheme`
+
+</details>
+
+<details>
+<summary>PokerTrainingTable</summary>
+
+```ts
+PokerTrainingTable({
+  task = {},
+  defaultStackBigBlinds = 100,
+  accessibilityLabel,
+  ...tableProps
+}: PokerTrainingTableProps) => React.JSX.Element
+```
+
+Manifest-ready poker training pattern that reconstructs a complete table from task data.
+
+Bind the raw training task object to `task`; the pattern maps sparse active-player data to a
+full nine-seat presentation while leaving API execution in the generated application.
+
+#### Training task binding
+
+```tsx
+<PokerTrainingTable task={task} />
+```
+
+Related types: `PokerTrainingTableProps`
+
+<details>
+<summary>Props</summary>
+
+| Prop                  | Type                                      | Required | Default | Description |
+| --------------------- | ----------------------------------------- | -------- | ------- | ----------- |
+| accessibilityLabel    | `string \| undefined`                     | no       | —       |             |
+| cardSize              | `TabletopCardSize \| undefined`           | no       | —       |             |
+| colorScheme           | `TabletopColorOverrides \| undefined`     | no       | —       |             |
+| defaultStackBigBlinds | `number \| undefined`                     | no       | `100`   |             |
+| disabled              | `boolean \| undefined`                    | no       | —       |             |
+| shape                 | `TabletopShape \| undefined`              | no       | —       |             |
+| task                  | `PokerTrainingTaskTableData \| undefined` | no       | `{}`    |             |
+| testID                | `string \| undefined`                     | no       | —       |             |
+
+</details>
 
 </details>

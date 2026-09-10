@@ -62,6 +62,28 @@ Export paths: `src/index.ts`
 | size               | `TabletopCardSize \| undefined`       | no       | `'medium'` |             |
 | testID             | `string \| undefined`                 | no       | —          |             |
 
+## PokerTrainingTable
+
+Source: `src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx:19:1`
+
+Manifest-ready poker training pattern that reconstructs a complete table from task data.
+
+Bind the raw training task object to `task`; the pattern maps sparse active-player data to a
+full nine-seat presentation while leaving API execution in the generated application.
+
+Export paths: `src/index.ts`
+
+| Prop                  | Type                                      | Required | Default | Description |
+| --------------------- | ----------------------------------------- | -------- | ------- | ----------- |
+| accessibilityLabel    | `string \| undefined`                     | no       | —       |             |
+| cardSize              | `TabletopCardSize \| undefined`           | no       | —       |             |
+| colorScheme           | `TabletopColorOverrides \| undefined`     | no       | —       |             |
+| defaultStackBigBlinds | `number \| undefined`                     | no       | `100`   |             |
+| disabled              | `boolean \| undefined`                    | no       | —       |             |
+| shape                 | `TabletopShape \| undefined`              | no       | —       |             |
+| task                  | `PokerTrainingTaskTableData \| undefined` | no       | `{}`    |             |
+| testID                | `string \| undefined`                     | no       | —       |             |
+
 ## TabletopTable
 
 Source: `src/components/tabletop-table/TabletopTable.tsx:42:1`

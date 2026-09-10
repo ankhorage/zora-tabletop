@@ -63,7 +63,34 @@ graph TD
   package__ankhorage_zora_tabletop -.-> module_src_components_tabletop_table_types_ts
   module_src_components_tabletop_table_types_ts --> module_src_colors_ts
   module_src_components_tabletop_table_types_ts --> module_src_types_ts
+  module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts["src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"]
+  package__ankhorage_zora_tabletop -.-> module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts
+  module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts --> module_src_features_game_presentations_domain_createTabletopGameSeats_ts
+  module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts --> module_src_types_gamePresentation_ts
+  module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts --> module_src_types_pokerTraining_ts
+  module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx["src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx"]
+  package__ankhorage_zora_tabletop -.-> module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx
+  module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx --> module_src_components_tabletop_table_index_ts
+  module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx --> module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts
+  module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx --> module_src_types_pokerTraining_ts
+  module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts["src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts"]
+  package__ankhorage_zora_tabletop -.-> module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts
+  module_src_features_game_presentations_domain_createTabletopGameSeats_ts["src/features/game-presentations/domain/createTabletopGameSeats.ts"]
+  package__ankhorage_zora_tabletop -.-> module_src_features_game_presentations_domain_createTabletopGameSeats_ts
+  module_src_features_game_presentations_domain_createTabletopGameSeats_ts --> module_src_types_ts
+  module_src_features_game_presentations_domain_createTabletopGameSeats_ts --> module_src_types_gamePresentation_ts
   module_src_index_ts["src/index.ts"]
+  module_src_meta_ts["src/meta.ts"]
+  package__ankhorage_zora_tabletop -.-> module_src_meta_ts
+  module_src_plugin_ts["src/plugin.ts"]
+  package__ankhorage_zora_tabletop -.-> module_src_plugin_ts
+  module_src_plugin_ts --> module_src_components_tabletop_table_index_ts
+  module_src_plugin_ts --> module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx
+  module_src_plugin_ts --> module_src_registry_ts
+  module_src_registry_ts["src/registry.ts"]
+  package__ankhorage_zora_tabletop -.-> module_src_registry_ts
+  module_src_registry_ts --> module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts
+  module_src_registry_ts --> module_src_meta_ts
   module_src_tableLayout_ts["src/tableLayout.ts"]
   package__ankhorage_zora_tabletop -.-> module_src_tableLayout_ts
   module_src_tableLayout_ts --> module_src_types_ts
@@ -72,3 +99,10 @@ graph TD
   module_src_tablePositions_ts --> module_src_types_ts
   module_src_types_ts["src/types.ts"]
   package__ankhorage_zora_tabletop -.-> module_src_types_ts
+  module_src_types_gamePresentation_ts["src/types/gamePresentation.ts"]
+  package__ankhorage_zora_tabletop -.-> module_src_types_gamePresentation_ts
+  module_src_types_gamePresentation_ts --> module_src_types_ts
+  module_src_types_pokerTraining_ts["src/types/pokerTraining.ts"]
+  package__ankhorage_zora_tabletop -.-> module_src_types_pokerTraining_ts
+  module_src_types_pokerTraining_ts --> module_src_colors_ts
+  module_src_types_pokerTraining_ts --> module_src_types_ts

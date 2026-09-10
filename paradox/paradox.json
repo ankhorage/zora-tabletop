@@ -2,6 +2,7 @@
   "packageName": "@ankhorage/zora-tabletop",
   "packageId": "@ankhorage/zora-tabletop",
   "description": "Reusable tabletop, playing-card, seat, token, and card-game presentation components for React Native and React Native Web.",
+  "collaborators": null,
   "donation": null,
   "badges": [
     {
@@ -13,7 +14,7 @@
     {
       "id": "npm",
       "label": "npm",
-      "value": "v0.0.5",
+      "value": "v0.1.0",
       "color": "cb3837"
     },
     {
@@ -199,6 +200,38 @@
       "exports": ["TabletopTableProps"]
     },
     {
+      "path": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+      "isEntrypoint": false,
+      "dependencies": [
+        "src/features/game-presentations/domain/createTabletopGameSeats.ts",
+        "src/types/gamePresentation.ts",
+        "src/types/pokerTraining.ts"
+      ],
+      "exports": ["createPokerTrainingTableState"]
+    },
+    {
+      "path": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx",
+      "isEntrypoint": false,
+      "dependencies": [
+        "src/components/tabletop-table/index.ts",
+        "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+        "src/types/pokerTraining.ts"
+      ],
+      "exports": ["PokerTrainingTable"]
+    },
+    {
+      "path": "src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts",
+      "isEntrypoint": false,
+      "dependencies": [],
+      "exports": ["pokerTrainingTableMeta"]
+    },
+    {
+      "path": "src/features/game-presentations/domain/createTabletopGameSeats.ts",
+      "isEntrypoint": false,
+      "dependencies": ["src/types.ts", "src/types/gamePresentation.ts"],
+      "exports": ["createTabletopGameSeats"]
+    },
+    {
       "path": "src/index.ts",
       "isEntrypoint": true,
       "dependencies": [],
@@ -207,20 +240,63 @@
         "CardBackProps",
         "CardHand",
         "CardHandProps",
+        "createPokerTrainingTableState",
+        "CreatePokerTrainingTableStateOptions",
         "createTabletopColorScheme",
+        "createTabletopGameSeats",
+        "CreateTabletopGameSeatsInput",
         "PlayingCard",
         "PlayingCardProps",
         "PlayingCardSuit",
         "PlayingCardValue",
+        "PokerTrainingPlayer",
+        "PokerTrainingTable",
+        "pokerTrainingTableMeta",
+        "PokerTrainingTableProps",
+        "PokerTrainingTableState",
+        "PokerTrainingTaskTableData",
         "TabletopCardSize",
         "TabletopColorOverrides",
         "TabletopColorScheme",
+        "TabletopGameParticipantState",
+        "TabletopGameSeatDefinition",
+        "TabletopGameSeatPresentation",
         "TabletopSeatCount",
         "TabletopSeatState",
         "TabletopShape",
         "TabletopTable",
-        "TabletopTableProps"
+        "tabletopTableMeta",
+        "TabletopTableProps",
+        "ZORA_PLUGIN_METADATA",
+        "ZORA_TABLETOP_COMPONENT_META",
+        "ZORA_TABLETOP_COMPONENT_REGISTRY",
+        "ZORA_TABLETOP_PLUGIN"
       ]
+    },
+    {
+      "path": "src/meta.ts",
+      "isEntrypoint": false,
+      "dependencies": [],
+      "exports": ["tabletopTableMeta"]
+    },
+    {
+      "path": "src/plugin.ts",
+      "isEntrypoint": false,
+      "dependencies": [
+        "src/components/tabletop-table/index.ts",
+        "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx",
+        "src/registry.ts"
+      ],
+      "exports": ["ZORA_TABLETOP_COMPONENT_REGISTRY", "ZORA_TABLETOP_PLUGIN"]
+    },
+    {
+      "path": "src/registry.ts",
+      "isEntrypoint": false,
+      "dependencies": [
+        "src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts",
+        "src/meta.ts"
+      ],
+      "exports": ["ZORA_PLUGIN_METADATA", "ZORA_TABLETOP_COMPONENT_META"]
     },
     {
       "path": "src/tableLayout.ts",
@@ -250,6 +326,29 @@
         "TabletopSeatCount",
         "TabletopSeatState",
         "TabletopShape"
+      ]
+    },
+    {
+      "path": "src/types/gamePresentation.ts",
+      "isEntrypoint": false,
+      "dependencies": ["src/types.ts"],
+      "exports": [
+        "CreateTabletopGameSeatsInput",
+        "TabletopGameParticipantState",
+        "TabletopGameSeatDefinition",
+        "TabletopGameSeatPresentation"
+      ]
+    },
+    {
+      "path": "src/types/pokerTraining.ts",
+      "isEntrypoint": false,
+      "dependencies": ["src/colors.ts", "src/types.ts"],
+      "exports": [
+        "CreatePokerTrainingTableStateOptions",
+        "PokerTrainingPlayer",
+        "PokerTrainingTableProps",
+        "PokerTrainingTableState",
+        "PokerTrainingTaskTableData"
       ]
     }
   ],
@@ -318,7 +417,7 @@
         {
           "name": "colorScheme",
           "kind": "property",
-          "type": "Partial<import(\"./src/colors\").TabletopColorScheme> | undefined",
+          "type": "Partial<import(\"../..\").TabletopColorScheme> | undefined",
           "required": false,
           "description": null
         },
@@ -417,7 +516,7 @@
         {
           "name": "colorScheme",
           "kind": "property",
-          "type": "Partial<import(\"./src/colors\").TabletopColorScheme> | undefined",
+          "type": "Partial<import(\"../..\").TabletopColorScheme> | undefined",
           "required": false,
           "description": null
         },
@@ -446,6 +545,74 @@
           "name": "testID",
           "kind": "property",
           "type": "string | undefined",
+          "required": false,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "createPokerTrainingTableState",
+      "description": "Adapts the table-relevant subset of a poker training task to generic tabletop presentation state.\n\nThe canonical poker ring is rotated so the hero occupies the first (bottom) tabletop seat.\nPlayers omitted by the task are reconstructed as folded with the configured default stack.",
+      "isReadme": false,
+      "examples": [],
+      "kind": "function",
+      "modulePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+      "sourceLocation": {
+        "filePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+        "line": 20,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [
+        "CreatePokerTrainingTableStateOptions",
+        "PokerTrainingTableState",
+        "PokerTrainingTaskTableData"
+      ],
+      "signatures": [
+        {
+          "label": "(task: PokerTrainingTaskTableData, { defaultStackBigBlinds = 100 }?: CreatePokerTrainingTableStateOptions) => PokerTrainingTableState",
+          "parameters": [
+            {
+              "name": "{ defaultStackBigBlinds = 100 }",
+              "type": "CreatePokerTrainingTableStateOptions",
+              "required": false,
+              "description": null
+            },
+            {
+              "name": "task",
+              "type": "PokerTrainingTaskTableData",
+              "required": true,
+              "description": "- Serializable poker training task data received by the generated application."
+            }
+          ],
+          "returnType": "PokerTrainingTableState",
+          "returnDescription": "Seats and shared-table content ready for `TabletopTable`."
+        }
+      ],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "CreatePokerTrainingTableStateOptions",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/types/pokerTraining.ts",
+      "sourceLocation": {
+        "filePath": "src/types/pokerTraining.ts",
+        "line": 30,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [
+        {
+          "name": "defaultStackBigBlinds",
+          "kind": "property",
+          "type": "number | undefined",
           "required": false,
           "description": null
         }
@@ -494,6 +661,88 @@
         }
       ],
       "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "createTabletopGameSeats",
+      "description": "Joins an ordered game layout with the participant states currently present in a scene.\n\nMissing participants retain their seat definition and receive the configured fallback state,\nwhich lets card games represent folded, eliminated, disconnected, or otherwise inactive seats\nwithout embedding those game rules in the tabletop renderer.",
+      "isReadme": false,
+      "examples": [
+        {
+          "title": "Generic four-seat game",
+          "language": "ts",
+          "code": "const seats = createTabletopGameSeats({\n  seats: [\n    { id: 'north', defaultState: { label: 'North' } },\n    { id: 'east', defaultState: { label: 'East' } },\n  ],\n  participants: [{ seatId: 'east', state: { sublabel: 'Ready' } }],\n  missingParticipantState: { muted: true },\n});"
+        }
+      ],
+      "kind": "function",
+      "modulePath": "src/features/game-presentations/domain/createTabletopGameSeats.ts",
+      "sourceLocation": {
+        "filePath": "src/features/game-presentations/domain/createTabletopGameSeats.ts",
+        "line": 25,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["CreateTabletopGameSeatsInput", "TabletopSeatState"],
+      "signatures": [
+        {
+          "label": "({\n  seats,\n  participants,\n  missingParticipantState = { disabled: true, muted: true },\n}: CreateTabletopGameSeatsInput) => readonly TabletopSeatState[]",
+          "parameters": [
+            {
+              "name": "{\n  seats,\n  participants,\n  missingParticipantState = { disabled: true, muted: true },\n}",
+              "type": "CreateTabletopGameSeatsInput",
+              "required": true,
+              "description": null
+            }
+          ],
+          "returnType": "readonly TabletopSeatState[]",
+          "returnDescription": "Normalized tabletop seats in the same order as the supplied seat definitions."
+        }
+      ],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "CreateTabletopGameSeatsInput",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/types/gamePresentation.ts",
+      "sourceLocation": {
+        "filePath": "src/types/gamePresentation.ts",
+        "line": 15,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [
+        "TabletopGameParticipantState",
+        "TabletopGameSeatDefinition",
+        "TabletopGameSeatPresentation"
+      ],
+      "signatures": [],
+      "members": [
+        {
+          "name": "missingParticipantState",
+          "kind": "property",
+          "type": "Partial<TabletopGameSeatPresentation> | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "participants",
+          "kind": "property",
+          "type": "readonly TabletopGameParticipantState[]",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "seats",
+          "kind": "property",
+          "type": "readonly TabletopGameSeatDefinition[]",
+          "required": true,
+          "description": null
+        }
+      ],
       "structuredRows": []
     },
     {
@@ -567,7 +816,7 @@
         {
           "name": "colorScheme",
           "kind": "property",
-          "type": "Partial<import(\"./src/colors\").TabletopColorScheme> | undefined",
+          "type": "Partial<import(\"../..\").TabletopColorScheme> | undefined",
           "required": false,
           "description": null
         },
@@ -648,6 +897,318 @@
           "kind": "property",
           "type": "PlayingCardSuit",
           "required": true,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "PokerTrainingPlayer",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/types/pokerTraining.ts",
+      "sourceLocation": {
+        "filePath": "src/types/pokerTraining.ts",
+        "line": 9,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["PlayingCardValue"],
+      "signatures": [],
+      "members": [
+        {
+          "name": "bet",
+          "kind": "property",
+          "type": "number | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "cards",
+          "kind": "property",
+          "type": "readonly PlayingCardValue[] | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "folded",
+          "kind": "property",
+          "type": "boolean | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "isHero",
+          "kind": "property",
+          "type": "boolean | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "position",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "stack",
+          "kind": "property",
+          "type": "number | undefined",
+          "required": false,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "PokerTrainingTable",
+      "description": "Manifest-ready poker training pattern that reconstructs a complete table from task data.\n\nBind the raw training task object to `task`; the pattern maps sparse active-player data to a\nfull nine-seat presentation while leaving API execution in the generated application.",
+      "isReadme": true,
+      "examples": [
+        {
+          "title": "Training task binding",
+          "language": "tsx",
+          "code": "<PokerTrainingTable task={task} />"
+        }
+      ],
+      "kind": "function",
+      "modulePath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx",
+      "sourceLocation": {
+        "filePath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx",
+        "line": 19,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["PokerTrainingTableProps"],
+      "signatures": [
+        {
+          "label": "({\n  task = {},\n  defaultStackBigBlinds = 100,\n  accessibilityLabel,\n  ...tableProps\n}: PokerTrainingTableProps) => React.JSX.Element",
+          "parameters": [
+            {
+              "name": "{\n  task = {},\n  defaultStackBigBlinds = 100,\n  accessibilityLabel,\n  ...tableProps\n}",
+              "type": "PokerTrainingTableProps",
+              "required": true,
+              "description": null
+            }
+          ],
+          "returnType": "React.JSX.Element",
+          "returnDescription": null
+        }
+      ],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "pokerTrainingTableMeta",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "value",
+      "modulePath": "src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts",
+      "sourceLocation": {
+        "filePath": "src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts",
+        "line": 1,
+        "column": 14
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "PokerTrainingTableProps",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/types/pokerTraining.ts",
+      "sourceLocation": {
+        "filePath": "src/types/pokerTraining.ts",
+        "line": 42,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [
+        "PokerTrainingTaskTableData",
+        "TabletopCardSize",
+        "TabletopColorScheme",
+        "TabletopShape"
+      ],
+      "signatures": [],
+      "members": [
+        {
+          "name": "accessibilityLabel",
+          "kind": "property",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "cardSize",
+          "kind": "property",
+          "type": "TabletopCardSize | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "colorScheme",
+          "kind": "property",
+          "type": "Partial<import(\"..\").TabletopColorScheme> | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "defaultStackBigBlinds",
+          "kind": "property",
+          "type": "number | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "disabled",
+          "kind": "property",
+          "type": "boolean | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "shape",
+          "kind": "property",
+          "type": "TabletopShape | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "task",
+          "kind": "property",
+          "type": "PokerTrainingTaskTableData | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "testID",
+          "kind": "property",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "PokerTrainingTableState",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/types/pokerTraining.ts",
+      "sourceLocation": {
+        "filePath": "src/types/pokerTraining.ts",
+        "line": 34,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["PlayingCardValue", "TabletopSeatState"],
+      "signatures": [],
+      "members": [
+        {
+          "name": "accessibilityLabel",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "centerCards",
+          "kind": "property",
+          "type": "readonly PlayingCardValue[]",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "centerLabel",
+          "kind": "property",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "centerSublabel",
+          "kind": "property",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "seats",
+          "kind": "property",
+          "type": "readonly TabletopSeatState[]",
+          "required": true,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "PokerTrainingTaskTableData",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/types/pokerTraining.ts",
+      "sourceLocation": {
+        "filePath": "src/types/pokerTraining.ts",
+        "line": 18,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["PlayingCardValue", "PokerTrainingPlayer"],
+      "signatures": [],
+      "members": [
+        {
+          "name": "blinds",
+          "kind": "property",
+          "type": "{ readonly small: number; readonly big: number; } | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "communityCards",
+          "kind": "property",
+          "type": "readonly PlayingCardValue[] | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "heroCards",
+          "kind": "property",
+          "type": "readonly PlayingCardValue[] | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "heroPosition",
+          "kind": "property",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "players",
+          "kind": "property",
+          "type": "readonly PokerTrainingPlayer[] | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "pot",
+          "kind": "property",
+          "type": "number | undefined",
+          "required": false,
           "description": null
         }
       ],
@@ -842,6 +1403,90 @@
       "structuredRows": []
     },
     {
+      "name": "TabletopGameParticipantState",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/types/gamePresentation.ts",
+      "sourceLocation": {
+        "filePath": "src/types/gamePresentation.ts",
+        "line": 10,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["TabletopGameSeatPresentation"],
+      "signatures": [],
+      "members": [
+        {
+          "name": "seatId",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "state",
+          "kind": "property",
+          "type": "Partial<TabletopGameSeatPresentation>",
+          "required": true,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "TabletopGameSeatDefinition",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "type",
+      "modulePath": "src/types/gamePresentation.ts",
+      "sourceLocation": {
+        "filePath": "src/types/gamePresentation.ts",
+        "line": 5,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": ["TabletopGameSeatPresentation"],
+      "signatures": [],
+      "members": [
+        {
+          "name": "defaultState",
+          "kind": "property",
+          "type": "TabletopGameSeatPresentation",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "id",
+          "kind": "property",
+          "type": "string",
+          "required": true,
+          "description": null
+        }
+      ],
+      "structuredRows": []
+    },
+    {
+      "name": "TabletopGameSeatPresentation",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "unknown",
+      "modulePath": "src/types/gamePresentation.ts",
+      "sourceLocation": {
+        "filePath": "src/types/gamePresentation.ts",
+        "line": 3,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
       "name": "TabletopSeatCount",
       "description": null,
       "isReadme": false,
@@ -1005,6 +1650,24 @@
       "structuredRows": []
     },
     {
+      "name": "tabletopTableMeta",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "value",
+      "modulePath": "src/meta.ts",
+      "sourceLocation": {
+        "filePath": "src/meta.ts",
+        "line": 1,
+        "column": 14
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
       "name": "TabletopTableProps",
       "description": null,
       "isReadme": false,
@@ -1065,7 +1728,7 @@
         {
           "name": "colorScheme",
           "kind": "property",
-          "type": "Partial<import(\"./src/colors\").TabletopColorScheme> | undefined",
+          "type": "Partial<import(\"../..\").TabletopColorScheme> | undefined",
           "required": false,
           "description": null
         },
@@ -1105,6 +1768,78 @@
           "description": null
         }
       ],
+      "structuredRows": []
+    },
+    {
+      "name": "ZORA_PLUGIN_METADATA",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "value",
+      "modulePath": "src/registry.ts",
+      "sourceLocation": {
+        "filePath": "src/registry.ts",
+        "line": 9,
+        "column": 14
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "ZORA_TABLETOP_COMPONENT_META",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "value",
+      "modulePath": "src/registry.ts",
+      "sourceLocation": {
+        "filePath": "src/registry.ts",
+        "line": 4,
+        "column": 14
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "ZORA_TABLETOP_COMPONENT_REGISTRY",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "value",
+      "modulePath": "src/plugin.ts",
+      "sourceLocation": {
+        "filePath": "src/plugin.ts",
+        "line": 5,
+        "column": 14
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
+      "structuredRows": []
+    },
+    {
+      "name": "ZORA_TABLETOP_PLUGIN",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "kind": "value",
+      "modulePath": "src/plugin.ts",
+      "sourceLocation": {
+        "filePath": "src/plugin.ts",
+        "line": 7,
+        "column": 14
+      },
+      "exportPaths": ["src/index.ts"],
+      "relatedSymbols": [],
+      "signatures": [],
+      "members": [],
       "structuredRows": []
     }
   ],
@@ -1285,6 +2020,77 @@
           "type": "TabletopCardSize | undefined",
           "required": false,
           "defaultValue": "'medium'",
+          "description": null
+        },
+        {
+          "name": "testID",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        }
+      ]
+    },
+    {
+      "name": "PokerTrainingTable",
+      "description": "Manifest-ready poker training pattern that reconstructs a complete table from task data.\n\nBind the raw training task object to `task`; the pattern maps sparse active-player data to a\nfull nine-seat presentation while leaving API execution in the generated application.",
+      "isReadme": true,
+      "examples": [
+        {
+          "title": "Training task binding",
+          "language": "tsx",
+          "code": "<PokerTrainingTable task={task} />"
+        }
+      ],
+      "modulePath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx",
+      "sourceLocation": {
+        "filePath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx",
+        "line": 19,
+        "column": 1
+      },
+      "exportPaths": ["src/index.ts"],
+      "props": [
+        {
+          "name": "accessibilityLabel",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "cardSize",
+          "type": "TabletopCardSize | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "colorScheme",
+          "type": "TabletopColorOverrides | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "defaultStackBigBlinds",
+          "type": "number | undefined",
+          "required": false,
+          "defaultValue": "100",
+          "description": null
+        },
+        {
+          "name": "disabled",
+          "type": "boolean | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "shape",
+          "type": "TabletopShape | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "task",
+          "type": "PokerTrainingTaskTableData | undefined",
+          "required": false,
+          "defaultValue": "{}",
           "description": null
         },
         {
@@ -1587,6 +2393,87 @@
       }
     },
     {
+      "name": "createPokerTrainingTableState",
+      "description": "Adapts the table-relevant subset of a poker training task to generic tabletop presentation state.\n\nThe canonical poker ring is rotated so the hero occupies the first (bottom) tabletop seat.\nPlayers omitted by the task are reconstructed as folded with the configured default stack.",
+      "sourceLocation": {
+        "filePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+        "line": 20,
+        "column": 1
+      }
+    },
+    {
+      "name": "rotatePokerPositions",
+      "description": "Rotates the canonical nine-seat poker ring to place the hero at the bottom seat.",
+      "sourceLocation": {
+        "filePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+        "line": 62,
+        "column": 1
+      }
+    },
+    {
+      "name": "createPokerParticipantState",
+      "description": "Converts one poker participant record into a generic seat-state override.",
+      "sourceLocation": {
+        "filePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+        "line": 70,
+        "column": 1
+      }
+    },
+    {
+      "name": "formatPlayerSublabel",
+      "description": "Formats stack and optional committed chips as a compact seat sublabel.",
+      "sourceLocation": {
+        "filePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+        "line": 93,
+        "column": 1
+      }
+    },
+    {
+      "name": "formatChipStack",
+      "description": "Formats chips as big blinds when a positive blind is known, otherwise as an amount.",
+      "sourceLocation": {
+        "filePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+        "line": 107,
+        "column": 1
+      }
+    },
+    {
+      "name": "formatAmount",
+      "description": "Formats a numeric poker amount consistently across native and web runtimes.",
+      "sourceLocation": {
+        "filePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+        "line": 116,
+        "column": 1
+      }
+    },
+    {
+      "name": "createPokerAccessibilityLabel",
+      "description": "Summarizes the reconstructed table for assistive technologies.",
+      "sourceLocation": {
+        "filePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+        "line": 121,
+        "column": 1
+      }
+    },
+    {
+      "name": "PokerTrainingTable",
+      "description": "Manifest-ready poker training pattern that reconstructs a complete table from task data.\n\nBind the raw training task object to `task`; the pattern maps sparse active-player data to a\nfull nine-seat presentation while leaving API execution in the generated application.",
+      "sourceLocation": {
+        "filePath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx",
+        "line": 19,
+        "column": 1
+      }
+    },
+    {
+      "name": "createTabletopGameSeats",
+      "description": "Joins an ordered game layout with the participant states currently present in a scene.\n\nMissing participants retain their seat definition and receive the configured fallback state,\nwhich lets card games represent folded, eliminated, disconnected, or otherwise inactive seats\nwithout embedding those game rules in the tabletop renderer.",
+      "sourceLocation": {
+        "filePath": "src/features/game-presentations/domain/createTabletopGameSeats.ts",
+        "line": 25,
+        "column": 1
+      }
+    },
+    {
       "name": "getTabletopSeatCardSize",
       "description": null,
       "sourceLocation": {
@@ -1642,6 +2529,14 @@
     },
     {
       "kind": "export",
+      "name": "createPokerTrainingTableState",
+      "sourcePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+      "symbolName": "createPokerTrainingTableState",
+      "description": "Adapts the table-relevant subset of a poker training task to generic tabletop presentation state.\n\nThe canonical poker ring is rotated so the hero occupies the first (bottom) tabletop seat.\nPlayers omitted by the task are reconstructed as folded with the configured default stack.",
+      "isReadme": false
+    },
+    {
+      "kind": "export",
       "name": "createTabletopColorScheme",
       "sourcePath": "src/colors.ts",
       "symbolName": "createTabletopColorScheme",
@@ -1650,10 +2545,26 @@
     },
     {
       "kind": "export",
+      "name": "createTabletopGameSeats",
+      "sourcePath": "src/features/game-presentations/domain/createTabletopGameSeats.ts",
+      "symbolName": "createTabletopGameSeats",
+      "description": "Joins an ordered game layout with the participant states currently present in a scene.\n\nMissing participants retain their seat definition and receive the configured fallback state,\nwhich lets card games represent folded, eliminated, disconnected, or otherwise inactive seats\nwithout embedding those game rules in the tabletop renderer.",
+      "isReadme": false
+    },
+    {
+      "kind": "export",
       "name": "PlayingCard",
       "sourcePath": "src/components/playing-card/PlayingCard.tsx",
       "symbolName": "PlayingCard",
       "description": "Theme-aware face-up playing card primitive.\n\nUse `PlayingCard` for visible card values in hands, shared table cards, piles,\nor custom tabletop layouts. The component renders rank and suit glyphs and\nexposes an accessible card label by default.",
+      "isReadme": true
+    },
+    {
+      "kind": "export",
+      "name": "PokerTrainingTable",
+      "sourcePath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx",
+      "symbolName": "PokerTrainingTable",
+      "description": "Manifest-ready poker training pattern that reconstructs a complete table from task data.\n\nBind the raw training task object to `task`; the pattern maps sparse active-player data to a\nfull nine-seat presentation while leaving API execution in the generated application.",
       "isReadme": true
     },
     {
@@ -1709,8 +2620,78 @@
       },
       {
         "fromPath": "src/index.ts",
+        "toPath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/features/game-presentations/domain/createTabletopGameSeats.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/meta.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/plugin.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/registry.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
         "toPath": "src/types.ts",
         "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/types/gamePresentation.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/index.ts",
+        "toPath": "src/types/pokerTraining.ts",
+        "sourcePath": "src/index.ts"
+      },
+      {
+        "fromPath": "src/plugin.ts",
+        "toPath": "src/components/tabletop-table/index.ts",
+        "sourcePath": "src/plugin.ts"
+      },
+      {
+        "fromPath": "src/plugin.ts",
+        "toPath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx",
+        "sourcePath": "src/plugin.ts"
+      },
+      {
+        "fromPath": "src/plugin.ts",
+        "toPath": "src/registry.ts",
+        "sourcePath": "src/plugin.ts"
+      },
+      {
+        "fromPath": "src/registry.ts",
+        "toPath": "src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts",
+        "sourcePath": "src/registry.ts"
+      },
+      {
+        "fromPath": "src/registry.ts",
+        "toPath": "src/meta.ts",
+        "sourcePath": "src/registry.ts"
       },
       {
         "fromPath": "src/tableLayout.ts",
@@ -1721,6 +2702,21 @@
         "fromPath": "src/tablePositions.ts",
         "toPath": "src/types.ts",
         "sourcePath": "src/tablePositions.ts"
+      },
+      {
+        "fromPath": "src/types/gamePresentation.ts",
+        "toPath": "src/types.ts",
+        "sourcePath": "src/types/gamePresentation.ts"
+      },
+      {
+        "fromPath": "src/types/pokerTraining.ts",
+        "toPath": "src/colors.ts",
+        "sourcePath": "src/types/pokerTraining.ts"
+      },
+      {
+        "fromPath": "src/types/pokerTraining.ts",
+        "toPath": "src/types.ts",
+        "sourcePath": "src/types/pokerTraining.ts"
       },
       {
         "fromPath": "src/components/card-back/CardBack.tsx",
@@ -1891,6 +2887,46 @@
         "fromPath": "src/components/tabletop-table/types.ts",
         "toPath": "src/types.ts",
         "sourcePath": "src/components/tabletop-table/types.ts"
+      },
+      {
+        "fromPath": "src/features/game-presentations/domain/createTabletopGameSeats.ts",
+        "toPath": "src/types.ts",
+        "sourcePath": "src/features/game-presentations/domain/createTabletopGameSeats.ts"
+      },
+      {
+        "fromPath": "src/features/game-presentations/domain/createTabletopGameSeats.ts",
+        "toPath": "src/types/gamePresentation.ts",
+        "sourcePath": "src/features/game-presentations/domain/createTabletopGameSeats.ts"
+      },
+      {
+        "fromPath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+        "toPath": "src/types/gamePresentation.ts",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"
+      },
+      {
+        "fromPath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+        "toPath": "src/types/pokerTraining.ts",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"
+      },
+      {
+        "fromPath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+        "toPath": "src/features/game-presentations/domain/createTabletopGameSeats.ts",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"
+      },
+      {
+        "fromPath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx",
+        "toPath": "src/components/tabletop-table/index.ts",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx"
+      },
+      {
+        "fromPath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx",
+        "toPath": "src/types/pokerTraining.ts",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx"
+      },
+      {
+        "fromPath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx",
+        "toPath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx"
       }
     ],
     "calls": [
@@ -2067,6 +3103,66 @@
         "toSymbol": "createSeatAccessibilityLabel",
         "callExpression": "createSeatAccessibilityLabel",
         "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
+      },
+      {
+        "fromSymbol": "createPokerTrainingTableState",
+        "toSymbol": "rotatePokerPositions",
+        "callExpression": "rotatePokerPositions",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"
+      },
+      {
+        "fromSymbol": "createPokerTrainingTableState",
+        "toSymbol": "formatAmount",
+        "callExpression": "formatAmount",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"
+      },
+      {
+        "fromSymbol": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts",
+        "toSymbol": "createPokerParticipantState",
+        "callExpression": "createPokerParticipantState",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"
+      },
+      {
+        "fromSymbol": "createPokerTrainingTableState",
+        "toSymbol": "createTabletopGameSeats",
+        "callExpression": "createTabletopGameSeats",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"
+      },
+      {
+        "fromSymbol": "createPokerTrainingTableState",
+        "toSymbol": "createPokerAccessibilityLabel",
+        "callExpression": "createPokerAccessibilityLabel",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"
+      },
+      {
+        "fromSymbol": "createPokerParticipantState",
+        "toSymbol": "formatPlayerSublabel",
+        "callExpression": "formatPlayerSublabel",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"
+      },
+      {
+        "fromSymbol": "formatPlayerSublabel",
+        "toSymbol": "formatChipStack",
+        "callExpression": "formatChipStack",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"
+      },
+      {
+        "fromSymbol": "formatChipStack",
+        "toSymbol": "formatAmount",
+        "callExpression": "formatAmount",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"
+      },
+      {
+        "fromSymbol": "createPokerAccessibilityLabel",
+        "toSymbol": "formatAmount",
+        "callExpression": "formatAmount",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"
+      },
+      {
+        "fromSymbol": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx",
+        "toSymbol": "createPokerTrainingTableState",
+        "callExpression": "createPokerTrainingTableState",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx"
       }
     ],
     "typeReferences": [
@@ -2226,6 +3322,41 @@
         "sourcePath": "src/components/tabletop-table/TabletopTable.tsx"
       },
       {
+        "fromSymbol": "createPokerTrainingTableState",
+        "toType": "CreatePokerTrainingTableStateOptions",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"
+      },
+      {
+        "fromSymbol": "createPokerTrainingTableState",
+        "toType": "PokerTrainingTableState",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"
+      },
+      {
+        "fromSymbol": "createPokerTrainingTableState",
+        "toType": "PokerTrainingTaskTableData",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"
+      },
+      {
+        "fromSymbol": "PokerTrainingTable",
+        "toType": "PokerTrainingTableProps",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx"
+      },
+      {
+        "fromSymbol": "PokerTrainingTable",
+        "toType": "React",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx"
+      },
+      {
+        "fromSymbol": "createTabletopGameSeats",
+        "toType": "CreateTabletopGameSeatsInput",
+        "sourcePath": "src/features/game-presentations/domain/createTabletopGameSeats.ts"
+      },
+      {
+        "fromSymbol": "createTabletopGameSeats",
+        "toType": "TabletopSeatState",
+        "sourcePath": "src/features/game-presentations/domain/createTabletopGameSeats.ts"
+      },
+      {
         "fromSymbol": "PlayingCardValue",
         "toType": "PlayingCardSuit",
         "sourcePath": "src/types.ts"
@@ -2244,6 +3375,91 @@
         "fromSymbol": "TabletopSeatState",
         "toType": "ReactNode",
         "sourcePath": "src/types.ts"
+      },
+      {
+        "fromSymbol": "CreateTabletopGameSeatsInput",
+        "toType": "Partial",
+        "sourcePath": "src/types/gamePresentation.ts"
+      },
+      {
+        "fromSymbol": "CreateTabletopGameSeatsInput",
+        "toType": "TabletopGameParticipantState",
+        "sourcePath": "src/types/gamePresentation.ts"
+      },
+      {
+        "fromSymbol": "CreateTabletopGameSeatsInput",
+        "toType": "TabletopGameSeatDefinition",
+        "sourcePath": "src/types/gamePresentation.ts"
+      },
+      {
+        "fromSymbol": "CreateTabletopGameSeatsInput",
+        "toType": "TabletopGameSeatPresentation",
+        "sourcePath": "src/types/gamePresentation.ts"
+      },
+      {
+        "fromSymbol": "TabletopGameParticipantState",
+        "toType": "Partial",
+        "sourcePath": "src/types/gamePresentation.ts"
+      },
+      {
+        "fromSymbol": "TabletopGameParticipantState",
+        "toType": "TabletopGameSeatPresentation",
+        "sourcePath": "src/types/gamePresentation.ts"
+      },
+      {
+        "fromSymbol": "TabletopGameSeatDefinition",
+        "toType": "TabletopGameSeatPresentation",
+        "sourcePath": "src/types/gamePresentation.ts"
+      },
+      {
+        "fromSymbol": "PokerTrainingPlayer",
+        "toType": "PlayingCardValue",
+        "sourcePath": "src/types/pokerTraining.ts"
+      },
+      {
+        "fromSymbol": "PokerTrainingTableProps",
+        "toType": "Partial",
+        "sourcePath": "src/types/pokerTraining.ts"
+      },
+      {
+        "fromSymbol": "PokerTrainingTableProps",
+        "toType": "PokerTrainingTaskTableData",
+        "sourcePath": "src/types/pokerTraining.ts"
+      },
+      {
+        "fromSymbol": "PokerTrainingTableProps",
+        "toType": "TabletopCardSize",
+        "sourcePath": "src/types/pokerTraining.ts"
+      },
+      {
+        "fromSymbol": "PokerTrainingTableProps",
+        "toType": "TabletopColorScheme",
+        "sourcePath": "src/types/pokerTraining.ts"
+      },
+      {
+        "fromSymbol": "PokerTrainingTableProps",
+        "toType": "TabletopShape",
+        "sourcePath": "src/types/pokerTraining.ts"
+      },
+      {
+        "fromSymbol": "PokerTrainingTableState",
+        "toType": "PlayingCardValue",
+        "sourcePath": "src/types/pokerTraining.ts"
+      },
+      {
+        "fromSymbol": "PokerTrainingTableState",
+        "toType": "TabletopSeatState",
+        "sourcePath": "src/types/pokerTraining.ts"
+      },
+      {
+        "fromSymbol": "PokerTrainingTaskTableData",
+        "toType": "PlayingCardValue",
+        "sourcePath": "src/types/pokerTraining.ts"
+      },
+      {
+        "fromSymbol": "PokerTrainingTaskTableData",
+        "toType": "PokerTrainingPlayer",
+        "sourcePath": "src/types/pokerTraining.ts"
       }
     ],
     "componentComposition": [
@@ -2294,6 +3510,12 @@
         "toComponent": "Text",
         "jsxElement": "<Text\n        selectable={false}\n        style={[\n          styles.suit,\n          {\n            color: suitColor,\n            fontSize: dimensions.suitFontSize,\n            lineHeight: dimensions.suitFontSize + 3,\n          },\n        ]}\n      >",
         "sourcePath": "src/components/playing-card/PlayingCard.tsx"
+      },
+      {
+        "fromComponent": "PokerTrainingTable",
+        "toComponent": "TabletopTable",
+        "jsxElement": "<TabletopTable\n      {...tableProps}\n      accessibilityLabel={accessibilityLabel ?? state.accessibilityLabel}\n      centerCards={state.centerCards}\n      centerLabel={state.centerLabel}\n      centerSublabel={state.centerSublabel}\n      seatCount={9}\n      seats={state.seats}\n    />",
+        "sourcePath": "src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx"
       },
       {
         "fromComponent": "TabletopTable",
