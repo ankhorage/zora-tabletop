@@ -263,6 +263,36 @@
               </button>
             </li>
             <li>
+              <button
+                class="nav-button"
+                type="button"
+                data-target="src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"
+              >
+                src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts
+                <small>7 functions</small>
+              </button>
+            </li>
+            <li>
+              <button
+                class="nav-button"
+                type="button"
+                data-target="src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx"
+              >
+                src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx
+                <small>1 function</small>
+              </button>
+            </li>
+            <li>
+              <button
+                class="nav-button"
+                type="button"
+                data-target="src/features/game-presentations/domain/createTabletopGameSeats.ts"
+              >
+                src/features/game-presentations/domain/createTabletopGameSeats.ts
+                <small>1 function</small>
+              </button>
+            </li>
+            <li>
               <button class="nav-button" type="button" data-target="src/tableLayout.ts">
                 src/tableLayout.ts
                 <small>1 function</small>
@@ -282,9 +312,9 @@
           <section class="panel">
             <h2>Package overview</h2>
             <div class="summary">
-              <div><strong>17</strong><span class="muted">public exports</span></div>
-              <div><strong>4</strong><span class="muted">components</span></div>
-              <div><strong>20</strong><span class="muted">modules</span></div>
+              <div><strong>35</strong><span class="muted">public exports</span></div>
+              <div><strong>5</strong><span class="muted">components</span></div>
+              <div><strong>29</strong><span class="muted">modules</span></div>
               <div><strong>1</strong><span class="muted">entrypoints</span></div>
             </div>
             <h3>Entrypoints</h3>
@@ -485,7 +515,57 @@
             </article>
             <article
               class="item"
-              data-search="src/index.ts CardBack CardBackProps CardHand CardHandProps createTabletopColorScheme PlayingCard PlayingCardProps PlayingCardSuit PlayingCardValue TabletopCardSize TabletopColorOverrides TabletopColorScheme TabletopSeatCount TabletopSeatState TabletopShape TabletopTable TabletopTableProps"
+              data-search="src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts src/features/game-presentations/domain/createTabletopGameSeats.ts src/types/gamePresentation.ts src/types/pokerTraining.ts createPokerTrainingTableState"
+            >
+              <h3>
+                src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts
+              </h3>
+              <p class="muted">Referenced module</p>
+              <p>
+                <strong>Dependencies:</strong>
+                <code>src/features/game-presentations/domain/createTabletopGameSeats.ts</code>,
+                <code>src/types/gamePresentation.ts</code>, <code>src/types/pokerTraining.ts</code>
+              </p>
+              <p><strong>Exports:</strong> <code>createPokerTrainingTableState</code></p>
+            </article>
+            <article
+              class="item"
+              data-search="src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx src/components/tabletop-table/index.ts src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts src/types/pokerTraining.ts PokerTrainingTable"
+            >
+              <h3>src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx</h3>
+              <p class="muted">Referenced module</p>
+              <p>
+                <strong>Dependencies:</strong> <code>src/components/tabletop-table/index.ts</code>,
+                <code
+                  >src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts</code
+                >, <code>src/types/pokerTraining.ts</code>
+              </p>
+              <p><strong>Exports:</strong> <code>PokerTrainingTable</code></p>
+            </article>
+            <article
+              class="item"
+              data-search="src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts pokerTrainingTableMeta"
+            >
+              <h3>src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p><strong>Dependencies:</strong> <span class="empty">None</span></p>
+              <p><strong>Exports:</strong> <code>pokerTrainingTableMeta</code></p>
+            </article>
+            <article
+              class="item"
+              data-search="src/features/game-presentations/domain/createTabletopGameSeats.ts src/types.ts src/types/gamePresentation.ts createTabletopGameSeats"
+            >
+              <h3>src/features/game-presentations/domain/createTabletopGameSeats.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p>
+                <strong>Dependencies:</strong> <code>src/types.ts</code>,
+                <code>src/types/gamePresentation.ts</code>
+              </p>
+              <p><strong>Exports:</strong> <code>createTabletopGameSeats</code></p>
+            </article>
+            <article
+              class="item"
+              data-search="src/index.ts CardBack CardBackProps CardHand CardHandProps createPokerTrainingTableState CreatePokerTrainingTableStateOptions createTabletopColorScheme createTabletopGameSeats CreateTabletopGameSeatsInput PlayingCard PlayingCardProps PlayingCardSuit PlayingCardValue PokerTrainingPlayer PokerTrainingTable pokerTrainingTableMeta PokerTrainingTableProps PokerTrainingTableState PokerTrainingTaskTableData TabletopCardSize TabletopColorOverrides TabletopColorScheme TabletopGameParticipantState TabletopGameSeatDefinition TabletopGameSeatPresentation TabletopSeatCount TabletopSeatState TabletopShape TabletopTable tabletopTableMeta TabletopTableProps ZORA_PLUGIN_METADATA ZORA_TABLETOP_COMPONENT_META ZORA_TABLETOP_COMPONENT_REGISTRY ZORA_TABLETOP_PLUGIN"
             >
               <h3>src/index.ts</h3>
               <p class="muted">Configured entrypoint</p>
@@ -493,13 +573,62 @@
               <p>
                 <strong>Exports:</strong> <code>CardBack</code>, <code>CardBackProps</code>,
                 <code>CardHand</code>, <code>CardHandProps</code>,
-                <code>createTabletopColorScheme</code>, <code>PlayingCard</code>,
+                <code>createPokerTrainingTableState</code>,
+                <code>CreatePokerTrainingTableStateOptions</code>,
+                <code>createTabletopColorScheme</code>, <code>createTabletopGameSeats</code>,
+                <code>CreateTabletopGameSeatsInput</code>, <code>PlayingCard</code>,
                 <code>PlayingCardProps</code>, <code>PlayingCardSuit</code>,
-                <code>PlayingCardValue</code>, <code>TabletopCardSize</code>,
+                <code>PlayingCardValue</code>, <code>PokerTrainingPlayer</code>,
+                <code>PokerTrainingTable</code>, <code>pokerTrainingTableMeta</code>,
+                <code>PokerTrainingTableProps</code>, <code>PokerTrainingTableState</code>,
+                <code>PokerTrainingTaskTableData</code>, <code>TabletopCardSize</code>,
                 <code>TabletopColorOverrides</code>, <code>TabletopColorScheme</code>,
-                <code>TabletopSeatCount</code>, <code>TabletopSeatState</code>,
-                <code>TabletopShape</code>, <code>TabletopTable</code>,
-                <code>TabletopTableProps</code>
+                <code>TabletopGameParticipantState</code>, <code>TabletopGameSeatDefinition</code>,
+                <code>TabletopGameSeatPresentation</code>, <code>TabletopSeatCount</code>,
+                <code>TabletopSeatState</code>, <code>TabletopShape</code>,
+                <code>TabletopTable</code>, <code>tabletopTableMeta</code>,
+                <code>TabletopTableProps</code>, <code>ZORA_PLUGIN_METADATA</code>,
+                <code>ZORA_TABLETOP_COMPONENT_META</code>,
+                <code>ZORA_TABLETOP_COMPONENT_REGISTRY</code>, <code>ZORA_TABLETOP_PLUGIN</code>
+              </p>
+            </article>
+            <article class="item" data-search="src/meta.ts tabletopTableMeta">
+              <h3>src/meta.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p><strong>Dependencies:</strong> <span class="empty">None</span></p>
+              <p><strong>Exports:</strong> <code>tabletopTableMeta</code></p>
+            </article>
+            <article
+              class="item"
+              data-search="src/plugin.ts src/components/tabletop-table/index.ts src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx src/registry.ts ZORA_TABLETOP_COMPONENT_REGISTRY ZORA_TABLETOP_PLUGIN"
+            >
+              <h3>src/plugin.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p>
+                <strong>Dependencies:</strong> <code>src/components/tabletop-table/index.ts</code>,
+                <code>src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx</code
+                >, <code>src/registry.ts</code>
+              </p>
+              <p>
+                <strong>Exports:</strong> <code>ZORA_TABLETOP_COMPONENT_REGISTRY</code>,
+                <code>ZORA_TABLETOP_PLUGIN</code>
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="src/registry.ts src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts src/meta.ts ZORA_PLUGIN_METADATA ZORA_TABLETOP_COMPONENT_META"
+            >
+              <h3>src/registry.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p>
+                <strong>Dependencies:</strong>
+                <code
+                  >src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts</code
+                >, <code>src/meta.ts</code>
+              </p>
+              <p>
+                <strong>Exports:</strong> <code>ZORA_PLUGIN_METADATA</code>,
+                <code>ZORA_TABLETOP_COMPONENT_META</code>
               </p>
             </article>
             <article
@@ -536,6 +665,34 @@
                 <code>PlayingCardValue</code>, <code>TabletopCardSize</code>,
                 <code>TabletopSeatCount</code>, <code>TabletopSeatState</code>,
                 <code>TabletopShape</code>
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="src/types/gamePresentation.ts src/types.ts CreateTabletopGameSeatsInput TabletopGameParticipantState TabletopGameSeatDefinition TabletopGameSeatPresentation"
+            >
+              <h3>src/types/gamePresentation.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p><strong>Dependencies:</strong> <code>src/types.ts</code></p>
+              <p>
+                <strong>Exports:</strong> <code>CreateTabletopGameSeatsInput</code>,
+                <code>TabletopGameParticipantState</code>, <code>TabletopGameSeatDefinition</code>,
+                <code>TabletopGameSeatPresentation</code>
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="src/types/pokerTraining.ts src/colors.ts src/types.ts CreatePokerTrainingTableStateOptions PokerTrainingPlayer PokerTrainingTableProps PokerTrainingTableState PokerTrainingTaskTableData"
+            >
+              <h3>src/types/pokerTraining.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p>
+                <strong>Dependencies:</strong> <code>src/colors.ts</code>, <code>src/types.ts</code>
+              </p>
+              <p>
+                <strong>Exports:</strong> <code>CreatePokerTrainingTableStateOptions</code>,
+                <code>PokerTrainingPlayer</code>, <code>PokerTrainingTableProps</code>,
+                <code>PokerTrainingTableState</code>, <code>PokerTrainingTaskTableData</code>
               </p>
             </article>
           </section>
@@ -867,7 +1024,7 @@
                       <td>property</td>
                       <td>
                         <code
-                          >Partial&lt;import(&quot;./src/colors&quot;).TabletopColorScheme&gt; |
+                          >Partial&lt;import(&quot;../..&quot;).TabletopColorScheme&gt; |
                           undefined</code
                         >
                       </td>
@@ -1011,7 +1168,7 @@
                       <td>property</td>
                       <td>
                         <code
-                          >Partial&lt;import(&quot;./src/colors&quot;).TabletopColorScheme&gt; |
+                          >Partial&lt;import(&quot;../..&quot;).TabletopColorScheme&gt; |
                           undefined</code
                         >
                       </td>
@@ -1163,7 +1320,7 @@
                       <td>property</td>
                       <td>
                         <code
-                          >Partial&lt;import(&quot;./src/colors&quot;).TabletopColorScheme&gt; |
+                          >Partial&lt;import(&quot;../..&quot;).TabletopColorScheme&gt; |
                           undefined</code
                         >
                       </td>
@@ -1344,7 +1501,7 @@
                       <td>property</td>
                       <td>
                         <code
-                          >Partial&lt;import(&quot;./src/colors&quot;).TabletopColorScheme&gt; |
+                          >Partial&lt;import(&quot;../..&quot;).TabletopColorScheme&gt; |
                           undefined</code
                         >
                       </td>
@@ -1388,6 +1545,288 @@
                     </tr>
                   </tbody>
                 </table>
+              </article>
+            </section>
+            <section>
+              <h3>
+                src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts
+              </h3>
+              <article
+                class="item"
+                id="symbol-createpokertrainingtablestate"
+                data-search="createPokerTrainingTableState function src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts Adapts the table-relevant subset of a poker training task to generic tabletop presentation state.&#10;&#10;The canonical poker ring is rotated so the hero occupies the first (bottom) tabletop seat.&#10;Players omitted by the task are reconstructed as folded with the configured default stack. CreatePokerTrainingTableStateOptions PokerTrainingTableState PokerTrainingTaskTableData (task: PokerTrainingTaskTableData, { defaultStackBigBlinds = 100 }?: CreatePokerTrainingTableStateOptions) =&gt; PokerTrainingTableState"
+              >
+                <h4>createPokerTrainingTableState</h4>
+                <p class="muted">
+                  function •
+                  <code
+                    >src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts:20:1</code
+                  >
+                </p>
+                <p>
+                  Adapts the table-relevant subset of a poker training task to generic tabletop
+                  presentation state. The canonical poker ring is rotated so the hero occupies the
+                  first (bottom) tabletop seat. Players omitted by the task are reconstructed as
+                  folded with the configured default stack.
+                </p>
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">CreatePokerTrainingTableStateOptions</li>
+                    <li class="chip">PokerTrainingTableState</li>
+                    <li class="chip">PokerTrainingTaskTableData</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Signature</h5>
+                  <pre>
+(task: PokerTrainingTaskTableData, { defaultStackBigBlinds = 100 }?: CreatePokerTrainingTableStateOptions) =&gt; PokerTrainingTableState</pre>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>{ defaultStackBigBlinds = 100 }</code></td>
+                        <td><code>CreatePokerTrainingTableStateOptions</code></td>
+                        <td>no</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><code>task</code></td>
+                        <td><code>PokerTrainingTaskTableData</code></td>
+                        <td>yes</td>
+                        <td>
+                          - Serializable poker training task data received by the generated
+                          application.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>
+                    <strong>Returns:</strong> <code>PokerTrainingTableState</code> — Seats and
+                    shared-table content ready for `TabletopTable`.
+                  </p>
+                </div>
+              </article>
+            </section>
+            <section>
+              <h3>src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx</h3>
+              <article
+                class="item"
+                id="symbol-pokertrainingtable"
+                data-search="PokerTrainingTable function src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx Manifest-ready poker training pattern that reconstructs a complete table from task data.&#10;&#10;Bind the raw training task object to `task`; the pattern maps sparse active-player data to a&#10;full nine-seat presentation while leaving API execution in the generated application. PokerTrainingTableProps ({&#10;  task = {},&#10;  defaultStackBigBlinds = 100,&#10;  accessibilityLabel,&#10;  ...tableProps&#10;}: PokerTrainingTableProps) =&gt; React.JSX.Element"
+              >
+                <h4>PokerTrainingTable</h4>
+                <p class="muted">
+                  function •
+                  <code
+                    >src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx:19:1</code
+                  >
+                </p>
+                <p>
+                  Manifest-ready poker training pattern that reconstructs a complete table from task
+                  data. Bind the raw training task object to `task`; the pattern maps sparse
+                  active-player data to a full nine-seat presentation while leaving API execution in
+                  the generated application.
+                </p>
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">PokerTrainingTableProps</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Signature</h5>
+                  <pre>
+({
+  task = {},
+  defaultStackBigBlinds = 100,
+  accessibilityLabel,
+  ...tableProps
+}: PokerTrainingTableProps) =&gt; React.JSX.Element</pre>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <code
+                            >{ task = {}, defaultStackBigBlinds = 100, accessibilityLabel,
+                            ...tableProps }</code
+                          >
+                        </td>
+                        <td><code>PokerTrainingTableProps</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p><strong>Returns:</strong> <code>React.JSX.Element</code></p>
+                </div>
+              </article>
+            </section>
+            <section>
+              <h3>src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts</h3>
+              <article
+                class="item"
+                id="symbol-pokertrainingtablemeta"
+                data-search="pokerTrainingTableMeta value src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts "
+              >
+                <h4>pokerTrainingTableMeta</h4>
+                <p class="muted">
+                  value •
+                  <code
+                    >src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts:1:14</code
+                  >
+                </p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+            </section>
+            <section>
+              <h3>src/features/game-presentations/domain/createTabletopGameSeats.ts</h3>
+              <article
+                class="item"
+                id="symbol-createtabletopgameseats"
+                data-search="createTabletopGameSeats function src/features/game-presentations/domain/createTabletopGameSeats.ts Joins an ordered game layout with the participant states currently present in a scene.&#10;&#10;Missing participants retain their seat definition and receive the configured fallback state,&#10;which lets card games represent folded, eliminated, disconnected, or otherwise inactive seats&#10;without embedding those game rules in the tabletop renderer. CreateTabletopGameSeatsInput TabletopSeatState ({&#10;  seats,&#10;  participants,&#10;  missingParticipantState = { disabled: true, muted: true },&#10;}: CreateTabletopGameSeatsInput) =&gt; readonly TabletopSeatState[]"
+              >
+                <h4>createTabletopGameSeats</h4>
+                <p class="muted">
+                  function •
+                  <code
+                    >src/features/game-presentations/domain/createTabletopGameSeats.ts:25:1</code
+                  >
+                </p>
+                <p>
+                  Joins an ordered game layout with the participant states currently present in a
+                  scene. Missing participants retain their seat definition and receive the
+                  configured fallback state, which lets card games represent folded, eliminated,
+                  disconnected, or otherwise inactive seats without embedding those game rules in
+                  the tabletop renderer.
+                </p>
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">CreateTabletopGameSeatsInput</li>
+                    <li class="chip">TabletopSeatState</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Signature</h5>
+                  <pre>
+({
+  seats,
+  participants,
+  missingParticipantState = { disabled: true, muted: true },
+}: CreateTabletopGameSeatsInput) =&gt; readonly TabletopSeatState[]</pre>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <code
+                            >{ seats, participants, missingParticipantState = { disabled: true,
+                            muted: true }, }</code
+                          >
+                        </td>
+                        <td><code>CreateTabletopGameSeatsInput</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>
+                    <strong>Returns:</strong> <code>readonly TabletopSeatState[]</code> — Normalized
+                    tabletop seats in the same order as the supplied seat definitions.
+                  </p>
+                </div>
+              </article>
+            </section>
+            <section>
+              <h3>src/meta.ts</h3>
+              <article
+                class="item"
+                id="symbol-tabletoptablemeta"
+                data-search="tabletopTableMeta value src/meta.ts "
+              >
+                <h4>tabletopTableMeta</h4>
+                <p class="muted">value • <code>src/meta.ts:1:14</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+            </section>
+            <section>
+              <h3>src/plugin.ts</h3>
+              <article
+                class="item"
+                id="symbol-zora-tabletop-component-registry"
+                data-search="ZORA_TABLETOP_COMPONENT_REGISTRY value src/plugin.ts "
+              >
+                <h4>ZORA_TABLETOP_COMPONENT_REGISTRY</h4>
+                <p class="muted">value • <code>src/plugin.ts:5:14</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+              <article
+                class="item"
+                id="symbol-zora-tabletop-plugin"
+                data-search="ZORA_TABLETOP_PLUGIN value src/plugin.ts "
+              >
+                <h4>ZORA_TABLETOP_PLUGIN</h4>
+                <p class="muted">value • <code>src/plugin.ts:7:14</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+            </section>
+            <section>
+              <h3>src/registry.ts</h3>
+              <article
+                class="item"
+                id="symbol-zora-plugin-metadata"
+                data-search="ZORA_PLUGIN_METADATA value src/registry.ts "
+              >
+                <h4>ZORA_PLUGIN_METADATA</h4>
+                <p class="muted">value • <code>src/registry.ts:9:14</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+              <article
+                class="item"
+                id="symbol-zora-tabletop-component-meta"
+                data-search="ZORA_TABLETOP_COMPONENT_META value src/registry.ts "
+              >
+                <h4>ZORA_TABLETOP_COMPONENT_META</h4>
+                <p class="muted">value • <code>src/registry.ts:4:14</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
               </article>
             </section>
             <section>
@@ -1579,6 +2018,503 @@
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+            </section>
+            <section>
+              <h3>src/types/gamePresentation.ts</h3>
+              <article
+                class="item"
+                id="symbol-createtabletopgameseatsinput"
+                data-search="CreateTabletopGameSeatsInput type src/types/gamePresentation.ts  TabletopGameParticipantState TabletopGameSeatDefinition TabletopGameSeatPresentation"
+              >
+                <h4>CreateTabletopGameSeatsInput</h4>
+                <p class="muted">type • <code>src/types/gamePresentation.ts:15:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">TabletopGameParticipantState</li>
+                    <li class="chip">TabletopGameSeatDefinition</li>
+                    <li class="chip">TabletopGameSeatPresentation</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>missingParticipantState</code></td>
+                      <td>property</td>
+                      <td><code>Partial&lt;TabletopGameSeatPresentation&gt; | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>participants</code></td>
+                      <td>property</td>
+                      <td><code>readonly TabletopGameParticipantState[]</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>seats</code></td>
+                      <td>property</td>
+                      <td><code>readonly TabletopGameSeatDefinition[]</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-tabletopgameparticipantstate"
+                data-search="TabletopGameParticipantState type src/types/gamePresentation.ts  TabletopGameSeatPresentation"
+              >
+                <h4>TabletopGameParticipantState</h4>
+                <p class="muted">type • <code>src/types/gamePresentation.ts:10:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">TabletopGameSeatPresentation</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>seatId</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>state</code></td>
+                      <td>property</td>
+                      <td><code>Partial&lt;TabletopGameSeatPresentation&gt;</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-tabletopgameseatdefinition"
+                data-search="TabletopGameSeatDefinition type src/types/gamePresentation.ts  TabletopGameSeatPresentation"
+              >
+                <h4>TabletopGameSeatDefinition</h4>
+                <p class="muted">type • <code>src/types/gamePresentation.ts:5:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">TabletopGameSeatPresentation</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>defaultState</code></td>
+                      <td>property</td>
+                      <td><code>TabletopGameSeatPresentation</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>id</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-tabletopgameseatpresentation"
+                data-search="TabletopGameSeatPresentation unknown src/types/gamePresentation.ts "
+              >
+                <h4>TabletopGameSeatPresentation</h4>
+                <p class="muted">unknown • <code>src/types/gamePresentation.ts:3:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+            </section>
+            <section>
+              <h3>src/types/pokerTraining.ts</h3>
+              <article
+                class="item"
+                id="symbol-createpokertrainingtablestateoptions"
+                data-search="CreatePokerTrainingTableStateOptions type src/types/pokerTraining.ts "
+              >
+                <h4>CreatePokerTrainingTableStateOptions</h4>
+                <p class="muted">type • <code>src/types/pokerTraining.ts:30:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>defaultStackBigBlinds</code></td>
+                      <td>property</td>
+                      <td><code>number | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-pokertrainingplayer"
+                data-search="PokerTrainingPlayer type src/types/pokerTraining.ts  PlayingCardValue"
+              >
+                <h4>PokerTrainingPlayer</h4>
+                <p class="muted">type • <code>src/types/pokerTraining.ts:9:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">PlayingCardValue</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>bet</code></td>
+                      <td>property</td>
+                      <td><code>number | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>cards</code></td>
+                      <td>property</td>
+                      <td><code>readonly PlayingCardValue[] | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>folded</code></td>
+                      <td>property</td>
+                      <td><code>boolean | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>isHero</code></td>
+                      <td>property</td>
+                      <td><code>boolean | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>position</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>stack</code></td>
+                      <td>property</td>
+                      <td><code>number | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-pokertrainingtableprops"
+                data-search="PokerTrainingTableProps type src/types/pokerTraining.ts  PokerTrainingTaskTableData TabletopCardSize TabletopColorScheme TabletopShape"
+              >
+                <h4>PokerTrainingTableProps</h4>
+                <p class="muted">type • <code>src/types/pokerTraining.ts:42:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">PokerTrainingTaskTableData</li>
+                    <li class="chip">TabletopCardSize</li>
+                    <li class="chip">TabletopColorScheme</li>
+                    <li class="chip">TabletopShape</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>accessibilityLabel</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>cardSize</code></td>
+                      <td>property</td>
+                      <td><code>TabletopCardSize | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>colorScheme</code></td>
+                      <td>property</td>
+                      <td>
+                        <code
+                          >Partial&lt;import(&quot;..&quot;).TabletopColorScheme&gt; |
+                          undefined</code
+                        >
+                      </td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>defaultStackBigBlinds</code></td>
+                      <td>property</td>
+                      <td><code>number | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>disabled</code></td>
+                      <td>property</td>
+                      <td><code>boolean | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>shape</code></td>
+                      <td>property</td>
+                      <td><code>TabletopShape | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>task</code></td>
+                      <td>property</td>
+                      <td><code>PokerTrainingTaskTableData | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>testID</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-pokertrainingtablestate"
+                data-search="PokerTrainingTableState type src/types/pokerTraining.ts  PlayingCardValue TabletopSeatState"
+              >
+                <h4>PokerTrainingTableState</h4>
+                <p class="muted">type • <code>src/types/pokerTraining.ts:34:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">PlayingCardValue</li>
+                    <li class="chip">TabletopSeatState</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>accessibilityLabel</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>centerCards</code></td>
+                      <td>property</td>
+                      <td><code>readonly PlayingCardValue[]</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>centerLabel</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>centerSublabel</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>seats</code></td>
+                      <td>property</td>
+                      <td><code>readonly TabletopSeatState[]</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-pokertrainingtasktabledata"
+                data-search="PokerTrainingTaskTableData type src/types/pokerTraining.ts  PlayingCardValue PokerTrainingPlayer"
+              >
+                <h4>PokerTrainingTaskTableData</h4>
+                <p class="muted">type • <code>src/types/pokerTraining.ts:18:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">PlayingCardValue</li>
+                    <li class="chip">PokerTrainingPlayer</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>blinds</code></td>
+                      <td>property</td>
+                      <td>
+                        <code>{ readonly small: number; readonly big: number; } | undefined</code>
+                      </td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>communityCards</code></td>
+                      <td>property</td>
+                      <td><code>readonly PlayingCardValue[] | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>heroCards</code></td>
+                      <td>property</td>
+                      <td><code>readonly PlayingCardValue[] | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>heroPosition</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>players</code></td>
+                      <td>property</td>
+                      <td><code>readonly PokerTrainingPlayer[] | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>pot</code></td>
+                      <td>property</td>
+                      <td><code>number | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
               </article>
             </section>
           </section>
@@ -1779,6 +2715,85 @@
             </article>
             <article
               class="item"
+              id="component-pokertrainingtable"
+              data-search="PokerTrainingTable src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx Manifest-ready poker training pattern that reconstructs a complete table from task data.&#10;&#10;Bind the raw training task object to `task`; the pattern maps sparse active-player data to a&#10;full nine-seat presentation while leaving API execution in the generated application. accessibilityLabel string | undefined cardSize TabletopCardSize | undefined colorScheme TabletopColorOverrides | undefined defaultStackBigBlinds number | undefined disabled boolean | undefined shape TabletopShape | undefined task PokerTrainingTaskTableData | undefined testID string | undefined"
+            >
+              <h3>PokerTrainingTable</h3>
+              <p class="muted">
+                <code
+                  >src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx:19:1</code
+                >
+              </p>
+              <p>
+                Manifest-ready poker training pattern that reconstructs a complete table from task
+                data. Bind the raw training task object to `task`; the pattern maps sparse
+                active-player data to a full nine-seat presentation while leaving API execution in
+                the generated application.
+              </p>
+              <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Prop</th>
+                    <th>Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>accessibilityLabel</code></td>
+                    <td><code>string | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>cardSize</code></td>
+                    <td><code>TabletopCardSize | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>colorScheme</code></td>
+                    <td><code>TabletopColorOverrides | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>defaultStackBigBlinds</code></td>
+                    <td><code>number | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>disabled</code></td>
+                    <td><code>boolean | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>shape</code></td>
+                    <td><code>TabletopShape | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>task</code></td>
+                    <td><code>PokerTrainingTaskTableData | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>testID</code></td>
+                    <td><code>string | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+            <article
+              class="item"
               id="component-tabletoptable"
               data-search="TabletopTable src/components/tabletop-table/TabletopTable.tsx Responsive tabletop surface for generic card-game and board-game scenes.&#10;&#10;Use `TabletopTable` to arrange seats around a themed table surface, display&#10;shared center cards, and show neutral seat labels/tokens without embedding game&#10;rules into the component. accessibilityLabel string | undefined cardSize TabletopCardSize | undefined centerCards readonly PlayingCardValue[] | undefined centerLabel React.ReactNode | undefined centerSublabel React.ReactNode | undefined colorScheme TabletopColorOverrides | undefined disabled boolean | undefined seatCount TabletopSeatCount | undefined seats readonly TabletopSeatState[] shape TabletopShape | undefined testID string | undefined"
             >
@@ -1957,7 +2972,45 @@
                 module_src_components_tabletop_table_types_ts
                 module_src_components_tabletop_table_types_ts --&gt; module_src_colors_ts
                 module_src_components_tabletop_table_types_ts --&gt; module_src_types_ts
-                module_src_index_ts[&quot;src/index.ts&quot;]
+                module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts[&quot;src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt;
+                module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts
+                module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts
+                --&gt; module_src_features_game_presentations_domain_createTabletopGameSeats_ts
+                module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts
+                --&gt; module_src_types_gamePresentation_ts
+                module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts
+                --&gt; module_src_types_pokerTraining_ts
+                module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx[&quot;src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx&quot;]
+                package__ankhorage_zora_tabletop -.-&gt;
+                module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx
+                module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx
+                --&gt; module_src_components_tabletop_table_index_ts
+                module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx
+                --&gt;
+                module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts
+                module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx
+                --&gt; module_src_types_pokerTraining_ts
+                module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts[&quot;src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt;
+                module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts
+                module_src_features_game_presentations_domain_createTabletopGameSeats_ts[&quot;src/features/game-presentations/domain/createTabletopGameSeats.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt;
+                module_src_features_game_presentations_domain_createTabletopGameSeats_ts
+                module_src_features_game_presentations_domain_createTabletopGameSeats_ts --&gt;
+                module_src_types_ts
+                module_src_features_game_presentations_domain_createTabletopGameSeats_ts --&gt;
+                module_src_types_gamePresentation_ts module_src_index_ts[&quot;src/index.ts&quot;]
+                module_src_meta_ts[&quot;src/meta.ts&quot;] package__ankhorage_zora_tabletop -.-&gt;
+                module_src_meta_ts module_src_plugin_ts[&quot;src/plugin.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt; module_src_plugin_ts module_src_plugin_ts
+                --&gt; module_src_components_tabletop_table_index_ts module_src_plugin_ts --&gt;
+                module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx
+                module_src_plugin_ts --&gt; module_src_registry_ts
+                module_src_registry_ts[&quot;src/registry.ts&quot;] package__ankhorage_zora_tabletop
+                -.-&gt; module_src_registry_ts module_src_registry_ts --&gt;
+                module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts
+                module_src_registry_ts --&gt; module_src_meta_ts
                 module_src_tableLayout_ts[&quot;src/tableLayout.ts&quot;]
                 package__ankhorage_zora_tabletop -.-&gt; module_src_tableLayout_ts
                 module_src_tableLayout_ts --&gt; module_src_types_ts
@@ -1966,6 +3019,13 @@
                 module_src_tablePositions_ts --&gt; module_src_types_ts
                 module_src_types_ts[&quot;src/types.ts&quot;] package__ankhorage_zora_tabletop
                 -.-&gt; module_src_types_ts
+                module_src_types_gamePresentation_ts[&quot;src/types/gamePresentation.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt; module_src_types_gamePresentation_ts
+                module_src_types_gamePresentation_ts --&gt; module_src_types_ts
+                module_src_types_pokerTraining_ts[&quot;src/types/pokerTraining.ts&quot;]
+                package__ankhorage_zora_tabletop -.-&gt; module_src_types_pokerTraining_ts
+                module_src_types_pokerTraining_ts --&gt; module_src_colors_ts
+                module_src_types_pokerTraining_ts --&gt; module_src_types_ts
               </div>
               <details>
                 <summary>View Mermaid source</summary>
@@ -2035,7 +3095,34 @@ graph TD
   package__ankhorage_zora_tabletop -.-&gt; module_src_components_tabletop_table_types_ts
   module_src_components_tabletop_table_types_ts --&gt; module_src_colors_ts
   module_src_components_tabletop_table_types_ts --&gt; module_src_types_ts
+  module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts[&quot;src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts
+  module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts --&gt; module_src_features_game_presentations_domain_createTabletopGameSeats_ts
+  module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts --&gt; module_src_types_gamePresentation_ts
+  module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts --&gt; module_src_types_pokerTraining_ts
+  module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx[&quot;src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx
+  module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx --&gt; module_src_components_tabletop_table_index_ts
+  module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx --&gt; module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts
+  module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx --&gt; module_src_types_pokerTraining_ts
+  module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts[&quot;src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts
+  module_src_features_game_presentations_domain_createTabletopGameSeats_ts[&quot;src/features/game-presentations/domain/createTabletopGameSeats.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_features_game_presentations_domain_createTabletopGameSeats_ts
+  module_src_features_game_presentations_domain_createTabletopGameSeats_ts --&gt; module_src_types_ts
+  module_src_features_game_presentations_domain_createTabletopGameSeats_ts --&gt; module_src_types_gamePresentation_ts
   module_src_index_ts[&quot;src/index.ts&quot;]
+  module_src_meta_ts[&quot;src/meta.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_meta_ts
+  module_src_plugin_ts[&quot;src/plugin.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_plugin_ts
+  module_src_plugin_ts --&gt; module_src_components_tabletop_table_index_ts
+  module_src_plugin_ts --&gt; module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx
+  module_src_plugin_ts --&gt; module_src_registry_ts
+  module_src_registry_ts[&quot;src/registry.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_registry_ts
+  module_src_registry_ts --&gt; module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts
+  module_src_registry_ts --&gt; module_src_meta_ts
   module_src_tableLayout_ts[&quot;src/tableLayout.ts&quot;]
   package__ankhorage_zora_tabletop -.-&gt; module_src_tableLayout_ts
   module_src_tableLayout_ts --&gt; module_src_types_ts
@@ -2044,6 +3131,13 @@ graph TD
   module_src_tablePositions_ts --&gt; module_src_types_ts
   module_src_types_ts[&quot;src/types.ts&quot;]
   package__ankhorage_zora_tabletop -.-&gt; module_src_types_ts
+  module_src_types_gamePresentation_ts[&quot;src/types/gamePresentation.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_types_gamePresentation_ts
+  module_src_types_gamePresentation_ts --&gt; module_src_types_ts
+  module_src_types_pokerTraining_ts[&quot;src/types/pokerTraining.ts&quot;]
+  package__ankhorage_zora_tabletop -.-&gt; module_src_types_pokerTraining_ts
+  module_src_types_pokerTraining_ts --&gt; module_src_colors_ts
+  module_src_types_pokerTraining_ts --&gt; module_src_types_ts
 </pre>
               </details>
             </article>
@@ -2070,12 +3164,21 @@ graph TD
                 module_src_components_tabletop_table_index_ts[&quot;src/components/tabletop-table/index.ts&quot;]
                 module_src_components_tabletop_table_TabletopTable_tsx[&quot;src/components/tabletop-table/TabletopTable.tsx&quot;]
                 module_src_components_tabletop_table_types_ts[&quot;src/components/tabletop-table/types.ts&quot;]
+                module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts[&quot;src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts&quot;]
+                module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx[&quot;src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx&quot;]
+                module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts[&quot;src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts&quot;]
+                module_src_features_game_presentations_domain_createTabletopGameSeats_ts[&quot;src/features/game-presentations/domain/createTabletopGameSeats.ts&quot;]
                 module_src_index_ts[&quot;src/index.ts&quot;]
+                module_src_meta_ts[&quot;src/meta.ts&quot;]
+                module_src_plugin_ts[&quot;src/plugin.ts&quot;]
+                module_src_registry_ts[&quot;src/registry.ts&quot;]
                 module_src_tableLayout_ts[&quot;src/tableLayout.ts&quot;]
                 module_src_tablePositions_ts[&quot;src/tablePositions.ts&quot;]
-                module_src_types_ts[&quot;src/types.ts&quot;] module_src_cardLabel_ts --&gt;
-                module_src_types_ts module_src_cardSizing_ts --&gt; module_src_types_ts
-                module_src_cardSymbols_ts --&gt; module_src_types_ts
+                module_src_types_ts[&quot;src/types.ts&quot;]
+                module_src_types_gamePresentation_ts[&quot;src/types/gamePresentation.ts&quot;]
+                module_src_types_pokerTraining_ts[&quot;src/types/pokerTraining.ts&quot;]
+                module_src_cardLabel_ts --&gt; module_src_types_ts module_src_cardSizing_ts --&gt;
+                module_src_types_ts module_src_cardSymbols_ts --&gt; module_src_types_ts
                 module_src_components_card_back_CardBack_tsx --&gt; module_src_cardLabel_ts
                 module_src_components_card_back_CardBack_tsx --&gt; module_src_cardSizing_ts
                 module_src_components_card_back_CardBack_tsx --&gt; module_src_colors_ts
@@ -2108,8 +3211,32 @@ graph TD
                 module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_types_ts
                 module_src_components_tabletop_table_types_ts --&gt; module_src_colors_ts
                 module_src_components_tabletop_table_types_ts --&gt; module_src_types_ts
-                module_src_tableLayout_ts --&gt; module_src_types_ts module_src_tablePositions_ts
-                --&gt; module_src_types_ts
+                module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts
+                --&gt; module_src_features_game_presentations_domain_createTabletopGameSeats_ts
+                module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts
+                --&gt; module_src_types_gamePresentation_ts
+                module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts
+                --&gt; module_src_types_pokerTraining_ts
+                module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx
+                --&gt; module_src_components_tabletop_table_index_ts
+                module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx
+                --&gt;
+                module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts
+                module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx
+                --&gt; module_src_types_pokerTraining_ts
+                module_src_features_game_presentations_domain_createTabletopGameSeats_ts --&gt;
+                module_src_types_ts
+                module_src_features_game_presentations_domain_createTabletopGameSeats_ts --&gt;
+                module_src_types_gamePresentation_ts module_src_plugin_ts --&gt;
+                module_src_components_tabletop_table_index_ts module_src_plugin_ts --&gt;
+                module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx
+                module_src_plugin_ts --&gt; module_src_registry_ts module_src_registry_ts --&gt;
+                module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts
+                module_src_registry_ts --&gt; module_src_meta_ts module_src_tableLayout_ts --&gt;
+                module_src_types_ts module_src_tablePositions_ts --&gt; module_src_types_ts
+                module_src_types_gamePresentation_ts --&gt; module_src_types_ts
+                module_src_types_pokerTraining_ts --&gt; module_src_colors_ts
+                module_src_types_pokerTraining_ts --&gt; module_src_types_ts
               </div>
               <details>
                 <summary>View Mermaid source</summary>
@@ -2131,10 +3258,19 @@ graph LR
   module_src_components_tabletop_table_index_ts[&quot;src/components/tabletop-table/index.ts&quot;]
   module_src_components_tabletop_table_TabletopTable_tsx[&quot;src/components/tabletop-table/TabletopTable.tsx&quot;]
   module_src_components_tabletop_table_types_ts[&quot;src/components/tabletop-table/types.ts&quot;]
+  module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts[&quot;src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts&quot;]
+  module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx[&quot;src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx&quot;]
+  module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts[&quot;src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts&quot;]
+  module_src_features_game_presentations_domain_createTabletopGameSeats_ts[&quot;src/features/game-presentations/domain/createTabletopGameSeats.ts&quot;]
   module_src_index_ts[&quot;src/index.ts&quot;]
+  module_src_meta_ts[&quot;src/meta.ts&quot;]
+  module_src_plugin_ts[&quot;src/plugin.ts&quot;]
+  module_src_registry_ts[&quot;src/registry.ts&quot;]
   module_src_tableLayout_ts[&quot;src/tableLayout.ts&quot;]
   module_src_tablePositions_ts[&quot;src/tablePositions.ts&quot;]
   module_src_types_ts[&quot;src/types.ts&quot;]
+  module_src_types_gamePresentation_ts[&quot;src/types/gamePresentation.ts&quot;]
+  module_src_types_pokerTraining_ts[&quot;src/types/pokerTraining.ts&quot;]
   module_src_cardLabel_ts --&gt; module_src_types_ts
   module_src_cardSizing_ts --&gt; module_src_types_ts
   module_src_cardSymbols_ts --&gt; module_src_types_ts
@@ -2164,8 +3300,24 @@ graph LR
   module_src_components_tabletop_table_TabletopTable_tsx --&gt; module_src_types_ts
   module_src_components_tabletop_table_types_ts --&gt; module_src_colors_ts
   module_src_components_tabletop_table_types_ts --&gt; module_src_types_ts
+  module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts --&gt; module_src_features_game_presentations_domain_createTabletopGameSeats_ts
+  module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts --&gt; module_src_types_gamePresentation_ts
+  module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts --&gt; module_src_types_pokerTraining_ts
+  module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx --&gt; module_src_components_tabletop_table_index_ts
+  module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx --&gt; module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts
+  module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx --&gt; module_src_types_pokerTraining_ts
+  module_src_features_game_presentations_domain_createTabletopGameSeats_ts --&gt; module_src_types_ts
+  module_src_features_game_presentations_domain_createTabletopGameSeats_ts --&gt; module_src_types_gamePresentation_ts
+  module_src_plugin_ts --&gt; module_src_components_tabletop_table_index_ts
+  module_src_plugin_ts --&gt; module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx
+  module_src_plugin_ts --&gt; module_src_registry_ts
+  module_src_registry_ts --&gt; module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts
+  module_src_registry_ts --&gt; module_src_meta_ts
   module_src_tableLayout_ts --&gt; module_src_types_ts
   module_src_tablePositions_ts --&gt; module_src_types_ts
+  module_src_types_gamePresentation_ts --&gt; module_src_types_ts
+  module_src_types_pokerTraining_ts --&gt; module_src_colors_ts
+  module_src_types_pokerTraining_ts --&gt; module_src_types_ts
 </pre>
               </details>
             </article>
@@ -2189,12 +3341,22 @@ graph LR
                 module_src_components_tabletop_table_index_ts[&quot;src/components/tabletop-table/index.ts&quot;]
                 module_src_components_tabletop_table_TabletopTable_tsx[&quot;src/components/tabletop-table/TabletopTable.tsx&quot;]
                 module_src_components_tabletop_table_types_ts[&quot;src/components/tabletop-table/types.ts&quot;]
+                module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts[&quot;src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts&quot;]
+                module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx[&quot;src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx&quot;]
+                module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts[&quot;src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts&quot;]
+                module_src_features_game_presentations_domain_createTabletopGameSeats_ts[&quot;src/features/game-presentations/domain/createTabletopGameSeats.ts&quot;]
                 module_src_index_ts[&quot;src/index.ts&quot;]
+                module_src_meta_ts[&quot;src/meta.ts&quot;]
+                module_src_plugin_ts[&quot;src/plugin.ts&quot;]
+                module_src_registry_ts[&quot;src/registry.ts&quot;]
                 module_src_tableLayout_ts[&quot;src/tableLayout.ts&quot;]
                 module_src_tablePositions_ts[&quot;src/tablePositions.ts&quot;]
-                module_src_types_ts[&quot;src/types.ts&quot;] export_CardBack[&quot;CardBack&quot;]
-                module_src_components_card_back_CardBack_tsx --&gt; export_CardBack export_CardBack
-                -.-&gt; export_CardBackProps export_CardBackProps[&quot;CardBackProps&quot;]
+                module_src_types_ts[&quot;src/types.ts&quot;]
+                module_src_types_gamePresentation_ts[&quot;src/types/gamePresentation.ts&quot;]
+                module_src_types_pokerTraining_ts[&quot;src/types/pokerTraining.ts&quot;]
+                export_CardBack[&quot;CardBack&quot;] module_src_components_card_back_CardBack_tsx
+                --&gt; export_CardBack export_CardBack -.-&gt; export_CardBackProps
+                export_CardBackProps[&quot;CardBackProps&quot;]
                 module_src_components_card_back_types_ts --&gt; export_CardBackProps
                 export_CardBackProps -.-&gt; export_TabletopCardSize export_CardBackProps -.-&gt;
                 export_TabletopColorScheme export_CardHand[&quot;CardHand&quot;]
@@ -2203,9 +3365,27 @@ graph LR
                 module_src_components_card_hand_types_ts --&gt; export_CardHandProps
                 export_CardHandProps -.-&gt; export_PlayingCardValue export_CardHandProps -.-&gt;
                 export_TabletopCardSize export_CardHandProps -.-&gt; export_TabletopColorScheme
+                export_createPokerTrainingTableState[&quot;createPokerTrainingTableState&quot;]
+                module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts
+                --&gt; export_createPokerTrainingTableState export_createPokerTrainingTableState
+                -.-&gt; export_CreatePokerTrainingTableStateOptions
+                export_createPokerTrainingTableState -.-&gt; export_PokerTrainingTableState
+                export_createPokerTrainingTableState -.-&gt; export_PokerTrainingTaskTableData
+                export_CreatePokerTrainingTableStateOptions[&quot;CreatePokerTrainingTableStateOptions&quot;]
+                module_src_types_pokerTraining_ts --&gt; export_CreatePokerTrainingTableStateOptions
                 export_createTabletopColorScheme[&quot;createTabletopColorScheme&quot;]
                 module_src_colors_ts --&gt; export_createTabletopColorScheme
                 export_createTabletopColorScheme -.-&gt; export_TabletopColorScheme
+                export_createTabletopGameSeats[&quot;createTabletopGameSeats&quot;]
+                module_src_features_game_presentations_domain_createTabletopGameSeats_ts --&gt;
+                export_createTabletopGameSeats export_createTabletopGameSeats -.-&gt;
+                export_CreateTabletopGameSeatsInput export_createTabletopGameSeats -.-&gt;
+                export_TabletopSeatState
+                export_CreateTabletopGameSeatsInput[&quot;CreateTabletopGameSeatsInput&quot;]
+                module_src_types_gamePresentation_ts --&gt; export_CreateTabletopGameSeatsInput
+                export_CreateTabletopGameSeatsInput -.-&gt; export_TabletopGameParticipantState
+                export_CreateTabletopGameSeatsInput -.-&gt; export_TabletopGameSeatDefinition
+                export_CreateTabletopGameSeatsInput -.-&gt; export_TabletopGameSeatPresentation
                 export_PlayingCard[&quot;PlayingCard&quot;]
                 module_src_components_playing_card_PlayingCard_tsx --&gt; export_PlayingCard
                 export_PlayingCard -.-&gt; export_PlayingCardProps
@@ -2217,12 +3397,44 @@ graph LR
                 module_src_types_ts --&gt; export_PlayingCardSuit
                 export_PlayingCardValue[&quot;PlayingCardValue&quot;] module_src_types_ts --&gt;
                 export_PlayingCardValue export_PlayingCardValue -.-&gt; export_PlayingCardSuit
+                export_PokerTrainingPlayer[&quot;PokerTrainingPlayer&quot;]
+                module_src_types_pokerTraining_ts --&gt; export_PokerTrainingPlayer
+                export_PokerTrainingPlayer -.-&gt; export_PlayingCardValue
+                export_PokerTrainingTable[&quot;PokerTrainingTable&quot;]
+                module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx
+                --&gt; export_PokerTrainingTable export_PokerTrainingTable -.-&gt;
+                export_PokerTrainingTableProps
+                export_pokerTrainingTableMeta[&quot;pokerTrainingTableMeta&quot;]
+                module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts
+                --&gt; export_pokerTrainingTableMeta
+                export_PokerTrainingTableProps[&quot;PokerTrainingTableProps&quot;]
+                module_src_types_pokerTraining_ts --&gt; export_PokerTrainingTableProps
+                export_PokerTrainingTableProps -.-&gt; export_PokerTrainingTaskTableData
+                export_PokerTrainingTableProps -.-&gt; export_TabletopCardSize
+                export_PokerTrainingTableProps -.-&gt; export_TabletopColorScheme
+                export_PokerTrainingTableProps -.-&gt; export_TabletopShape
+                export_PokerTrainingTableState[&quot;PokerTrainingTableState&quot;]
+                module_src_types_pokerTraining_ts --&gt; export_PokerTrainingTableState
+                export_PokerTrainingTableState -.-&gt; export_PlayingCardValue
+                export_PokerTrainingTableState -.-&gt; export_TabletopSeatState
+                export_PokerTrainingTaskTableData[&quot;PokerTrainingTaskTableData&quot;]
+                module_src_types_pokerTraining_ts --&gt; export_PokerTrainingTaskTableData
+                export_PokerTrainingTaskTableData -.-&gt; export_PlayingCardValue
+                export_PokerTrainingTaskTableData -.-&gt; export_PokerTrainingPlayer
                 export_TabletopCardSize[&quot;TabletopCardSize&quot;] module_src_types_ts --&gt;
                 export_TabletopCardSize
                 export_TabletopColorOverrides[&quot;TabletopColorOverrides&quot;]
                 module_src_colors_ts --&gt; export_TabletopColorOverrides
                 export_TabletopColorScheme[&quot;TabletopColorScheme&quot;] module_src_colors_ts
                 --&gt; export_TabletopColorScheme
+                export_TabletopGameParticipantState[&quot;TabletopGameParticipantState&quot;]
+                module_src_types_gamePresentation_ts --&gt; export_TabletopGameParticipantState
+                export_TabletopGameParticipantState -.-&gt; export_TabletopGameSeatPresentation
+                export_TabletopGameSeatDefinition[&quot;TabletopGameSeatDefinition&quot;]
+                module_src_types_gamePresentation_ts --&gt; export_TabletopGameSeatDefinition
+                export_TabletopGameSeatDefinition -.-&gt; export_TabletopGameSeatPresentation
+                export_TabletopGameSeatPresentation[&quot;TabletopGameSeatPresentation&quot;]
+                module_src_types_gamePresentation_ts --&gt; export_TabletopGameSeatPresentation
                 export_TabletopSeatCount[&quot;TabletopSeatCount&quot;] module_src_types_ts --&gt;
                 export_TabletopSeatCount export_TabletopSeatState[&quot;TabletopSeatState&quot;]
                 module_src_types_ts --&gt; export_TabletopSeatState export_TabletopSeatState -.-&gt;
@@ -2231,13 +3443,22 @@ graph LR
                 export_TabletopTable[&quot;TabletopTable&quot;]
                 module_src_components_tabletop_table_TabletopTable_tsx --&gt; export_TabletopTable
                 export_TabletopTable -.-&gt; export_TabletopTableProps
-                export_TabletopTableProps[&quot;TabletopTableProps&quot;]
+                export_tabletopTableMeta[&quot;tabletopTableMeta&quot;] module_src_meta_ts --&gt;
+                export_tabletopTableMeta export_TabletopTableProps[&quot;TabletopTableProps&quot;]
                 module_src_components_tabletop_table_types_ts --&gt; export_TabletopTableProps
                 export_TabletopTableProps -.-&gt; export_PlayingCardValue export_TabletopTableProps
                 -.-&gt; export_TabletopCardSize export_TabletopTableProps -.-&gt;
                 export_TabletopColorScheme export_TabletopTableProps -.-&gt;
                 export_TabletopSeatCount export_TabletopTableProps -.-&gt; export_TabletopSeatState
                 export_TabletopTableProps -.-&gt; export_TabletopShape
+                export_ZORA_PLUGIN_METADATA[&quot;ZORA_PLUGIN_METADATA&quot;] module_src_registry_ts
+                --&gt; export_ZORA_PLUGIN_METADATA
+                export_ZORA_TABLETOP_COMPONENT_META[&quot;ZORA_TABLETOP_COMPONENT_META&quot;]
+                module_src_registry_ts --&gt; export_ZORA_TABLETOP_COMPONENT_META
+                export_ZORA_TABLETOP_COMPONENT_REGISTRY[&quot;ZORA_TABLETOP_COMPONENT_REGISTRY&quot;]
+                module_src_plugin_ts --&gt; export_ZORA_TABLETOP_COMPONENT_REGISTRY
+                export_ZORA_TABLETOP_PLUGIN[&quot;ZORA_TABLETOP_PLUGIN&quot;] module_src_plugin_ts
+                --&gt; export_ZORA_TABLETOP_PLUGIN
               </div>
               <details>
                 <summary>View Mermaid source</summary>
@@ -2259,10 +3480,19 @@ graph LR
   module_src_components_tabletop_table_index_ts[&quot;src/components/tabletop-table/index.ts&quot;]
   module_src_components_tabletop_table_TabletopTable_tsx[&quot;src/components/tabletop-table/TabletopTable.tsx&quot;]
   module_src_components_tabletop_table_types_ts[&quot;src/components/tabletop-table/types.ts&quot;]
+  module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts[&quot;src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts&quot;]
+  module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx[&quot;src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx&quot;]
+  module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts[&quot;src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts&quot;]
+  module_src_features_game_presentations_domain_createTabletopGameSeats_ts[&quot;src/features/game-presentations/domain/createTabletopGameSeats.ts&quot;]
   module_src_index_ts[&quot;src/index.ts&quot;]
+  module_src_meta_ts[&quot;src/meta.ts&quot;]
+  module_src_plugin_ts[&quot;src/plugin.ts&quot;]
+  module_src_registry_ts[&quot;src/registry.ts&quot;]
   module_src_tableLayout_ts[&quot;src/tableLayout.ts&quot;]
   module_src_tablePositions_ts[&quot;src/tablePositions.ts&quot;]
   module_src_types_ts[&quot;src/types.ts&quot;]
+  module_src_types_gamePresentation_ts[&quot;src/types/gamePresentation.ts&quot;]
+  module_src_types_pokerTraining_ts[&quot;src/types/pokerTraining.ts&quot;]
   export_CardBack[&quot;CardBack&quot;]
   module_src_components_card_back_CardBack_tsx --&gt; export_CardBack
   export_CardBack -.-&gt; export_CardBackProps
@@ -2278,9 +3508,25 @@ graph LR
   export_CardHandProps -.-&gt; export_PlayingCardValue
   export_CardHandProps -.-&gt; export_TabletopCardSize
   export_CardHandProps -.-&gt; export_TabletopColorScheme
+  export_createPokerTrainingTableState[&quot;createPokerTrainingTableState&quot;]
+  module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts --&gt; export_createPokerTrainingTableState
+  export_createPokerTrainingTableState -.-&gt; export_CreatePokerTrainingTableStateOptions
+  export_createPokerTrainingTableState -.-&gt; export_PokerTrainingTableState
+  export_createPokerTrainingTableState -.-&gt; export_PokerTrainingTaskTableData
+  export_CreatePokerTrainingTableStateOptions[&quot;CreatePokerTrainingTableStateOptions&quot;]
+  module_src_types_pokerTraining_ts --&gt; export_CreatePokerTrainingTableStateOptions
   export_createTabletopColorScheme[&quot;createTabletopColorScheme&quot;]
   module_src_colors_ts --&gt; export_createTabletopColorScheme
   export_createTabletopColorScheme -.-&gt; export_TabletopColorScheme
+  export_createTabletopGameSeats[&quot;createTabletopGameSeats&quot;]
+  module_src_features_game_presentations_domain_createTabletopGameSeats_ts --&gt; export_createTabletopGameSeats
+  export_createTabletopGameSeats -.-&gt; export_CreateTabletopGameSeatsInput
+  export_createTabletopGameSeats -.-&gt; export_TabletopSeatState
+  export_CreateTabletopGameSeatsInput[&quot;CreateTabletopGameSeatsInput&quot;]
+  module_src_types_gamePresentation_ts --&gt; export_CreateTabletopGameSeatsInput
+  export_CreateTabletopGameSeatsInput -.-&gt; export_TabletopGameParticipantState
+  export_CreateTabletopGameSeatsInput -.-&gt; export_TabletopGameSeatDefinition
+  export_CreateTabletopGameSeatsInput -.-&gt; export_TabletopGameSeatPresentation
   export_PlayingCard[&quot;PlayingCard&quot;]
   module_src_components_playing_card_PlayingCard_tsx --&gt; export_PlayingCard
   export_PlayingCard -.-&gt; export_PlayingCardProps
@@ -2294,12 +3540,42 @@ graph LR
   export_PlayingCardValue[&quot;PlayingCardValue&quot;]
   module_src_types_ts --&gt; export_PlayingCardValue
   export_PlayingCardValue -.-&gt; export_PlayingCardSuit
+  export_PokerTrainingPlayer[&quot;PokerTrainingPlayer&quot;]
+  module_src_types_pokerTraining_ts --&gt; export_PokerTrainingPlayer
+  export_PokerTrainingPlayer -.-&gt; export_PlayingCardValue
+  export_PokerTrainingTable[&quot;PokerTrainingTable&quot;]
+  module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx --&gt; export_PokerTrainingTable
+  export_PokerTrainingTable -.-&gt; export_PokerTrainingTableProps
+  export_pokerTrainingTableMeta[&quot;pokerTrainingTableMeta&quot;]
+  module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts --&gt; export_pokerTrainingTableMeta
+  export_PokerTrainingTableProps[&quot;PokerTrainingTableProps&quot;]
+  module_src_types_pokerTraining_ts --&gt; export_PokerTrainingTableProps
+  export_PokerTrainingTableProps -.-&gt; export_PokerTrainingTaskTableData
+  export_PokerTrainingTableProps -.-&gt; export_TabletopCardSize
+  export_PokerTrainingTableProps -.-&gt; export_TabletopColorScheme
+  export_PokerTrainingTableProps -.-&gt; export_TabletopShape
+  export_PokerTrainingTableState[&quot;PokerTrainingTableState&quot;]
+  module_src_types_pokerTraining_ts --&gt; export_PokerTrainingTableState
+  export_PokerTrainingTableState -.-&gt; export_PlayingCardValue
+  export_PokerTrainingTableState -.-&gt; export_TabletopSeatState
+  export_PokerTrainingTaskTableData[&quot;PokerTrainingTaskTableData&quot;]
+  module_src_types_pokerTraining_ts --&gt; export_PokerTrainingTaskTableData
+  export_PokerTrainingTaskTableData -.-&gt; export_PlayingCardValue
+  export_PokerTrainingTaskTableData -.-&gt; export_PokerTrainingPlayer
   export_TabletopCardSize[&quot;TabletopCardSize&quot;]
   module_src_types_ts --&gt; export_TabletopCardSize
   export_TabletopColorOverrides[&quot;TabletopColorOverrides&quot;]
   module_src_colors_ts --&gt; export_TabletopColorOverrides
   export_TabletopColorScheme[&quot;TabletopColorScheme&quot;]
   module_src_colors_ts --&gt; export_TabletopColorScheme
+  export_TabletopGameParticipantState[&quot;TabletopGameParticipantState&quot;]
+  module_src_types_gamePresentation_ts --&gt; export_TabletopGameParticipantState
+  export_TabletopGameParticipantState -.-&gt; export_TabletopGameSeatPresentation
+  export_TabletopGameSeatDefinition[&quot;TabletopGameSeatDefinition&quot;]
+  module_src_types_gamePresentation_ts --&gt; export_TabletopGameSeatDefinition
+  export_TabletopGameSeatDefinition -.-&gt; export_TabletopGameSeatPresentation
+  export_TabletopGameSeatPresentation[&quot;TabletopGameSeatPresentation&quot;]
+  module_src_types_gamePresentation_ts --&gt; export_TabletopGameSeatPresentation
   export_TabletopSeatCount[&quot;TabletopSeatCount&quot;]
   module_src_types_ts --&gt; export_TabletopSeatCount
   export_TabletopSeatState[&quot;TabletopSeatState&quot;]
@@ -2310,6 +3586,8 @@ graph LR
   export_TabletopTable[&quot;TabletopTable&quot;]
   module_src_components_tabletop_table_TabletopTable_tsx --&gt; export_TabletopTable
   export_TabletopTable -.-&gt; export_TabletopTableProps
+  export_tabletopTableMeta[&quot;tabletopTableMeta&quot;]
+  module_src_meta_ts --&gt; export_tabletopTableMeta
   export_TabletopTableProps[&quot;TabletopTableProps&quot;]
   module_src_components_tabletop_table_types_ts --&gt; export_TabletopTableProps
   export_TabletopTableProps -.-&gt; export_PlayingCardValue
@@ -2318,6 +3596,14 @@ graph LR
   export_TabletopTableProps -.-&gt; export_TabletopSeatCount
   export_TabletopTableProps -.-&gt; export_TabletopSeatState
   export_TabletopTableProps -.-&gt; export_TabletopShape
+  export_ZORA_PLUGIN_METADATA[&quot;ZORA_PLUGIN_METADATA&quot;]
+  module_src_registry_ts --&gt; export_ZORA_PLUGIN_METADATA
+  export_ZORA_TABLETOP_COMPONENT_META[&quot;ZORA_TABLETOP_COMPONENT_META&quot;]
+  module_src_registry_ts --&gt; export_ZORA_TABLETOP_COMPONENT_META
+  export_ZORA_TABLETOP_COMPONENT_REGISTRY[&quot;ZORA_TABLETOP_COMPONENT_REGISTRY&quot;]
+  module_src_plugin_ts --&gt; export_ZORA_TABLETOP_COMPONENT_REGISTRY
+  export_ZORA_TABLETOP_PLUGIN[&quot;ZORA_TABLETOP_PLUGIN&quot;]
+  module_src_plugin_ts --&gt; export_ZORA_TABLETOP_PLUGIN
 </pre>
               </details>
             </article>
@@ -2372,6 +3658,60 @@ sequenceDiagram
   participant participant_createFaceDownCards as createFaceDownCards
   participant_CardHand-&gt;&gt;participant_createFaceDownCards: createFaceDownCards()
   participant_createFaceDownCards--&gt;&gt;participant_CardHand: return
+</pre>
+              </details>
+            </article>
+            <article
+              class="item"
+              data-search="createPokerTrainingTableState sequence diagrams/sequences/create-poker-training-table-state.mmd"
+            >
+              <h3>createPokerTrainingTableState sequence</h3>
+              <p class="muted">
+                <code>diagrams/sequences/create-poker-training-table-state.mmd</code>
+              </p>
+              <div class="mermaid">
+                sequenceDiagram participant participant_createPokerAccessibilityLabel as
+                createPokerAccessibilityLabel participant participant_createPokerTrainingTableState
+                as createPokerTrainingTableState participant participant_createTabletopGameSeats as
+                createTabletopGameSeats participant participant_formatAmount as formatAmount
+                participant participant_rotatePokerPositions as rotatePokerPositions
+                participant_createPokerTrainingTableState-&gt;&gt;participant_rotatePokerPositions:
+                rotatePokerPositions()
+                participant_rotatePokerPositions--&gt;&gt;participant_createPokerTrainingTableState:
+                return participant_createPokerTrainingTableState-&gt;&gt;participant_formatAmount:
+                formatAmount()
+                participant_formatAmount--&gt;&gt;participant_createPokerTrainingTableState: return
+                participant_createPokerTrainingTableState-&gt;&gt;participant_createTabletopGameSeats:
+                createTabletopGameSeats()
+                participant_createTabletopGameSeats--&gt;&gt;participant_createPokerTrainingTableState:
+                return
+                participant_createPokerTrainingTableState-&gt;&gt;participant_createPokerAccessibilityLabel:
+                createPokerAccessibilityLabel()
+                participant_createPokerAccessibilityLabel-&gt;&gt;participant_formatAmount:
+                formatAmount()
+                participant_formatAmount--&gt;&gt;participant_createPokerAccessibilityLabel: return
+                participant_createPokerAccessibilityLabel--&gt;&gt;participant_createPokerTrainingTableState:
+                return
+              </div>
+              <details>
+                <summary>View Mermaid source</summary>
+                <pre>
+sequenceDiagram
+  participant participant_createPokerAccessibilityLabel as createPokerAccessibilityLabel
+  participant participant_createPokerTrainingTableState as createPokerTrainingTableState
+  participant participant_createTabletopGameSeats as createTabletopGameSeats
+  participant participant_formatAmount as formatAmount
+  participant participant_rotatePokerPositions as rotatePokerPositions
+  participant_createPokerTrainingTableState-&gt;&gt;participant_rotatePokerPositions: rotatePokerPositions()
+  participant_rotatePokerPositions--&gt;&gt;participant_createPokerTrainingTableState: return
+  participant_createPokerTrainingTableState-&gt;&gt;participant_formatAmount: formatAmount()
+  participant_formatAmount--&gt;&gt;participant_createPokerTrainingTableState: return
+  participant_createPokerTrainingTableState-&gt;&gt;participant_createTabletopGameSeats: createTabletopGameSeats()
+  participant_createTabletopGameSeats--&gt;&gt;participant_createPokerTrainingTableState: return
+  participant_createPokerTrainingTableState-&gt;&gt;participant_createPokerAccessibilityLabel: createPokerAccessibilityLabel()
+  participant_createPokerAccessibilityLabel-&gt;&gt;participant_formatAmount: formatAmount()
+  participant_formatAmount--&gt;&gt;participant_createPokerAccessibilityLabel: return
+  participant_createPokerAccessibilityLabel--&gt;&gt;participant_createPokerTrainingTableState: return
 </pre>
               </details>
             </article>
@@ -2667,6 +4007,164 @@ sequenceDiagram
                 `TabletopTable` to arrange seats around a themed table surface, display shared
                 center cards, and show neutral seat labels/tokens without embedding game rules into
                 the component.
+              </p>
+            </article>
+          </section>
+        </section>
+        <section
+          id="view-src-features-game-presentations-adapters-inbound-createpokertrainingtablestate-ts"
+          class="view"
+          data-view="src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"
+          hidden
+        >
+          <section class="panel">
+            <h2>
+              src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts
+            </h2>
+            <article
+              class="item"
+              data-search="createPokerTrainingTableState src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts Adapts the table-relevant subset of a poker training task to generic tabletop presentation state.&#10;&#10;The canonical poker ring is rotated so the hero occupies the first (bottom) tabletop seat.&#10;Players omitted by the task are reconstructed as folded with the configured default stack."
+            >
+              <h3>createPokerTrainingTableState</h3>
+              <p class="muted">
+                <code
+                  >src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts:20:1</code
+                >
+              </p>
+              <p>
+                Adapts the table-relevant subset of a poker training task to generic tabletop
+                presentation state. The canonical poker ring is rotated so the hero occupies the
+                first (bottom) tabletop seat. Players omitted by the task are reconstructed as
+                folded with the configured default stack.
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="rotatePokerPositions src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts Rotates the canonical nine-seat poker ring to place the hero at the bottom seat."
+            >
+              <h3>rotatePokerPositions</h3>
+              <p class="muted">
+                <code
+                  >src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts:62:1</code
+                >
+              </p>
+              <p>
+                Rotates the canonical nine-seat poker ring to place the hero at the bottom seat.
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="createPokerParticipantState src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts Converts one poker participant record into a generic seat-state override."
+            >
+              <h3>createPokerParticipantState</h3>
+              <p class="muted">
+                <code
+                  >src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts:70:1</code
+                >
+              </p>
+              <p>Converts one poker participant record into a generic seat-state override.</p>
+            </article>
+            <article
+              class="item"
+              data-search="formatPlayerSublabel src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts Formats stack and optional committed chips as a compact seat sublabel."
+            >
+              <h3>formatPlayerSublabel</h3>
+              <p class="muted">
+                <code
+                  >src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts:93:1</code
+                >
+              </p>
+              <p>Formats stack and optional committed chips as a compact seat sublabel.</p>
+            </article>
+            <article
+              class="item"
+              data-search="formatChipStack src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts Formats chips as big blinds when a positive blind is known, otherwise as an amount."
+            >
+              <h3>formatChipStack</h3>
+              <p class="muted">
+                <code
+                  >src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts:107:1</code
+                >
+              </p>
+              <p>
+                Formats chips as big blinds when a positive blind is known, otherwise as an amount.
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="formatAmount src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts Formats a numeric poker amount consistently across native and web runtimes."
+            >
+              <h3>formatAmount</h3>
+              <p class="muted">
+                <code
+                  >src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts:116:1</code
+                >
+              </p>
+              <p>Formats a numeric poker amount consistently across native and web runtimes.</p>
+            </article>
+            <article
+              class="item"
+              data-search="createPokerAccessibilityLabel src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts Summarizes the reconstructed table for assistive technologies."
+            >
+              <h3>createPokerAccessibilityLabel</h3>
+              <p class="muted">
+                <code
+                  >src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts:121:1</code
+                >
+              </p>
+              <p>Summarizes the reconstructed table for assistive technologies.</p>
+            </article>
+          </section>
+        </section>
+        <section
+          id="view-src-features-game-presentations-adapters-inbound-pokertrainingtable-tsx"
+          class="view"
+          data-view="src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx"
+          hidden
+        >
+          <section class="panel">
+            <h2>src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx</h2>
+            <article
+              class="item"
+              data-search="PokerTrainingTable src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx Manifest-ready poker training pattern that reconstructs a complete table from task data.&#10;&#10;Bind the raw training task object to `task`; the pattern maps sparse active-player data to a&#10;full nine-seat presentation while leaving API execution in the generated application."
+            >
+              <h3>PokerTrainingTable</h3>
+              <p class="muted">
+                <code
+                  >src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx:19:1</code
+                >
+              </p>
+              <p>
+                Manifest-ready poker training pattern that reconstructs a complete table from task
+                data. Bind the raw training task object to `task`; the pattern maps sparse
+                active-player data to a full nine-seat presentation while leaving API execution in
+                the generated application.
+              </p>
+            </article>
+          </section>
+        </section>
+        <section
+          id="view-src-features-game-presentations-domain-createtabletopgameseats-ts"
+          class="view"
+          data-view="src/features/game-presentations/domain/createTabletopGameSeats.ts"
+          hidden
+        >
+          <section class="panel">
+            <h2>src/features/game-presentations/domain/createTabletopGameSeats.ts</h2>
+            <article
+              class="item"
+              data-search="createTabletopGameSeats src/features/game-presentations/domain/createTabletopGameSeats.ts Joins an ordered game layout with the participant states currently present in a scene.&#10;&#10;Missing participants retain their seat definition and receive the configured fallback state,&#10;which lets card games represent folded, eliminated, disconnected, or otherwise inactive seats&#10;without embedding those game rules in the tabletop renderer."
+            >
+              <h3>createTabletopGameSeats</h3>
+              <p class="muted">
+                <code>src/features/game-presentations/domain/createTabletopGameSeats.ts:25:1</code>
+              </p>
+              <p>
+                Joins an ordered game layout with the participant states currently present in a
+                scene. Missing participants retain their seat definition and receive the configured
+                fallback state, which lets card games represent folded, eliminated, disconnected, or
+                otherwise inactive seats without embedding those game rules in the tabletop
+                renderer.
               </p>
             </article>
           </section>

@@ -15,10 +15,19 @@ graph LR
   module_src_components_tabletop_table_index_ts["src/components/tabletop-table/index.ts"]
   module_src_components_tabletop_table_TabletopTable_tsx["src/components/tabletop-table/TabletopTable.tsx"]
   module_src_components_tabletop_table_types_ts["src/components/tabletop-table/types.ts"]
+  module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts["src/features/game-presentations/adapters/inbound/createPokerTrainingTableState.ts"]
+  module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx["src/features/game-presentations/adapters/inbound/PokerTrainingTable.tsx"]
+  module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts["src/features/game-presentations/adapters/inbound/pokerTrainingTableMeta.ts"]
+  module_src_features_game_presentations_domain_createTabletopGameSeats_ts["src/features/game-presentations/domain/createTabletopGameSeats.ts"]
   module_src_index_ts["src/index.ts"]
+  module_src_meta_ts["src/meta.ts"]
+  module_src_plugin_ts["src/plugin.ts"]
+  module_src_registry_ts["src/registry.ts"]
   module_src_tableLayout_ts["src/tableLayout.ts"]
   module_src_tablePositions_ts["src/tablePositions.ts"]
   module_src_types_ts["src/types.ts"]
+  module_src_types_gamePresentation_ts["src/types/gamePresentation.ts"]
+  module_src_types_pokerTraining_ts["src/types/pokerTraining.ts"]
   export_CardBack["CardBack"]
   module_src_components_card_back_CardBack_tsx --> export_CardBack
   export_CardBack -.-> export_CardBackProps
@@ -34,9 +43,25 @@ graph LR
   export_CardHandProps -.-> export_PlayingCardValue
   export_CardHandProps -.-> export_TabletopCardSize
   export_CardHandProps -.-> export_TabletopColorScheme
+  export_createPokerTrainingTableState["createPokerTrainingTableState"]
+  module_src_features_game_presentations_adapters_inbound_createPokerTrainingTableState_ts --> export_createPokerTrainingTableState
+  export_createPokerTrainingTableState -.-> export_CreatePokerTrainingTableStateOptions
+  export_createPokerTrainingTableState -.-> export_PokerTrainingTableState
+  export_createPokerTrainingTableState -.-> export_PokerTrainingTaskTableData
+  export_CreatePokerTrainingTableStateOptions["CreatePokerTrainingTableStateOptions"]
+  module_src_types_pokerTraining_ts --> export_CreatePokerTrainingTableStateOptions
   export_createTabletopColorScheme["createTabletopColorScheme"]
   module_src_colors_ts --> export_createTabletopColorScheme
   export_createTabletopColorScheme -.-> export_TabletopColorScheme
+  export_createTabletopGameSeats["createTabletopGameSeats"]
+  module_src_features_game_presentations_domain_createTabletopGameSeats_ts --> export_createTabletopGameSeats
+  export_createTabletopGameSeats -.-> export_CreateTabletopGameSeatsInput
+  export_createTabletopGameSeats -.-> export_TabletopSeatState
+  export_CreateTabletopGameSeatsInput["CreateTabletopGameSeatsInput"]
+  module_src_types_gamePresentation_ts --> export_CreateTabletopGameSeatsInput
+  export_CreateTabletopGameSeatsInput -.-> export_TabletopGameParticipantState
+  export_CreateTabletopGameSeatsInput -.-> export_TabletopGameSeatDefinition
+  export_CreateTabletopGameSeatsInput -.-> export_TabletopGameSeatPresentation
   export_PlayingCard["PlayingCard"]
   module_src_components_playing_card_PlayingCard_tsx --> export_PlayingCard
   export_PlayingCard -.-> export_PlayingCardProps
@@ -50,12 +75,42 @@ graph LR
   export_PlayingCardValue["PlayingCardValue"]
   module_src_types_ts --> export_PlayingCardValue
   export_PlayingCardValue -.-> export_PlayingCardSuit
+  export_PokerTrainingPlayer["PokerTrainingPlayer"]
+  module_src_types_pokerTraining_ts --> export_PokerTrainingPlayer
+  export_PokerTrainingPlayer -.-> export_PlayingCardValue
+  export_PokerTrainingTable["PokerTrainingTable"]
+  module_src_features_game_presentations_adapters_inbound_PokerTrainingTable_tsx --> export_PokerTrainingTable
+  export_PokerTrainingTable -.-> export_PokerTrainingTableProps
+  export_pokerTrainingTableMeta["pokerTrainingTableMeta"]
+  module_src_features_game_presentations_adapters_inbound_pokerTrainingTableMeta_ts --> export_pokerTrainingTableMeta
+  export_PokerTrainingTableProps["PokerTrainingTableProps"]
+  module_src_types_pokerTraining_ts --> export_PokerTrainingTableProps
+  export_PokerTrainingTableProps -.-> export_PokerTrainingTaskTableData
+  export_PokerTrainingTableProps -.-> export_TabletopCardSize
+  export_PokerTrainingTableProps -.-> export_TabletopColorScheme
+  export_PokerTrainingTableProps -.-> export_TabletopShape
+  export_PokerTrainingTableState["PokerTrainingTableState"]
+  module_src_types_pokerTraining_ts --> export_PokerTrainingTableState
+  export_PokerTrainingTableState -.-> export_PlayingCardValue
+  export_PokerTrainingTableState -.-> export_TabletopSeatState
+  export_PokerTrainingTaskTableData["PokerTrainingTaskTableData"]
+  module_src_types_pokerTraining_ts --> export_PokerTrainingTaskTableData
+  export_PokerTrainingTaskTableData -.-> export_PlayingCardValue
+  export_PokerTrainingTaskTableData -.-> export_PokerTrainingPlayer
   export_TabletopCardSize["TabletopCardSize"]
   module_src_types_ts --> export_TabletopCardSize
   export_TabletopColorOverrides["TabletopColorOverrides"]
   module_src_colors_ts --> export_TabletopColorOverrides
   export_TabletopColorScheme["TabletopColorScheme"]
   module_src_colors_ts --> export_TabletopColorScheme
+  export_TabletopGameParticipantState["TabletopGameParticipantState"]
+  module_src_types_gamePresentation_ts --> export_TabletopGameParticipantState
+  export_TabletopGameParticipantState -.-> export_TabletopGameSeatPresentation
+  export_TabletopGameSeatDefinition["TabletopGameSeatDefinition"]
+  module_src_types_gamePresentation_ts --> export_TabletopGameSeatDefinition
+  export_TabletopGameSeatDefinition -.-> export_TabletopGameSeatPresentation
+  export_TabletopGameSeatPresentation["TabletopGameSeatPresentation"]
+  module_src_types_gamePresentation_ts --> export_TabletopGameSeatPresentation
   export_TabletopSeatCount["TabletopSeatCount"]
   module_src_types_ts --> export_TabletopSeatCount
   export_TabletopSeatState["TabletopSeatState"]
@@ -66,6 +121,8 @@ graph LR
   export_TabletopTable["TabletopTable"]
   module_src_components_tabletop_table_TabletopTable_tsx --> export_TabletopTable
   export_TabletopTable -.-> export_TabletopTableProps
+  export_tabletopTableMeta["tabletopTableMeta"]
+  module_src_meta_ts --> export_tabletopTableMeta
   export_TabletopTableProps["TabletopTableProps"]
   module_src_components_tabletop_table_types_ts --> export_TabletopTableProps
   export_TabletopTableProps -.-> export_PlayingCardValue
@@ -74,3 +131,11 @@ graph LR
   export_TabletopTableProps -.-> export_TabletopSeatCount
   export_TabletopTableProps -.-> export_TabletopSeatState
   export_TabletopTableProps -.-> export_TabletopShape
+  export_ZORA_PLUGIN_METADATA["ZORA_PLUGIN_METADATA"]
+  module_src_registry_ts --> export_ZORA_PLUGIN_METADATA
+  export_ZORA_TABLETOP_COMPONENT_META["ZORA_TABLETOP_COMPONENT_META"]
+  module_src_registry_ts --> export_ZORA_TABLETOP_COMPONENT_META
+  export_ZORA_TABLETOP_COMPONENT_REGISTRY["ZORA_TABLETOP_COMPONENT_REGISTRY"]
+  module_src_plugin_ts --> export_ZORA_TABLETOP_COMPONENT_REGISTRY
+  export_ZORA_TABLETOP_PLUGIN["ZORA_TABLETOP_PLUGIN"]
+  module_src_plugin_ts --> export_ZORA_TABLETOP_PLUGIN
