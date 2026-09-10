@@ -1,5 +1,11 @@
 # @ankhorage/zora-tabletop
 
+## 0.1.1
+
+### Patch Changes
+
+- c1cbbcd: Add generic card-game seat mapping and a poker training table pattern.
+
 ## 0.1.0
 
 ### Minor Changes
