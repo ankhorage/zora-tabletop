@@ -4,6 +4,7 @@ import type { PokerTrainingTaskTableData } from '../../../../types/pokerTraining
 import { createPokerTrainingTableState } from './createPokerTrainingTableState';
 
 const liveTask: PokerTrainingTaskTableData = {
+  tableSize: '9max',
   blinds: { small: 50, big: 100 },
   heroPosition: 'BTN',
   heroCards: [
@@ -23,9 +24,10 @@ const liveTask: PokerTrainingTaskTableData = {
   ],
 };
 
-test('createPokerTrainingTableState reconstructs a sparse task as nine seats', () => {
+test('createPokerTrainingTableState reconstructs a sparse 9-max task with gateway positions', () => {
   const state = createPokerTrainingTableState(liveTask);
 
+  expect(state.seatCount).toBe(9);
   expect(state.seats).toHaveLength(9);
   expect(state.seats.map((seat) => seat.id)).toEqual([
     'BTN',
@@ -33,8 +35,8 @@ test('createPokerTrainingTableState reconstructs a sparse task as nine seats', (
     'BB',
     'UTG',
     'UTG+1',
+    'UTG+2',
     'MP',
-    'MP+1',
     'HJ',
     'CO',
   ]);
@@ -56,6 +58,29 @@ test('createPokerTrainingTableState reconstructs a sparse task as nine seats', (
     muted: true,
     sublabel: '100 BB · Folded',
   });
+});
+
+test('createPokerTrainingTableState reconstructs the canonical 6-max ring', () => {
+  const state = createPokerTrainingTableState({
+    ...liveTask,
+    tableSize: '6max',
+    heroPosition: 'HJ',
+    players: [
+      { position: 'UTG', stack: 7500, folded: true },
+      { position: 'HJ', stack: 9200, isHero: true },
+      { position: 'CO', stack: 10100 },
+      { position: 'BTN', stack: 11000 },
+      { position: 'SB', stack: 9950, bet: 50 },
+      { position: 'BB', stack: 9900, bet: 100 },
+    ],
+  });
+
+  expect(state.seatCount).toBe(6);
+  expect(state.seats.map((seat) => seat.id)).toEqual(['HJ', 'CO', 'BTN', 'SB', 'BB', 'UTG']);
+  expect(state.seats[0]).toMatchObject({ id: 'HJ', cards: liveTask.heroCards, selected: true });
+  expect(state.accessibilityLabel).toBe(
+    'Six-player poker table. Hero HJ. Pot 1,200. Blinds 50 / 100.',
+  );
 });
 
 test('createPokerTrainingTableState maps shared live task state', () => {
@@ -88,8 +113,8 @@ test('createPokerTrainingTableState rotates another hero to the bottom seat', ()
     'BB',
     'UTG',
     'UTG+1',
+    'UTG+2',
     'MP',
-    'MP+1',
     'HJ',
   ]);
 });
@@ -124,6 +149,7 @@ test('createPokerTrainingTableState maps folded and visible opponent state', () 
 test('createPokerTrainingTableState uses a configurable folded stack', () => {
   const state = createPokerTrainingTableState({}, { defaultStackBigBlinds: 75 });
 
+  expect(state.seatCount).toBe(9);
   expect(state.seats[0]?.sublabel).toBe('75 BB · Folded');
   expect(state.centerLabel).toBeUndefined();
   expect(state.centerSublabel).toBeUndefined();

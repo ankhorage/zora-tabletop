@@ -2,6 +2,7 @@ import type { TabletopGameParticipantState } from '../../../../types/gamePresent
 import type {
   CreatePokerTrainingTableStateOptions,
   PokerTrainingPlayer,
+  PokerTrainingTableSize,
   PokerTrainingTableState,
   PokerTrainingTaskTableData,
 } from '../../../../types/pokerTraining';
@@ -10,8 +11,9 @@ import { createTabletopGameSeats } from '../../domain/createTabletopGameSeats';
 /***
  * Adapts the table-relevant subset of a poker training task to generic tabletop presentation state.
  *
- * The canonical poker ring is rotated so the hero occupies the first (bottom) tabletop seat.
- * Players omitted by the task are reconstructed as folded with the configured default stack.
+ * The canonical poker ring for the task table size is rotated so the hero occupies the first
+ * (bottom) tabletop seat. Players omitted by the task are reconstructed as folded with the
+ * configured default stack.
  *
  * @param task - Serializable poker training task data received by the generated application.
  * @param options - Presentation defaults for task fields that are intentionally omitted.
@@ -21,9 +23,11 @@ export function createPokerTrainingTableState(
   task: PokerTrainingTaskTableData,
   { defaultStackBigBlinds = 100 }: CreatePokerTrainingTableStateOptions = {},
 ): PokerTrainingTableState {
+  const tableSize = task.tableSize ?? '9max';
+  const positions = tableSize === '6max' ? sixMaxPokerPositions : nineMaxPokerPositions;
   const bigBlind = task.blinds?.big;
   const heroPosition = task.heroPosition ?? task.players?.find((player) => player.isHero)?.position;
-  const orderedPositions = rotatePokerPositions(heroPosition);
+  const orderedPositions = rotatePokerPositions(positions, heroPosition);
   const defaultStack = `${formatAmount(defaultStackBigBlinds)} BB`;
   const participants = (task.players ?? []).map((player) =>
     createPokerParticipantState(player, task, bigBlind),
@@ -45,6 +49,7 @@ export function createPokerTrainingTableState(
   });
 
   return {
+    seatCount: positions.length,
     seats,
     centerCards: task.communityCards ?? [],
     centerLabel: task.pot === undefined ? undefined : `Pot ${formatAmount(task.pot)}`,
@@ -52,18 +57,32 @@ export function createPokerTrainingTableState(
       task.blinds === undefined
         ? undefined
         : `Blinds ${formatAmount(task.blinds.small)} / ${formatAmount(task.blinds.big)}`,
-    accessibilityLabel: createPokerAccessibilityLabel(heroPosition, task),
+    accessibilityLabel: createPokerAccessibilityLabel(tableSize, heroPosition, task),
   };
 }
 
-const pokerPositions = ['BTN', 'SB', 'BB', 'UTG', 'UTG+1', 'MP', 'MP+1', 'HJ', 'CO'] as const;
+const sixMaxPokerPositions = ['BTN', 'SB', 'BB', 'UTG', 'HJ', 'CO'] as const;
+const nineMaxPokerPositions = [
+  'BTN',
+  'SB',
+  'BB',
+  'UTG',
+  'UTG+1',
+  'UTG+2',
+  'MP',
+  'HJ',
+  'CO',
+] as const;
 
-/*** Rotates the canonical nine-seat poker ring to place the hero at the bottom seat. */
-function rotatePokerPositions(heroPosition: string | undefined): readonly string[] {
-  const heroIndex = pokerPositions.findIndex((position) => position === heroPosition);
-  if (heroIndex <= 0) return pokerPositions;
+/*** Rotates one canonical poker ring to place the hero at the bottom seat. */
+function rotatePokerPositions(
+  positions: readonly string[],
+  heroPosition: string | undefined,
+): readonly string[] {
+  const heroIndex = positions.findIndex((position) => position === heroPosition);
+  if (heroIndex <= 0) return positions;
 
-  return [...pokerPositions.slice(heroIndex), ...pokerPositions.slice(0, heroIndex)];
+  return [...positions.slice(heroIndex), ...positions.slice(0, heroIndex)];
 }
 
 /*** Converts one poker participant record into a generic seat-state override. */
@@ -119,10 +138,11 @@ function formatAmount(amount: number): string {
 
 /*** Summarizes the reconstructed table for assistive technologies. */
 function createPokerAccessibilityLabel(
+  tableSize: PokerTrainingTableSize,
   heroPosition: string | undefined,
   task: PokerTrainingTaskTableData,
 ): string {
-  const parts = ['Nine-player poker table'];
+  const parts = [`${tableSize === '6max' ? 'Six' : 'Nine'}-player poker table`];
   if (heroPosition !== undefined) parts.push(`Hero ${heroPosition}`);
   if (task.pot !== undefined) parts.push(`Pot ${formatAmount(task.pot)}`);
   if (task.blinds !== undefined) {

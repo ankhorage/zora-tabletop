@@ -33,6 +33,7 @@ export type {
   CreatePokerTrainingTableStateOptions,
   PokerTrainingPlayer,
   PokerTrainingTableProps,
+  PokerTrainingTableSize,
   PokerTrainingTableState,
   PokerTrainingTaskTableData,
 } from './types/pokerTraining';
