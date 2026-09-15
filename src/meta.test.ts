@@ -1,8 +1,9 @@
+import { composeZoraPluginMetadata, ZORA_CORE_PLUGIN_METADATA } from '@ankhorage/zora/metadata';
 import { describe, expect, test } from 'bun:test';
 
 import { pokerTrainingTableMeta } from './features/game-presentations/adapters/inbound/pokerTrainingTableMeta';
 import { tabletopTableMeta } from './meta';
-import { ZORA_TABLETOP_COMPONENT_META } from './registry';
+import { ZORA_PLUGIN_METADATA, ZORA_TABLETOP_COMPONENT_META } from './registry';
 
 describe('ZORA tabletop component metadata', () => {
   test('exposes TabletopTable as a directly authorable manifest node', () => {
@@ -49,6 +50,18 @@ describe('ZORA tabletop component metadata', () => {
     expect(Object.keys(ZORA_TABLETOP_COMPONENT_META)).toEqual([
       'PokerTrainingTable',
       'TabletopTable',
+    ]);
+  });
+});
+
+describe('ZORA 19 plugin composition', () => {
+  test('uses only declared core extension hosts', () => {
+    expect(() =>
+      composeZoraPluginMetadata([ZORA_CORE_PLUGIN_METADATA, ZORA_PLUGIN_METADATA]),
+    ).not.toThrow();
+    expect(ZORA_PLUGIN_METADATA.placements.map((placement) => placement.parents)).toEqual([
+      ['Card', 'Grid', 'Screen', 'ScreenSection', 'View'],
+      ['Card', 'Grid', 'Screen', 'ScreenSection', 'View'],
     ]);
   });
 });

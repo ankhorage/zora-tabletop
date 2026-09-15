@@ -6,6 +6,8 @@ export const ZORA_TABLETOP_COMPONENT_META = {
   TabletopTable: tabletopTableMeta,
 } as const;
 
+const TABLETOP_PLACEMENT_PARENTS = ['Card', 'Grid', 'Screen', 'ScreenSection', 'View'] as const;
+
 export const ZORA_PLUGIN_METADATA = {
   packageName: '@ankhorage/zora-tabletop',
   displayName: 'ZORA Tabletop',
@@ -13,11 +15,11 @@ export const ZORA_PLUGIN_METADATA = {
   placements: [
     {
       child: 'PokerTrainingTable',
-      parents: ['Box', 'Card', 'Container', 'Grid', 'Panel', 'Screen', 'ScreenSection', 'Stack'],
+      parents: TABLETOP_PLACEMENT_PARENTS,
     },
     {
       child: 'TabletopTable',
-      parents: ['Box', 'Card', 'Container', 'Grid', 'Panel', 'Screen', 'ScreenSection', 'Stack'],
+      parents: TABLETOP_PLACEMENT_PARENTS,
     },
   ],
 } as const;
