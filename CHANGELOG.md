@@ -1,5 +1,11 @@
 # @ankhorage/zora-tabletop
 
+## 0.1.2
+
+### Patch Changes
+
+- 952a91d: Align plugin placement metadata with ZORA 19 extension hosts, validate composition against ZORA 19.0.1, and refresh the development dependency baseline.
+
 ## 0.1.1
 
 ### Patch Changes
