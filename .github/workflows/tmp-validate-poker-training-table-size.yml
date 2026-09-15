@@ -19,6 +19,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: fix/poker-training-table-size
+          fetch-depth: 0
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: '1.4.2'
