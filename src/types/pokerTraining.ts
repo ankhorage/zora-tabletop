@@ -2,6 +2,7 @@ import type { TabletopColorOverrides } from '../colors';
 import type {
   PlayingCardValue,
   TabletopCardSize,
+  TabletopSeatCount,
   TabletopSeatState,
   TabletopShape,
 } from '../types';
@@ -35,7 +36,7 @@ export interface CreatePokerTrainingTableStateOptions {
 }
 
 export interface PokerTrainingTableState {
-  readonly seatCount: number;
+  readonly seatCount: TabletopSeatCount;
   readonly seats: readonly TabletopSeatState[];
   readonly centerCards: readonly PlayingCardValue[];
   readonly centerLabel?: string;
