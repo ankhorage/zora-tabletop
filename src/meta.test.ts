@@ -54,14 +54,14 @@ describe('ZORA tabletop component metadata', () => {
   });
 });
 
-describe('ZORA 19 plugin composition', () => {
-  test('uses only declared core extension hosts', () => {
+describe('ZORA plugin composition', () => {
+  test('uses only stable declared extension hosts', () => {
     expect(() =>
       composeZoraPluginMetadata([ZORA_CORE_PLUGIN_METADATA, ZORA_PLUGIN_METADATA]),
     ).not.toThrow();
     expect(ZORA_PLUGIN_METADATA.placements.map((placement) => placement.parents)).toEqual([
-      ['Card', 'Grid', 'Screen', 'ScreenSection', 'View'],
-      ['Card', 'Grid', 'Screen', 'ScreenSection', 'View'],
+      ['Card', 'Grid', 'Screen', 'ScreenSection'],
+      ['Card', 'Grid', 'Screen', 'ScreenSection'],
     ]);
   });
 });

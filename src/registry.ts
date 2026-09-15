@@ -6,7 +6,7 @@ export const ZORA_TABLETOP_COMPONENT_META = {
   TabletopTable: tabletopTableMeta,
 } as const;
 
-const TABLETOP_PLACEMENT_PARENTS = ['Card', 'Grid', 'Screen', 'ScreenSection', 'View'] as const;
+const TABLETOP_PLACEMENT_PARENTS = ['Card', 'Grid', 'Screen', 'ScreenSection'] as const;
 
 export const ZORA_PLUGIN_METADATA = {
   packageName: '@ankhorage/zora-tabletop',
