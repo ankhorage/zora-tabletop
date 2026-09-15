@@ -24,7 +24,7 @@ export function createPokerTrainingTableState(
   { defaultStackBigBlinds = 100 }: CreatePokerTrainingTableStateOptions = {},
 ): PokerTrainingTableState {
   const tableSize = task.tableSize ?? '9max';
-  const positions = pokerPositionsByTableSize[tableSize];
+  const positions = tableSize === '6max' ? sixMaxPokerPositions : nineMaxPokerPositions;
   const bigBlind = task.blinds?.big;
   const heroPosition = task.heroPosition ?? task.players?.find((player) => player.isHero)?.position;
   const orderedPositions = rotatePokerPositions(positions, heroPosition);
@@ -61,10 +61,18 @@ export function createPokerTrainingTableState(
   };
 }
 
-const pokerPositionsByTableSize = {
-  '6max': ['BTN', 'SB', 'BB', 'UTG', 'HJ', 'CO'],
-  '9max': ['BTN', 'SB', 'BB', 'UTG', 'UTG+1', 'UTG+2', 'MP', 'HJ', 'CO'],
-} as const satisfies Readonly<Record<PokerTrainingTableSize, readonly string[]>>;
+const sixMaxPokerPositions = ['BTN', 'SB', 'BB', 'UTG', 'HJ', 'CO'] as const;
+const nineMaxPokerPositions = [
+  'BTN',
+  'SB',
+  'BB',
+  'UTG',
+  'UTG+1',
+  'UTG+2',
+  'MP',
+  'HJ',
+  'CO',
+] as const;
 
 /*** Rotates one canonical poker ring to place the hero at the bottom seat. */
 function rotatePokerPositions(
