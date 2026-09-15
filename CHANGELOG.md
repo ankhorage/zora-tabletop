@@ -1,5 +1,11 @@
 # @ankhorage/zora-tabletop
 
+## 0.1.3
+
+### Patch Changes
+
+- ef14cb6: Render poker training tables with the task's actual 6-max or 9-max seat ring.
+
 ## 0.1.2
 
 ### Patch Changes
