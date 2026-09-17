@@ -16,14 +16,15 @@
     "url": "git+https://github.com/ankhorage/zora-tabletop.git"
   },
   "keywords": [
+    "ankhorage",
+    "card-game",
+    "cards",
+    "expo",
     "react-native",
     "react-native-web",
     "tabletop",
-    "cards",
-    "card-game",
-    "expo",
-    "zora",
-    "ui-kit"
+    "ui-kit",
+    "zora"
   ],
   "files": [
     "dist",
