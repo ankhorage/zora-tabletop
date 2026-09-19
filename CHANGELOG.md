@@ -1,5 +1,11 @@
 # @ankhorage/zora-tabletop
 
+## 0.1.13
+
+### Patch Changes
+
+- e91dc85: Update Ankhorage dependencies: `@ankhorage/zora`.
+
 ## 0.1.12
 
 ### Patch Changes
